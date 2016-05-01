@@ -1,0 +1,91 @@
+.wc-metaboxes-wrapper .wc-metabox .woocommerce_attribute_data td label { display: none; }
+
+.woocommerce_attribute:nth-child(1) strong { color: #29bc94; }
+
+.woocommerce_attribute:nth-child(2) strong { color: #763eaf; }
+
+.woocommerce_attribute:nth-child(3) strong { color: #ff9517; }
+
+.woocommerce_variation.wc-metabox { position: relative; }
+
+.toolbar-variations-defaults { display: none !important; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete, .wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 .handlediv { position: relative; width: 27px; height: 27px; margin-top: 0 !important; cursor: pointer; display: inline-block; background: #f7f7f7; height: 28px; margin: 0; padding: 0 10px 1px; border: 1px solid #ccc; white-space: nowrap; text-decoration: none; font-size: 13px; line-height: 26px; color: #555; border-color: #ccc; vertical-align: top; -webkit-appearance: none; border-radius: 3px; box-sizing: border-box; box-shadow: 0 1px 0 #ccc; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete:hover, .wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 .handlediv:hover { background: #fafafa; border-color: #999; color: #23282d; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete:active, .wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 .handlediv:active { background: #eee; background-color: white; border-color: #999; box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5); -webkit-transform: translateY(1px); transform: translateY(1px); }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete::before, .wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 .handlediv::before { position: absolute; top: 0; right: 0; width: 100%; height: 100%; text-align: center; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 .handlediv { width: auto; padding-right: 18px; background-color: #f7f7f7 !important; border-radius: 3px 0 0 3px; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 .handlediv::before { line-height: 27px !important; padding: 0; text-align: right; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 .handlediv::after { content: "Edit"; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete { font-size: 0; border-radius: 0 3px 3px 0; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete:hover { background: #e35950; border-color: #ba281e; color: #fff; box-shadow: 0 1px 0 #ba281e; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete:active { background: #d02c21; border-color: #ba281e; box-shadow: inset 0 2px 0 #ba281e; }
+
+.wc-metaboxes-wrapper .wc-metaboxes .wc-metabox > h3 a.delete::before { content: "\f182"; font-family: dashicons; font-size: initial; vertical-align: top; -webkit-font-smoothing: antialiased; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 { cursor: default !important; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 .sort { margin-top: 1px; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 strong { display: none; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 select { cursor: pointer; margin: 0; padding: 0 5px; border: none; background-color: transparent; border-radius: 3px; box-shadow: none; transition: all 0.25s ease-in-out; -moz-appearance: none; -webkit-appearance: none; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 select:nth-of-type(1) { color: #29bc94; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 select:nth-of-type(1):hover { background-color: rgba(41, 188, 148, 0.2); }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 select:nth-of-type(2) { color: #763eaf; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 select:nth-of-type(2):hover { background-color: rgba(118, 62, 175, 0.2); }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 select:nth-of-type(3) { color: #ff9517; }
+
+.woocommerce_variations .woocommerce_variation.wc-metabox > h3 select:nth-of-type(3):hover { background-color: rgba(255, 149, 23, 0.2); }
+
+.wc-metabox.open h3, .wc-metabox h3:hover, .wc-metabox.active { background-color: #eff9fd; }
+
+.hwc-form input { position: relative; z-index: 2; width: 80px; vertical-align: middle; line-height: normal; font-weight: normal; border-radius: 3px; }
+
+.hwc-form input[type="number"] { width: 60px; }
+
+.hwc-form label { display: inline-block; background: #f4f4f4; padding: 3.5px 7px; border: #dfdfdf solid 1px; height: 27px; font-size: 13px; font-weight: bold; line-height: normal; border-radius: 3px 0 0 3px; box-sizing: border-box; }
+
+.hwc-form label + input { margin: 0 5px 0 -1px; border-radius: 0 3px 3px 0; }
+
+.hwc-form .dashicons { width: auto; vertical-align: sub; font-size: 14px; }
+
+.quick-form { display: inline-block; }
+
+.woocommerce_variation h3:hover .quick-form input, .woocommerce_variation.open .quick-form input, .woocommerce_variation.active .quick-form input { border: 1px solid #ddd; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07); }
+
+.woocommerce_variation h3:hover .quick-form input:focus, .woocommerce_variation.open .quick-form input:focus, .woocommerce_variation.active .quick-form input:focus { border-color: #5b9dd9; box-shadow: 0 0 2px rgba(30, 140, 190, 0.8); }
+
+.woocommerce_variation h3:hover .quick-form label, .woocommerce_variation.open .quick-form label, .woocommerce_variation.active .quick-form label { background: #f4f4f4; border: #dfdfdf solid 1px; }
+
+.quick-form input { border-color: transparent; box-shadow: none; }
+
+.quick-form label { border-color: transparent; background-color: transparent; }
+
+.quick-form.has-sale [name*="quick_price"] { margin-right: -4px; border-radius: 0; }
+
+.quick-form.has-sale [name*="quick_price"] + label, .quick-form.has-sale [name*="quick_sale"] { display: inline-block; }
+
+.quick-form [name*="quick_price"] + label, .quick-form [name*="quick_sale"] { display: none; }
+
+.quick-form [name*="quick_price"] + label { border-radius: 0; margin-left: -1px; }
+
+.quick-form [name*="quick_sale"] { border-radius: 0 3px 3px 0; }
+
+.global-form span { margin-right: 5px; }
+
+.global-form input { margin-right: 15px; }

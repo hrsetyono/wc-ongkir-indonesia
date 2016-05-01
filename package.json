@@ -1,0 +1,14 @@
+{
+  "name": "wc-indo-shipping",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrsetyono/wc-indo-shipping.git"
+  },
+  "dependencies": {},
+  "scripts": {
+    "sass": "FOR /f \"delims=\" %v IN ('node -p \"require('edje').includePaths()[0]\"') DO node-sass -w assets/css -o assets/css --output-style compact --include-path \"%v\" ",
+    "watch-x": "node-sass -w assets/sass -o assets/css --include-paths $(node -p \"require('edje').includePaths()\")"
+  },
+  "devDependencies": {}
+}
