@@ -1,11 +1,24 @@
 <?php
 /*
-  Register JavaScript that handles "Calculate Shipping" feature
-  Also handles the additional form at Checkout page.
+  Add district to the Shipping calculator data
+
+  @param mixed $packages - Cart parameters with products and destination data
 */
+function wcis_cart_calculator($packages) {
+  if(array_key_exists('shipping_district', $_POST) ) {
+    $packages[0]['destination']['district'] = $_POST['shipping_district'];
+    $packages[0]['destination']['district_id'] = $_POST['shipping_district_id'];
+  }
+
+  return $packages;
+}
 
 // Custom Style and CSS
 
+/*
+  Register JavaScript that handles "Calculate Shipping" feature
+  Also handles the additional form at Checkout page.
+*/
 function wcis_enqueue_scripts($hook) {
   // for cart and checkout only
   if(is_cart() || is_checkout() ) {

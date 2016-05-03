@@ -2,10 +2,11 @@
 
 class WCIS_API {
   private $api_key;
-  private $api_base = 'http://api.rajaongkir.com/starter';
+  private $api_base = 'http://pro.rajaongkir.com/api';
 
   const PROVINCE_URL = '/province';
   const CITY_URL = '/city?province=';
+  const DISTRICT_URL = '/subdistrict?city=';
   const COST_URL = '/cost';
 
   function __construct($api_key = '') {
@@ -39,7 +40,7 @@ class WCIS_API {
   function get_cities($prov_id) {
     $response = $this->call(self::CITY_URL . $prov_id);
 
-    if($response) {
+    if($response['status']['code'] === 200) {
       $cities = $response['results'];
 
       // if Semarang, differentiate Kota and Kabupaten
@@ -59,7 +60,20 @@ class WCIS_API {
   }
 
   /*
+    Get all districts in the city
+  */
+  function get_districts($city_id) {
+    $response = $this->call(self::DISTRICT_URL . $city_id);
 
+    if($response['status']['code'] === 200) {
+      return $response['results'];
+    } else {
+      return $response;
+    }
+  }
+
+  /*
+    Get costs
   */
   function get_costs($args) {
     $query = http_build_query($args);

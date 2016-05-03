@@ -79,7 +79,7 @@ class WCIS_Method extends WC_Shipping_Method {
         'options' => $couriers
       );
 
-      $key_success = __('Key accepted!', 'wcis');
+      $key_success = __('API Connected!', 'wcis');
       $key_field['description'] = '<span style="color: #4caf50;">' . $key_success . '</span>';
 
       $fields = array(
@@ -133,10 +133,10 @@ class WCIS_Method extends WC_Shipping_Method {
 	*/
 	function calculate_shipping($package) {
     $weight = $this->_calculate_weight($package);
-    $destination_id = $this->_get_city_id($package['destination']['city']);
+    $destination_id = $package['destination']['district_id'];
 
-    // if city or destination_id empty
-    if(!$package['destination']['city'] || !$destination_id) {
+    // if district or destination_id empty
+    if(!$package['destination']['district'] || !$destination_id) {
       return false;
     }
 
@@ -145,7 +145,9 @@ class WCIS_Method extends WC_Shipping_Method {
     foreach($this->settings['couriers'] as $courier) {
       $args[] = array(
         'origin' => $this->settings['city'],
+        'originType' => 'city',
         'destination' => $destination_id,
+        'destinationType' => 'subdistrict',
         'weight' => $weight,
         'courier' => $courier
       );
@@ -158,14 +160,13 @@ class WCIS_Method extends WC_Shipping_Method {
     }
 
     // format the costs from API to WooCommerce
-    foreach($costs as $courier) {
-      foreach($courier[0]['costs'] as $service) {
+    foreach($costs as $courier):
+      foreach($courier[0]['costs'] as $service):
+
         $code = $courier[0]['code'];
 
-        // TODO: this assuming the client filled the service
         // if included in allowed service
         $setting_id = $code . '_services';
-
         $all_services = $this->_get_services($code);
         $allowed_services = (array_key_exists($setting_id, $this->settings) ) ? $this->settings[$setting_id] : array();
 
@@ -185,8 +186,8 @@ class WCIS_Method extends WC_Shipping_Method {
 
           $this->add_rate($rate);
         }
-      }
-    }
+      endforeach;
+    endforeach;
 	}
 
   /////
@@ -202,17 +203,13 @@ class WCIS_Method extends WC_Shipping_Method {
 
   /*
     Get cities from API
-
-    @param boolean $raw - Get raw data or clean one
     @return array - List of cities in base province
   */
-  private function _get_cities($raw = false) {
+  private function _get_cities() {
     $location = wc_get_base_location();
     $province_id = WCIS_Provinces::get_id($location['state']);
 
     $cities_raw = $this->api->get_cities($province_id);
-    if($raw) { return $cities_raw; }
-
     $cities = array();
     foreach($cities_raw as $c) {
       $cities[$c['city_id']] = $c['city_name'];
@@ -227,8 +224,10 @@ class WCIS_Method extends WC_Shipping_Method {
     @param string $city_name
     @return int - The ID of the city, 0 if not found.
   */
-  private function _get_city_id($city_name) {
-    $cities = $this->_get_cities(true);
+  private function _get_city_id($province_code, $city_name) {
+
+    $province_id = WCIS_Provinces::get_id($province_code);
+    $cities = $this->api->get_cities($province_id);
 
     foreach($cities as $c) {
       if($c['city_name'] === $city_name) {

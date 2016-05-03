@@ -3,20 +3,40 @@
   Add Template for Select dropdown
 */
 
-add_action('wp_footer', 'wcis_handlebars_template');
-add_filter('woocommerce_shipping_calculator_enable_city', '__return_true');
-
 function wcis_handlebars_template() {
   ?>
 
   <!-- City Select -->
-  <script id="wcis-select-city" type="text/x-handlebars-template">
+  <script id="wcis-city-field" type="text/x-handlebars-template">
 
-    <select name="calc_shipping_city" id="calc_shipping_city">
-      {{#each this }}
-        <option value="{{ city_name }}">{{ city_name }}</option>
+    <select name="{{ field_id }}" id="{{ field_id }}" placeholder="Choose your City">
+      <option></option>
+      {{#each cities }}
+        <option value="{{ city_name }}" data-id="{{ city_id }}">{{ city_name }}</option>
       {{/each }}
     </select>
+
+  </script>
+
+
+  <!-- District Wrapper -->
+  <script id="wcis-district-wrap" type="text/x-handlebars-template">
+
+    <p class="form-row form-row-wide" id="{{ id }}">
+		</p>
+
+  </script>
+
+  <!-- District Select -->
+  <script id="wcis-district-field" type="text/x-handlebars-template">
+
+    <select name="{{ field_id }}" id="{{ field_id }}" placeholder="Choose your District">
+      <option></option>
+      {{#each districts }}
+        <option value="{{ subdistrict_name }}" data-id="{{ subdistrict_id }}">{{ subdistrict_name }}</option>
+      {{/each }}
+    </select>
+    <input type="hidden" name="{{ field_id }}_id" id="{{ field_id }}_id">
 
   </script>
 

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WooCommerce Indonesia Shipping
-Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Uses data from RajaOngkir.com.
+Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Requires purchase from RajaOngkir.com.
 Plugin URI: http://github.com/hrsetyono/wc-indo-shipping
 Author: The Syne Studio
 Author URI: http://thesyne.com/
@@ -20,17 +20,26 @@ require_once 'lib/all.php';
 // if enabled
 $wcis_settings = get_option('woocommerce_wcis_settings');
 if(array_key_exists('enabled', $wcis_settings) && $wcis_settings['enabled'] === 'yes') {
-  add_action('woocommerce_shipping_init', 'wcis_init');
-  add_filter('woocommerce_shipping_methods', 'wcis_add_method');
-
-  add_action('wp_ajax_wcis_get_city', 'wcis_ajax_get_city');
-
-  // queue css and js
-  add_action('wp_enqueue_scripts', 'wcis_enqueue_scripts', 999);
+  // AJAX.php
+  add_action('wp_ajax_wcis_get_cities', 'wcis_ajax_get_cities');
+  add_action('wp_ajax_wcis_get_districts', 'wcis_ajax_get_districts');
 
   // reorder checkout fields
   add_filter('woocommerce_checkout_fields', 'wcis_checkout_fields');
+
+  // TEMPLATE.php
+  add_action('wp_footer', 'wcis_handlebars_template');
+
+  // CALCULATOR.php
+  add_action('wp_enqueue_scripts', 'wcis_enqueue_scripts', 999);
+  add_filter('woocommerce_cart_shipping_packages', 'wcis_cart_calculator');
+
+  add_filter('woocommerce_shipping_calculator_enable_city', '__return_true');
+  add_filter('woocommerce_shipping_calculator_enable_postcode', '__return_false');
 }
+
+add_action('woocommerce_shipping_init', 'wcis_init');
+add_filter('woocommerce_shipping_methods', 'wcis_add_method');
 
 /////
 
@@ -47,22 +56,6 @@ function wcis_init() {
 function wcis_add_method($methods) {
 	$methods[] = 'WCIS_Method';
 	return $methods;
-}
-
-/*
-  AJAX translate province code into City list.
-*/
-function wcis_ajax_get_city() {
-	$code = $_GET['code'];
-	$id = WCIS_Provinces::get_id($code);
-
-  $settings = get_option('woocommerce_wcis_settings');
-
-  $api = new WCIS_API($settings['key']);
-  $response = $api->get_cities($id);
-  echo json_encode($response);
-
-	wp_die();
 }
 
 /*
