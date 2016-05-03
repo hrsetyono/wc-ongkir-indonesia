@@ -18,171 +18,199 @@ function start() {
 
   // if checkout page
   else if($('.woocommerce-checkout').length) {
-    var args = {
-      state: '#billing_state',
-      city: '#billing_city',
-      cityWrapper: '#billing_city_field'
-    };
-
-    var form = new Form('checkout', args);
-    form.init();
+    checkout.init();
   }
 }
 
 /////
 
-// ----- FORM CLASS -----
 
-function Form(type, args) {
+// ----- API Module -----
+var api = {
+  // Get all cities in that state
+  getCities: function($state, callback) {
+    var code = $state.val();
+
+    if(code) {
+      $.get(woocommerce_params.ajax_url,
+        { action: 'wcis_get_cities', code: code },
+        callback );
+    }
+  },
+
+  // Get all districts in that state
+  getDistricts: function($city, callback) {
+    var id = $city.val();
+
+    if(id) {
+      $.get(woocommerce_params.ajax_url,
+        { action: 'wcis_get_districts', id: id },
+        callback );
+    }
+  },
+};
+
+/*
+  Handle City and District fields
+
+  @param string type - Either calc, billing, or shipping
+  @param obj fields - List of class and ID of all targets
+*/
+function Fields(type, args) {
   this.type = type;
-  this.args = args;
 
-  this.data = {};
-}
+  this.state = {
+    field: type + '_state',
+    wrapper: type + '_state_field'
+  };
 
-Form.prototype = {
-  /*
-    Init the Form fields handler
-  */
+  this.city = {
+    field: type + '_city',
+    wrapper: type + '_city_field',
+    newField: type + '_wcis_c',
+    newWrapper: type + '_wcis_c_wrapper'
+  };
+
+  this.dist = {
+    newField: type + '_wcis_d',
+    newWrapper: type + '_wcis_d_wrapper'
+  };
+
+  // parse the city value, the format is "City, District"
+  var cityRaw = $('#' + this.city.field).val();
+  this.city.value = cityRaw.split(', ')[0];
+  this.dist.value = cityRaw.split(', ')[1];
+};
+
+Fields.prototype = {
   init: function() {
     var self = this;
 
-    switch(self.type) {
-      // CART
-      case 'cart':
+    // add wrapper for the new fields
+    var args = { city: self.city, dist: self.dist };
 
-        // hide country
-        $(self.args.country).hide();
+    var template = Handlebars.compile($('#wcis-wrapper').html() );
+    var html = template(args);
 
-        $(self.args.state).select2().on('change', _onStateChange);
+    // append template and hide the real city field
+    $('#' + self.city.wrapper).append(html);
+    // $('#' + this.city.field).hide();
 
-        // after selecting shipping method
-        $(document.body).on('updated_shipping_method', _onSelectMethod.bind(self) );
+    // initiate the event handler
+    this.initState();
+    this.initCity();
+    this.initDistrict();
+  },
 
-        // create district field
-        var args = { id: self.args.districtWrapper.replace('#', '') };
-        var template = Handlebars.compile($('#wcis-district-wrap').html() );
-        var html = template(args);
-        $(self.args.cityWrapper).after(html);
+  /*
+    Add Listener to Province / State field
+  */
+  initState: function() {
+    var self = this;
+    var $field = $('#' + self.state.field);
 
-        break;
+    $field.off('change');
+    $field.on('change', function(e) {
+      console.log('state changed');
+      $('#' + self.city.newField).trigger('wcis-state-selected');
+    });
+  },
 
-      // CHECKOUT
-      case 'checkout':
-        $(self.args.state).on('change', _onStateChange);
-        break;
+  /*
+    Create a City Selection based on Province
+  */
+  initCity: function() {
+    var self = this;
+    var $field = $('#' + self.city.newField);
+
+    $field.off('wcis-state-selected');
+    $field.on('wcis-state-selected', _onStateSelected);
+
+    $field.off('change');
+    $field.on('change', _onChange);
+
+    function _onStateSelected(e) {
+      // remove all options first
+      $(this).empty();
+
+      // also remove district
+      $(self.dist.newWrapper).hide();
+      $(self.dist.newField).empty();
+
+      api.getCities($('#' + self.state.field), _onGetCities);
     }
 
-    /////
+    function _onGetCities(response) {
+      console.log('get city');
+      var args = JSON.parse(response);
 
-    function _onStateChange(e) {
-      var code = $(this).val();
+      // insert template
+      var template = Handlebars.compile($('#wcis-city-option').html() );
+      var html = template(args);
 
-      // if not empty get the API, if empty hide the city
-      if(code) {
-        self.getCities(code);
-      } else {
-        $(self.args.cityWrapper).hide();
+      $field.append(html);
+
+      if(self.city.value) {
+        var optionTarget = 'option:contains("' + self.city.value + '")';
+        $field.find(optionTarget).prop('selected', true).trigger('change');
       }
     }
 
-    function _onSelectMethod(e) {
-      // remove previous listener
-      $(self.args.state).off('change');
-      $(document.body).off('updated_shipping_method');
+    function _onChange(e) {
+      $('#' + self.dist.newField).trigger('wcis-city-selected');
 
-      // reinitiate and trigger change
-      self.init();
-      $(self.args.state).trigger('change');
+      // add the string for real city field
+      self.city.value = $(this).find('option:selected').text();
+      $('#' + self.city.field).val(self.city.value);
     }
   },
 
   /*
-    Get Cities data from the Province
+    Create a District Selection based on City
   */
-  getCities: function(code) {
+  initDistrict: function() {
     var self = this;
+    var $field = $('#' + self.dist.newField);
 
-    var data = { action: 'wcis_get_cities', code: code };
-    $.get(woocommerce_params.ajax_url, data, _afterGetCities);
+    $field.off('wcis-city-selected');
+    $field.on('wcis-city-selected', _onCitySelected);
 
-    /////
+    $field.off('change');
+    $field.on('change', _onChange);
 
-    /*
-      Make CITY input field into <select> and insert the data we have received.
-    */
-    function _afterGetCities(response) {
-      var args = {
-        cities: JSON.parse(response),
-        field_id: self.args.city.replace('#', '')
-      };
+    function _onCitySelected(e) {
+      // remove all options first
+      $(this).empty();
 
-      var currentVal = $(self.args.city).val();
+      api.getDistricts($('#' + self.city.newField), _onGetDistricts);
+    }
 
-      // create city dropdown
-      var template = Handlebars.compile($('#wcis-city-field').html() );
+    function _onGetDistricts(response) {
+      console.log('get district');
+      var args = JSON.parse(response);
+
+      // insert template
+      var template = Handlebars.compile($('#wcis-dist-option').html() );
       var html = template(args);
 
-      var $cityWrapper = $(self.args.cityWrapper);
-      $cityWrapper.html(html);
-
-      // populate the field
-      var $select = $cityWrapper.find('select');
-      $select.val(currentVal);
-
-      $select.select2({
-        placeholder: $select.attr('placeholder')
-      });
-
-      $select.on('change', _onCityChange);
-
-      $cityWrapper.show();
+      $field.append(html);
     }
 
-    function _onCityChange(e) {
-      var cityId = $(this).find(':selected').data('id');
-
-      var data = { action: 'wcis_get_districts', city: cityId };
-      $.get(woocommerce_params.ajax_url, data, _afterGetDistricts);
+    function _onChange(e) {
+      // create the string for real city field
+      self.dist.value = $(this).find('option:selected').text();
+      $('#' + self.city.field).val(self.city.value + ', ' + self.dist.value);
     }
 
-    function _afterGetDistricts(response) {
-      var $distWrapper = $(self.args.districtWrapper);
-      $distWrapper.empty(); // empty out previous content
-
-      var args = {
-        field_id: self.args.district.replace('#', ''),
-        districts: JSON.parse(response)
-      };
-
-      var template = Handlebars.compile($('#wcis-district-field').html() );
-      var html = template(args);
-
-      $distWrapper.html(html);
-
-      // convert to select2 and add listener
-      var $select = $(self.args.district);
-      $select.select2({
-        placeholder: $select.attr('placeholder')
-      }).on('change', _onDistrictChange);
-    }
-
-    function _onDistrictChange(e) {
-      var districtId = $(this).find(':selected').data('id');
-      $('#shipping_district_id').val(districtId);
-    }
-  },
+  }
 };
 
-var form = {
-
-  checkoutInit: function() {
-    $('#billing_state').on('change', this.stateOnChange);
-    var code = $('#billing_state').val();
-    this.getCities(code, this._afterGetCities);
+var checkout = {
+  init: function() {
+    var billingField = new Fields('billing');
+    billingField.init();
   },
 };
-
 
 $(document).ready(start);
 $(document).on('page:load', start);

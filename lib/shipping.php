@@ -133,10 +133,10 @@ class WCIS_Method extends WC_Shipping_Method {
 	*/
 	function calculate_shipping($package) {
     $weight = $this->_calculate_weight($package);
-    $destination_id = $package['destination']['district_id'];
 
-    // if district or destination_id empty
-    if(!$package['destination']['district'] || !$destination_id) {
+    // if district not exists or empty
+    $id_exists = array_key_exists('district_id', $package['destination']);
+    if(!$id_exists || empty($package['destination']['district_id']) ) {
       return false;
     }
 
@@ -146,7 +146,7 @@ class WCIS_Method extends WC_Shipping_Method {
       $args[] = array(
         'origin' => $this->settings['city'],
         'originType' => 'city',
-        'destination' => $destination_id,
+        'destination' => $package['destination']['district_id'],
         'destinationType' => 'subdistrict',
         'weight' => $weight,
         'courier' => $courier

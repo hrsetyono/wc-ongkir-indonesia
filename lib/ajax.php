@@ -20,7 +20,7 @@ function wcis_ajax_get_cities() {
   Get districts from city
 */
 function wcis_ajax_get_districts() {
-	$id = $_GET['city'];
+	$id = $_GET['id'];
   $settings = get_option('woocommerce_wcis_settings');
 
   $api = new WCIS_API($settings['key']);

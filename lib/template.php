@@ -6,38 +6,41 @@
 function wcis_handlebars_template() {
   ?>
 
-  <!-- City Select -->
-  <script id="wcis-city-field" type="text/x-handlebars-template">
+  <!-- WCIS Wrapper -->
+  <script id="wcis-wrapper" type="text/x-handlebars-template">
 
-    <select name="{{ field_id }}" id="{{ field_id }}" placeholder="Choose your City">
-      <option></option>
-      {{#each cities }}
-        <option value="{{ city_name }}" data-id="{{ city_id }}">{{ city_name }}</option>
-      {{/each }}
-    </select>
+    <p class="form-row form-row-first" id="{{ city.newWrapper }}">
+      <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
+    </p>
+
+    <p class="form-row form-row-last" id="{{ dist.newWrapper }}">
+      <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
+    </p>
 
   </script>
 
+  <!-- City Select -->
+  <script id="wcis-city-option" type="text/x-handlebars-template">
 
-  <!-- District Wrapper -->
-  <script id="wcis-district-wrap" type="text/x-handlebars-template">
-
-    <p class="form-row form-row-wide" id="{{ id }}">
-		</p>
+    <option></option>
+    {{#each this }}
+      <option value="{{ city_id }}">{{ city_name }}</option>
+    {{/each }}
 
   </script>
 
   <!-- District Select -->
-  <script id="wcis-district-field" type="text/x-handlebars-template">
+  <script id="wcis-dist-option" type="text/x-handlebars-template">
 
-    <select name="{{ field_id }}" id="{{ field_id }}" placeholder="Choose your District">
-      <option></option>
-      {{#each districts }}
-        <option value="{{ subdistrict_name }}" data-id="{{ subdistrict_id }}">{{ subdistrict_name }}</option>
-      {{/each }}
-    </select>
-    <input type="hidden" name="{{ field_id }}_id" id="{{ field_id }}_id">
+    <option></option>
+    {{#each this }}
+      <option value="{{ subdistrict_id }}">{{ subdistrict_name }}</option>
+    {{/each }}
 
+  </script>
+
+  <script>
+    var wcis_post = <?php echo json_encode($_POST); ?>;
   </script>
 
   <?php

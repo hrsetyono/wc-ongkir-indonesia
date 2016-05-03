@@ -22,9 +22,13 @@ $wcis_settings = get_option('woocommerce_wcis_settings');
 if(array_key_exists('enabled', $wcis_settings) && $wcis_settings['enabled'] === 'yes') {
   // AJAX.php
   add_action('wp_ajax_wcis_get_cities', 'wcis_ajax_get_cities');
-  add_action('wp_ajax_wcis_get_districts', 'wcis_ajax_get_districts');
+  add_action('wp_ajax_nopriv_wcis_get_cities', 'wcis_ajax_get_cities');
 
-  // reorder checkout fields
+
+  add_action('wp_ajax_wcis_get_districts', 'wcis_ajax_get_districts');
+  add_action('wp_ajax_nopriv_wcis_get_districts', 'wcis_ajax_get_districts');
+
+  // CHECKOUT.php
   add_filter('woocommerce_checkout_fields', 'wcis_checkout_fields');
 
   // TEMPLATE.php
@@ -36,6 +40,9 @@ if(array_key_exists('enabled', $wcis_settings) && $wcis_settings['enabled'] === 
 
   add_filter('woocommerce_shipping_calculator_enable_city', '__return_true');
   add_filter('woocommerce_shipping_calculator_enable_postcode', '__return_false');
+
+  // TRANSLATE.php
+  // add_filter('load_textdomain_mofile', 'wcis_load_translation', 10, 2);
 }
 
 add_action('woocommerce_shipping_init', 'wcis_init');
@@ -56,31 +63,4 @@ function wcis_init() {
 function wcis_add_method($methods) {
 	$methods[] = 'WCIS_Method';
 	return $methods;
-}
-
-/*
-  Reorder Billing and Shipping filds in Checkout page
-*/
-function wcis_checkout_fields($fields) {
-  $order = array(
-    'billing_first_name',
-    'billing_last_name',
-    'billing_email',
-    'billing_phone',
-
-    'billing_country',
-    'billing_state',
-    'billing_postcode',
-    'billing_city',
-    'billing_address_1',
-    'billing_address_2',
-  );
-
-  $ordered_fields = array();
-  foreach($order as $o) {
-    $ordered_fields[$o] = $fields['billing'][$o];
-  }
-
-  $fields['billing'] = $ordered_fields;
-  return $fields;
 }
