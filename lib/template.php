@@ -6,7 +6,20 @@
 function wcis_handlebars_template() {
   ?>
 
-  <!-- WCIS Wrapper -->
+  <!-- Wrapper for Cart -->
+  <script id="wcis-wrapper-cart" type="text/x-handlebars-template">
+
+    <p class="form-row form-row-wide" id="{{ city.newWrapper }}">
+      <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
+    </p>
+
+    <p class="form-row form-row-wide" id="{{ dist.newWrapper }}">
+      <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
+    </p>
+
+  </script>
+
+  <!-- Wrapper for Checkout -->
   <script id="wcis-wrapper" type="text/x-handlebars-template">
 
     <p class="form-row form-row-first" id="{{ city.newWrapper }}">

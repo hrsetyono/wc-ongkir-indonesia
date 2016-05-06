@@ -43,6 +43,11 @@ if(array_key_exists('enabled', $wcis_settings) && $wcis_settings['enabled'] === 
 
   // TRANSLATE.php
   // add_filter('load_textdomain_mofile', 'wcis_load_translation', 10, 2);
+
+  // $str_data = 'billing_first_name=Jack&billing_last_name=Black&billing_email=jack%40thesyne.com&billing_phone=081234567&billing_country=ID&billing_state=JT&billing_postcode=12345&billing_city=Kota+Semarang&billing_address_1=Random+Street+101&billing_address_2=&order_comments=&payment_method=bacs&_wpnonce=2d53e91cce&_wp_http_referer=%2Fcheckout%2F';
+  //
+  // parse_str($str_data, $post_data);
+  // var_dump($post_data);
 }
 
 add_action('woocommerce_shipping_init', 'wcis_init');

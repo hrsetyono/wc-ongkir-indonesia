@@ -5,10 +5,25 @@
   @param mixed $packages - Cart parameters with products and destination data
 */
 function wcis_cart_calculator($packages) {
-  if(array_key_exists('shipping_district', $_POST) ) {
-    $packages[0]['destination']['district'] = $_POST['shipping_district'];
-    $packages[0]['destination']['district_id'] = $_POST['shipping_district_id'];
+
+  // if checkout page
+  if(isset($_POST['security']) ) {
+    parse_str($_POST['post_data'], $post_data);
+    $packages[0]['destination']['destination_id'] = $post_data['billing_destination_id'];
   }
+
+  // if cart page
+  if(isset($_POST['calc_shipping_wcis_d']) ) {
+    $packages[0]['destination']['destination_id'] = $_POST['calc_shipping_wcis_d'];
+  }
+
+  // var_dump($packages[0]['destination']);
+
+
+  error_log(print_r($packages[0]['destination'], true) );
+  // error_log(print_r($_POST, true) );
+
+  // $packages[0]['destination']['district_id'] = 5498;
 
   return $packages;
 }
@@ -41,6 +56,5 @@ function wcis_enqueue_scripts($hook) {
 
     wp_enqueue_script('select2');
     wp_enqueue_style('select2');
-
   }
 }

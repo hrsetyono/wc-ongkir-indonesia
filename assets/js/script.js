@@ -4,21 +4,17 @@
 function start() {
   // if cart page
   if($('.woocommerce-cart').length) {
-    var args = {
-      country: '#calc_shipping_country',
-      state: '#calc_shipping_state',
-      city: '#calc_shipping_city',
-      cityWrapper: '#calc_shipping_city_field',
-      district: '#shipping_district',
-      districtWrapper: '#shipping_district_field'
-    };
-    var form = new Form('cart', args);
-    form.init();
+    var calcField = new Fields('calc_shipping');
+    calcField.init();
   }
 
   // if checkout page
   else if($('.woocommerce-checkout').length) {
-    checkout.init();
+    var billingField = new Fields('billing');
+    billingField.init();
+
+    var shippingField = new Fields('shipping');
+    shippingField.init();
   }
 }
 
@@ -59,9 +55,15 @@ var api = {
 function Fields(type, args) {
   this.type = type;
 
+  this.country = {
+    field: type + '_country',
+    wrapper: type + '_country_field'
+  };
+
   this.state = {
     field: type + '_state',
-    wrapper: type + '_state_field'
+    wrapper: type + '_state_field',
+    changeCounter: 0 // WooCommerce has bug where State Field trigger its "change" event twice
   };
 
   this.city = {
@@ -76,6 +78,8 @@ function Fields(type, args) {
     newWrapper: type + '_wcis_d_wrapper'
   };
 
+  this.destination = type + '_destination_id';
+
   // parse the city value, the format is "City, District"
   var cityRaw = $('#' + this.city.field).val();
   this.city.value = cityRaw.split(', ')[0];
@@ -89,17 +93,29 @@ Fields.prototype = {
     // add wrapper for the new fields
     var args = { city: self.city, dist: self.dist };
 
-    var template = Handlebars.compile($('#wcis-wrapper').html() );
+    var templateId = (self._isCartPage() ) ? '#wcis-wrapper-cart' : '#wcis-wrapper';
+
+    var template = Handlebars.compile($(templateId).html() );
     var html = template(args);
 
     // append template and hide the real city field
     $('#' + self.city.wrapper).append(html);
-    // $('#' + this.city.field).hide();
+    // $('#' + self.city.field).hide();
 
     // initiate the event handler
+    this.initCountry();
     this.initState();
     this.initCity();
     this.initDistrict();
+  },
+
+  initCountry: function() {
+    var self = this;
+
+    // if cart page, hide the country
+    if(self._isCartPage() ) {
+      $('#' + self.country.wrapper).hide();
+    }
   },
 
   /*
@@ -109,11 +125,24 @@ Fields.prototype = {
     var self = this;
     var $field = $('#' + self.state.field);
 
+    if(self._isCartPage() ) {
+      $field.select2();
+    }
+
     $field.off('change');
-    $field.on('change', function(e) {
+    $field.on('change', _onChange);
+
+    function _onChange(e) {
       console.log('state changed');
-      $('#' + self.city.newField).trigger('wcis-state-selected');
-    });
+
+      // prevent the first change to trigger (bug from WC where it triggers twice)
+      // TODO: if bug resolved, remove this
+      if(self._isCartPage() || self.state.changeCounter) {
+        $('#' + self.city.newField).trigger('wcis-state-selected');
+      }
+
+      self.state.changeCounter += 1;
+    }
   },
 
   /*
@@ -134,8 +163,8 @@ Fields.prototype = {
       $(this).empty();
 
       // also remove district
-      $(self.dist.newWrapper).hide();
-      $(self.dist.newField).empty();
+      $('#' + self.dist.newWrapper).hide();
+      $('#' + self.dist.newField).empty();
 
       api.getCities($('#' + self.state.field), _onGetCities);
     }
@@ -148,8 +177,9 @@ Fields.prototype = {
       var template = Handlebars.compile($('#wcis-city-option').html() );
       var html = template(args);
 
-      $field.append(html);
+      $field.append(html); //.select2();
 
+      // prepopulate
       if(self.city.value) {
         var optionTarget = 'option:contains("' + self.city.value + '")';
         $field.find(optionTarget).prop('selected', true).trigger('change');
@@ -171,6 +201,7 @@ Fields.prototype = {
   initDistrict: function() {
     var self = this;
     var $field = $('#' + self.dist.newField);
+    var $wrapper = $('#' + self.dist.newWrapper);
 
     $field.off('wcis-city-selected');
     $field.on('wcis-city-selected', _onCitySelected);
@@ -181,6 +212,8 @@ Fields.prototype = {
     function _onCitySelected(e) {
       // remove all options first
       $(this).empty();
+
+      $wrapper.show();
 
       api.getDistricts($('#' + self.city.newField), _onGetDistricts);
     }
@@ -193,23 +226,34 @@ Fields.prototype = {
       var template = Handlebars.compile($('#wcis-dist-option').html() );
       var html = template(args);
 
-      $field.append(html);
+      $field.append(html); // .select2();
+
+      // prepopulate
+      if(self.dist.value) {
+        var optionTarget = 'option:contains("' + self.dist.value + '")';
+        $field.find(optionTarget).prop('selected', true).trigger('change');
+      }
     }
 
     function _onChange(e) {
       // create the string for real city field
       self.dist.value = $(this).find('option:selected').text();
       $('#' + self.city.field).val(self.city.value + ', ' + self.dist.value);
+
+      // add ID to destination field
+      $('#' + self.destination).val($(this).val() );
     }
-
-  }
-};
-
-var checkout = {
-  init: function() {
-    var billingField = new Fields('billing');
-    billingField.init();
   },
+
+  /////
+
+  _isCartPage: function() {
+    return this.type === 'calc_shipping';
+  },
+
+  _isCheckoutPage: function() {
+    return this.type === 'shipping' || this.type === 'billing';
+  }
 };
 
 $(document).ready(start);

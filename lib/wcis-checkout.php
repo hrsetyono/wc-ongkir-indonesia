@@ -3,39 +3,46 @@
   Reorder Billing and Shipping filds in Checkout page
 */
 function wcis_checkout_fields($fields) {
-  // BILLING
-  $order = array(
-    'billing_first_name',
-    'billing_last_name',
-    'billing_email',
-    'billing_phone',
+  // Field Order
+  $forms = array(
+    'billing' => array(
+      '_first_name', '_last_name',
+      '_email', '_phone',
 
-    'billing_country',
-    'billing_state',
-    'billing_postcode',
-    'billing_city',
-    'billing_address_1',
-    'billing_address_2',
+      '_country',
+      '_state', '_postcode',
+      '_city',
+      '_address_1',
+      '_address_2',
+    ),
+
+    'shipping' => array(
+      '_first_name', '_last_name',
+      '_country',
+      '_state', '_postcode',
+      '_city',
+      '_address_1',
+      '_address_2'
+    )
   );
 
-  $ordered_fields = array();
-  foreach($order as $o) {
-    $ordered_fields[$o] = $fields['billing'][$o];
+  foreach($forms as $f => $order) {
+    $ordered_fields = array();
+    foreach($order as $o) {
+      $ordered_fields[$f . $o] = $fields[$f][$f . $o];
+    }
+
+    $fields[$f] = $ordered_fields;
+
+    // Add Destination ID necessary for RajaOngkir API
+    $fields[$f][$f . '_destination_id'] = array(
+      'label' => __('Destination ID', 'wcis'),
+      'placeholder' => __('Leave this empty', 'wcis'),
+      'required' => false,
+      'class' => array('form-row-wide'),
+      'clear' => true
+    );
   }
-
-  $fields['billing'] = $ordered_fields;
-
-  /*
-  $fields['billing']['billing_district'] = array(
-    'label' => __('District / Kecamatan', 'wcis'),
-    'placeholder' => __('District / Kecamatan', 'wcis'),
-    'required' => false,
-    'class' => array('form-row-wide'),
-    'clear' => true
-  );
-  */
-
-  // ORDER
 
   return $fields;
 }
