@@ -33,16 +33,53 @@ function wcis_checkout_fields($fields) {
     }
 
     $fields[$f] = $ordered_fields;
-
-    // Add Destination ID necessary for RajaOngkir API
-    $fields[$f][$f . '_destination_id'] = array(
-      'label' => __('Destination ID', 'wcis'),
-      'placeholder' => __('Leave this empty', 'wcis'),
-      'required' => false,
-      'class' => array('form-row-wide'),
-      'clear' => true
-    );
   }
 
   return $fields;
+}
+
+/*
+  Clean the User's city field from [id] notation used when calculating shipping cost. Only run when it's not Guest.
+
+  @param int $user_id - The customer that bought this
+  @param array $posted - The data posted
+*/
+function wcis_checkout_update_user_meta($user_id, $posted) {
+  $city = _wcis_clean_city_field($posted['billing_city']);
+  update_user_meta($user_id, 'billing_city', $city);
+
+  // if shipping city is passed on
+  if(isset($posted['shipping_city']) ) {
+    $city = _wcis_clean_city_field($posted['shipping_city']);
+  }
+  update_user_meta($user_id, 'shipping_city', $city);
+}
+
+/*
+  Clean the Order's city field from [id] notation used when calculating shipping cost.
+
+  @param int $order_id - The order that just created
+  @param array $posted - The data posted
+*/
+function wcis_checkout_update_order_meta($order_id, $posted) {
+  $city = _wcis_clean_city_field($posted['billing_city']);
+  update_post_meta($order_id, '_billing_city', $city);
+
+  // if shipping city is passed on
+  if(isset($posted['shipping_city']) ) {
+    $city = _wcis_clean_city_field($posted['shipping_city']);
+  }
+  update_post_meta($order_id, '_shipping_city', $city);
+}
+
+/*
+  Clean the city field. The raw formatt is "City name [id]". Remove the [id].
+
+  @param string $city_raw
+  @return string - City name without ID
+*/
+function _wcis_clean_city_field($city_raw) {
+  preg_match('/[\w\s,]+/', $city_raw, $city);
+
+  return trim($city[0]);
 }

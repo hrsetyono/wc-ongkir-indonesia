@@ -133,8 +133,7 @@ class WCIS_Method extends WC_Shipping_Method {
 	*/
 	function calculate_shipping($package) {
     $weight = $this->_calculate_weight($package);
-    var_dump($package['destination']);
-
+    
     // if district not exists or empty
     $id_exists = array_key_exists('destination_id', $package['destination']);
     if(!$id_exists || empty($package['destination']['destination_id']) ) {

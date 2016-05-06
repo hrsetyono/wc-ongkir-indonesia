@@ -6,24 +6,11 @@
 */
 function wcis_cart_calculator($packages) {
 
-  // if checkout page
-  if(isset($_POST['security']) ) {
-    parse_str($_POST['post_data'], $post_data);
-    $packages[0]['destination']['destination_id'] = $post_data['billing_destination_id'];
+  // look for district ID in city field
+  preg_match('/\[(\d+)\]/', $packages[0]['destination']['city'], $matches);
+  if(count($matches) ) {
+    $packages[0]['destination']['destination_id'] = $matches[1];
   }
-
-  // if cart page
-  if(isset($_POST['calc_shipping_wcis_d']) ) {
-    $packages[0]['destination']['destination_id'] = $_POST['calc_shipping_wcis_d'];
-  }
-
-  // var_dump($packages[0]['destination']);
-
-
-  error_log(print_r($packages[0]['destination'], true) );
-  // error_log(print_r($_POST, true) );
-
-  // $packages[0]['destination']['district_id'] = 5498;
 
   return $packages;
 }

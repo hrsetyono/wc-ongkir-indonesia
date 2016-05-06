@@ -2,14 +2,14 @@
 'use strict';
 
 function start() {
-  // if cart page
-  if($('.woocommerce-cart').length) {
+  // if cart page and has item
+  if($('.woocommerce-cart').length && $('.shop_table').length) {
     var calcField = new Fields('calc_shipping');
     calcField.init();
   }
 
-  // if checkout page
-  else if($('.woocommerce-checkout').length) {
+  // if checkout page but not Order Received page
+  else if($('.woocommerce-checkout:not(.woocommerce-order-received)').length) {
     var billingField = new Fields('billing');
     billingField.init();
 
@@ -80,10 +80,14 @@ function Fields(type, args) {
 
   this.destination = type + '_destination_id';
 
-  // parse the city value, the format is "City, District"
+  // parse the city value, the format is "City, District [code]"
   var cityRaw = $('#' + this.city.field).val();
-  this.city.value = cityRaw.split(', ')[0];
-  this.dist.value = cityRaw.split(', ')[1];
+
+  var cityValue = cityRaw.match(/[\w\s]+/);
+  this.city.value = cityValue ? cityValue[0] : null;
+
+  var distValue = cityRaw.match(/,\s([\w\s]+)\s*/)
+  this.dist.value = distValue ? distValue[1].trim() : null;
 };
 
 Fields.prototype = {
@@ -100,7 +104,7 @@ Fields.prototype = {
 
     // append template and hide the real city field
     $('#' + self.city.wrapper).append(html);
-    // $('#' + self.city.field).hide();
+    $('#' + self.city.field).hide();
 
     // initiate the event handler
     this.initCountry();
@@ -133,7 +137,7 @@ Fields.prototype = {
     $field.on('change', _onChange);
 
     function _onChange(e) {
-      console.log('state changed');
+      // console.log('state changed');
 
       // prevent the first change to trigger (bug from WC where it triggers twice)
       // TODO: if bug resolved, remove this
@@ -170,14 +174,14 @@ Fields.prototype = {
     }
 
     function _onGetCities(response) {
-      console.log('get city');
+      // console.log('get city');
       var args = JSON.parse(response);
 
       // insert template
       var template = Handlebars.compile($('#wcis-city-option').html() );
       var html = template(args);
 
-      $field.append(html); //.select2();
+      $field.append(html).select2();
 
       // prepopulate
       if(self.city.value) {
@@ -189,9 +193,9 @@ Fields.prototype = {
     function _onChange(e) {
       $('#' + self.dist.newField).trigger('wcis-city-selected');
 
-      // add the string for real city field
+      // empty out the city field and store it in variable
+      $('#' + self.city.field).val('');
       self.city.value = $(this).find('option:selected').text();
-      $('#' + self.city.field).val(self.city.value);
     }
   },
 
@@ -212,21 +216,20 @@ Fields.prototype = {
     function _onCitySelected(e) {
       // remove all options first
       $(this).empty();
-
       $wrapper.show();
 
       api.getDistricts($('#' + self.city.newField), _onGetDistricts);
     }
 
     function _onGetDistricts(response) {
-      console.log('get district');
+      // console.log('get district');
       var args = JSON.parse(response);
 
       // insert template
       var template = Handlebars.compile($('#wcis-dist-option').html() );
       var html = template(args);
 
-      $field.append(html); // .select2();
+      $field.append(html).select2();
 
       // prepopulate
       if(self.dist.value) {
@@ -238,10 +241,8 @@ Fields.prototype = {
     function _onChange(e) {
       // create the string for real city field
       self.dist.value = $(this).find('option:selected').text();
-      $('#' + self.city.field).val(self.city.value + ', ' + self.dist.value);
-
-      // add ID to destination field
-      $('#' + self.destination).val($(this).val() );
+      var destinationId = ' [' + $(this).val() + ']';
+      $('#' + self.city.field).val(self.city.value + ', ' + self.dist.value + destinationId);
     }
   },
 
