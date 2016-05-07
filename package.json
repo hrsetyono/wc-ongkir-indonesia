@@ -3,7 +3,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hrsetyono/wc-indo-shipping.git"
+    "url": "git+https://github.com/hrsetyono/woocommerce-indo-shipping.git"
   },
   "dependencies": {},
   "scripts": {

@@ -21,26 +21,24 @@ require_once 'lib/all.php';
 $wcis_settings = get_option('woocommerce_wcis_settings');
 if(array_key_exists('enabled', $wcis_settings) && $wcis_settings['enabled'] === 'yes') {
   // AJAX.php
-  add_action('wp_ajax_wcis_get_cities', 'wcis_ajax_get_cities');
-  add_action('wp_ajax_nopriv_wcis_get_cities', 'wcis_ajax_get_cities');
+  add_action('wp_ajax_wcis_get_cities', array('WCIS_Ajax', 'get_cities') );
+  add_action('wp_ajax_nopriv_wcis_get_cities', array('WCIS_Ajax', 'get_cities') );
 
-
-  add_action('wp_ajax_wcis_get_districts', 'wcis_ajax_get_districts');
-  add_action('wp_ajax_nopriv_wcis_get_districts', 'wcis_ajax_get_districts');
+  add_action('wp_ajax_wcis_get_districts', array('WCIS_Ajax', 'get_districts') );
+  add_action('wp_ajax_nopriv_wcis_get_districts', array('WCIS_Ajax', 'get_districts') );
 
   // CHECKOUT.php
-  add_filter('woocommerce_checkout_fields', 'wcis_checkout_fields');
+  add_filter('woocommerce_checkout_fields', array('WCIS_Checkout', 'reorder_fields') );
+  add_action('woocommerce_checkout_update_user_meta', array('WCIS_Checkout', 'update_user_meta'), 99, 2);
+  add_action('woocommerce_checkout_update_order_meta', array('WCIS_Checkout', 'update_order_meta'), 99, 2);
 
-  add_action('woocommerce_checkout_update_user_meta', 'wcis_checkout_update_user_meta', 99, 2);
-  add_action('woocommerce_checkout_update_order_meta', 'wcis_checkout_update_order_meta', 99, 2);
+  add_filter('woocommerce_cart_shipping_packages', array('WCIS_Checkout', 'parse_shipping_package') );
 
   // TEMPLATE.php
-  add_action('wp_footer', 'wcis_handlebars_template');
-
-  // CALCULATOR.php
   add_action('wp_enqueue_scripts', 'wcis_enqueue_scripts', 999);
-  add_filter('woocommerce_cart_shipping_packages', 'wcis_cart_calculator');
+  add_action('wp_footer', 'wcis_field_template');
 
+  //
   add_filter('woocommerce_shipping_calculator_enable_city', '__return_true');
   add_filter('woocommerce_shipping_calculator_enable_postcode', '__return_false');
 }
@@ -54,7 +52,7 @@ add_filter('woocommerce_shipping_methods', 'wcis_add_method');
   Initiate WC Shipping
 */
 function wcis_init() {
-  require_once('lib/shipping.php');
+  require_once('lib/wcis-main.php');
 }
 
 /*

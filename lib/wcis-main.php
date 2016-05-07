@@ -48,13 +48,11 @@ class WCIS_Method extends WC_Shipping_Method {
 
     $fields = array();
 
-    // only show if Key has been filled AND valid
-    $key_exists = array_key_exists('key', $this->settings);
+    $key_exists = isset($this->settings['key']);
     $key_valid = $this->api->is_valid();
-    if($key_exists && $key_valid) {
 
-      $cities = $this->_get_cities();
-      $couriers = $this->_get_couriers();
+    // only show if Key has been filled AND valid
+    if($key_exists && $key_valid) {
 
       $enabled_field = array(
         'title' => __('Enable/Disable', 'wcis'),
@@ -68,7 +66,7 @@ class WCIS_Method extends WC_Shipping_Method {
         'type' => 'select',
         'class'    => 'wc-enhanced-select',
         'description' => __('Your shop\'s base city. Change your province at General > Base Location', 'wcis'),
-        'options' => $cities
+        'options' => $this->_get_cities()
       );
 
       $couriers_field = array(
@@ -76,7 +74,7 @@ class WCIS_Method extends WC_Shipping_Method {
         'type' => 'multiselect',
         'class' => 'wc-enhanced-select',
         'description' => __('Choose the couriers you want to use. You can select multiple.', 'wcis'),
-        'options' => $couriers
+        'options' => WCIS_Data::get_couriers()
       );
 
       $key_success = __('API Connected!', 'wcis');
@@ -90,15 +88,15 @@ class WCIS_Method extends WC_Shipping_Method {
       );
 
       // if couriers already chosen
-      if(array_key_exists('couriers', $this->settings) ) {
+      if(isset($this->settings['couriers']) ) {
         foreach($this->settings['couriers'] as $c) {
           $title = strtoupper($c);
 
           // get services
-          $services_raw = $this->_get_services($c);
+          $services_raw = WCIS_Data::get_services($c);
           $services = array();
           foreach($services_raw as $key => $s) {
-            $services[$key] = $s['title'];
+            $services[$key] = isset($s['title']) ? $s['title'] : $s;
           }
 
           $service_field = array(
@@ -113,13 +111,13 @@ class WCIS_Method extends WC_Shipping_Method {
         }
       }
     }
-    // if api key is invalid
+    // if key has been fileld BUT invalid
     elseif($key_exists && !$key_valid) {
       $key_error = __('Invalid API Key. Is there empty space behind it?', 'wcis');
       $key_field['description'] = '<span style="color:#f44336;">' . $key_error . '</span>';
       $fields = array('key' => $key_field);
     }
-    // if api key empty
+    // if key is empty
     else {
       $fields = array('key' => $key_field);
     }
@@ -132,13 +130,43 @@ class WCIS_Method extends WC_Shipping_Method {
 	  @param mixed $package
 	*/
 	function calculate_shipping($package) {
-    $weight = $this->_calculate_weight($package);
-    
     // if district not exists or empty
     $id_exists = array_key_exists('destination_id', $package['destination']);
     if(!$id_exists || empty($package['destination']['destination_id']) ) {
       return false;
     }
+
+    $couriers_cost = $this->_get_costs($package);
+    $this->_set_rate($couriers_cost);
+	}
+
+  /////
+
+  /*
+    Get cities from API
+    @return array - List of cities in base province
+  */
+  private function _get_cities() {
+    $location = wc_get_base_location();
+    $province_id = WCIS_Data::get_province_id($location['state']);
+
+    $cities_raw = $this->api->get_cities($province_id);
+    $cities = array();
+    foreach($cities_raw as $c) {
+      $cities[$c['city_id']] = $c['city_name'];
+    }
+
+    return $cities;
+  }
+
+  /*
+    Get the costs from selected Couriers.
+
+    @param array $package - The shipping detail
+    @return array - List of cost grouped for each courier
+  */
+  private function _get_costs($package) {
+    $weight = $this->_calculate_weight($package);
 
     // form the args accepted by rajaongkir
     $args = array();
@@ -153,26 +181,45 @@ class WCIS_Method extends WC_Shipping_Method {
       );
     }
 
-    // get list of costs
-    $costs = array();
+    // get list of couriers and its cost
+    $couriers = array();
     foreach($args as $a) {
-      $costs[] = $this->api->get_costs($a);
+      $couriers[] = $this->api->get_costs($a);
     }
 
+    return $couriers;
+  }
+
+  /*
+    Set the Rate based on Cost list from API
+
+    @param array $couriers_cost - Cost list from API
+  */
+  private function _set_rate($couriers_cost) {
     // format the costs from API to WooCommerce
-    foreach($costs as $courier):
+    foreach($couriers_cost as $courier):
+
+      // get full list of services
+      $code = $courier[0]['code'];
+      $all_services = WCIS_Data::get_services($code);
+
+      // get allowed service from this courier
+      $setting_id = $code . '_services';
+      $allowed_services = isset($this->settings[$setting_id]) ? $this->settings[$setting_id] : array();
+
       foreach($courier[0]['costs'] as $service):
 
-        $code = $courier[0]['code'];
-
-        // if included in allowed service
-        $setting_id = $code . '_services';
-        $all_services = $this->_get_services($code);
-        $allowed_services = (array_key_exists($setting_id, $this->settings) ) ? $this->settings[$setting_id] : array();
-
+        // check if this service is allowed
         $is_allowed = false;
-        foreach($allowed_services as $s) {
-          $is_allowed = in_array($service['service'], $all_services[$s]['vars'] );
+        foreach($allowed_services as $as) {
+          // if has variation
+          if(isset($all_services[$as]['vars']) ) {
+            $is_allowed = in_array($service['service'], $all_services[$as]['vars'] );
+          }
+          else {
+            $is_allowed = $service['service'] === $as;
+          }
+
           if($is_allowed) { break; }
         }
 
@@ -188,10 +235,13 @@ class WCIS_Method extends WC_Shipping_Method {
         }
       endforeach;
     endforeach;
-	}
+  }
 
-  /////
+  /*
+    Calculate the weight of items in cart. If all items has no weight specified, it will return 1.
 
+    @return int - THe weight in the unit specified in admin.
+  */
   private function _calculate_weight($package) {
     global $woocommerce;
 
@@ -201,106 +251,4 @@ class WCIS_Method extends WC_Shipping_Method {
     else { return 1; }
   }
 
-  /*
-    Get cities from API
-    @return array - List of cities in base province
-  */
-  private function _get_cities() {
-    $location = wc_get_base_location();
-    $province_id = WCIS_Provinces::get_id($location['state']);
-
-    $cities_raw = $this->api->get_cities($province_id);
-    $cities = array();
-    foreach($cities_raw as $c) {
-      $cities[$c['city_id']] = $c['city_name'];
-    }
-
-    return $cities;
-  }
-
-  /*
-    Convert City name to Id
-
-    @param string $city_name
-    @return int - The ID of the city, 0 if not found.
-  */
-  private function _get_city_id($province_code, $city_name) {
-
-    $province_id = WCIS_Provinces::get_id($province_code);
-    $cities = $this->api->get_cities($province_id);
-
-    foreach($cities as $c) {
-      if($c['city_name'] === $city_name) {
-        return $c['city_id'];
-      }
-    }
-
-    return 0;
-  }
-
-  // get form fields
-  private function _get_form_fields() {
-
-  }
-
-  // get couriers list
-  private function _get_couriers() {
-    return array(
-      'jne' => 'JNE',
-      'tiki' => 'TIKI',
-      'pos' => 'POS Indonesia'
-    );
-  }
-
-  /*
-    Get courier services list
-
-    @param string $courier - The lowercased name of the courier
-    @return array - The list of services provided by this courier and its variation
-  */
-  private function _get_services($courier) {
-    switch($courier) {
-      case 'jne':
-        return array(
-          'OKE' => array(
-            'title' => 'OKE - Ongkos Kirim Ekonomis',
-            'vars' => array('OKE', 'CTCOKE')
-          ),
-          'REG' => array(
-            'title' => 'REG - Layanan Reguler',
-            'vars' => array('REG', 'CTC')
-          ),
-          'YES' => array(
-            'title' => 'YES - Yakin Esok Sampai',
-            'vars' => array('YES', 'CTCYES')
-          ),
-          'JTR' => array(
-            'title' => 'JTR - JNE Trucking',
-            'vars' => array('JTR', 'JTR<150', 'JTR250', 'JTR>250')
-          ),
-          'SPS' => array(
-            'title' => 'SPS - Super Speed',
-            'vars' => array('SPS')
-          ),
-        );
-        break;
-
-      case 'tiki':
-        return array(
-          'ECO' => array('title' => 'ECO - Economi Service', 'vars' => array('ECO') ),
-          'REG' => array('title' => 'REG - Reguler Service', 'vars' => array('REG') ),
-          'ONS' => array('title' => 'ONS - Over Night Service', 'vars' => array('ONS') ),
-          'HDS' => array('title' => 'HDS - Holiday Delivery Service', 'vars' => array('HDS') ),
-          'SDS' => array('title' => 'SDS - Same Day Service', 'vars' => array('SDS') )
-        );
-        break;
-
-      case 'pos':
-        return array(
-          'Surat Kilat Khusus' => array('title' => 'Surat Kilat Khusus', 'vars' => array('Surat Kilat Khusus') ),
-          'Express Next Day' => array('title' => 'Express Next Day', 'vars' => array('Express Next Day') )
-        );
-        break;
-    }
-  }
 }
