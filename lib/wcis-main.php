@@ -21,12 +21,13 @@ class WCIS_Method extends WC_Shipping_Method {
 	function init() {
     $this->init_settings();
 
-    // initiate API if key exists
-    if(array_key_exists('enabled', $this->settings) ) {
+    // enable / disable the shipping method
+    if(isset($this->settings['enabled']) ) {
       $this->enabled = $this->settings['enabled'];
     }
 
-    if(array_key_exists('key', $this->settings) ) {
+    // initiate API if key exists
+    if(isset($this->settings['key']) ) {
       $this->api = new WCIS_API($this->settings['key']);
     }
 
@@ -43,81 +44,80 @@ class WCIS_Method extends WC_Shipping_Method {
     $key_field = array(
       'title' => __('API Key', 'wcis'),
       'type' => 'text',
-      'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Starter license (Free). Paste the API Key here', 'wcis'),
+      'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here', 'wcis'),
     );
 
     $fields = array();
 
     $key_exists = isset($this->settings['key']);
-    $key_valid = $this->api->is_valid();
+    if($key_exists) {
+      // if api key is valid
+      if($this->api->is_valid() ) {
+        $enabled_field = array(
+          'title' => __('Enable/Disable', 'wcis'),
+          'type' => 'checkbox',
+          'label' => __('Enable Indo Shipping', 'wcis'),
+          'default' => 'yes'
+        );
 
-    // only show if Key has been filled AND valid
-    if($key_exists && $key_valid) {
+        $city_field = array(
+          'title' => __('City Origin', 'wcis'),
+          'type' => 'select',
+          'class'    => 'wc-enhanced-select',
+          'description' => __('Your shop\'s base city. Change your province at General > Base Location', 'wcis'),
+          'options' => $this->_get_cities()
+        );
 
-      $enabled_field = array(
-        'title' => __('Enable/Disable', 'wcis'),
-        'type' => 'checkbox',
-        'label' => __('Enable Indo Shipping', 'wcis'),
-        'default' => 'yes'
-      );
+        $couriers_field = array(
+          'title' => __('Couriers', 'wcis'),
+          'type' => 'multiselect',
+          'class' => 'wc-enhanced-select',
+          'description' => __('Choose the couriers you want to use. You can select multiple.', 'wcis'),
+          'options' => WCIS_Data::get_couriers()
+        );
 
-      $city_field = array(
-        'title' => __('City Origin', 'wcis'),
-        'type' => 'select',
-        'class'    => 'wc-enhanced-select',
-        'description' => __('Your shop\'s base city. Change your province at General > Base Location', 'wcis'),
-        'options' => $this->_get_cities()
-      );
+        $key_success = __('API Connected!', 'wcis');
+        $key_field['description'] = '<span style="color: #4caf50;">' . $key_success . '</span>';
 
-      $couriers_field = array(
-        'title' => __('Couriers', 'wcis'),
-        'type' => 'multiselect',
-        'class' => 'wc-enhanced-select',
-        'description' => __('Choose the couriers you want to use. You can select multiple.', 'wcis'),
-        'options' => WCIS_Data::get_couriers()
-      );
+        $fields = array(
+          'enabled' => $enabled_field,
+          'key' => $key_field,
+          'city' => $city_field,
+          'couriers' => $couriers_field
+        );
 
-      $key_success = __('API Connected!', 'wcis');
-      $key_field['description'] = '<span style="color: #4caf50;">' . $key_success . '</span>';
+        // if couriers already chosen
+        if(isset($this->settings['couriers']) ) {
+          foreach($this->settings['couriers'] as $c) {
+            $title = strtoupper($c);
 
-      $fields = array(
-        'enabled' => $enabled_field,
-        'key' => $key_field,
-        'city' => $city_field,
-        'couriers' => $couriers_field
-      );
+            // get services
+            $services_raw = WCIS_Data::get_services($c);
+            $services = array();
+            foreach($services_raw as $key => $s) {
+              $services[$key] = isset($s['title']) ? $s['title'] : $s;
+            }
 
-      // if couriers already chosen
-      if(isset($this->settings['couriers']) ) {
-        foreach($this->settings['couriers'] as $c) {
-          $title = strtoupper($c);
+            $service_field = array(
+              'title' => $title . ' Services',
+              'type' => 'multiselect',
+              'class' => 'wc-enhanced-select',
+              'description' => __("Choose the allowed services by {$title}", 'wcis'),
+              'options' => $services
+            );
 
-          // get services
-          $services_raw = WCIS_Data::get_services($c);
-          $services = array();
-          foreach($services_raw as $key => $s) {
-            $services[$key] = isset($s['title']) ? $s['title'] : $s;
+            $fields[$c . '_services'] = $service_field;
           }
-
-          $service_field = array(
-            'title' => $title . ' Services',
-            'type' => 'multiselect',
-            'class' => 'wc-enhanced-select',
-            'description' => __("Choose the allowed services by {$title}", 'wcis'),
-            'options' => $services
-          );
-
-          $fields[$c . '_services'] = $service_field;
         }
       }
+      // if api key not valid
+      else {
+        $key_error = __('Invalid API Key. Is there empty space behind it?', 'wcis');
+        $key_field['description'] = '<span style="color:#f44336;">' . $key_error . '</span>';
+        $fields = array('key' => $key_field);
+      }
     }
-    // if key has been fileld BUT invalid
-    elseif($key_exists && !$key_valid) {
-      $key_error = __('Invalid API Key. Is there empty space behind it?', 'wcis');
-      $key_field['description'] = '<span style="color:#f44336;">' . $key_error . '</span>';
-      $fields = array('key' => $key_field);
-    }
-    // if key is empty
+    // if key doesn't exist
     else {
       $fields = array('key' => $key_field);
     }
@@ -151,7 +151,7 @@ class WCIS_Method extends WC_Shipping_Method {
     $province_id = WCIS_Data::get_province_id($location['state']);
 
     $cities_raw = $this->api->get_cities($province_id);
-    $cities = array();
+    $cities = array('' => 'Choose your City');
     foreach($cities_raw as $c) {
       $cities[$c['city_id']] = $c['city_name'];
     }

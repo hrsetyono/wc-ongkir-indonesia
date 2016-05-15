@@ -19,7 +19,9 @@ require_once 'lib/all.php';
 
 // if enabled
 $wcis_settings = get_option('woocommerce_wcis_settings');
-if(array_key_exists('enabled', $wcis_settings) && $wcis_settings['enabled'] === 'yes') {
+$wcis_enabled = isset($wcis_settings['enabled']) ? $wcis_settings['enabled'] : 'no';
+
+if($wcis_enabled === 'yes') {
   // AJAX.php
   add_action('wp_ajax_wcis_get_cities', array('WCIS_Ajax', 'get_cities') );
   add_action('wp_ajax_nopriv_wcis_get_cities', array('WCIS_Ajax', 'get_cities') );
