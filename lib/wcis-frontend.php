@@ -1,91 +1,99 @@
 <?php
 
-/*
-  Register JavaScript that handles "Calculate Shipping" feature
-  Also handles the additional form at Checkout page.
-*/
-function wcis_enqueue_scripts($hook) {
-  // for cart and checkout only
-  if(is_cart() || is_checkout() ) {
-    // custom script
-    wp_register_style('wcis_style', WCIS_PLUGIN_DIR . '/assets/css/style.css');
-    wp_register_script('wcis_script', WCIS_PLUGIN_DIR . '/assets/js/script.js');
+class WCIS_Frontend {
 
-    wp_enqueue_script('wcis_script');
-    wp_enqueue_style('wcis_style');
-
-    // handlebars
-    wp_register_script('wcis_handlebars', WCIS_PLUGIN_DIR . '/assets/js/handlebars.js');
-    wp_enqueue_script('wcis_handlebars');
-
-    // select2 from woocommerce
-    $WC_DIR = str_replace(array('http:', 'https:'), '', WC()->plugin_url() );
-
-    wp_register_script('select2', $WC_DIR . '/assets/js/select2/select2.min.js');
-    wp_register_style('select2', $WC_DIR . '/assets/css/select2.css');
-
-    wp_enqueue_script('select2');
-    wp_enqueue_style('select2');
+  function __construct() {
+    add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'), 999);
+    add_action('wp_footer', array($this, 'field_template') );
   }
-}
 
+  /*
+    Register JavaScript that handles "Calculate Shipping" feature
+    Also handles the additional form at Checkout page.
+  */
+  function enqueue_scripts($hook) {
+    // for cart and checkout only
+    if(is_cart() || is_checkout() ) {
+      // select2 from woocommerce
+      $WC_DIR = str_replace(array('http:', 'https:'), '', WC()->plugin_url() );
 
-/*
-  Add Template for Select dropdown
-*/
+      wp_register_script('select2', $WC_DIR . '/assets/js/select2/select2.min.js');
+      wp_register_style('select2', $WC_DIR . '/assets/css/select2.css');
 
-function wcis_field_template() {
-  ?>
+      wp_enqueue_script('select2');
+      wp_enqueue_style('select2');
 
-  <!-- Wrapper for Cart -->
-  <script id="wcis-wrapper-cart" type="text/x-handlebars-template">
+      // custom script
+      wp_register_style('wcis_style', WCIS_PLUGIN_DIR . '/assets/css/style.css');
+      wp_register_script('wcis_script', WCIS_PLUGIN_DIR . '/assets/js/script.js');
 
-    <p class="form-row form-row-wide" id="{{ city.newWrapper }}">
-      <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
-    </p>
+      wp_enqueue_script('wcis_script');
+      wp_enqueue_style('wcis_style');
 
-    <p class="form-row form-row-wide" id="{{ dist.newWrapper }}">
-      <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
-    </p>
+      // handlebars
+      wp_register_script('wcis_handlebars', WCIS_PLUGIN_DIR . '/assets/js/handlebars.js');
+      wp_enqueue_script('wcis_handlebars');
+    }
+  }
 
-  </script>
+  /*
+    Add Template for Select dropdown
+  */
 
-  <!-- Wrapper for Checkout -->
-  <script id="wcis-wrapper" type="text/x-handlebars-template">
+  function field_template() {
+    ?>
 
-    <p class="form-row form-row-first" id="{{ city.newWrapper }}">
-      <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
-    </p>
+    <!-- Wrapper for Cart -->
+    <script id="wcis-wrapper-cart" type="text/x-handlebars-template">
 
-    <p class="form-row form-row-last" id="{{ dist.newWrapper }}">
-      <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
-    </p>
+      <p class="form-row form-row-wide" id="{{ city.newWrapper }}">
+        <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
+      </p>
 
-  </script>
+      <p class="form-row form-row-wide" id="{{ dist.newWrapper }}">
+        <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
+      </p>
 
-  <!-- City Select -->
-  <script id="wcis-city-option" type="text/x-handlebars-template">
+    </script>
 
-    <option></option>
-    {{#each this }}
-      <option value="{{ city_id }}">{{ city_name }}</option>
-    {{/each }}
+    <!-- Wrapper for Checkout -->
+    <script id="wcis-wrapper" type="text/x-handlebars-template">
 
-  </script>
+      <p class="form-row form-row-first" id="{{ city.newWrapper }}">
+        <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
+      </p>
 
-  <!-- District Select -->
-  <script id="wcis-dist-option" type="text/x-handlebars-template">
+      <p class="form-row form-row-last" id="{{ dist.newWrapper }}">
+        <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
+      </p>
 
-    <option></option>
-    {{#each this }}
-      <option value="{{ subdistrict_id }}">{{ subdistrict_name }}</option>
-    {{/each }}
+    </script>
 
-  </script>
+    <!-- City Select -->
+    <script id="wcis-city-option" type="text/x-handlebars-template">
 
-  <script>
-    var wcis_post = <?php echo json_encode($_POST); ?>;
-  </script>
+      <option></option>
+      {{#each this }}
+        <option value="{{ city_id }}">{{ city_name }}</option>
+      {{/each }}
 
-  <?php
+    </script>
+
+    <!-- District Select -->
+    <script id="wcis-dist-option" type="text/x-handlebars-template">
+
+      <option></option>
+      {{#each this }}
+        <option value="{{ subdistrict_id }}">{{ subdistrict_name }}</option>
+      {{/each }}
+
+    </script>
+
+    <script>
+      var wcis_post = <?php echo json_encode($_POST); ?>;
+    </script>
+
+    <?php
+  }
+
 }

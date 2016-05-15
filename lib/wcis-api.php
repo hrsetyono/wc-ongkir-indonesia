@@ -43,14 +43,13 @@ class WCIS_API {
     if($response['status']['code'] === 200) {
       $cities = $response['results'];
 
-      // if Semarang, differentiate Kota and Kabupaten
-      if($prov_id == 10) {
-        $cities = array_map(function($c) {
-          if($c['city_name'] === 'Semarang') {
-            $c['city_name'] = $c['type'] . ' ' . $c['city_name'];
-          }
-          return $c;
-        }, $cities);
+      switch($prov_id) {
+        case 9:
+          $cities = $this->diff_city_name($cities, 'Bandung');
+          break;
+        case 10:
+           $cities = $this->diff_city_name($cities, 'Semarang');
+           break;
       }
 
       return $cities;
@@ -61,12 +60,29 @@ class WCIS_API {
 
   /*
     Get all districts in the city
+
+    @param int $city_id
+    @param array $couriers - Selected couriers
   */
-  function get_districts($city_id) {
+  function get_districts($city_id, $couriers) {
     $response = $this->call(self::DISTRICT_URL . $city_id);
 
     if($response['status']['code'] === 200) {
-      return $response['results'];
+      $results = $response['results'];
+
+      // if only courier is JNE, Filter the district that isn't available in JNE
+      // if(count($couriers) === 1 && $couriers[0] === 'jne') {
+      //   $exception = WCIS_Data::get_jne_district_exc($city_id);
+      //
+      //   if($exception) {
+      //     $results = array_filter($results, function($r) {
+      //       $dist_id = (int) $r['subdistrict_id'];
+      //       return !in_array($dist_id, $exception);
+      //     });
+      //   }
+      // }
+
+      return $results;
     } else {
       return $response;
     }
@@ -104,9 +120,9 @@ class WCIS_API {
     $curl_options = array(
       CURLOPT_URL => $this->api_base . $endpoint,
       CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_ENCODING => "",
+      CURLOPT_ENCODING => '',
       CURLOPT_MAXREDIRS => 10,
-      CURLOPT_TIMEOUT => 30,
+      CURLOPT_TIMEOUT => 10,
       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
       CURLOPT_CUSTOMREQUEST => 'GET',
       CURLOPT_HTTPHEADER => array(
@@ -128,4 +144,19 @@ class WCIS_API {
 
     return $response;
   }
+
+  /*
+    If there's City and District with the same name
+  */
+  private function diff_city_name($cities, $city_name) {
+    $cities = array_map(function($c) use ($city_name) {
+      if($c['city_name'] === $city_name) {
+        $c['city_name'] = $c['type'] . ' ' . $c['city_name'];
+      }
+      return $c;
+    }, $cities);
+
+    return $cities;
+  }
+
 }

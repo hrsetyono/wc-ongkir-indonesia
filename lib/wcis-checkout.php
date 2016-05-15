@@ -1,13 +1,22 @@
 <?php
 
 class WCIS_Checkout {
+
+  function __construct() {
+    add_filter('woocommerce_checkout_fields', array($this, 'reorder_fields') );
+    add_action('woocommerce_checkout_update_user_meta', array($this, 'update_user_meta'), 99, 2);
+    add_action('woocommerce_checkout_update_order_meta', array($this, 'update_order_meta'), 99, 2);
+
+    add_filter('woocommerce_cart_shipping_packages', array($this, 'parse_shipping_package') );
+  }
+
   /*
     Reorder Billing and Shipping filds in Checkout page.
 
     @param array $fields - The current list of fields
     @return array - The ordered list of fields
   */
-  static function reorder_fields($fields) {
+  function reorder_fields($fields) {
     // the order
     $forms = array(
       'billing' => array(
@@ -50,13 +59,13 @@ class WCIS_Checkout {
     @param int $user_id - The customer that bought this
     @param array $posted - The data posted
   */
-  static function update_user_meta($user_id, $posted) {
-    $city = self::_clean_city_field($posted['billing_city']);
+  function update_user_meta($user_id, $posted) {
+    $city = $this->_clean_city_field($posted['billing_city']);
     update_user_meta($user_id, 'billing_city', $city);
 
     // if shipping city is passed on
     if(isset($posted['shipping_city']) ) {
-      $city = self::_clean_city_field($posted['shipping_city']);
+      $city = $this->_clean_city_field($posted['shipping_city']);
     }
     update_user_meta($user_id, 'shipping_city', $city);
   }
@@ -67,13 +76,13 @@ class WCIS_Checkout {
     @param int $order_id - The order that just created
     @param array $posted - The data posted
   */
-  static function update_order_meta($order_id, $posted) {
-    $city = self::_clean_city_field($posted['billing_city']);
+  function update_order_meta($order_id, $posted) {
+    $city = $this->_clean_city_field($posted['billing_city']);
     update_post_meta($order_id, '_billing_city', $city);
 
     // if shipping city is passed on
     if(isset($posted['shipping_city']) ) {
-      $city = self::_clean_city_field($posted['shipping_city']);
+      $city = $this->_clean_city_field($posted['shipping_city']);
     }
     update_post_meta($order_id, '_shipping_city', $city);
   }
@@ -84,7 +93,7 @@ class WCIS_Checkout {
 
     @param mixed $packages - Cart parameters with products and destination data
   */
-  static function parse_shipping_package($packages) {
+  function parse_shipping_package($packages) {
     // look for district ID in city field
     preg_match('/\[(\d+)\]/', $packages[0]['destination']['city'], $matches);
     if(count($matches) ) {
@@ -102,7 +111,7 @@ class WCIS_Checkout {
     @param string $city_raw
     @return string - City name without ID
   */
-  private static function _clean_city_field($city_raw) {
+  private function _clean_city_field($city_raw) {
     preg_match('/[\w\s,]+/', $city_raw, $city);
 
     return trim($city[0]);

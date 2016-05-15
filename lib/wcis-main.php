@@ -151,7 +151,7 @@ class WCIS_Method extends WC_Shipping_Method {
     $province_id = WCIS_Data::get_province_id($location['state']);
 
     $cities_raw = $this->api->get_cities($province_id);
-    $cities = array('' => 'Choose your City');
+    $cities = array();
     foreach($cities_raw as $c) {
       $cities[$c['city_id']] = $c['city_name'];
     }
@@ -198,6 +198,8 @@ class WCIS_Method extends WC_Shipping_Method {
   private function _set_rate($couriers_cost) {
     // format the costs from API to WooCommerce
     foreach($couriers_cost as $courier):
+
+      if(empty($courier) ) { break; }
 
       // get full list of services
       $code = $courier[0]['code'];
@@ -247,8 +249,15 @@ class WCIS_Method extends WC_Shipping_Method {
 
     $weight = $woocommerce->cart->cart_contents_weight;
 
-    if($weight > 0) { return $weight; }
-    else { return 1; }
+    if($weight > 0) {
+      return $weight;
+    }
+    // if no weight data, return default weight or 1kg
+    else {
+      $weight = (int) ceil(apply_filters('wcis_default_weight', $package) );
+
+      return (is_int($weight) && $weight > 0 ) ? $weight : 1;
+    }
   }
 
 }

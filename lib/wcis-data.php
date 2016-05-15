@@ -10,8 +10,7 @@ class WCIS_Data {
     @return int - the province's ID
   */
   static function get_province_id($code) {
-    $provinces = self::$PROVINCES; // dereference for php < 5.3
-    $id = array_key_exists($code, $provinces) ? $provinces[$code] : 0;
+    $id = array_key_exists($code, self::PROVINCES) ? self::PROVINCES[$code] : 0;
     return $id;
   }
 
@@ -21,7 +20,7 @@ class WCIS_Data {
     @return array - List of couriers in (slug => name) format.
   */
   static function get_couriers() {
-    return self::$COURIERS;
+    return self::COURIERS;
   }
 
   /*
@@ -31,13 +30,19 @@ class WCIS_Data {
     @return array - The services this courier provided
   */
   static function get_services($courier) {
-    $services = self::$SERVICES;
-    return array_key_exists($courier, $services) ? $services[$courier] : array();
+    return array_key_exists($courier, self::SERVICES) ? self::SERVICES[$courier] : array();
+  }
+
+  /*
+    Get the district that isn't in JNE
+  */
+  static function get_jne_district_exc($city_id) {
+    return array_key_exists($city_id, self::JNE_DISTRICT_EXC) ? self::JNE_DISTRICT_EXC[$city_id] : null;
   }
 
   /////
 
-  static $PROVINCES = array(
+  const PROVINCES = array(
     'AC' => 21, 'SU' => 34,
     'SB' => 32, 'RI' => 26,
     'KR' => 17, 'JA' => 8,
@@ -70,13 +75,13 @@ class WCIS_Data {
     'PA' => 24, 'PB' => 25,
   );
 
-  static $COURIERS = array(
+  const COURIERS = array(
     'jne' => 'JNE',
     'tiki' => 'TIKI',
     'pos' => 'POS Indonesia'
   );
 
-  static $SERVICES = array(
+  const SERVICES = array(
     'jne' => array(
       'OKE' => array(
         'title' => 'OKE - Ongkos Kirim Ekonomis',
@@ -112,5 +117,11 @@ class WCIS_Data {
       'Surat Kilat Khusus' => 'Surat Kilat Khusus',
       'Express Next Day' => 'Express Next Day'
     )
+  );
+
+  const JNE_DISTRICT_EXC = array(
+    '63' => array(
+      '842' // bunga mas
+    ),
   );
 }

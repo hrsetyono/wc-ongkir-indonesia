@@ -103,7 +103,7 @@ Fields.prototype = {
     var html = template(args);
 
     // append template and hide the real city field
-    $('#' + self.city.wrapper).append(html);
+    $('#' + self.city.wrapper).append(html).addClass('hide');
     $('#' + self.city.field).hide();
 
     // initiate the event handler
@@ -137,7 +137,7 @@ Fields.prototype = {
     $field.on('change', _onChange);
 
     function _onChange(e) {
-      // console.log('state changed');
+      $('#' + self.city.field).val('').change();
 
       // prevent the first change to trigger (bug from WC where it triggers twice)
       // TODO: if bug resolved, remove this
@@ -155,6 +155,10 @@ Fields.prototype = {
   initCity: function() {
     var self = this;
     var $field = $('#' + self.city.newField);
+    var $wrapper = $('#' + self.city.wrapper);
+
+    // hide city first
+    // $wrapper.addClass('hide');
 
     $field.off('wcis-state-selected');
     $field.on('wcis-state-selected', _onStateSelected);
@@ -163,6 +167,7 @@ Fields.prototype = {
     $field.on('change', _onChange);
 
     function _onStateSelected(e) {
+      // console.log('state selected');
       // remove all options first
       $(this).empty();
 
@@ -182,6 +187,9 @@ Fields.prototype = {
       var html = template(args);
 
       $field.append(html).select2();
+
+      // show the city field
+      $wrapper.removeClass('hide');
 
       // prepopulate
       if(self.city.value) {
@@ -216,7 +224,6 @@ Fields.prototype = {
     function _onCitySelected(e) {
       // remove all options first
       $(this).empty();
-      $wrapper.show();
 
       api.getDistricts($('#' + self.city.newField), _onGetDistricts);
     }
@@ -231,6 +238,9 @@ Fields.prototype = {
 
       $field.append(html).select2();
 
+      // show district
+      $wrapper.show();
+
       // prepopulate
       if(self.dist.value) {
         var optionTarget = 'option:contains("' + self.dist.value + '")';
@@ -242,6 +252,11 @@ Fields.prototype = {
       // create the string for real city field
       self.dist.value = $(this).find('option:selected').text();
       var destinationId = ' [' + $(this).val() + ']';
+
+      // TODO remove this after debug
+      // var cityId = ' (' + $('#' + self.city.newField).val() + ')';
+      // $('#' + self.city.field).val(self.city.value + cityId + ', ' + self.dist.value + destinationId);
+
       $('#' + self.city.field).val(self.city.value + ', ' + self.dist.value + destinationId);
     }
   },
