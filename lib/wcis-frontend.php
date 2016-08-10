@@ -47,11 +47,11 @@ class WCIS_Frontend {
     <script id="wcis-wrapper-cart" type="text/x-handlebars-template">
 
       <p class="form-row form-row-wide" id="{{ city.newWrapper }}">
-        <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
+        <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose City"></select>
       </p>
 
       <p class="form-row form-row-wide" id="{{ dist.newWrapper }}">
-        <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
+        <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose District"></select>
       </p>
 
     </script>
@@ -60,11 +60,12 @@ class WCIS_Frontend {
     <script id="wcis-wrapper" type="text/x-handlebars-template">
 
       <p class="form-row form-row-first" id="{{ city.newWrapper }}">
-        <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose your City"></select>
+        <select name="{{ city.newField }}" id="{{ city.newField }}" placeholder="Choose City"></select>
       </p>
 
       <p class="form-row form-row-last" id="{{ dist.newWrapper }}">
-        <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose your District"></select>
+        <select name="{{ dist.newField }}" id="{{ dist.newField }}" placeholder="Choose District">
+        </select>
       </p>
 
     </script>

@@ -1,8 +1,28 @@
 ## WooCommerce Indonesia Shipping
 
-Add JNE, TIKI, or POS to your WooCommerce shipping option. Currently we support only RajaOngkir's PRO API.
+Add JNE, TIKI, or POS to your WooCommerce shipping option. Require PRO License purchase from RajaOngkir.com
 
 This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/wc-indo-shipping/issues).
+
+### How to Use
+
+**For WooCommerce 2.6+**
+
+1. Go to WooCommerce > Settings > Shipping. Create a shipping zone and add "Indo Shipping" method to it.
+
+1. Click the **Indo Shipping** link to open the config page.
+
+1. Enter your RajaOngkir Key and click Save Changes. You will see new fields for **Base location** and **Couriers**. If it doesn't show up, refresh once more.
+
+1. After choosing courier, new field to choose **Services** will appear. Select the one you need. Note that some destinations doesn't have express service like YES.
+
+Done! Now you can see the shipping option after entering the required Shipping info in **Checkout page**.
+
+**For WooCommerce 2.5 and lower**
+
+This version doesn't support WooCommerce 2.5 and lower. Download our [older version](https://github.com/hrsetyono/woocommerce-indo-shipping/releases/tag/0.2.1) instead.
+
+The installation step is similar as above. But the config page is in WooCommerce > Settings > Shipping > Find "Indo Shipping" tab.
 
 ### FAQ
 

@@ -5,7 +5,6 @@ Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Requires pu
 Plugin URI: http://github.com/hrsetyono/wc-indo-shipping
 Author: The Syne Studio
 Author URI: http://thesyne.com/
-Version: 0.2.0
 */
 
 // check if WooCommerce active
@@ -34,7 +33,7 @@ if($wcis_enabled === 'yes') {
 
 // run this code even if disabled
 add_action('woocommerce_shipping_init', 'wcis_init');
-add_filter('woocommerce_shipping_methods', 'wcis_add_method');
+add_filter('woocommerce_shipping_methods', 'register_wcis_method');
 
 /////
 
@@ -48,7 +47,7 @@ function wcis_init() {
 /*
   Add our custom Shipping method
 */
-function wcis_add_method($methods) {
-	$methods[] = 'WCIS_Method';
+function register_wcis_method($methods) {
+	$methods['wcis'] = 'WCIS_Method';
 	return $methods;
 }

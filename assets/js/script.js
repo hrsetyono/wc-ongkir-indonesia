@@ -130,7 +130,7 @@ Fields.prototype = {
     var $field = $('#' + self.state.field);
 
     if(self._isCartPage() ) {
-      $field.select2();
+      // $field.select2();
     }
 
     $field.off('change');
@@ -186,7 +186,7 @@ Fields.prototype = {
       var template = Handlebars.compile($('#wcis-city-option').html() );
       var html = template(args);
 
-      $field.append(html).select2();
+      $field.append(html); //.select2();
 
       // show the city field
       $wrapper.removeClass('hide');
@@ -229,14 +229,13 @@ Fields.prototype = {
     }
 
     function _onGetDistricts(response) {
-      // console.log('get district');
       var args = JSON.parse(response);
 
       // insert template
       var template = Handlebars.compile($('#wcis-dist-option').html() );
       var html = template(args);
 
-      $field.append(html).select2();
+      $field.append(html); //.select2();
 
       // show district
       $wrapper.show();

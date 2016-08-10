@@ -151,7 +151,7 @@ class WCIS_API {
   private function diff_city_name($cities, $city_name) {
     $cities = array_map(function($c) use ($city_name) {
       if($c['city_name'] === $city_name) {
-        $c['city_name'] = $c['type'] . ' ' . $c['city_name'];
+        $c['city_name'] = $c['city_name'] . ' (' . $c['type'] . ')';
       }
       return $c;
     }, $cities);
