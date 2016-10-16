@@ -1,3 +1,8 @@
+### 0.3.1
+
+- Fixed plugin not working on new website.
+- Added Global settings, you still need to set individual shipping zones for it to work.
+
 ### 0.3.0
 
 - Added support to Shipping Zone for WooCommerce 2.6

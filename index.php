@@ -1,12 +1,15 @@
 <?php
 /*
 Plugin Name: WooCommerce Indonesia Shipping
-Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Requires purchase from RajaOngkir.com.
+Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Requires purchase from RajaOngkir.
 Plugin URI: http://github.com/hrsetyono/wc-indo-shipping
 Author: The Syne Studio
 Author URI: http://thesyne.com/
-Version: 0.3.0
+Version: 0.3.1
 */
+
+// exit if accessed directly
+if(!defined('ABSPATH') ) { exit; }
 
 // check if WooCommerce active
 if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')) )) {
@@ -24,7 +27,6 @@ $wcis_enabled = isset($wcis_settings['enabled']) ? $wcis_settings['enabled'] : '
 if($wcis_enabled === 'yes') {
   $wcis_ajax = new WCIS_Ajax();
   $wcis_checkout = new WCIS_Checkout();
-
   $wcis_frontend = new WCIS_Frontend();
 
   // change default
@@ -43,6 +45,7 @@ add_filter('woocommerce_shipping_methods', 'register_wcis_method');
 */
 function wcis_init() {
   require_once('lib/wcis-main.php');
+  require_once('lib/wcis-zones.php');
 }
 
 /*
@@ -50,5 +53,6 @@ function wcis_init() {
 */
 function register_wcis_method($methods) {
 	$methods['wcis'] = 'WCIS_Method';
+  $methods['wcis_zone'] = 'WCIS_Zones_Method';
 	return $methods;
 }

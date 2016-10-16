@@ -26,11 +26,23 @@ class WCIS_Data {
   /*
     Get the services provided by the courier.
 
-    @param string $courier - Courier slug as listed in self::COURIERS
+    @param $courier (str) - Courier slug as listed in self::COURIERS
+    @param $simple_format (bool) - *Optional* If true, return a simplified `id => name` format. Default is false.
     @return array - The services this courier provided
   */
-  static function get_services($courier) {
-    return array_key_exists($courier, self::SERVICES) ? self::SERVICES[$courier] : array();
+  static function get_services($courier, $simple_format = false) {
+    $services_raw = array_key_exists($courier, self::SERVICES) ? self::SERVICES[$courier] : array();
+
+    if($simple_format) {
+      $services = array();
+      foreach($services_raw as $key => $val) {
+        $services[$key] = $val['title'];
+      }
+      return $services;
+    }
+    else {
+      return $services_raw;
+    }
   }
 
   /*
@@ -106,16 +118,30 @@ class WCIS_Data {
     ),
 
     'tiki' => array(
-      'ECO' => 'ECO - Economi Service',
-      'REG' => 'REG - Reguler Service',
-      'ONS' => 'ONS - Over Night Service',
-      'HDS' => 'HDS - Holiday Delivery Service',
-      'SDS' => 'SDS - Same Day Service'
+      'ECO' => array(
+        'title' => 'ECO - Economi Service',
+      ),
+      'REG' => array(
+        'title' => 'REG - Reguler Service',
+      ),
+      'ONS' => array(
+        'title' => 'ONS - Over Night Service',
+      ),
+      'HDS' => array(
+        'title' => 'HDS - Holiday Delivery Service',
+      ),
+      'SDS' => array(
+        'title' => 'SDS - Same Day Service'
+      ),
     ),
 
     'pos' => array(
-      'Surat Kilat Khusus' => 'Surat Kilat Khusus',
-      'Express Next Day' => 'Express Next Day'
+      'Surat Kilat Khusus' => array(
+        'title' => 'Surat Kilat Khusus'
+      ),
+      'Express Next Day' => array(
+        'title' => 'Express Next Day'
+      ),
     )
   );
 
