@@ -12,14 +12,12 @@ class WCIS_Method extends WC_Shipping_Method {
 		$this->method_title = __('Indo Shipping', 'wcis');
 		$this->method_description = __('Indonesian domestic shipping with JNE, TIKI, or POS', 'wcis');
 
-    $this->api = isset($this->settings['key']) ? new WCIS_API($this->settings['key']) : null;
-
     $this->enabled = $this->get_option('enabled');
     $this->init_form_fields();
 
     // allow save setting
     add_action('woocommerce_update_options_shipping_' . $this->id, array($this, 'process_admin_options') );
-    // TODO: add action whenever it's saved, check API
+    add_action('woocommerce_update_options_shipping_' . $this->id, array($this, 'process_admin_transients') );
 	}
 
   /*
@@ -74,6 +72,18 @@ class WCIS_Method extends WC_Shipping_Method {
   }
 
 
+  /*
+    Update transients when necessary
+  */
+  function process_admin_transients() {
+    $license = $this->_set_license_transient();
+
+    if($license['valid']) {
+      $this->_set_location_transient($license['key']);
+    }
+  }
+
+
   /////
 
 
@@ -83,30 +93,17 @@ class WCIS_Method extends WC_Shipping_Method {
     @return bool - Valid or not
   */
   private function check_key_valid() {
-    $key = isset($this->settings['key']) ? $this->settings['key'] : null;
-
-    // TODO: broken! create a code to check API whenever this setting is saved
     $license = get_transient('wcis_license');
 
-    if(!$key || $license) { return false; } // ABORT if key is empty
+    // if key doesn't exist, abort
+    if(!isset($license['key']) ) { return false; }
 
-
-
-    // if never checked OR key different from cache
-    if(empty($license) || $license['key'] !== $key ) {
-      $license = array(
-        'key' => $key,
-        'valid' => $this->api->is_valid()
-      );
-
-      if($license['valid']) { set_transient('wcis_license', $license, 60*60*24); }
-    }
-
-    // set message label
-    if($license['valid']) {
+    // if valid, return success
+    if(isset($license['valid']) && $license['valid'] === true) {
       $msg = __('API Connected!', 'wcis');
       $this->form_fields['key']['description'] = '<span style="color: #4caf50;">' . $msg . '</span>';
-    } else {
+    }
+    else {
       $msg = __('Invalid API Key. Is there empty space before / after it?', 'wcis');
       $this->form_fields['key']['description'] = '<span style="color:#f44336;">' . $msg . '</span>';
     }
@@ -119,26 +116,70 @@ class WCIS_Method extends WC_Shipping_Method {
     @return array - List of cities in base province
   */
   private function get_cities_origin() {
-    $country = wc_get_base_location();
-    $province = WCIS_Data::get_province_id($country['state']);
+    $t_location = get_transient('wcis_location');
+    return $t_location['cities'];
+  }
 
-    $location = get_transient('wcis_location_origin');
 
-    // if cities not in cache OR province has changed
-    if($location === false || $location['province'] !== $province) {
+    /*
+      Set License API Key transient
 
-      // get raw cities and parse it
-      $cities_raw = $this->api->get_cities($province);
-      $cities = array_reduce($cities_raw, function($result, $i) {
-        $result[$i['city_id']] = $i['city_name'];
-        return $result;
-      }, array() );
+      @return arr - The transient array `{ key, valid }`
+    */
+    private function set_license_transient() {
+      $t_license = get_transient('wcis_license');
 
-      $location = array('province' => $province, 'cities' => $cities);
-      set_transient('wcis_location_origin', $location, 60*60*24*30);
+      $post_data = $this->get_post_data();
+      $key = $post_data['woocommerce_wcis_key'];
+
+      // check license
+      $license_valid = isset($t_license['valid']) && $t_license['valid'] === true;
+      $license_different = isset($t_license['key']) && $t_license['key'] === $key;
+
+      // if not valid OR different from before, update transient
+      if(!$license_valid || $license_different) {
+        $api = new WCIS_API($key);
+
+        $t_license = array(
+          'key' => $key,
+          'valid' => $api->is_valid()
+        );
+        set_transient('wcis_license', $t_license, 60*60*24*30);
+      }
+
+      return $t_license;
     }
 
-    return $location['cities'];
-  }
+    /*
+      Set Location Origin transient
+
+      @param $key (str) - The API key
+    */
+    private function set_location_transient($key) {
+      $t_location = get_transient('wcis_location');
+
+      $country = wc_get_base_location();
+      $province = WCIS_Data::get_province_id($country['state']);
+
+      // check location cache
+      $location_different = isset($t_location['province']) && $t_location['province'] !== $province;
+
+      // if cache empty or different from before, update transient
+      if(empty($t_location) || $location_different) {
+
+        // get cities data
+        $api = new WCIS_API($key);
+        $cities_raw = $api->get_cities($province);
+        $cities = array_reduce($cities_raw, function($result, $i) {
+          $result[$i['city_id']] = $i['city_name'];
+          return $result;
+        }, array() );
+
+        set_transient('wcis_location', array(
+          'province' => $province,
+          'cities' => $cities,
+        ), 60*60*24*30);
+      }
+    }
 
 }

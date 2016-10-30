@@ -3,44 +3,48 @@
 class WCIS_Frontend {
 
   function __construct() {
-    add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'), 999);
-    add_action('wp_footer', array($this, 'field_template') );
+    add_action('wp_enqueue_scripts', array($this, 'enqueue_checkout_scripts'), 999);
+    add_action('wp_footer', array($this, 'footer_checkout_template') );
   }
 
   /*
     Register JavaScript that handles "Calculate Shipping" feature
     Also handles the additional form at Checkout page.
   */
-  function enqueue_scripts($hook) {
-    // for cart and checkout only
-    if(is_cart() || is_checkout() ) {
-      // select2 from woocommerce
-      $WC_DIR = str_replace(array('http:', 'https:'), '', WC()->plugin_url() );
-
-      wp_register_script('select2', $WC_DIR . '/assets/js/select2/select2.min.js');
-      wp_register_style('select2', $WC_DIR . '/assets/css/select2.css');
-
-      wp_enqueue_script('select2');
-      wp_enqueue_style('select2');
-
-      // custom script
-      wp_register_style('wcis_style', WCIS_PLUGIN_DIR . '/assets/css/style.css');
-      wp_register_script('wcis_script', WCIS_PLUGIN_DIR . '/assets/js/script.js');
-
-      wp_enqueue_script('wcis_script');
-      wp_enqueue_style('wcis_style');
-
-      // handlebars
-      wp_register_script('wcis_handlebars', WCIS_PLUGIN_DIR . '/assets/js/handlebars.js');
-      wp_enqueue_script('wcis_handlebars');
+  function enqueue_checkout_scripts($hook) {
+    if(!(is_cart() || is_checkout() ) ) {
+      return false;
     }
+
+    // select2 from woocommerce
+    $WC_DIR = str_replace(array('http:', 'https:'), '', WC()->plugin_url() );
+
+    wp_register_script('select2', $WC_DIR . '/assets/js/select2/select2.min.js');
+    wp_register_style('select2', $WC_DIR . '/assets/css/select2.css');
+
+    wp_enqueue_script('select2');
+    wp_enqueue_style('select2');
+
+    // custom script
+    wp_register_style('wcis_style', WCIS_DIR . '/assets/css/style.css');
+    wp_register_script('wcis_script', WCIS_DIR . '/assets/js/script.js');
+
+    wp_enqueue_script('wcis_script');
+    wp_enqueue_style('wcis_style');
+
+    // handlebars
+    wp_register_script('handlebars', WCIS_DIR . '/assets/js/handlebars.js');
+    wp_enqueue_script('handlebars');
   }
 
   /*
     Add Template for Select dropdown
   */
 
-  function field_template() {
+  function footer_checkout_template() {
+    if(!(is_cart() || is_checkout() ) ) {
+      return false;
+    }
     ?>
 
     <!-- Wrapper for Cart -->

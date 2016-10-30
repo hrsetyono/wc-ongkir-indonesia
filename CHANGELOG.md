@@ -1,3 +1,8 @@
+### 0.3.2
+
+- Directory structure changes
+- Namespace the landing code with class
+
 ### 0.3.1
 
 - Fixed plugin not working on new website.

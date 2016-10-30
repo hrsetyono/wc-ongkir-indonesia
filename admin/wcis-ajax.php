@@ -9,6 +9,7 @@ class WCIS_Ajax {
 		add_action('wp_ajax_wcis_get_districts', array($this, 'get_districts') );
 		add_action('wp_ajax_nopriv_wcis_get_districts', array($this, 'get_districts') );
 	}
+	
 	/*
 	  Get list of Cities from Province Code
 	*/
