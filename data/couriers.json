@@ -1,0 +1,55 @@
+{
+"jne": {
+  "name": "JNE",
+  "services": {
+    "OKE": {
+      "title": "OKE - Ongkos Kirim Ekonomis",
+      "vars": ["OKE", "CTCOKE"]
+    },
+    "REG": {
+      "title": "REG - Layanan Reguler",
+      "vars": ["REG", "CTC"]
+    },
+    "YES": {
+      "title": "YES - Yakin Esok Sampai",
+      "vars": ["YES", "CTCYES"]
+    },
+    "JTR": {
+      "title": "JTR - JNE Trucking",
+      "vars": ["JTR", "JTR<150", "JTR250", "JTR>250"]
+    },
+    "SPS": {
+      "title": "SPS - Super Speed",
+    }
+  }
+},
+
+"tiki": {
+  "name": "TIKI",
+  "services": {
+    "ECO": {
+    },
+    "REG": {
+    },
+    "ONS": {
+    },
+    "HDS": {
+    },
+    "SDS": {
+      "title": "SDS - Same Day Service"
+    }
+  }
+},
+
+"pos": {
+  "name": "POS Indonesia",
+  "services": {
+    "Surat Kilat Khusus": {
+      "title": "Surat Kilat Khusus"
+    },
+    "Express Next Day": {
+      "title": "Express Next Day"
+    }
+  }
+}
+}

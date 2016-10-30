@@ -1,0 +1,74 @@
+[
+{
+  "id": "17",
+  "name": "Badung",
+  "postal_code": [80351, 80361],
+  "districts": [
+    {
+      "id": "258",
+      "name": "Abiansemal"
+    },
+    {
+      "id": "259",
+      "name": "Kuta"
+    },
+    {
+      "id": "260",
+      "name": "Kuta Selatan"
+    },
+    {
+      "id": "261",
+      "name": "Kuta Utara"
+    },
+    {
+      "id": "262",
+      "name": "Mengwi"
+    },
+    {
+      "id": "263",
+      "name": "Petang"
+    }
+  ]
+},
+{
+  "id": "32",
+  "name": "Bangli",
+  "postal_code": [80611, 80671]
+},
+{
+  "id": "94",
+  "name": "Buleleng",
+  "postal_code": [81111, 81173]
+},
+{
+  "id": "114",
+  "type": "Kota",
+  "name": "Denpasar",
+  "postal_code": [80111, 80239]
+},
+{
+  "id": "128",
+  "name": "Gianyar",
+  "postal_code": [80511, 80582]
+},
+{
+  "id": "161",
+  "name": "Jembrana",
+  "postal_code": [82211, 82262]
+},
+{
+  "id": "170",
+  "name": "Karangasem",
+  "postal_code": [80811, 80871]
+},
+{
+  "id": "197",
+  "name": "Klungkung",
+  "postal_code": [80711, 80771]
+},
+{
+  "id": "447",
+  "name": "Tabanan",
+  "postal_code": [82111, 82191]
+}
+]
