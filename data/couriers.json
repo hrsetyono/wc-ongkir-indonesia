@@ -20,6 +20,7 @@
     },
     "SPS": {
       "title": "SPS - Super Speed",
+      "vars": ["SPS"]
     }
   }
 },
@@ -28,12 +29,16 @@
   "name": "TIKI",
   "services": {
     "ECO": {
+      "title": "ECO - Economi Service"
     },
     "REG": {
+      "title": "REG - Reguler Service"
     },
     "ONS": {
+      "title": "ONS - Over Night Service"
     },
     "HDS": {
+      "title": "HDS - Holiday Delivery Service"
     },
     "SDS": {
       "title": "SDS - Same Day Service"
