@@ -126,7 +126,7 @@ class WCIS_Method extends WC_Shipping_Method {
 
       @return arr - The transient array `{ key, valid }`
     */
-    private function set_license_transient() {
+    private function _set_license_transient() {
       $t_license = get_transient('wcis_license');
 
       $post_data = $this->get_post_data();
@@ -155,7 +155,7 @@ class WCIS_Method extends WC_Shipping_Method {
 
       @param $key (str) - The API key
     */
-    private function set_location_transient($key) {
+    private function _set_location_transient($key) {
       $t_location = get_transient('wcis_location');
 
       $country = wc_get_base_location();

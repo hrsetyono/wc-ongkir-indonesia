@@ -1,3 +1,7 @@
+### 0.3.3
+
+- Fix for initial installation
+
 ### 0.3.2
 
 - Directory structure changes
