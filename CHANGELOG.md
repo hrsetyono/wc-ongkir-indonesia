@@ -1,3 +1,7 @@
+### 0.3.4
+
+- Add prefix to city with same name. Example: "Bandung (Kota)" and "Bandung (Kabupaten)"
+
 ### 0.3.3
 
 - Fix for initial installation

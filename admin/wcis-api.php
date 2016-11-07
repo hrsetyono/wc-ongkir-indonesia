@@ -43,13 +43,29 @@ class WCIS_API {
     if($response['status']['code'] === 200) {
       $cities = $response['results'];
 
-      switch($prov_id) {
-        case 9:
-          $cities = $this->diff_city_name($cities, 'Bandung');
-          break;
-        case 10:
-           $cities = $this->diff_city_name($cities, 'Semarang');
-           break;
+      // Province that has same city and district name
+      $prov_with_twin_name = array(
+        3 => array(402, 403, 455, 456), // Serang, Tangerang
+        9 => array(22, 23, 54, 55, 78, 79, 108, 109, 430, 431, 468, 469), // Bandung, Bekasi, Bogor, Cirebon, Sukabumi, Tasikmalaya
+        10 => array(249, 250, 348, 349, 472, 473, 398, 399), // Magelang, Pekalongan, Tegal, Semarang
+        11 => array(74, 75, 178, 179, 255, 256, 247, 248, 289, 290, 342, 343, 369, 370), // Blitar, Kediri, Malang, Madiun, Mojokerto, Pasuruan, Probolinggo,
+
+        32 => array(420, 421), // Solok
+
+        22 => array(68, 69), // Bima
+        23 => array(212, 213), // Kupang
+
+        12 => array(364, 365), // Pontianak
+        7 => array(129, 130), // Gorontalo
+
+        24 => array(157, 158), // Jayapura
+        25 => array(424, 425), // Sorong
+      );
+
+      if(array_key_exists($prov_id, $prov_with_twin_name) ) {
+        $twin_ids = $prov_with_twin_name[$prov_id];
+
+        $cities = $this->_filter_twin_name($cities, $twin_ids);
       }
 
       return $cities;
@@ -145,12 +161,15 @@ class WCIS_API {
     return $response;
   }
 
+
   /*
-    If there's City and District with the same name
+    Add prefix to city and district that have the same name
   */
-  private function diff_city_name($cities, $city_name) {
-    $cities = array_map(function($c) use ($city_name) {
-      if($c['city_name'] === $city_name) {
+  private function _filter_twin_name($cities, $twin_ids) {
+
+    $cities = array_map(function($c) use ($twin_ids) {
+      // if ID exist
+      if(in_array($c['city_id'], $twin_ids) ) {
         $c['city_name'] = $c['city_name'] . ' (' . $c['type'] . ')';
       }
       return $c;

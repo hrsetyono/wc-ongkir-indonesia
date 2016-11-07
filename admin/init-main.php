@@ -41,7 +41,7 @@ class WCIS_Method extends WC_Shipping_Method {
       'title' => __('City Origin', 'wcis'),
       'type' => 'select',
       'class'    => 'wc-enhanced-select',
-      'description' => __('Ship from where? <br> Change your province at General > Base Location', 'wcis'),
+      'description' => __('Ship from where? <br> Change your province at General > Base Location <br> Save this to refresh the City selection', 'wcis'),
       'options' => array()
     );
 
