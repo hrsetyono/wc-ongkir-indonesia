@@ -109,6 +109,8 @@ class WCIS_API {
   */
   function get_costs($args) {
     $query = http_build_query($args);
+    error_log(print_r($args, true) );
+
     $response = $this->call(self::COST_URL, array(
       CURLOPT_CUSTOMREQUEST => 'POST',
       CURLOPT_POSTFIELDS => $query,
@@ -119,6 +121,7 @@ class WCIS_API {
     ));
 
     if($response) {
+
       $costs = $response['results'];
       return $costs;
     } else {

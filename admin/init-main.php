@@ -40,7 +40,7 @@ class WCIS_Method extends WC_Shipping_Method {
     $city_field = array(
       'title' => __('City Origin', 'wcis'),
       'type' => 'select',
-      'class'    => 'wc-enhanced-select',
+      // 'class'    => 'wc-enhanced-select', // bugged!! doesn't save the value
       'description' => __('Ship from where? <br> Change your province at General > Base Location <br> Save this to refresh the City selection', 'wcis'),
       'options' => array()
     );
@@ -117,6 +117,7 @@ class WCIS_Method extends WC_Shipping_Method {
   */
   private function get_cities_origin() {
     $t_location = get_transient('wcis_location');
+    // var_dump($t_location);
     return $t_location['cities'];
   }
 

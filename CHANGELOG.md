@@ -1,3 +1,7 @@
+### 0.3.5
+
+- Fixed City origin not saving due to Enhanced Select bug.
+
 ### 0.3.4
 
 - Add prefix to city with same name. Example: "Bandung (Kota)" and "Bandung (Kabupaten)"
