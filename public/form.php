@@ -1,5 +1,9 @@
 <?php
+/*
+  Manipulate the Checkout Form
 
+  TODO: add conditional to only manipulate if ship to Indonesia
+*/
 class WCIS_Frontend {
 
   function __construct() {
@@ -8,8 +12,9 @@ class WCIS_Frontend {
   }
 
   /*
-    Register JavaScript that handles "Calculate Shipping" feature
-    Also handles the additional form at Checkout page.
+    Register JS and CSS that calculates shipping and modify form
+
+    @filter wp_enqueue_scripts
   */
   function enqueue_checkout_scripts($hook) {
     if(!(is_cart() || is_checkout() ) ) {
@@ -38,9 +43,10 @@ class WCIS_Frontend {
   }
 
   /*
-    Add Template for Select dropdown
-  */
+    Add Handlebars template for Select dropdown
 
+    @filter wp_footer
+  */
   function footer_checkout_template() {
     if(!(is_cart() || is_checkout() ) ) {
       return false;

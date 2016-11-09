@@ -1,5 +1,7 @@
 <?php
-
+/*
+  Rearrange checkout field and modify the data before saving
+*/
 class WCIS_Checkout {
 
   function __construct() {
@@ -13,6 +15,7 @@ class WCIS_Checkout {
   /*
     Reorder Billing and Shipping filds in Checkout page.
 
+    @filter woocommerce_checkout_fields
     @param array $fields - The current list of fields
     @return array - The ordered list of fields
   */
@@ -56,6 +59,7 @@ class WCIS_Checkout {
   /*
     Clean the User's city field from [id] notation used when calculating shipping cost. Only run when it's not Guest.
 
+    @filter woocommerce_checkout_update_user_meta
     @param int $user_id - The customer that bought this
     @param array $posted - The data posted
   */
@@ -73,6 +77,7 @@ class WCIS_Checkout {
   /*
     Clean the Order's city field from [id] notation used when calculating shipping cost.
 
+    @filter woocommerce_checkout_update_order_meta
     @param int $order_id - The order that just created
     @param array $posted - The data posted
   */
@@ -89,9 +94,11 @@ class WCIS_Checkout {
 
 
   /*
-    Parse the package data to get the Destination ID
+    Add Destination's ID to POST parameter
 
-    @param mixed $packages - Cart parameters with products and destination data
+    @filter woocommerce_cart_shipping_packages
+    @param mixed $packages - Cart parameters
+    @return mixed
   */
   function parse_shipping_package($packages) {
     // look for district ID in city field

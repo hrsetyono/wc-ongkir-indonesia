@@ -1,6 +1,7 @@
 ### 0.3.5
 
 - Fixed City origin not saving due to Enhanced Select bug.
+- Add comment and add more PHPdoc
 
 ### 0.3.4
 

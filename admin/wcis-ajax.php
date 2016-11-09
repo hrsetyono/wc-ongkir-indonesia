@@ -1,5 +1,7 @@
 <?php
-
+/*
+  Handle all AJAX call from front-end
+*/
 class WCIS_Ajax {
 
 	function __construct() {
@@ -9,9 +11,11 @@ class WCIS_Ajax {
 		add_action('wp_ajax_wcis_get_districts', array($this, 'get_districts') );
 		add_action('wp_ajax_nopriv_wcis_get_districts', array($this, 'get_districts') );
 	}
-	
+
 	/*
 	  Get list of Cities from Province Code
+
+		@filter wp_ajax_wcis_get_cities
 	*/
 	function get_cities() {
 		$code = $_GET['code'];
@@ -28,6 +32,8 @@ class WCIS_Ajax {
 
 	/*
 	  Get list of Districts from City ID
+
+		@filter wp_ajax_wcis_get_districts
 	*/
 	function get_districts() {
 		$id = $_GET['id'];

@@ -1,12 +1,14 @@
 <?php
 /*
-  Handle the getter for static JSON file provided in /data directory
+  Handle request for static data files
+
+  TODO: add postal code range for all cities, then we can use Postal Code field for city detection.
 */
 class WCIS_Data {
   /*
     Translate Prov Code into ID based on Raja Ongkir list.
 
-    @param string $code - province code from WooCommerce
+    @param str $code - province code from WooCommerce
     @return int - the province's ID
   */
   static function get_province_id($code) {
@@ -35,8 +37,8 @@ class WCIS_Data {
   /*
     Get the services provided by the courier.
 
-    @param $name (str) - Courier slug as listed in couriers.json
-    @param $simple_format (bool) - *Optional* If true, return a simplified `id => name` format. Default is false.
+    @param string $name - Courier slug as listed in couriers.json
+    @param bool $simple_format - *Optional*. If true, return a simplified `id => name` format. Default is false.
     @return array - The services this courier provided
   */
   static function get_services($name, $simple_format = false) {
@@ -63,6 +65,11 @@ class WCIS_Data {
 
   /*
     Get the district that isn't in JNE
+
+    TODO: not used
+
+    @param int $city_id
+    @return array - The city list
   */
   static function get_jne_district_exc($city_id) {
     return array_key_exists($city_id, self::JNE_DISTRICT_EXC) ? self::JNE_DISTRICT_EXC[$city_id] : null;
@@ -74,11 +81,13 @@ class WCIS_Data {
 
   /*
     Get JSON file inside /data directory
+
+    @param string $filename
+    @return array
   */
   private static function get_json_file($filename) {
     return json_decode(file_get_contents(WCIS_DIR . "/data/$filename"), true);
   }
-
 
   const JNE_DISTRICT_EXC = array(
     '63' => array(

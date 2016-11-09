@@ -1,7 +1,6 @@
 <?php
-
 /*
-  Class to keep the global variable such as API key
+  Global setting for Indo Shipping
 */
 class WCIS_Method extends WC_Shipping_Method {
   private $api;
@@ -88,9 +87,9 @@ class WCIS_Method extends WC_Shipping_Method {
 
 
   /*
-    Check validation of Key by doing a sample AJAX call
+    Validate API Key by doing a sample AJAX call
 
-    @return bool - Valid or not
+    @return bool
   */
   private function check_key_valid() {
     $license = get_transient('wcis_license');
@@ -112,75 +111,75 @@ class WCIS_Method extends WC_Shipping_Method {
   }
 
   /*
-    Get cities origin from API
+    Get cities list from cache. Cached when the setting is saved.
+
     @return array - List of cities in base province
   */
   private function get_cities_origin() {
     $t_location = get_transient('wcis_location');
-    // var_dump($t_location);
     return $t_location['cities'];
   }
 
 
-    /*
-      Set License API Key transient
+  /*
+    Set API key to cache
 
-      @return arr - The transient array `{ key, valid }`
-    */
-    private function _set_license_transient() {
-      $t_license = get_transient('wcis_license');
+    @return arr -  in the format of `{ key, valid }`
+  */
+  private function _set_license_transient() {
+    $t_license = get_transient('wcis_license');
 
-      $post_data = $this->get_post_data();
-      $key = $post_data['woocommerce_wcis_key'];
+    $post_data = $this->get_post_data();
+    $key = $post_data['woocommerce_wcis_key'];
 
-      // check license
-      $license_valid = isset($t_license['valid']) && $t_license['valid'] === true;
-      $license_different = isset($t_license['key']) && $t_license['key'] === $key;
+    // check license
+    $license_valid = isset($t_license['valid']) && $t_license['valid'] === true;
+    $license_different = isset($t_license['key']) && $t_license['key'] === $key;
 
-      // if not valid OR different from before, update transient
-      if(!$license_valid || $license_different) {
-        $api = new WCIS_API($key);
+    // if not valid OR different from before, update transient
+    if(!$license_valid || $license_different) {
+      $api = new WCIS_API($key);
 
-        $t_license = array(
-          'key' => $key,
-          'valid' => $api->is_valid()
-        );
-        set_transient('wcis_license', $t_license, 60*60*24*30);
-      }
-
-      return $t_license;
+      $t_license = array(
+        'key' => $key,
+        'valid' => $api->is_valid()
+      );
+      set_transient('wcis_license', $t_license, 60*60*24*30);
     }
 
-    /*
-      Set Location Origin transient
+    return $t_license;
+  }
 
-      @param $key (str) - The API key
-    */
-    private function _set_location_transient($key) {
-      $t_location = get_transient('wcis_location');
+  /*
+    Set Location Origin transient
 
-      $country = wc_get_base_location();
-      $province = WCIS_Data::get_province_id($country['state']);
+    @param $key (str) - The API key
+  */
+  private function _set_location_transient($key) {
+    $t_location = get_transient('wcis_location');
 
-      // check location cache
-      $location_different = isset($t_location['province']) && $t_location['province'] !== $province;
+    $country = wc_get_base_location();
+    $province = WCIS_Data::get_province_id($country['state']);
 
-      // if cache empty or different from before, update transient
-      if(empty($t_location) || $location_different) {
+    // check location cache
+    $location_different = isset($t_location['province']) && $t_location['province'] !== $province;
 
-        // get cities data
-        $api = new WCIS_API($key);
-        $cities_raw = $api->get_cities($province);
-        $cities = array_reduce($cities_raw, function($result, $i) {
-          $result[$i['city_id']] = $i['city_name'];
-          return $result;
-        }, array() );
+    // if cache empty or different from before, update transient
+    if(empty($t_location) || $location_different) {
 
-        set_transient('wcis_location', array(
-          'province' => $province,
-          'cities' => $cities,
-        ), 60*60*24*30);
-      }
+      // get cities data
+      $api = new WCIS_API($key);
+      $cities_raw = $api->get_cities($province);
+      $cities = array_reduce($cities_raw, function($result, $i) {
+        $result[$i['city_id']] = $i['city_name'];
+        return $result;
+      }, array() );
+
+      set_transient('wcis_location', array(
+        'province' => $province,
+        'cities' => $cities,
+      ), 60*60*24*30);
     }
+  }
 
 }

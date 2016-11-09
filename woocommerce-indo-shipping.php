@@ -21,8 +21,10 @@ define('WCIS_DIR', plugins_url('', __FILE__) );
 require_once 'admin/all.php';
 require_once 'public/all.php';
 
+/*
+  Inititate the Indo Shipping method
+*/
 new WCIS_Init();
-
 class WCIS_Init {
   private $settings;
   private $enabled;
@@ -40,6 +42,9 @@ class WCIS_Init {
     add_filter('woocommerce_shipping_methods', array($this, '_shipping_method') );
   }
 
+  /*
+    Inititate the needed classes
+  */
   function init_classes() {
 
     new WCIS_Ajax();
@@ -57,9 +62,10 @@ class WCIS_Init {
 
   /////
 
-
   /*
     Initiate WC Shipping
+
+    @filter woocommerce_shipping_init
   */
   function _shipping_init() {
     require_once('admin/init-main.php');
@@ -68,6 +74,8 @@ class WCIS_Init {
 
   /*
     Add our custom Shipping method
+
+    @filter woocommerce_shipping_methods
   */
   function _shipping_method($methods) {
   	$methods['wcis'] = 'WCIS_Method';

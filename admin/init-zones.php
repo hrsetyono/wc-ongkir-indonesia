@@ -1,5 +1,7 @@
 <?php
-
+/*
+  Zone setting for Indo Shipping
+*/
 class WCIS_Zones_Method extends WC_Shipping_Method {
   private $api;
   private $main_settings;
@@ -22,6 +24,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
 
 	/*
 	  Calculate_shipping function.
+
 	  @param mixed $package
 	*/
 	function calculate_shipping($package = array() ) {
@@ -42,22 +45,13 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
     Get the costs from selected Couriers.
 
     @param array $package - The shipping detail
-    @return array - List of cost grouped for each courier
+    @return array - List of cost grouped by each courier
   */
   private function _get_costs($package) {
     $weight = $this->_calculate_weight($package);
+    $selected_couriers = $this->_get_selected_couriers();
 
-    // get selected couriers based on which service fields are filled
-    $couriers = WCIS_Data::get_couriers();
-    $selected_couriers = array();
-
-    foreach($couriers as $id => $name) {
-      if(!empty($this->main_settings[$id . '_services']) ) {
-        $selected_couriers[] = $id;
-      }
-    }
-
-    // form the args accepted by rajaongkir
+    // format the args to be suitable for API
     $args = array();
     foreach($selected_couriers as $courier) {
       $args[] = array(
@@ -70,13 +64,13 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
       );
     }
 
-    // get list of couriers and its cost
-    $couriers = array();
+    // get the cost of each couriers
+    $couriers_cost = array();
     foreach($args as $a) {
-      $couriers[] = $this->api->get_costs($a);
+      $couriers_cost[] = $this->api->get_costs($a);
     }
 
-    return $couriers;
+    return $couriers_cost;
   }
 
   /*
@@ -131,6 +125,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
   /*
     Calculate the weight of items in cart. If all items has no weight specified, it will return 1.
 
+    @param array - POST parameter
     @return int - THe weight in the unit specified in admin.
   */
   private function _calculate_weight($package) {
@@ -147,6 +142,24 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
 
       return (is_int($weight) && $weight > 0 ) ? $weight : 1;
     }
+  }
+
+  /*
+    Get selected services from the courier
+
+    @return array
+  */
+  private function _get_selected_couriers() {
+    $couriers = WCIS_Data::get_couriers();
+
+    $selected_couriers = array();
+    foreach($couriers as $id => $name) {
+      if(!empty($this->main_settings[$id . '_services']) ) {
+        $selected_couriers[] = $id;
+      }
+    }
+
+    return $selected_couriers;
   }
 
 }

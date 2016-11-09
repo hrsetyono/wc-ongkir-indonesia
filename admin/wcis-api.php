@@ -15,6 +15,8 @@ class WCIS_API {
 
   /*
     Test if API key is working
+
+    @return bool
   */
   function is_valid() {
     $response = $this->call(self::PROVINCE_URL . '?id=6');
@@ -24,7 +26,7 @@ class WCIS_API {
   /*
     Get all province data
 
-    @return array - All
+    @return array
   */
   function get_provinces() {
     $response = $this->call(self::PROVINCE_URL);
@@ -35,7 +37,7 @@ class WCIS_API {
     Get all cities in the provice
 
     @param $prov_id - ID of the province
-    @retun array - city data
+    @retun array
   */
   function get_cities($prov_id) {
     $response = $this->call(self::CITY_URL . $prov_id);
@@ -105,7 +107,10 @@ class WCIS_API {
   }
 
   /*
-    Get costs
+    Get shipping costs
+
+    @param array $args - Formatted argument ready for API call
+    @return array - JSON response
   */
   function get_costs($args) {
     $query = http_build_query($args);
@@ -133,6 +138,10 @@ class WCIS_API {
 
   /*
     Call API
+
+    @param string $endpoint
+    @param array $extra_options - *Optional*. Additional arguments
+    @return array - JSON response
   */
   private function call($endpoint, $extra_options = array() ) {
     $curl = curl_init();
@@ -167,6 +176,10 @@ class WCIS_API {
 
   /*
     Add prefix to city and district that have the same name
+
+    @param array $cities - Cities to be filtered
+    @param array $twin_ids - ID of cities that share the same name
+    @return array - Prefixed list
   */
   private function _filter_twin_name($cities, $twin_ids) {
 
