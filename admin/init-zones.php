@@ -12,7 +12,8 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
 
     $this->title = __('Indo Shipping', 'wcis');
 		$this->method_title = __('Indo Shipping', 'wcis');
-    $this->supports = array('shipping-zones');
+    $this->method_description = __('Indonesian domestic shipping with JNE, TIKI, or POS', 'wcis');
+    $this->supports = array('shipping-zones', 'instance-settings',);
 
     // global
     $this->main_settings = get_option('woocommerce_wcis_settings');

@@ -1,3 +1,7 @@
+### 0.3.5b
+
+- Fixed Shipping Zone can't be removed
+
 ### 0.3.5
 
 - Fixed City origin not saving due to Enhanced Select bug.
