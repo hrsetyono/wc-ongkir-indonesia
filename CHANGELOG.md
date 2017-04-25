@@ -1,3 +1,7 @@
+### 0.3.6
+
+- Added City and District data as part of the plugin. No need to do API call just to get them.
+
 ### 0.3.5b
 
 - Fixed Shipping Zone can't be removed

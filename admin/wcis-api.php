@@ -168,9 +168,8 @@ class WCIS_API {
     $err = curl_error($curl);
     curl_close($curl);
 
-    $response = json_decode($response, true)['rajaongkir'];
-
-    return $response;
+    $response = json_decode($response, true);
+    return $response['rajaongkir'];
   }
 
 
