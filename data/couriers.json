@@ -56,5 +56,54 @@
       "title": "Express Next Day"
     }
   }
+},
+"pcp": {
+  "name": "PCP",
+  "services": {
+    "ECO": {
+      "title": "ECO - Economic Service"
+    },
+    "REG": {
+      "title": "REG - Regular Service"
+    },
+    "ONS": {
+      "title": "ONS - Overnight Service"
+    },
+    "ONP": {
+      "title": "ONP - Overnight Service Premium"
+    },
+    "NFS": {
+      "title": "NFS - Next Flight Service"
+    }
+  }
+},
+"rpx": {
+  "name": "RPX",
+  "services": {
+    "REP": {
+      "title": "REP - Retail Package"
+    },
+    "RGP": {
+      "title": "RGP - Regular Package"
+    },
+    "NDP": {
+      "title": "NDP - Next Day Package"
+    },
+    "MDP": {
+      "title": "MDP - MidDay Package"
+    },
+    "SDP": {
+      "title": "SDP - SameDay Package"
+    }
+  }
+},
+"jnt": {
+  "code": "J&T",
+  "name": "J&T Express",
+  "services": {
+    "EZ": {
+      "title": "EZ - Regular Service"
+    }
+  }
 }
 }

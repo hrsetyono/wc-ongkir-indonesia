@@ -62,7 +62,7 @@ class WCIS_Method extends WC_Shipping_Method {
           'title' => $name,
           'type' => 'multiselect',
           'class' => 'wc-enhanced-select',
-          'description' => __("Choose allowed services by { $name }.", 'wcis'),
+          'description' => __("Choose allowed services by $name.", 'wcis'),
           'options' => WCIS_Data::get_services($id, true)
         );
       }
@@ -139,11 +139,11 @@ class WCIS_Method extends WC_Shipping_Method {
     // if not valid OR different from before, update transient
     if(!$license_valid || $license_different) {
       $api = new WCIS_API($key);
-
       $t_license = array(
         'key' => $key,
         'valid' => $api->is_valid()
       );
+
       set_transient('wcis_license', $t_license, 60*60*24*30);
     }
 
@@ -170,10 +170,12 @@ class WCIS_Method extends WC_Shipping_Method {
       // get cities data
       $api = new WCIS_API($key);
       $cities_raw = $api->get_cities($province);
-      $cities = array_reduce($cities_raw, function($result, $i) {
-        $result[$i['city_id']] = $i['city_name'];
-        return $result;
-      }, array() );
+
+      // parse raw data
+      $cities = array();
+      foreach($cities_raw as $id => $value) {
+        $cities[$id] = $value['city_name'];
+      }
 
       set_transient('wcis_location', array(
         'province' => $province,

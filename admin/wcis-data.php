@@ -12,9 +12,27 @@ class WCIS_Data {
     @return int - the province's ID
   */
   static function get_province_id($code) {
-    $provinces = self::get_json_file('provinces.json');
+    $provinces = self::_get_json_file('provinces.json');
     $id = array_key_exists($code, $provinces) ? $provinces[$code] : 0;
     return $id;
+  }
+
+  /*
+    Get all cities in the provice
+
+    @param $prov_id - ID of the province
+    @retun array
+  */
+  static function get_cities($prov_id) {
+    $data = self::_get_json_file('cities/' . $prov_id . '.json');
+
+    // if exists, filter and return it
+    if($data) {
+      $data = self::_filter_dupe_name($prov_id, $data);
+      return $data;
+    } else {
+      return $data;
+    }
   }
 
   /*
@@ -23,7 +41,7 @@ class WCIS_Data {
     @return array - List of couriers in (slug => name) format.
   */
   static function get_couriers() {
-    $couriers_raw = self::get_json_file('couriers.json');
+    $couriers_raw = self::_get_json_file('couriers.json');
 
     // remap
     $couriers = array();
@@ -42,7 +60,9 @@ class WCIS_Data {
     @return array - The services this courier provided
   */
   static function get_services($name, $simple_format = false) {
-    $couriers = self::get_json_file('couriers.json');
+    if($name === 'J&T') { $name = 'jnt'; } // for weird reason, the response code for 'jnt' is 'J&T'
+
+    $couriers = self::_get_json_file('couriers.json');
     $courier = isset($couriers[$name]) ? $couriers[$name] : null;
 
     // if courier found
@@ -85,7 +105,7 @@ class WCIS_Data {
     @param string $filename
     @return array
   */
-  private static function get_json_file($filename) {
+  private static function _get_json_file($filename) {
     return json_decode(file_get_contents(WCIS_DIR . "/data/$filename"), true);
   }
 
@@ -94,4 +114,46 @@ class WCIS_Data {
       '842' // bunga mas
     ),
   );
+
+  /*
+    Add prefix to city and district that have the same name
+
+    @param array $data - Cities data
+    @param array $dupe_ids - ID of cities that share the same name
+
+    @return array - Prefixed list
+  */
+  private static function _filter_dupe_name($prov_id, $data) {
+    // Province that has same city and district name
+    $city_dupe_name = array(
+      3 => array(402, 403, 455, 456), // Serang, Tangerang
+      9 => array(22, 23, 54, 55, 78, 79, 108, 109, 430, 431, 468, 469), // Bandung, Bekasi, Bogor, Cirebon, Sukabumi, Tasikmalaya
+      10 => array(249, 250, 348, 349, 472, 473, 398, 399), // Magelang, Pekalongan, Tegal, Semarang
+      11 => array(74, 75, 178, 179, 255, 256, 247, 248, 289, 290, 342, 343, 369, 370), // Blitar, Kediri, Malang, Madiun, Mojokerto, Pasuruan, Probolinggo,
+
+      32 => array(420, 421), // Solok
+
+      22 => array(68, 69), // Bima
+      23 => array(212, 213), // Kupang
+
+      12 => array(364, 365), // Pontianak
+      7 => array(129, 130), // Gorontalo
+
+      24 => array(157, 158), // Jayapura
+      25 => array(424, 425), // Sorong
+    );
+
+    // if province has duplicate city name
+    if(array_key_exists($prov_id, $city_dupe_name) ):
+      $dupe_ids = $city_dupe_name[$prov_id];
+
+      foreach($data as $id => &$value) {
+        if(in_array($id, $dupe_ids) ) {
+          $value['city_name'] = $value['city_name'] . ' (' . $value['type'] . ')';
+        }
+      }
+    endif;
+
+    return $data;
+  }
 }

@@ -52,49 +52,39 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
     $weight = $this->_calculate_weight($package);
     $selected_couriers = $this->_get_selected_couriers();
 
-    // format the args to be suitable for API
-    $args = array();
-    foreach($selected_couriers as $courier) {
-      $args[] = array(
-        'origin' => $this->main_settings['city'],
-        'originType' => 'city',
-        'destination' => $package['destination']['destination_id'],
-        'destinationType' => 'subdistrict',
-        'weight' => $weight,
-        'courier' => $courier
-      );
-    }
+    $args = array(
+      'origin' => $this->main_settings['city'],
+      'originType' => 'city',
+      'destination' => $package['destination']['destination_id'],
+      'destinationType' => 'subdistrict',
+      'weight' => $weight,
+      'courier' => $selected_couriers
+    );
 
-    // get the cost of each couriers
-    $couriers_cost = array();
-    foreach($args as $a) {
-      $couriers_cost[] = $this->api->get_costs($a);
-    }
-
-    return $couriers_cost;
+    // get the cost
+    $costs = $this->api->get_costs($args);
+    return $costs;
   }
 
   /*
     Set the Rate based on Cost list from API
 
-    @param array $couriers_cost - Cost list from API
+    @param array $costs - Cost list from API
   */
-  private function _set_rate($couriers_cost) {
+  private function _set_rate($costs) {
     // format the costs from API to WooCommerce
-    foreach($couriers_cost as $courier):
-
+    foreach($costs['results'] as $courier):
       if(empty($courier) ) { break; }
 
       // get full list of services
-      $code = $courier[0]['code'];
+      $code = $courier['code'];
       $all_services = WCIS_Data::get_services($code);
 
       // get allowed service from this courier
       $setting_id = $code . '_services';
       $allowed_services = isset($this->main_settings[$setting_id]) ? $this->main_settings[$setting_id] : array();
 
-      foreach($courier[0]['costs'] as $service):
-
+      foreach($courier['costs'] as $service):
         // check if this service is allowed
         $is_allowed = false;
         foreach($allowed_services as $as) {
@@ -148,7 +138,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
   /*
     Get selected services from the courier
 
-    @return array
+    @return string - The courier format accepted by RajaOngkir, separated by semicolon (jne:tiki:pos)
   */
   private function _get_selected_couriers() {
     $couriers = WCIS_Data::get_couriers();
@@ -160,7 +150,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
       }
     }
 
-    return $selected_couriers;
+    return join(':', $selected_couriers);
   }
 
 }

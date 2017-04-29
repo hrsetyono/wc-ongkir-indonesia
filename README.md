@@ -10,7 +10,7 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 ### How to Use
 
-1. Go to WooCommerce > Settings > Shipping. Open "Indo Shipping" tab.
+1. Go to `WooCommerce > Settings > Shipping`. Open "Indo Shipping" tab.
 
 1. Set your API (License) Key and Save. You will find some new fields to set City origin and Services to use. **Note:** If the City dropdown is empty, press Save again.
 
@@ -19,6 +19,16 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 1. Click the plus (+) button and add "Indo Shipping".
 
 Done! Now you can see the shipping cost in your Checkout page after filling out all fields.
+
+### Updating to v1
+
+If you have used this plugin previously, here are the steps you need to update our plugin:
+
+1. Delete old plugin, replace it with our [latest release](https://github.com/hrsetyono/woocommerce-indo-shipping/releases)
+
+1. Go to `WooCommerce > Settings > General` and change your shop base location to any place. After saving, revert it back. This is to flush the cache.
+
+1. Go to `WooCommerce > Settings > Shipping > Indo Shipping`. If the City Origin field is empty/bugged, click "Save changes". It should properly show all city name now.
 
 ### Screenshot
 

@@ -33,17 +33,6 @@ var api = {
         callback );
     }
   },
-
-  // Get all districts in that state
-  getDistricts: function($city, callback) {
-    var id = $city.val();
-
-    if(id) {
-      $.get(woocommerce_params.ajax_url,
-        { action: 'wcis_get_districts', id: id },
-        callback );
-    }
-  },
 };
 
 /*
@@ -79,6 +68,8 @@ function Fields(type, args) {
   };
 
   this.destination = type + '_destination_id';
+
+  this.stateData; // store the JSON data of all Cities in current state
 
   // parse the city value, the format is "City, District [code]"
   var cityRaw = $('#' + this.city.field).val();
@@ -179,8 +170,8 @@ Fields.prototype = {
     }
 
     function _onGetCities(response) {
-      // console.log('get city');
       var args = JSON.parse(response);
+      self.stateData = args;
 
       // insert template
       var template = Handlebars.compile($('#wcis-city-option').html() );
@@ -225,15 +216,13 @@ Fields.prototype = {
       // remove all options first
       $(this).empty();
 
-      api.getDistricts($('#' + self.city.newField), _onGetDistricts);
-    }
-
-    function _onGetDistricts(response) {
-      var args = JSON.parse(response);
+      // get district data from the API call previously
+      var cityId = $('#' + self.city.newField).val();
+      var distData = self.stateData[cityId]['districts'];
 
       // insert template
       var template = Handlebars.compile($('#wcis-dist-option').html() );
-      var html = template(args);
+      var html = template(distData);
 
       $field.append(html); //.select2();
 
@@ -252,11 +241,9 @@ Fields.prototype = {
       self.dist.value = $(this).find('option:selected').text();
       var destinationId = ' [' + $(this).val() + ']';
 
-      // TODO remove this after debug
-      // var cityId = ' (' + $('#' + self.city.newField).val() + ')';
-      // $('#' + self.city.field).val(self.city.value + cityId + ', ' + self.dist.value + destinationId);
-
-      $('#' + self.city.field).val(self.city.value + ', ' + self.dist.value + destinationId);
+      var $cityField = $('#' + self.city.field);
+      $cityField.val(self.city.value + ', ' + self.dist.value + destinationId);
+      $cityField.change();
     }
   },
 

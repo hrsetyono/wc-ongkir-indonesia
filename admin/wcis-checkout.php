@@ -27,7 +27,8 @@ class WCIS_Checkout {
         '_email', '_phone',
 
         '_country',
-        '_state', '_postcode',
+        '_state',
+        '_postcode',
         '_city',
         '_address_1',
         '_address_2',

@@ -1,3 +1,8 @@
+### 1.0.0 (beta)
+
+- City and District no longer uses API. All data stored internally in JSON.
+- Added RPX, J&T, and PCP couriers.
+
 ### 0.3.6
 
 - Added City and District data as part of the plugin. No need to do API call just to get them.

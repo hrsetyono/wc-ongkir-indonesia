@@ -82,22 +82,18 @@ class WCIS_Frontend {
 
     <!-- City Select -->
     <script id="wcis-city-option" type="text/x-handlebars-template">
-
-      <option></option>
+      <option>Choose City</option>
       {{#each this }}
-        <option value="{{ city_id }}">{{ city_name }}</option>
+        <option value="{{ @key }}">{{ city_name }}</option>
       {{/each }}
-
     </script>
 
     <!-- District Select -->
     <script id="wcis-dist-option" type="text/x-handlebars-template">
-
-      <option></option>
+      <option>Choose District</option>
       {{#each this }}
-        <option value="{{ subdistrict_id }}">{{ subdistrict_name }}</option>
+        <option value="{{ @key }}">{{ this }}</option>
       {{/each }}
-
     </script>
 
     <script>
