@@ -95,7 +95,7 @@ Fields.prototype = {
 
     // append template and hide the real city field
     $('#' + self.city.wrapper).append(html).addClass('hide');
-    $('#' + self.city.field).hide();
+    // $('#' + self.city.field).hide(); // TODO
 
     // initiate the event handler
     this.initCountry();
@@ -177,7 +177,7 @@ Fields.prototype = {
       var template = Handlebars.compile($('#wcis-city-option').html() );
       var html = template(args);
 
-      $field.append(html); //.select2();
+      $field.append(html);
 
       // show the city field
       $wrapper.removeClass('hide');
@@ -192,8 +192,7 @@ Fields.prototype = {
     function _onChange(e) {
       $('#' + self.dist.newField).trigger('wcis-city-selected');
 
-      // empty out the city field and store it in variable
-      $('#' + self.city.field).val('');
+      // store city value in variable
       self.city.value = $(this).find('option:selected').text();
     }
   },
@@ -241,8 +240,10 @@ Fields.prototype = {
       self.dist.value = $(this).find('option:selected').text();
       var destinationId = ' [' + $(this).val() + ']';
 
+      var cityVal = self.city.value + ', ' + self.dist.value + destinationId;
+
       var $cityField = $('#' + self.city.field);
-      $cityField.val(self.city.value + ', ' + self.dist.value + destinationId);
+      $cityField.val(cityVal);
       $cityField.change();
     }
   },

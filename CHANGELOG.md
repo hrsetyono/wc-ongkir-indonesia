@@ -1,4 +1,8 @@
-### 1.0.0 (beta)
+### 1.0.0-beta2
+
+- Fixed a bug where Shipping cost doesn't initially load when customer has existing address.
+
+### 1.0.0-beta
 
 - City and District no longer uses API. All data stored internally in JSON.
 - Added RPX, J&T, and PCP couriers.

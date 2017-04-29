@@ -5,7 +5,7 @@ Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Requires pu
 Plugin URI: http://github.com/hrsetyono/wc-indo-shipping
 Author: The Syne Studio
 Author URI: http://thesyne.com/
-Version: 1.0.0
+Version: 1.0.0-beta2
 */
 
 if(!defined('ABSPATH') ) { exit; } // exit if accessed directly
