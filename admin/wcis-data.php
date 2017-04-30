@@ -106,7 +106,16 @@ class WCIS_Data {
     @return array
   */
   private static function _get_json_file($filename) {
-    return json_decode(file_get_contents(WCIS_DIR . "/data/$filename"), true);
+    $fileurl = WCIS_DIR . "/data/$filename";
+    $args = array(
+      'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+      ),
+    );
+
+    $fileraw = file_get_contents($fileurl, false, stream_context_create($args) );
+    return json_decode($fileraw, true);
   }
 
   const JNE_DISTRICT_EXC = array(

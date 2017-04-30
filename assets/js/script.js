@@ -21,7 +21,8 @@ function start() {
 /////
 
 
-// ----- API Module -----
+///// API Module /////
+
 var api = {
   // Get all cities in that state
   getCities: function($state, callback) {

@@ -1,3 +1,9 @@
+### 1.0.0-beta5
+
+- Removed the function that reorders checkout field.
+- Fixed an error when choosing City Origin.
+- Removed City Origin cache since it's no longer do API call to get the list.
+
 ### 1.0.0-beta2
 
 - Fixed a bug where Shipping cost doesn't initially load when customer has existing address.

@@ -76,10 +76,6 @@ class WCIS_Method extends WC_Shipping_Method {
   */
   function process_admin_transients() {
     $license = $this->_set_license_transient();
-
-    if($license['valid']) {
-      $this->_set_location_transient($license['key']);
-    }
   }
 
 
@@ -116,8 +112,19 @@ class WCIS_Method extends WC_Shipping_Method {
     @return array - List of cities in base province
   */
   private function get_cities_origin() {
-    $t_location = get_transient('wcis_location');
-    return $t_location['cities'];
+    $country = wc_get_base_location();
+    $prov_id = WCIS_Data::get_province_id($country['state']);
+
+    // get cities data
+    $cities_raw = WCIS_Data::get_cities($prov_id);
+
+    // parse raw data
+    $cities = array();
+    foreach($cities_raw as $id => $value) {
+      $cities[$id] = $value['city_name'];
+    }
+
+    return $cities;
   }
 
 
@@ -150,38 +157,5 @@ class WCIS_Method extends WC_Shipping_Method {
     return $t_license;
   }
 
-  /*
-    Set Location Origin transient
-
-    @param $key (str) - The API key
-  */
-  private function _set_location_transient($key) {
-    $t_location = get_transient('wcis_location');
-
-    $country = wc_get_base_location();
-    $province = WCIS_Data::get_province_id($country['state']);
-
-    // check location cache
-    $location_different = isset($t_location['province']) && $t_location['province'] !== $province;
-
-    // if cache empty or different from before, update transient
-    if(empty($t_location) || $location_different) {
-
-      // get cities data
-      $api = new WCIS_API($key);
-      $cities_raw = $api->get_cities($province);
-
-      // parse raw data
-      $cities = array();
-      foreach($cities_raw as $id => $value) {
-        $cities[$id] = $value['city_name'];
-      }
-
-      set_transient('wcis_location', array(
-        'province' => $province,
-        'cities' => $cities,
-      ), 60*60*24*30);
-    }
-  }
 
 }
