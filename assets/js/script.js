@@ -95,7 +95,7 @@ Fields.prototype = {
 
     // append template and hide the real city field
     $('#' + self.city.wrapper).append(html).addClass('hide');
-    // $('#' + self.city.field).hide(); // TODO
+    $('#' + self.city.field).hide();
 
     // initiate the event handler
     this.initCountry();
