@@ -163,7 +163,6 @@ Fields.prototype = {
       $(this).empty();
 
       // also remove district
-      $('#' + self.dist.newWrapper).hide();
       $('#' + self.dist.newField).empty();
 
       api.getCities($('#' + self.state.field), _onGetCities);

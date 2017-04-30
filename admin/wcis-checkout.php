@@ -5,7 +5,9 @@
 class WCIS_Checkout {
 
   function __construct() {
-    add_filter('woocommerce_checkout_fields', array($this, 'reorder_fields') );
+    // add_filter('woocommerce_checkout_fields', array($this, 'reorder_fields') );
+    add_filter('woocommerce_default_address_fields', array($this, 'reorder_fields') );
+
     add_action('woocommerce_checkout_update_user_meta', array($this, 'update_user_meta'), 99, 2);
     add_action('woocommerce_checkout_update_order_meta', array($this, 'update_order_meta'), 99, 2);
 
@@ -15,44 +17,26 @@ class WCIS_Checkout {
   /*
     Reorder Billing and Shipping filds in Checkout page.
 
-    @filter woocommerce_checkout_fields
+    @filter woocommerce_default_address_fields
+
     @param array $fields - The current list of fields
     @return array - The ordered list of fields
   */
   function reorder_fields($fields) {
-    // the order
-    $forms = array(
-      'billing' => array(
-        '_first_name', '_last_name',
-        '_email', '_phone',
+    // default priorities:
+    // 'first_name' - 10
+    // 'last_name' - 20
+    // 'company' - 30
+    // 'country' - 40
+    // 'address_1' - 50
+    // 'address_2' - 60
+    // 'city' - 70
+    // 'state' - 80
+    // 'postcode' - 90
 
-        '_country',
-        '_state',
-        '_postcode',
-        '_city',
-        '_address_1',
-        '_address_2',
-      ),
-
-      'shipping' => array(
-        '_first_name', '_last_name',
-        '_country',
-        '_state', '_postcode',
-        '_city',
-        '_address_1',
-        '_address_2'
-      )
-    );
-
-    // reassign the current field into new order
-    foreach($forms as $f => $order) {
-      $ordered_fields = array();
-      foreach($order as $o) {
-        $ordered_fields[$f . $o] = $fields[$f][$f . $o];
-      }
-
-      $fields[$f] = $ordered_fields;
-    }
+    $fields['state']['priority'] = 42;
+    $fields['city']['priority'] = 44;
+    $fields['postcode']['priority'] = 46;
 
     return $fields;
   }
