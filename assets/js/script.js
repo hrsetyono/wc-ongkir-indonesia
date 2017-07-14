@@ -10,254 +10,184 @@ function start() {
 
   // if checkout page but not Order Received page
   else if($('.woocommerce-checkout:not(.woocommerce-order-received)').length) {
-    var billingField = new Fields('billing');
-    billingField.init();
-
-    var shippingField = new Fields('shipping');
-    shippingField.init();
+    startCheckout.init();
   }
 }
 
-/////
-
-
-///// API Module /////
-
-var api = {
-  // Get all cities in that state
-  getCities: function($state, callback) {
-    var code = $state.val();
-
-    if(code) {
-      $.get(woocommerce_params.ajax_url,
-        { action: 'wcis_get_cities', code: code },
-        callback );
-    }
-  },
-};
-
-/*
-  Handle City and District fields
-
-  @param string type - Either calc, billing, or shipping
-  @param obj fields - List of class and ID of all targets
-*/
-function Fields(type, args) {
-  this.type = type;
-
-  this.country = {
-    field: type + '_country',
-    wrapper: type + '_country_field'
-  };
-
-  this.state = {
-    field: type + '_state',
-    wrapper: type + '_state_field',
-    changeCounter: 0 // WooCommerce has bug where State Field trigger its "change" event twice
-  };
-
-  this.city = {
-    field: type + '_city',
-    wrapper: type + '_city_field',
-    newField: type + '_wcis_c',
-    newWrapper: type + '_wcis_c_wrapper'
-  };
-
-  this.dist = {
-    newField: type + '_wcis_d',
-    newWrapper: type + '_wcis_d_wrapper'
-  };
-
-  this.destination = type + '_destination_id';
-
-  this.stateData; // store the JSON data of all Cities in current state
-
-  // parse the city value, the format is "City, District [code]"
-  var cityRaw = $('#' + this.city.field).val();
-
-  var cityValue = cityRaw.match(/[\w\s]+/);
-  this.city.value = cityValue ? cityValue[0] : null;
-
-  var distValue = cityRaw.match(/,\s([\w\s]+)\s*/)
-  this.dist.value = distValue ? distValue[1].trim() : null;
-};
-
-Fields.prototype = {
+// Starter for Checkout functionality
+var startCheckout = {
   init: function() {
     var self = this;
 
-    // add wrapper for the new fields
-    var args = { city: self.city, dist: self.dist };
+    // dropdown listener
+    $(document).on('country_to_state_changed', self.onCountryChanged.bind(self) );
+    $('.woocommerce').on('change', '.state_select', self.onStateChanged);
 
-    var templateId = (self._isCartPage() ) ? '#wcis-wrapper-cart' : '#wcis-wrapper';
-
-    var template = Handlebars.compile($(templateId).html() );
-    var html = template(args);
-
-    // append template and hide the real city field
-    $('#' + self.city.wrapper).append(html).addClass('hide');
-    $('#' + self.city.field).hide();
-
-    // initiate the event handler
-    this.initCountry();
-    this.initState();
-    this.initCity();
-    this.initDistrict();
+    self.createCitySelect();
   },
 
-  initCountry: function() {
+  /*
+    Hide and remove City SELECT when country is changed to not Indonesia
+
+    @param country (string) - Country code
+    @param $wrapper (DOM) - The outer div of Billing or Shipping fieldset
+  */
+  onCountryChanged: function(e, country, $wrapper) {
     var self = this;
 
-    // if cart page, hide the country
-    if(self._isCartPage() ) {
-      $('#' + self.country.wrapper).hide();
+    console.log('country ' + country);
+    var $field = $wrapper.find('[id*="_city_field"]');
+
+    if(country === 'ID') {
+      $field.addClass('form-row--select');
+    } else {
+      $field.removeClass('form-row--select');
+      $field.find('select').html('').change();
     }
   },
 
   /*
-    Add Listener to Province / State field
+    Listener when State dropdown is changed
   */
-  initState: function() {
-    var self = this;
-    var $field = $('#' + self.state.field);
+  onStateChanged: function(e) {
+    console.log('state changed');
 
-    if(self._isCartPage() ) {
-      // $field.select2();
-    }
+    var $state = $(this);
+    var $wrapper = $state.closest('.woocommerce-billing-fields, .woocommerce-shipping-fields');
+    var $cityField = $wrapper.find('[id*="_city_field"]');
+    var $country = $wrapper.find('.country_select');
 
-    $field.off('change');
-    $field.on('change', _onChange);
-
-    function _onChange(e) {
-      $('#' + self.city.field).val('').change();
-
-      // prevent the first change to trigger (bug from WC where it triggers twice)
-      // TODO: if bug resolved, remove this
-      if(self._isCartPage() || self.state.changeCounter) {
-        $('#' + self.city.newField).trigger('wcis-state-selected');
-      }
-
-      self.state.changeCounter += 1;
+    // only run if Country is Indonesia
+    if($country.val() === 'ID') {
+      var cityField = new CityField($state.val(), $cityField);
+      cityField.init();
     }
   },
 
   /*
-    Create a City Selection based on Province
+    Create empty Select, add "_disabled" in the name so it become hidden
   */
-  initCity: function() {
-    var self = this;
-    var $field = $('#' + self.city.newField);
-    var $wrapper = $('#' + self.city.wrapper);
+  createCitySelect: function() {
+    var $wrapper = $('.woocommerce-billing-fields, .woocommerce-shipping-fields');
 
-    // hide city first
-    // $wrapper.addClass('hide');
+    $wrapper.each(function() {
+      var $cityField = $(this).find('[id*="_city_field"]');
 
-    $field.off('wcis-state-selected');
-    $field.on('wcis-state-selected', _onStateSelected);
+      // get the name and append "_disabled"
+      var name = $cityField.find('input').attr('name') + '_select';
+      var selectHtml = '<select name="' + name + '"></select>';
 
-    $field.off('change');
-    $field.on('change', _onChange);
-
-    function _onStateSelected(e) {
-      // console.log('state selected');
-      // remove all options first
-      $(this).empty();
-
-      // also remove district
-      $('#' + self.dist.newField).empty();
-
-      api.getCities($('#' + self.state.field), _onGetCities);
-    }
-
-    function _onGetCities(response) {
-      var args = JSON.parse(response);
-      self.stateData = args;
-
-      // insert template
-      var template = Handlebars.compile($('#wcis-city-option').html() );
-      var html = template(args);
-
-      $field.append(html);
-
-      // show the city field
-      $wrapper.removeClass('hide');
-
-      // prepopulate
-      if(self.city.value) {
-        var optionTarget = 'option:contains("' + self.city.value + '")';
-        $field.find(optionTarget).prop('selected', true).trigger('change');
-      }
-    }
-
-    function _onChange(e) {
-      $('#' + self.dist.newField).trigger('wcis-city-selected');
-
-      // store city value in variable
-      self.city.value = $(this).find('option:selected').text();
-    }
+      $cityField.append(selectHtml);
+    });
   },
 
-  /*
-    Create a District Selection based on City
-  */
-  initDistrict: function() {
-    var self = this;
-    var $field = $('#' + self.dist.newField);
-    var $wrapper = $('#' + self.dist.newWrapper);
-
-    $field.off('wcis-city-selected');
-    $field.on('wcis-city-selected', _onCitySelected);
-
-    $field.off('change');
-    $field.on('change', _onChange);
-
-    function _onCitySelected(e) {
-      // remove all options first
-      $(this).empty();
-
-      // get district data from the API call previously
-      var cityId = $('#' + self.city.newField).val();
-      var distData = self.stateData[cityId]['districts'];
-
-      // insert template
-      var template = Handlebars.compile($('#wcis-dist-option').html() );
-      var html = template(distData);
-
-      $field.append(html); //.select2();
-
-      // show district
-      $wrapper.show();
-
-      // prepopulate
-      if(self.dist.value) {
-        var optionTarget = 'option:contains("' + self.dist.value + '")';
-        $field.find(optionTarget).prop('selected', true).trigger('change');
-      }
-    }
-
-    function _onChange(e) {
-      // create the string for real city field
-      self.dist.value = $(this).find('option:selected').text();
-      var destinationId = ' [' + $(this).val() + ']';
-
-      var cityVal = self.city.value + ', ' + self.dist.value + destinationId;
-
-      var $cityField = $('#' + self.city.field);
-      $cityField.val(cityVal);
-      $cityField.change();
-    }
-  },
-
-  /////
-
-  _isCartPage: function() {
-    return this.type === 'calc_shipping';
-  },
-
-  _isCheckoutPage: function() {
-    return this.type === 'shipping' || this.type === 'billing';
-  }
 };
+
+
+/*
+  Handle City field
+
+  @param state (string) - The selected state
+  @param $field (DOM) - City field wrapper
+*/
+function CityField(state, $field) {
+  var self = this;
+  self.state = state;
+  self.$field = $field;
+  self.$input = self.$field.find('input');
+  self.inputVal = self.$input.val();
+  self.$select = self.$field.find('select');
+
+  self.$input.val(''); // empty out field
+}
+
+CityField.prototype = {
+  init: function() {
+    var self = this;
+
+    // city select listener
+    $('.woocommerce').on('change', '[name="billing_city_select"], [name="shipping_city_select"]', self.onCityChanged.bind(self) );
+
+    // populate dropdown initially
+    self.getData(self.fillSelect.bind(self) );
+  },
+
+  /*
+    After selecting city dropdown, copy the value to the Input text
+  */
+  onCityChanged: function(e) {
+    var self = this;
+
+    self.$select.closest('.form-row')
+      .find('input').val(self.$select.val() )
+      .change();
+  },
+
+
+  /*
+    Get cities data
+
+    @param callback (func) - Function to run after AJAX success
+  */
+  getData: function(callback) {
+    var self = this;
+
+    if(self.state) {
+      $.get(woocommerce_params.ajax_url, { action: 'wcis_get_cities', state: self.state }, callback);
+    }
+  },
+
+  /*
+    Fill City dropdown with data
+
+    @param data (obj) - Response data of cities
+  */
+  fillSelect: function(data) {
+    var self = this;
+    data = $.map(JSON.parse(data), function(el) { return el }); // parse data
+
+    var selectHtml = '';
+
+    // get current district to preselect the City dropdown
+    var districtRegex = /,\s([\w\d\s ]+)/g.exec(self.inputVal);
+    var currentDistrict = districtRegex ? districtRegex[1].trim() : '';
+    var districtFound = false;
+
+    // loop cities
+    for(var cityId in data) {
+      var c = data[cityId];
+      selectHtml += '<optgroup label="' + c.city_name + '">';
+
+      // loop districts
+      for(var distId in c.districts) {
+        var d = c.districts[distId];
+        var value = c.city_name + ', ' + d + ' [' + distId + ']';
+
+        // if same as current district, preselect it
+        if(currentDistrict === d) {
+          districtFound = true;
+          selectHtml += '<option value="' + value  + '" selected="selected">' + d + '</option>';
+        } else {
+          selectHtml += '<option value="' + value  + '">' + d + '</option>';
+        }
+      }
+
+      selectHtml += '</optgroup>';
+    }
+
+    // if district not found, add a placeholder option at top of Select
+    if(!districtFound) {
+      var placeholder = '<option value="" selected="selected" disabled>Please select your City</option>';
+      selectHtml = placeholder + selectHtml;
+    }
+
+    self.$select.html(selectHtml).change();
+    self.$field.addClass('form-row--select');
+  },
+
+}
+
+
 
 $(document).ready(start);
 $(document).on('page:load', start);

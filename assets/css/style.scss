@@ -1,2 +1,12 @@
 @import "setting";
 @import "edje";
+
+#billing_city_field,
+#shipping_city_field {
+  select { display: none; }
+
+  &.form-row--select {
+    select { display: block; }
+    input { display: none; }
+  }
+}

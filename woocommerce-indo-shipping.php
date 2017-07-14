@@ -5,7 +5,7 @@ Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Requires pu
 Plugin URI: http://github.com/hrsetyono/wc-indo-shipping
 Author: The Syne Studio
 Author URI: http://thesyne.com/
-Version: 1.0.0-beta5
+Version: 1.1.0
 */
 
 if(!defined('ABSPATH') ) { exit; } // exit if accessed directly
@@ -34,27 +34,31 @@ class WCIS_Init {
     $this->enabled = isset($this->settings['enabled']) ? $this->settings['enabled'] : 'no';
 
     if($this->enabled === 'yes') {
-      $this->init_classes();
+      $this->admin_init();
+
+      add_action('template_redirect', array($this, 'public_init') );
     }
 
     // run this code even if disabled
-    add_action('woocommerce_shipping_init', array($this, '_shipping_init') );
-    add_filter('woocommerce_shipping_methods', array($this, '_shipping_method') );
+    add_action('woocommerce_shipping_init', array($this, 'shipping_init') );
+    add_filter('woocommerce_shipping_methods', array($this, 'shipping_method') );
   }
 
   /*
     Inititate the needed classes
   */
-  function init_classes() {
-
+  function admin_init() {
     new WCIS_Ajax();
     new WCIS_Checkout();
+  }
 
-    if(!is_admin() ) {
+  function public_init() {
+    if(is_checkout() ) {
       new WCIS_Frontend();
     }
 
     // change default
+    // TODO: due to template_redirect action, Postcode might show up after refresh
     add_filter('woocommerce_shipping_calculator_enable_city', '__return_true');
     add_filter('woocommerce_shipping_calculator_enable_postcode', '__return_false');
   }
@@ -67,7 +71,7 @@ class WCIS_Init {
 
     @filter woocommerce_shipping_init
   */
-  function _shipping_init() {
+  function shipping_init() {
     require_once('admin/init-main.php');
     require_once('admin/init-zones.php');
   }
@@ -77,7 +81,7 @@ class WCIS_Init {
 
     @filter woocommerce_shipping_methods
   */
-  function _shipping_method($methods) {
+  function shipping_method($methods) {
   	$methods['wcis'] = 'WCIS_Method';
     $methods['wcis_zone'] = 'WCIS_Zones_Method';
   	return $methods;

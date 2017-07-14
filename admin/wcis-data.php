@@ -6,14 +6,14 @@
 */
 class WCIS_Data {
   /*
-    Translate Prov Code into ID based on Raja Ongkir list.
+    Translate Province Code into ID based on Raja Ongkir list.
 
-    @param str $code - province code from WooCommerce
+    @param str $state - State / Province code from WooCommerce
     @return int - the province's ID
   */
-  static function get_province_id($code) {
+  static function get_province_id($state) {
     $provinces = self::_get_json_file('provinces.json');
-    $id = array_key_exists($code, $provinces) ? $provinces[$code] : 0;
+    $id = array_key_exists($state, $provinces) ? $provinces[$state] : 0;
     return $id;
   }
 

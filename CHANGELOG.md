@@ -1,3 +1,7 @@
+### 1.1.0
+
+- Combine City and District into one SELECT, separated with optgroup
+
 ### 1.0.0-beta5
 
 - Removed the function that reorders checkout field.

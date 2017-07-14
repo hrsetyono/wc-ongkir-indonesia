@@ -15,9 +15,8 @@ class WCIS_Ajax {
 		@filter wp_ajax_wcis_get_cities
 	*/
 	function get_cities() {
-		$code = $_GET['code'];
-		$id = WCIS_Data::get_province_id($code);
-
+		$state = $_GET['state'];
+		$id = WCIS_Data::get_province_id($state);
 		$cities = WCIS_Data::get_cities($id);
 	  echo json_encode($cities);
 

@@ -5,29 +5,11 @@
 class WCIS_Checkout {
 
   function __construct() {
-    // TODO: this should be in theme, not in plugin
-    // add_filter('woocommerce_default_address_fields', array($this, 'reorder_fields') );
-
     add_action('woocommerce_checkout_update_user_meta', array($this, 'update_user_meta'), 99, 2);
     add_action('woocommerce_checkout_update_order_meta', array($this, 'update_order_meta'), 99, 2);
 
     add_filter('woocommerce_cart_shipping_packages', array($this, 'parse_shipping_package') );
-  }
-
-  /*
-    Reorder Billing and Shipping filds in Checkout page.
-
-    @filter woocommerce_default_address_fields
-
-    @param array $fields - The current list of fields
-    @return array - The ordered list of fields
-  */
-  function reorder_fields($fields) {
-    $fields['state']['priority'] = 42;
-    $fields['city']['priority'] = 44;
-    $fields['postcode']['priority'] = 46;
-
-    return $fields;
+    // add_filter('woocommerce_shipping_packages', array($this, 'parse_shipping_package') );
   }
 
   /*
