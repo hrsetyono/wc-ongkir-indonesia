@@ -10,7 +10,7 @@ Add JNE, TIKI, POS, PCP, RPX, and J&T Express to your WooCommerce. Requires PRO 
 
 This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/wc-indo-shipping/issues).
 
-## Installation
+### 1. Installation
 
 1. Go to `WooCommerce > Settings > Shipping`. Open "Indo Shipping" tab.
 
@@ -22,6 +22,10 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 Done! Now you can see the shipping cost in your Checkout page after filling out all fields.
 
-## Visit our Wiki for Details
+### 2. Like the Checkout Page Design?
+
+You can have that by simply installing my other plugin: [WooCommerce Edje](https://github.com/hrsetyono/woocommerce-edje)
+
+### 3. Visit our Wiki for Details
 
 We have lots of helpful guide and tips for your online shop. [Click here](https://github.com/hrsetyono/woocommerce-indo-shipping/wiki) to check out our wiki.
