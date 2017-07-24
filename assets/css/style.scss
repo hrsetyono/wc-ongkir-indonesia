@@ -3,10 +3,16 @@
 
 #billing_city_field,
 #shipping_city_field {
-  select { display: none; }
+  select,
+  .select2 { display: none; }
 
   &.form-row--select {
-    select { display: block; }
+    select,
+    .select2 { display: block; }
     input { display: none; }
   }
+}
+
+.select2-container {
+  width: 100% !important;
 }

@@ -22,6 +22,7 @@ var startCheckout = {
     // dropdown listener
     $(document).on('country_to_state_changed', self.onCountryChanged.bind(self) );
     $('.woocommerce').on('change', '.state_select', self.onStateChanged);
+    $('.woocommerce').on('change', '[name*="_city_select"]', self.onCityChanged);
 
     self.createCitySelect();
   },
@@ -34,8 +35,6 @@ var startCheckout = {
   */
   onCountryChanged: function(e, country, $wrapper) {
     var self = this;
-
-    console.log('country ' + country);
     var $field = $wrapper.find('[id*="_city_field"]');
 
     if(country === 'ID') {
@@ -50,8 +49,6 @@ var startCheckout = {
     Listener when State dropdown is changed
   */
   onStateChanged: function(e) {
-    console.log('state changed');
-
     var $state = $(this);
     var $wrapper = $state.closest('.woocommerce-billing-fields, .woocommerce-shipping-fields');
     var $cityField = $wrapper.find('[id*="_city_field"]');
@@ -60,8 +57,20 @@ var startCheckout = {
     // only run if Country is Indonesia
     if($country.val() === 'ID') {
       var cityField = new CityField($state.val(), $cityField);
+      $('.woocommerce').off('change.citySelect');
       cityField.init();
     }
+  },
+
+  /*
+    After selecting city dropdown, copy the value to the Input text
+  */
+  onCityChanged: function(e) {
+    var $select = $(this);
+
+    $select.closest('.form-row')
+      .find('input').val($select.val() )
+      .change();
   },
 
   /*
@@ -78,6 +87,7 @@ var startCheckout = {
       var selectHtml = '<select name="' + name + '"></select>';
 
       $cityField.append(selectHtml);
+      $cityField.find('select').select2();
     });
   },
 
@@ -105,22 +115,8 @@ CityField.prototype = {
   init: function() {
     var self = this;
 
-    // city select listener
-    $('.woocommerce').on('change', '[name="billing_city_select"], [name="shipping_city_select"]', self.onCityChanged.bind(self) );
-
     // populate dropdown initially
     self.getData(self.fillSelect.bind(self) );
-  },
-
-  /*
-    After selecting city dropdown, copy the value to the Input text
-  */
-  onCityChanged: function(e) {
-    var self = this;
-
-    self.$select.closest('.form-row')
-      .find('input').val(self.$select.val() )
-      .change();
   },
 
 

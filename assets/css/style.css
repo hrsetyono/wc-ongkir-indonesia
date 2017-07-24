@@ -1,5 +1,7 @@
-#billing_city_field select, #shipping_city_field select { display: none; }
+#billing_city_field select, #billing_city_field .select2, #shipping_city_field select, #shipping_city_field .select2 { display: none; }
 
-#billing_city_field.form-row--select select, #shipping_city_field.form-row--select select { display: block; }
+#billing_city_field.form-row--select select, #billing_city_field.form-row--select .select2, #shipping_city_field.form-row--select select, #shipping_city_field.form-row--select .select2 { display: block; }
 
 #billing_city_field.form-row--select input, #shipping_city_field.form-row--select input { display: none; }
+
+.select2-container { width: 100% !important; }

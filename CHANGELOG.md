@@ -1,3 +1,7 @@
+### 1.1.1
+
+- Fixed City Field not updated after selecting the dropdown
+
 ### 1.1.0
 
 - Combine City and District into one SELECT, separated with optgroup
