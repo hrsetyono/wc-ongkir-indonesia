@@ -5,7 +5,7 @@
 class WCIS_Frontend {
 
   function __construct() {
-    add_action('wp_enqueue_scripts', array($this, 'enqueue_checkout_scripts'), 1001);
+    add_action('wp_enqueue_scripts', array($this, 'enqueue_checkout_scripts'), 1000000);
   }
 
   /*

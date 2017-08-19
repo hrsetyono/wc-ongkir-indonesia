@@ -1,3 +1,8 @@
+### 1.1.2
+
+- Fixed compatibility with WooCommerce Edje plugin
+- [Weight] Fixed weight not being calculated
+
 ### 1.1.1
 
 - Fixed City Field not updated after selecting the dropdown

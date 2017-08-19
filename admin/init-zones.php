@@ -122,7 +122,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
   private function _calculate_weight($package) {
     global $woocommerce;
 
-    $weight = $woocommerce->cart->cart_contents_weight;
+    $weight = wc_get_weight($woocommerce->cart->cart_contents_weight, 'g');
 
     if($weight > 0) {
       return $weight;

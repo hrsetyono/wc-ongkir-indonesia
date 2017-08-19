@@ -99,7 +99,7 @@ class WCIS_Method extends WC_Shipping_Method {
       $this->form_fields['key']['description'] = '<span style="color: #4caf50;">' . $msg . '</span>';
     }
     else {
-      $msg = __('Invalid API Key. Is there empty space before / after it?', 'wcis');
+      $msg = __('Invalid API Key. Are you using non-Pro license?', 'wcis');
       $this->form_fields['key']['description'] = '<span style="color:#f44336;">' . $msg . '</span>';
     }
 
