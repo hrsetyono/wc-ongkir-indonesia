@@ -87,8 +87,67 @@ var startCheckout = {
       var selectHtml = '<select name="' + name + '"></select>';
 
       $cityField.append(selectHtml);
-      $cityField.find('select').select2();
+      $cityField.find('select').select2({
+        templateSelection: myTemplateSelection,
+        matcher: myMatcher,
+      });
     });
+
+    /////
+
+    function myTemplateSelection(opt) {
+      if (!opt.id) { return opt.text; } // optgroup
+      var city = $(opt.element).data('city');
+
+      return city + ' – ' + opt.text;
+    }
+
+
+    function myMatcher(params, data) {
+      var term = $.trim(params.term).toUpperCase(); // the search term
+      var text = $.trim(data.text).toUpperCase(); // the option text
+
+      // If there are no search terms, return all of the data
+      if (term === '') { return data; }
+
+      // if <optgroup>
+      if (data.children && data.children.length > 0) {
+        console.log('search children');
+
+        var match = $.extend(true, {}, data); // clone data
+
+        // if Group title matches, return all children
+        if(text.indexOf(term) > -1) {
+          return match;
+        }
+
+        // else loop through children
+        for (var c = data.children.length - 1; c >= 0; c--) {
+          var child = data.children[c];
+          var matches = myMatcher(params, child);
+
+          // If there wasn't a match, remove the child in array
+          if (matches == null) { match.children.splice(c, 1); }
+        }
+
+        // if any children matches, return the group
+        if (match.children.length > 0) {
+          return match;
+        }
+
+        // If there were no matching children, check just the plain object
+        return myMatcher(params, match);
+      }
+
+      // Check if the text contains the term
+      if (text.indexOf(term) > -1) {
+        console.log('normal search');
+        return data;
+      }
+
+      // If it doesn't contain the term, don't return anything
+      return null;
+    }
   },
 
 };
@@ -147,7 +206,6 @@ CityField.prototype = {
     // get current district to preselect the City dropdown
     var districtRegex = /,\s([\w\d\s ]+)/g.exec(self.inputVal);
     var currentDistrict = districtRegex ? districtRegex[1].trim() : '';
-    var districtFound = false;
 
     // loop cities
     for(var cityId in data) {
@@ -157,22 +215,23 @@ CityField.prototype = {
       // loop districts
       for(var distId in c.districts) {
         var d = c.districts[distId];
-        var value = c.city_name + ', ' + d + ' [' + distId + ']';
+        var value = ' value="' + c.city_name + ', ' + d + ' [' + distId + ']"';
+        var dataCity = ' data-city="' + c.city_name + '" ';
+        var isSelected = '';
 
         // if same as current district, preselect it
         if(currentDistrict === d) {
-          districtFound = true;
-          selectHtml += '<option value="' + value  + '" selected="selected">' + d + '</option>';
-        } else {
-          selectHtml += '<option value="' + value  + '">' + d + '</option>';
+          isSelected = ' selected="selected" ';
         }
+
+        selectHtml += '<option' + dataCity + value + isSelected + '>' + d + '</option>';
       }
 
       selectHtml += '</optgroup>';
     }
 
     // if district not found, add a placeholder option at top of Select
-    if(!districtFound) {
+    if(!isSelected) {
       var placeholder = '<option value="" selected="selected" disabled>Please select your City</option>';
       selectHtml = placeholder + selectHtml;
     }

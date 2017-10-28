@@ -1,3 +1,7 @@
+### 1.1.3
+
+- Fixed City dropdown filter only searching <optgroup> title
+
 ### 1.1.2
 
 - Fixed compatibility with WooCommerce Edje plugin
