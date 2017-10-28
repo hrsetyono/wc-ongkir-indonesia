@@ -2,7 +2,7 @@
 
 ![Indo Shipping - Checkout Page](http://cdn.setyono.net/indo-shipping/wcis-select-courier.jpg)
 
-**REQUIREMENT**: PHP 5.6 and WooCommerce 3.0+
+### REQUIREMENT: PHP 5.6 and WooCommerce 3.0+
 
 Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
 
