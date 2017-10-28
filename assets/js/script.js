@@ -52,6 +52,7 @@ var startCheckout = {
     var $state = $(this);
     var $wrapper = $state.closest('.woocommerce-billing-fields, .woocommerce-shipping-fields');
     var $cityField = $wrapper.find('[id*="_city_field"]');
+    var $country = $wrapper.find('[name="billing_country"], [name="shipping_country"]');
 
     // only run if Country is Indonesia
     if($country.val() === 'ID') {
