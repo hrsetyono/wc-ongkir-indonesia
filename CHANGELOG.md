@@ -1,3 +1,7 @@
+## 1.1.4
+
+- Fixed Sumatera Selatan (Province) not having correct ID.
+
 ### 1.1.3
 
 - Fixed City dropdown filter only searching <optgroup> title
