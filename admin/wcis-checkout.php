@@ -13,9 +13,9 @@ class WCIS_Checkout {
   }
 
   /*
-    Clean the User's city field from [id] notation used when calculating shipping cost. Only run when it's not Guest.
-
+    Clean the User's city field from [id] notation. Only run when it's not Guest.
     @filter woocommerce_checkout_update_user_meta
+
     @param int $user_id - The customer that bought this
     @param array $posted - The data posted
   */
@@ -31,35 +31,35 @@ class WCIS_Checkout {
   }
 
   /*
-    Clean the Order's city field from [id] notation used when calculating shipping cost.
-
+    Clean the Order's city field from [id] notation.
     @filter woocommerce_checkout_update_order_meta
+
     @param int $order_id - The order that just created
     @param array $posted - The data posted
   */
-  function update_order_meta($order_id, $posted) {
-    $city = $this->_clean_city_field($posted['billing_city']);
-    update_post_meta($order_id, '_billing_city', $city);
+  function update_order_meta( $order_id, $posted ) {
+    $city = $this->_clean_city_field( $posted['billing_city'] );
+    update_post_meta( $order_id, '_billing_city', $city );
 
     // if shipping city is passed on
-    if(isset($posted['shipping_city']) ) {
-      $city = $this->_clean_city_field($posted['shipping_city']);
+    if(isset( $posted['shipping_city'] ) ) {
+      $city = $this->_clean_city_field( $posted['shipping_city'] );
     }
-    update_post_meta($order_id, '_shipping_city', $city);
+    update_post_meta( $order_id, '_shipping_city', $city );
   }
 
 
   /*
     Add Destination's ID to POST parameter
-
     @filter woocommerce_cart_shipping_packages
+
     @param mixed $packages - Cart parameters
     @return mixed
   */
-  function parse_shipping_package($packages) {
+  function parse_shipping_package( $packages ) {
     // look for district ID in city field
-    preg_match('/\[(\d+)\]/', $packages[0]['destination']['city'], $matches);
-    if(count($matches) ) {
+    preg_match( '/\[(\d+)\]/', $packages[0]['destination']['city'], $matches );
+    if( count($matches) ) {
       $packages[0]['destination']['destination_id'] = $matches[1];
     }
 
@@ -69,15 +69,15 @@ class WCIS_Checkout {
   /////
 
   /*
-    Clean the city field. The raw formatt is "City name [id]". Remove the [id].
+    Clean the city field from [id] notation.
 
     @param string $city_raw
     @return string - City name without ID
   */
-  private function _clean_city_field($city_raw) {
-    preg_match('/[\w\s,]+/', $city_raw, $city);
+  private function _clean_city_field( $city_raw ) {
+    preg_match( '/[\w\s,]+/', $city_raw, $city );
 
-    return trim($city[0]);
+    return trim( $city[0] );
   }
 
 }

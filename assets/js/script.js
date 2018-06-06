@@ -112,7 +112,6 @@ var startCheckout = {
 
       // if <optgroup>
       if (data.children && data.children.length > 0) {
-        console.log('search children');
 
         var match = $.extend(true, {}, data); // clone data
 
@@ -141,7 +140,6 @@ var startCheckout = {
 
       // Check if the text contains the term
       if (text.indexOf(term) > -1) {
-        console.log('normal search');
         return data;
       }
 

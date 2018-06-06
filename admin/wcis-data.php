@@ -5,15 +5,20 @@
   TODO: add postal code range for all cities, then we can use Postal Code field for city detection.
 */
 class WCIS_Data {
+
+  function __construct() {
+
+  }
+
   /*
     Translate Province Code into ID based on Raja Ongkir list.
 
     @param str $state - State / Province code from WooCommerce
     @return int - the province's ID
   */
-  static function get_province_id($state) {
-    $provinces = self::_get_json_file('provinces.json');
-    $id = array_key_exists($state, $provinces) ? $provinces[$state] : 0;
+  static function get_province_id( $state ) {
+    $provinces = self::_get_data('provinces.json');
+    $id = array_key_exists( $state, $provinces ) ? $provinces[$state] : 0;
     return $id;
   }
 
@@ -23,12 +28,12 @@ class WCIS_Data {
     @param $prov_id - ID of the province
     @retun array
   */
-  static function get_cities($prov_id) {
-    $data = self::_get_json_file('cities/' . $prov_id . '.json');
+  static function get_cities( $prov_id ) {
+    $data = self::_get_data( 'cities/' . $prov_id . '.json' );
 
     // if exists, filter and return it
     if($data) {
-      $data = self::_filter_dupe_name($prov_id, $data);
+      $data = self::_filter_dupe_name( $prov_id, $data );
       return $data;
     } else {
       return $data;
@@ -41,11 +46,11 @@ class WCIS_Data {
     @return array - List of couriers in (slug => name) format.
   */
   static function get_couriers() {
-    $couriers_raw = self::_get_json_file('couriers.json');
+    $couriers_raw = self::_get_data( 'couriers.json' );
 
     // remap
     $couriers = array();
-    foreach($couriers_raw as $key => $value) {
+    foreach( $couriers_raw as $key => $value ) {
       $couriers[$key] = $value['name'];
     }
 
@@ -54,25 +59,26 @@ class WCIS_Data {
 
   /*
     Get the services provided by the courier.
+    // TODO: code stinks. Remove hardcode for J&T and simple_format parameter
 
     @param string $name - Courier slug as listed in couriers.json
     @param bool $simple_format - *Optional*. If true, return a simplified `id => name` format. Default is false.
     @return array - The services this courier provided
   */
-  static function get_services($name, $simple_format = false) {
+  static function get_services( $name, $simple_format = false ) {
     if($name === 'J&T') { $name = 'jnt'; } // for weird reason, the response code for 'jnt' is 'J&T'
 
-    $couriers = self::_get_json_file('couriers.json');
-    $courier = isset($couriers[$name]) ? $couriers[$name] : null;
+    $couriers = self::_get_data( 'couriers.json' );
+    $courier = isset( $couriers[$name] ) ? $couriers[$name] : null;
 
     // if courier found
-    if($courier) {
+    if( $courier ) {
       $services = $courier['services'];
 
       // simplify the data
-      if($simple_format) {
+      if( $simple_format ) {
         $parsed = array();
-        foreach($courier['services'] as $key => $val) {
+        foreach( $courier['services'] as $key => $val ) {
           $parsed[$key] = $val['title'];
         }
 
@@ -83,19 +89,6 @@ class WCIS_Data {
     }
   }
 
-  /*
-    Get the district that isn't in JNE
-
-    TODO: not used
-
-    @param int $city_id
-    @return array - The city list
-  */
-  static function get_jne_district_exc($city_id) {
-    return array_key_exists($city_id, self::JNE_DISTRICT_EXC) ? self::JNE_DISTRICT_EXC[$city_id] : null;
-  }
-
-
   /////
 
 
@@ -105,7 +98,7 @@ class WCIS_Data {
     @param string $filename
     @return array
   */
-  private static function _get_json_file($filename) {
+  private static function _get_data( $filename ) {
     $fileurl = WCIS_DIR . "/data/$filename";
     $args = array(
       'ssl' => array(
@@ -114,25 +107,18 @@ class WCIS_Data {
       ),
     );
 
-    $fileraw = file_get_contents($fileurl, false, stream_context_create($args) );
-    return json_decode($fileraw, true);
+    $fileraw = file_get_contents( $fileurl, false, stream_context_create($args) );
+    return json_decode( $fileraw, true );
   }
-
-  const JNE_DISTRICT_EXC = array(
-    '63' => array(
-      '842' // bunga mas
-    ),
-  );
 
   /*
     Add prefix to city and district that have the same name
 
     @param array $data - Cities data
     @param array $dupe_ids - ID of cities that share the same name
-
     @return array - Prefixed list
   */
-  private static function _filter_dupe_name($prov_id, $data) {
+  private static function _filter_dupe_name( $prov_id, $data ) {
     // Province that has same city and district name
     $city_dupe_name = array(
       3 => array(402, 403, 455, 456), // Serang, Tangerang
@@ -153,11 +139,11 @@ class WCIS_Data {
     );
 
     // if province has duplicate city name
-    if(array_key_exists($prov_id, $city_dupe_name) ):
+    if( array_key_exists( $prov_id, $city_dupe_name ) ):
       $dupe_ids = $city_dupe_name[$prov_id];
 
-      foreach($data as $id => &$value) {
-        if(in_array($id, $dupe_ids) ) {
+      foreach( $data as $id => &$value ) {
+        if( in_array($id, $dupe_ids) ) {
           $value['city_name'] = $value['city_name'] . ' (' . $value['type'] . ')';
         }
       }

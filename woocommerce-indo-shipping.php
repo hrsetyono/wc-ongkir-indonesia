@@ -53,7 +53,7 @@ class WCIS_Init {
   }
 
   function public_init() {
-    if(is_checkout() ) {
+    if( is_checkout() ) {
       new WCIS_Frontend();
     }
 

@@ -1,5 +1,7 @@
 <?php
-
+/*
+  Handle API call to RajaOngkir server
+*/
 class WCIS_API {
   private $api_key;
   private $api_base = 'http://pro.rajaongkir.com/api';
