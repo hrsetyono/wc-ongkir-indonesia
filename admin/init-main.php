@@ -32,7 +32,7 @@ class WCIS_Method extends WC_Shipping_Method {
 
     $key_field = array(
       'title' => __('API Key', 'wcis'),
-      'type' => 'text',
+      'type' => 'password',
       'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here', 'wcis'),
     );
 
