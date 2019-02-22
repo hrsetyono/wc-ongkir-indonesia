@@ -6,21 +6,21 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
   private $api;
   private $main_settings;
 
-  public function __construct($instance_id = 0) {
+  public function __construct( $instance_id = 0 ) {
 		$this->id = 'wcis_zone';
-    $this->instance_id = absint($instance_id);
+    $this->instance_id = absint( $instance_id );
 
-    $this->title = __('Indo Shipping', 'wcis');
-		$this->method_title = __('Indo Shipping', 'wcis');
-    $this->method_description = __('Indonesian domestic shipping with JNE, TIKI, or POS', 'wcis');
-    $this->supports = array('shipping-zones', 'instance-settings',);
+    $this->title = __( 'Indo Shipping', 'wcis' );
+		$this->method_title = __( 'Indo Shipping', 'wcis' );
+    $this->method_description = __( 'Indonesian domestic shipping with JNE, TIKI, POS, etc', 'wcis' );
+    $this->supports = array( 'shipping-zones', 'instance-settings' );
 
     // global
-    $this->main_settings = get_option('woocommerce_wcis_settings');
-    $this->api = new WCIS_API($this->main_settings['key']);
+    $this->main_settings = get_option( 'woocommerce_wcis_settings' );
+    $this->api = new WCIS_API( $this->main_settings['key'] );
 
     // allow save setting
-    add_action('woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
+    add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
 	}
 
 	/*
@@ -28,15 +28,15 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
 
 	  @param mixed $package
 	*/
-	function calculate_shipping($package = array() ) {
+	function calculate_shipping( $package = array() ) {
     // if district not exists or empty
-    $id_exists = array_key_exists('destination_id', $package['destination']);
-    if(!$id_exists || empty($package['destination']['destination_id']) ) {
+    $id_exists = array_key_exists( 'destination_id', $package['destination'] );
+    if( !$id_exists || empty( $package['destination']['destination_id'] ) ) {
       return false;
     }
 
-    $costs = $this->_get_costs($package);
-    $this->_set_rate($costs);
+    $costs = $this->_get_costs( $package );
+    $this->_set_rate( $costs );
 	}
 
   /////
@@ -62,7 +62,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
     );
 
     // get the cost
-    $costs = $this->api->get_costs($args);
+    $costs = $this->api->get_costs( $args );
     return $costs;
   }
 
@@ -71,35 +71,35 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
 
     @param array $costs - Cost list from API
   */
-  private function _set_rate($costs) {
+  private function _set_rate( $costs ) {
     // format the costs from API to WooCommerce
-    foreach($costs['results'] as $courier):
-      if(empty($courier) ) { break; }
+    foreach( $costs['results'] as $courier ):
+      if( empty($courier) ) { break; }
 
       // get full list of services
       $code = $courier['code'];
-      $all_services = WCIS_Data::get_services($code);
+      $all_services = WCIS_Data::get_services( $code );
 
       // get allowed service from this courier
       $setting_id = $code . '_services';
-      $allowed_services = isset($this->main_settings[$setting_id]) ? $this->main_settings[$setting_id] : array();
+      $allowed_services = isset( $this->main_settings[ $setting_id ] ) ? $this->main_settings[ $setting_id ] : array();
 
-      foreach($courier['costs'] as $service):
+      foreach( $courier['costs'] as $service ):
         // check if this service is allowed
         $is_allowed = false;
-        foreach($allowed_services as $as) {
+        foreach( $allowed_services as $as ) {
           // if has variation
-          if(isset($all_services[$as]['vars']) ) {
-            $is_allowed = in_array($service['service'], $all_services[$as]['vars'] );
+          if( isset( $all_services[$as]['vars'] ) ) {
+            $is_allowed = in_array( $service['service'], $all_services[$as]['vars'] );
           }
           else {
             $is_allowed = $service['service'] === $as;
           }
 
-          if($is_allowed) { break; }
+          if( $is_allowed ) { break; }
         }
 
-        if($is_allowed) {
+        if( $is_allowed ) {
           $rate = array(
             'id' => $code . '_' . strtolower($service['service']) . $this->instance_id,
             'label' => strtoupper($code) . ' ' . $service['service'],
