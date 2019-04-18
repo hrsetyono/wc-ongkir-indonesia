@@ -14,3 +14,19 @@ function shipping_indo_reorder_checkout_fields( $fields ) {
   return $fields;
 }
 
+/**
+ * Remove existing address on checkout to fix city show empty field
+ */
+add_filter( 'woocommerce_checkout_get_value', 'indo_shipping_clear_state_data', 10, 2 );
+
+function indo_shipping_clear_state_data( $value, $input ) {
+    $shipping_fields = array(
+        'shipping_city', 'shipping_state'
+    );
+
+    if ( in_array( $input, $shipping_fields ) ) {
+        $value = '';
+    }
+
+    return $value;
+}
