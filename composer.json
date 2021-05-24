@@ -1,0 +1,19 @@
+{
+  "name": "pixelstudio/woocommerce-indo-shipping",
+  "description": "WooCommerce FREE Shipping plugin for JNE, J&T, TIKI, POS, etc. Requires PRO License from RajaOngkir.",
+  "keywords": ["wordpress", "woocommerce", "plugin", "library"],
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/hrsetyono/woocommerce-indo-shipping/",
+  "authors": [
+    {
+      "name": "Pixel Studio",
+      "email": "info@pixelstudio.id",
+      "homepage": "https://pixelstudio.id"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0.0",
+    "composer/installers": "~1.0"
+  }
+}

@@ -1,4 +1,4 @@
-## WooCommerce Indonesia Shipping
+## WooCommerce Indonesia Shipping v2
 
 ![Indo Shipping - Checkout Page](https://cdn.pixelstudio.id/indo-shipping/wcis-select-courier.jpg)
 
@@ -7,6 +7,8 @@ Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
 Add JNE, TIKI, POS, PCP, RPX, and J&T Express to your WooCommerce. Requires PRO License purchase from RajaOngkir.com. We are not affiliated with RajaOngkir in any way.
 
 This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/wc-indo-shipping/issues).
+
+> **Version 2 is now available!**
 
 ### Tested working on:
 
@@ -29,6 +31,17 @@ Done! Now you can see the shipping cost in your Checkout page after filling out 
 
 You can have that by simply installing my other plugin: [WooCommerce Edje](https://github.com/hrsetyono/woocommerce-edje)
 
-### 3. Visit our Wiki for Details
+### 3. Version 2 Changelog
 
-We have lots of helpful guide and tips for your online shop. [Click here](https://github.com/hrsetyono/woocommerce-indo-shipping/wiki) to check out our wiki.
+Released 24 May 2021
+
+- Added support for PHP 7.3
+- Added support for WooCommerce 5.3
+- Splitted the City and District selection into 2 dropdowns
+- Added guidance and loading text for better user experience.
+- Smoother City and District selection.
+- Added condition to disable the selection if Country is not Indonesia.
+
+COMING SOON:
+- Add English language translation
+- Support for RajaOngkir free license
