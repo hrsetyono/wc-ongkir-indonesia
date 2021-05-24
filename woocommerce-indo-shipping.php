@@ -1,47 +1,51 @@
 <?php
 /*
-Plugin Name: WooCommerce Indonesia Shipping
-Description: WooCommerce FREE Shipping plugin for JNE, TIKI, or POS. Requires purchase from RajaOngkir.
-Plugin URI: http://github.com/hrsetyono/wc-indo-shipping
-Author: The Syne Studio
-Author URI: http://thesyne.com/
-Version: 1.1.4
+Plugin Name: WooCommerce Indo Shipping (Ongkos Kirim)
+Description: WooCommerce FREE Shipping plugin for JNE, J&T, TIKI, POS, etc. Requires PRO License from RajaOngkir.
+Plugin URI: http://github.com/hrsetyono/woocommerce-indo-shipping
+Author: Pixel Studio
+Author URI: https://pixelstudio.id/
+Version: 2.0.0
 */
 
 if(!defined('ABSPATH') ) { exit; } // exit if accessed directly
 
-// check if WooCommerce active
-include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-if(!is_plugin_active('woocommerce/woocommerce.php') ) {
-  return false;
+// Abort if WooCommerce not installed
+if( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+  return;
 }
 
-define('WCIS_DIR', plugins_url('', __FILE__) );
+define( 'WCIS_VERSION', '2.0.0' );
+define( 'WCIS_DIR', plugins_url('', __FILE__) );
+define( 'WCIS_NAMESPACE', 'wcis/v1' );
+define( 'WCIS_API', get_site_url() . '/wp-json/' . WCIS_NAMESPACE );
+define( 'RAJAONGKIR_API', 'https://pro.rajaongkir.com/api' );
 
-require_once 'admin/all.php';
-require_once 'public/all.php';
+
+require_once __DIR__ . '/module-admin/wcis-checkout.php';
+require_once __DIR__ . '/module-api/_index.php';
+require_once __DIR__ . '/module-checkout/_index.php';
 
 /*
   Inititate the Indo Shipping method
 */
-new WCIS_Init();
 class WCIS_Init {
   private $settings;
   private $enabled;
 
   function __construct() {
-    $this->settings = get_option('woocommerce_wcis_settings');
-    $this->enabled = isset($this->settings['enabled']) ? $this->settings['enabled'] : 'no';
+    $this->settings = get_option( 'woocommerce_wcis_settings' );
+    $this->enabled = isset( $this->settings['enabled'] ) ? $this->settings['enabled'] : 'no';
 
-    if($this->enabled === 'yes') {
+    if( $this->enabled === 'yes' ) {
       $this->admin_init();
 
-      add_action('template_redirect', array($this, 'public_init') );
+      add_action( 'template_redirect', [$this, 'public_init'] );
     }
 
     // run this code even if disabled
-    add_action('woocommerce_shipping_init', array($this, 'shipping_init') );
-    add_filter('woocommerce_shipping_methods', array($this, 'shipping_method') );
+    add_action( 'woocommerce_shipping_init', [$this, 'shipping_init'] );
+    add_filter( 'woocommerce_shipping_methods', [$this, 'shipping_method'] );
   }
 
   /*
@@ -53,37 +57,49 @@ class WCIS_Init {
   }
 
   function public_init() {
-    if( is_checkout() ) {
-      new WCIS_Frontend();
+    if( is_checkout() || is_cart() ) {
+      add_action( 'wp_enqueue_scripts', [$this, 'enqueue_assets'], 1000000 );
     }
 
     // change default
     // TODO: due to template_redirect action, Postcode might show up after refresh
-    add_filter('woocommerce_shipping_calculator_enable_city', '__return_true');
-    add_filter('woocommerce_shipping_calculator_enable_postcode', '__return_false');
+    add_filter( 'woocommerce_shipping_calculator_enable_city', '__return_true' );
+    add_filter( 'woocommerce_shipping_calculator_enable_postcode', '__return_false' );
   }
 
 
-  /////
-
-  /*
-    Initiate WC Shipping
-
-    @filter woocommerce_shipping_init
-  */
+  /**
+   * Initiate WC Shipping
+   * @filter woocommerce_shipping_init
+   */
   function shipping_init() {
-    require_once('admin/init-main.php');
-    require_once('admin/init-zones.php');
+    require_once( 'module-admin/init-main.php' );
+    require_once( 'module-admin/init-zones.php' );
   }
 
-  /*
-    Add our custom Shipping method
-
-    @filter woocommerce_shipping_methods
-  */
-  function shipping_method($methods) {
+  /**
+   * Add our custom Shipping method
+   * @filter woocommerce_shipping_methods
+   */
+  function shipping_method( $methods ) {
   	$methods['wcis'] = 'WCIS_Method';
     $methods['wcis_zone'] = 'WCIS_Zones_Method';
   	return $methods;
   }
+
+  /**
+   * @action wp_enqueue_scripts
+   */
+  function enqueue_assets() {
+    $dist = WCIS_DIR . '/assets/dist';
+    wp_enqueue_style( 'wcis_style', $dist . '/wcis-public.css', [], WCIS_VERSION );
+    wp_enqueue_script( 'wcis_script', $dist . '/wcis-public.js', ['jquery'], WCIS_VERSION, true );
+    
+    wp_localize_script( 'wcis_script', 'wcisLocalize', [
+      'WCIS_API' => WCIS_API,
+    ] );
+  }
 }
+
+
+new WCIS_Init();

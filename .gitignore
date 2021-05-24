@@ -3,6 +3,7 @@ Thumbs.db
 ehthumbs.db
 
 npm-debug.log
+node_modules
 
 # Folder config file
 Desktop.ini

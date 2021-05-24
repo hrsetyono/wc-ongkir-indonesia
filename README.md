@@ -1,6 +1,6 @@
 ## WooCommerce Indonesia Shipping
 
-![Indo Shipping - Checkout Page](http://cdn.setyono.net/indo-shipping/wcis-select-courier.jpg)
+![Indo Shipping - Checkout Page](https://cdn.pixelstudio.id/indo-shipping/wcis-select-courier.jpg)
 
 Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
 
@@ -8,11 +8,10 @@ Add JNE, TIKI, POS, PCP, RPX, and J&T Express to your WooCommerce. Requires PRO 
 
 This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/wc-indo-shipping/issues).
 
-### Requirement
+### Tested working on:
 
-- PHP 5.6+
-- WooCommerce 3.0+
-- These PHP modules must be activated: `CURL`, `ALLOW_URL_FOPEN`
+- PHP 7.3 with `CURL` and `ALLOW_URL_FOPEN` enabled.
+- WooCommerce 5.3.0
 
 ### 1. Installation
 

@@ -5,10 +5,41 @@
     "type": "git",
     "url": "git+https://github.com/hrsetyono/woocommerce-indo-shipping.git"
   },
-  "dependencies": {},
-  "scripts": {
-    "sass": "FOR /f \"delims=\" %v IN ('node -p \"require('edje').includePaths()[0]\"') DO node-sass -w assets/css -o assets/css --output-style compact --include-path \"%v\" ",
-    "watch-x": "node-sass -w assets/sass -o assets/css --include-paths $(node -p \"require('edje').includePaths()\")"
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@wordpress/components": "^11.1.1",
+    "@wordpress/scripts": "^12.5.0",
+    "autoprefixer": "^10.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "lodash": "^4.17.20",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.0.8",
+    "postcss-loader": "^4.0.2",
+    "sass-loader": "^10.0.2",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "prod": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "test": "jest"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@wordpress/babel-preset-default"
+    ]
+  }
 }
