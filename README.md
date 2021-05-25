@@ -15,7 +15,23 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 - PHP 7.3 with `CURL` and `ALLOW_URL_FOPEN` enabled.
 - WooCommerce 5.3.0
 
-### 1. Installation
+### 1. How to Install in WordPress
+
+1. Download our latest version at https://github.com/hrsetyono/woocommerce-indo-shipping/releases/
+
+1. Go to your WP Admin panel > Plugins > Add New
+
+1. Choose to upload your own zip file.
+
+**Alternative Way using Composer**:
+
+This plugin is available in Composer under this name:
+
+    "pixelstudio/woocommerce-indo-shipping": "~2.0.0"
+
+If you don't know how to use Composer to manage plugins, visit here https://wptips.dev/composer-to-manage-plugins/
+
+### 2. Initial Setup
 
 1. Go to `WooCommerce > Settings > Shipping`. Open "Indo Shipping" tab.
 
@@ -27,11 +43,11 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 Done! Now you can see the shipping cost in your Checkout page after filling out all fields.
 
-### 2. Like the Checkout Page Design?
+### 3. Like the Checkout Page Design?
 
 You can have that by simply installing my other plugin: [WooCommerce Edje](https://github.com/hrsetyono/woocommerce-edje)
 
-### 3. Version 2 Changelog
+### 4. Version 2 Changelog
 
 Released 24 May 2021
 
