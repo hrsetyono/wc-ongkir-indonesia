@@ -1,23 +1,31 @@
-## WooCommerce Indonesia Shipping v2
+# WooCommerce Indonesia Shipping v2
 
-![Indo Shipping - Checkout Page](https://cdn.pixelstudio.id/indo-shipping/wcis-select-courier.jpg)
+![](https://raw.github.com/hrsetyono/cdn/master/woocommerce-indo-shipping/ongkir-banner.jpg)
 
 Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
 
-Add JNE, TIKI, POS, PCP, RPX, and J&T Express to your WooCommerce.
+This plugin requires PRO License purchase from RajaOngkir.com. We are not affiliated with RajaOngkir in any way.
 
-**Important:** Requires PRO License purchase from RajaOngkir.com. We are not affiliated with RajaOngkir in any way.
+This plugin is free and provided as is. We are not responsible for any damage caused by bugs. If you found a bug, please submit it [here](https://github.com/hrsetyono/woocommerce-indo-shipping/issues).
 
-This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/wc-indo-shipping/issues).
+**Supported Couriers:**
 
-> **Version 2 is now available!**
+- JNE
+- TIKI
+- Pos Indonesia
+- J&T
+- SiCepat
+- Ninja Express
+- AnterAja
 
-### Tested working on:
+**Tested working on:**
 
 - PHP 7.3 with `CURL` and `ALLOW_URL_FOPEN` enabled.
-- WooCommerce 5.3.0
+- WooCommerce 5.9.0
+- WordPress 5.8.3
+- Storefront theme and [Edje Theme](https://github.com/hrsetyono/edje-wp-theme)
 
-### 1. How to Install in WordPress
+## 1. How to Install
 
 1. Download our latest version at https://github.com/hrsetyono/woocommerce-indo-shipping/releases/
 
@@ -29,29 +37,44 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 This plugin is available in Composer under this name:
 
-    "pixelstudio/woocommerce-indo-shipping": "~2.0.0"
+    "pixelstudio/woocommerce-indo-shipping": "~2.1.0"
 
 If you don't know how to use Composer to manage plugins, visit here https://wptips.dev/composer-to-manage-plugins/
 
-### 2. Initial Setup
+## 2. Initial Setup
 
-1. Go to `WooCommerce > Settings > Shipping`. Open "Indo Shipping" tab.
+![](https://raw.github.com/hrsetyono/cdn/master/woocommerce-indo-shipping/ongkir-setup.jpg)
 
-1. Set your API (License) Key and Save. You will find some new fields to set City origin and Services to use. **Note:** If the City dropdown is empty, press Save again.
+1. Go to WooCommerce > Settings > Shipping > Indo Shipping.
 
-1. Go to "Shipping Zones" tab and create one with only Indonesia as its region.
+1. Enter RajaOngkir PRO API Key and press "Save". If it's correct, it will say "Connected" and the rest of the fields will appear.
 
-1. Click the plus (+) button and add "Indo Shipping".
+1. Tick Enable.
 
-Done! Now you can see the shipping cost in your Checkout page after filling out all fields.
+1. Set your shop's city / district location. It is based on the Province you set in General setting.
 
-### 3. Like the Checkout Page Design?
+1. Select the service you want to enable from each courier. Leave empty if you want to disable it.
 
-You can have that by simply installing my other plugin: [WooCommerce Edje](https://github.com/hrsetyono/woocommerce-edje)
+![](https://raw.github.com/hrsetyono/cdn/master/woocommerce-indo-shipping/ongkir-zone.jpg)
 
-### 4. Version 2 Changelog
+1. Go to Shipping Zone and click "Add Shipping Zone" button. You will see the screen above.
 
-Released 24 May 2021
+1. Set regions as "Indonesia".
+
+1. Click "Add shipping method" and select "Indo Shipping".
+
+Done! You will now see additional fields for City and District (Kecamatan) when Checkout.
+
+## 3. Changelog
+
+2.1.0 (17 Jan 2022)
+
+- Added support for WooCommerce 5.9.
+- Added support for Localhost installation.
+- Added volume calculation. If it's higher than weight, it will use volume. The formula is `volume / 6000`.
+- Added support for SiCepat, AnterAja, and Ninja couriers.
+
+2.0.0 (24 May 2021)
 
 - Added support for PHP 7.3
 - Added support for WooCommerce 5.3
@@ -60,6 +83,7 @@ Released 24 May 2021
 - Smoother City and District selection.
 - Added condition to disable the selection if Country is not Indonesia.
 
-COMING SOON:
-- Add English language translation
+Planned future updates:
+
+- English language translation
 - Support for RajaOngkir free license
