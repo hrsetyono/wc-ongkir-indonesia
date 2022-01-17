@@ -1,7 +1,7 @@
 <?php
 
-add_filter( 'woocommerce_default_address_fields', 'wcis_reorder_checkout_fields' );
-add_filter( 'woocommerce_checkout_get_value', 'wcis_clear_state_data', 10, 2 );
+add_filter('woocommerce_default_address_fields', 'wcis_reorder_checkout_fields');
+add_filter('woocommerce_checkout_get_value', 'wcis_clear_state_data', 10, 2);
 
 /**
  * Re-order field checkout
@@ -9,7 +9,7 @@ add_filter( 'woocommerce_checkout_get_value', 'wcis_clear_state_data', 10, 2 );
  * 
  * @filter woocommerce_default_address_fields
  */
-function wcis_reorder_checkout_fields( $fields ) {
+function wcis_reorder_checkout_fields($fields) {
   $fields['state']['priority'] = 70;
   $fields['city']['priority'] = 80;
   return $fields;
@@ -20,12 +20,12 @@ function wcis_reorder_checkout_fields( $fields ) {
  * 
  * @filter woocommerce_checkout_get_value
  */
-function wcis_clear_state_data( $value, $input ) {
-  $shipping_fields = array(
+function wcis_clear_state_data($value, $input) {
+  $shipping_fields = [
     'shipping_city', 'shipping_state'
-  );
+  ];
 
-  if( in_array( $input, $shipping_fields ) ) {
+  if(in_array($input, $shipping_fields)) {
     $value = '';
   }
 

@@ -63,52 +63,49 @@
     }
   }
 },
-"pcp": {
-  "name": "PCP",
-  "services": {
-    "ECO": {
-      "title": "ECO - Economic Service"
-    },
-    "REG": {
-      "title": "REG - Regular Service"
-    },
-    "ONS": {
-      "title": "ONS - Overnight Service"
-    },
-    "ONP": {
-      "title": "ONP - Overnight Service Premium"
-    },
-    "NFS": {
-      "title": "NFS - Next Flight Service"
-    }
-  }
-},
-"rpx": {
-  "name": "RPX",
-  "services": {
-    "REP": {
-      "title": "REP - Retail Package"
-    },
-    "RGP": {
-      "title": "RGP - Regular Package"
-    },
-    "NDP": {
-      "title": "NDP - Next Day Package"
-    },
-    "MDP": {
-      "title": "MDP - MidDay Package"
-    },
-    "SDP": {
-      "title": "SDP - SameDay Package"
-    }
-  }
-},
+
 "jnt": {
   "code": "J&T",
   "name": "J&T Express",
   "services": {
     "EZ": {
       "title": "EZ - Regular Service"
+    }
+  }
+},
+
+"sicepat": {
+  "code": "sicepat",
+  "name": "SiCepat Express",
+  "services": {
+    "REG": {
+      "title": "Layanan Reguler"
+    },
+    "SIUNT": {
+      "title": "SiUntung"
+    },
+    "GOKIL": {
+      "title": "Cargo (Min 10kg)"
+    }
+  }
+},
+
+"ninja": {
+  "code": "ninja",
+  "name": "Ninja Xpress",
+  "services": {
+    "STANDARD": {
+      "title": "Standard Service"
+    }
+  }
+},
+
+"anteraja": {
+  "code": "anteraja",
+  "name": "AnterAja",
+  "services": {
+    "REG": {
+      "title": "Regular"
     }
   }
 }

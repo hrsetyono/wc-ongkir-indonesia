@@ -4,7 +4,9 @@
 
 Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
 
-Add JNE, TIKI, POS, PCP, RPX, and J&T Express to your WooCommerce. Requires PRO License purchase from RajaOngkir.com. We are not affiliated with RajaOngkir in any way.
+Add JNE, TIKI, POS, PCP, RPX, and J&T Express to your WooCommerce.
+
+**Important:** Requires PRO License purchase from RajaOngkir.com. We are not affiliated with RajaOngkir in any way.
 
 This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/wc-indo-shipping/issues).
 
