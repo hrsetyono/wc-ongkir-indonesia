@@ -125,14 +125,30 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
     global $woocommerce;
     $weight = wc_get_weight($woocommerce->cart->cart_contents_weight, 'g');
 
+    // calculate volume
+    // @warn - Setting default to "1" can cause item to be much larger if unit is set to "inch"
+    $volume = array_reduce($woocommerce->cart->get_cart_contents(), function($result, $item) {
+      $product = $item['data'];
+      $length = (int) $product->get_length() ?? 1;
+      $width = (int) $product->get_width() ?? 1;
+      $height = (int) $product->get_height() ?? 1;
+      $result += $length * $width * $height;
+      return $result;
+    }, 0);
+
+    $volume = wc_get_dimension($volume, 'cm');
+    $weight_volume = $volume / 6; //@todo: make this formula into a setting
+
+    // if volume is heavier than weight, use the volume
+    $weight = $weight_volume > $weight ? $weight_volume : $weight;
+
     if($weight > 0) {
       return $weight;
     }
     // if no weight data, return default weight or 1kg
     else {
-      $weight = (int) ceil(apply_filters('wcis_default_weight', $package));
-
-      return (is_int($weight) && $weight > 0) ? $weight : 1;
+      $weight = (int) ceil(apply_filters('wcis_default_weight', 1000));
+      return $weight;
     }
   }
 

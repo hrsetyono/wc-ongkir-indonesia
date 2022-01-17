@@ -5,7 +5,7 @@ Description: WooCommerce FREE Shipping plugin for JNE, J&T, TIKI, POS, etc. Requ
 Plugin URI: http://github.com/hrsetyono/woocommerce-indo-shipping
 Author: Pixel Studio
 Author URI: https://pixelstudio.id/
-Version: 2.0.2
+Version: 2.1.0
 */
 
 if(!defined('ABSPATH') ) { exit; } // exit if accessed directly
@@ -15,7 +15,7 @@ if(!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
   return;
 }
 
-define('WCIS_VERSION', '2.0.2');
+define('WCIS_VERSION', '2.1.0');
 define('WCIS_PATH', plugins_url('', __FILE__));
 define('WCIS_DIR', __DIR__);
 define('WCIS_NAMESPACE', 'wcis/v1');
