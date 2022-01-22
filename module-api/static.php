@@ -236,7 +236,6 @@ function wcis_get_couriers() {
  * @return array - The services this courier provided
  */
 function wcis_get_services($name, $simple_format = false) {
-  if($name === 'J&T') { $name = 'jnt'; } // for weird reason, the response code for 'jnt' is 'J&T'
 
   $couriers = _wcis_read_json('couriers.json');
   $courier = isset($couriers[$name]) ? $couriers[$name] : null;
