@@ -80,6 +80,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
 
       // get full list of services
       $code = $courier['code'];
+      if($code === 'J&T') { $code = 'jnt'; } // for weird reason, the response code for 'jnt' is 'J&T'
       $all_services = wcis_get_services($code);
 
       // get allowed service from this courier
