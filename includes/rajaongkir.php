@@ -1,21 +1,32 @@
 <?php
 
+if (!class_exists('RajaOngkir')):
+
 /**
  * Handle API Call to RajaOngkir Server
  */
 class RajaOngkir {
   private $api_key;
-  private $base_url = 'https://pro.rajaongkir.com/api';
+  private $base_url;
 
   function __construct($key = null) {
     // set API key
-    if($key) {
+    if ($key) {
       $this->api_key = $key;
     }
     else {
       $cached_license = get_transient('wcis_license');
       $this->api_key = $cached_license['key'];
     }
+
+    // set base URL
+    $urls = [
+      'starter' => 'https://api.rajaongkir.com/starter',
+      'pro' => 'https://pro.rajaongkir.com/api',
+    ];
+
+    $license_type = 'pro';
+    $this->base_url = $urls[$license_type];
   }
 
 
@@ -40,7 +51,7 @@ class RajaOngkir {
   function get_costs($args) {
     $result = $this->post('/cost', $args);
 
-    if($result) {
+    if ($result) {
       $costs = $result['rajaongkir']['results'] ?? null;
       return $costs;
     } else {
@@ -63,7 +74,7 @@ class RajaOngkir {
   function get($endpoint, $args = [], $return_only_body = true) {
     $url = $this->get_endpoint_url($endpoint);
 
-    if(!empty($args)) {
+    if (!empty($args)) {
       $url = sprintf('%s?%s', $url, http_build_query($args));
     }
 
@@ -72,11 +83,11 @@ class RajaOngkir {
       'sslverify' => WP_DEBUG === true ? false : true,
     ]);
 
-    if(is_wp_error($result)) {
+    if (is_wp_error($result)) {
       return $result->get_error_message();
     }
 
-    if($return_only_body) {
+    if ($return_only_body) {
       return json_decode($result['body'], true);
     }
 
@@ -101,11 +112,11 @@ class RajaOngkir {
       'sslverify' => WP_DEBUG === true ? false : true,
     ]);
 
-    if(is_wp_error($result)) {
+    if (is_wp_error($result)) {
       return $result->get_error_message();
     }
 
-    if($return_only_body) {
+    if ($return_only_body) {
       return json_decode($result['body'], true);
     }
 
@@ -137,7 +148,7 @@ class RajaOngkir {
   function get_curl($endpoint, $args = []) {
     $url = $this->get_endpoint_url($endpoint);
  
-    if(!empty($args)) {
+    if (!empty($args)) {
       $url = sprintf('%s?%s', $url, http_build_query($args));
     }
 
@@ -148,6 +159,7 @@ class RajaOngkir {
       'key:' . $this->api_key,
     ]);
 
+    // If localhost testing
     if (WP_DEBUG) {
       curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
       curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -192,3 +204,5 @@ class RajaOngkir {
     return $response;
   }
 }
+
+endif;

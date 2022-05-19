@@ -1,16 +1,17 @@
 <?php
-/**
- * Rearrange checkout field and modify the data before saving
- */
-class WCIS_Checkout {
+if (!defined('ABSPATH')) { exit; }
+
+if (!class_exists('Ongkir_Hooks')):
+
+class Ongkir_Hooks {
   function __construct() {
-    add_action('woocommerce_checkout_update_user_meta', [$this, 'update_user_meta'], 99, 2);
-    add_action('woocommerce_checkout_update_order_meta', [$this, 'update_order_meta'], 99, 2);
+    add_action('woocommerce_checkout_update_user_meta', [$this, 'on_save_user_profile'], 99, 2);
+    add_action('woocommerce_checkout_update_order_meta', [$this, 'on_save_order'], 99, 2);
 
-    add_filter('woocommerce_cart_shipping_packages', [$this, 'parse_shipping_package']);
-    // add_filter('woocommerce_shipping_packages', [$this, 'parse_shipping_package']);
+    add_filter('woocommerce_cart_shipping_packages', [$this, 'on_update_shipping_address']);
+    // add_filter('woocommerce_shipping_packages', [$this, 'on_update_shipping_address']);
   }
-
+  
   /**
    * Clean the User's city field from [id] notation. Only run when it's not Guest.
    * 
@@ -18,14 +19,15 @@ class WCIS_Checkout {
    * @param int $user_id - The customer that bought this
    * @param array $posted - The data posted
    */
-  function update_user_meta($user_id, $posted) {
+  function on_save_user_profile($user_id, $posted) {
     $city = $this->_clean_city_field($posted['billing_city']);
     update_user_meta($user_id, 'billing_city', $city);
 
     // if shipping city is passed on
-    if(isset($posted['shipping_city']) ) {
+    if (isset($posted['shipping_city']) ) {
       $city = $this->_clean_city_field($posted['shipping_city']);
     }
+
     update_user_meta($user_id, 'shipping_city', $city);
   }
 
@@ -36,36 +38,35 @@ class WCIS_Checkout {
    * @param int $order_id - The order that just created
    * @param array $posted - The data posted
    */
-  function update_order_meta($order_id, $posted) {
+  function on_save_order($order_id, $posted) {
     $city = $this->_clean_city_field($posted['billing_city']);
     update_post_meta($order_id, '_billing_city', $city);
 
     // if shipping city is passed on
-    if(isset($posted['shipping_city'])) {
+    if (isset($posted['shipping_city'])) {
       $city = $this->_clean_city_field($posted['shipping_city']);
     }
+
     update_post_meta($order_id, '_shipping_city', $city);
   }
 
-
   /**
-   * Add Destination's ID to POST parameter
+   * Add Destination's ID to POST parameter when checking for shipping cost
    * 
    * @filter woocommerce_cart_shipping_packages
    * @param mixed $packages - Cart parameters
    * @return mixed
    */
-  function parse_shipping_package($packages) {
+  function on_update_shipping_address($packages) {
     // look for district ID in city field
     preg_match('/\[(\d+)\]/', $packages[0]['destination']['city'], $matches);
-    if(count($matches)) {
+    if (count($matches)) {
       $packages[0]['destination']['destination_id'] = $matches[1];
     }
 
     return $packages;
   }
 
-  /////
 
   /**
    * Clean the city field from [id] notation.
@@ -79,3 +80,6 @@ class WCIS_Checkout {
     return trim($city[0]);
   }
 }
+
+new Ongkir_Hooks();
+endif;

@@ -1,9 +1,9 @@
 {
-  "name": "woocommerce-indo-shipping",
-  "private": true,
+  "name": "woocommerce-ongkir",
+  "license": "AGPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hrsetyono/woocommerce-indo-shipping.git"
+    "url": "git+https://github.com/hrsetyono/woocommerce-ongkir.git"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5"
@@ -16,7 +16,13 @@
     "@wordpress/scripts": "^12.5.0",
     "autoprefixer": "^10.0.0",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^4.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
     "file-loader": "^6.1.0",
     "lodash": "^4.17.20",
     "mini-css-extract-plugin": "^0.11.2",
@@ -29,7 +35,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "prod": "webpack --mode production",
+    "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
     "test": "jest"
   },

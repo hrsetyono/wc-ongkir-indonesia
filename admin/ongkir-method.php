@@ -1,16 +1,22 @@
 <?php
-require_once WCIS_DIR . '/helper/rajaongkir.php';
+if (!defined('ABSPATH')) { exit; }
+
+require_once ONGKIR_DIR . '/includes/rajaongkir.php';
+require_once ONGKIR_DIR . '/includes/ongkir-data.php';
+
+
+if (!class_exists('Ongkir_Method')):
 
 /**
  * Global setting for Indo Shipping
  */
-class WCIS_Method extends WC_Shipping_Method {
+class Ongkir_Method extends WC_Shipping_Method {
   private $api;
 
   public function __construct($instance_id = 0) {
-		$this->id = 'wcis';
-    $this->title = __('Indo Shipping');
-		$this->method_title = __('Indo Shipping');
+		$this->id = 'wcis'; // wcis is the old plugin name
+    $this->title = __('Indo Ongkir');
+		$this->method_title = __('Indo Ongkir');
 		$this->method_description = __('Indonesian domestic shipping with JNE, TIKI, or POS');
 
     $this->enabled = $this->get_option('enabled');
@@ -25,49 +31,60 @@ class WCIS_Method extends WC_Shipping_Method {
    * Initiate global setting page for WCIS
    */
   function init_form_fields() {
-    $enabled_field = array(
+    $enabled_field = [
       'title' => __('Enable/Disable'),
       'type' => 'checkbox',
       'label' => __('Enable Indo Shipping'),
       'description' => __( 'Tick this then go to Shipping Zone > Create Indonesia Zone > Add Shipping Method > Choose "Indo Shipping"' ),
       'default' => 'yes'
-    );
+    ];
 
-    $key_field = array(
+    // $type_field = [
+    //   'title' => __('License Type'),
+    //   'type' => '',
+    //   'description' => __('Starter is free, but limited to JNE, TIKI, and POS'),
+    //   'options' => [
+    //     'pro' => 'Pro',
+    //     'starter' => 'Starter',
+    //   ],
+    // ];
+
+    $key_field = [
       'title' => __('API Key'),
       'type' => 'password',
       'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here'),
-    );
+    ];
 
-    $city_field = array(
+    $city_field = [
       'title' => __('City Origin'),
       'type' => 'select',
       // 'class'    => 'wc-enhanced-select', // bugged!! doesn't save the value
       'description' => __('Ship from where? <br> Change your province at General > Store Address'),
-      'options' => array()
-    );
+      'options' => [],
+    ];
 
-    $this->form_fields = array(
-      'key' => $key_field
-    );
+    $this->form_fields = [
+      'key' => $key_field,
+      // 'type' => $type_field,
+    ];
 
     // if key is valid, show the other setting fields
-    if( $this->check_key_valid() ) {
+    if ($this->check_key_valid()) {
       $city_field['options'] = $this->get_cities_origin();
 
       $this->form_fields['enabled'] = $enabled_field;
       $this->form_fields['city'] = $city_field;
 
       // set service fields by each courier
-      $couriers = wcis_get_couriers();
-      foreach( $couriers as $id => $name ) {
-        $this->form_fields[$id . '_services'] = array(
+      $couriers = Ongkir_Data::get_couriers();
+      foreach ($couriers as $id => $name) {
+        $this->form_fields[$id . '_services'] = [
           'title' => $name,
           'type' => 'multiselect',
           'class' => 'wc-enhanced-select',
           'description' => __("Choose allowed services by $name."),
-          'options' => wcis_get_services($id, true)
-        );
+          'options' => Ongkir_Data::get_services($id, true)
+        ];
       }
 
     } // if valid
@@ -88,7 +105,7 @@ class WCIS_Method extends WC_Shipping_Method {
     $license_different = isset($t_license['key']) && $t_license['key'] === $key;
 
     // if not valid OR different from before, update transient
-    if(!$license_valid || $license_different) {
+    if (!$license_valid || $license_different) {
       $rj = new RajaOngkir($key);
       $t_license = [
         'key' => $key,
@@ -113,15 +130,15 @@ class WCIS_Method extends WC_Shipping_Method {
     $license = get_transient('wcis_license');
 
     // if key doesn't exist, abort
-    if(!isset($license['key'])) { return false; }
+    if (!isset($license['key'])) { return false; }
 
     // if valid, return success
-    if(isset($license['valid']) && $license['valid']) {
+    if (isset($license['valid']) && $license['valid']) {
       $msg = __('API Connected!');
       $this->form_fields['key']['description'] = '<span style="color: #4caf50;">' . $msg . '</span>';
     }
     else {
-      $msg = __('Invalid API Key. Are you using non-Pro license?');
+      $msg = __('Invalid API Key. Make sure it is a PRO license');
       $this->form_fields['key']['description'] = '<span style="color:#f44336;">' . $msg . '</span>';
     }
 
@@ -134,14 +151,14 @@ class WCIS_Method extends WC_Shipping_Method {
    */
   private function get_cities_origin() {
     $country = wc_get_base_location();
-    $prov_id = wcis_get_province_id( $country['state'] );
+    $prov_id = Ongkir_Data::get_province_id($country['state']);
 
     // get cities data
-    $cities_raw = wcis_get_cities( $prov_id );
+    $cities_raw = Ongkir_Data::get_cities($prov_id);
 
     // parse raw data
-    $cities = array();
-    foreach( $cities_raw as $id => $value ) {
+    $cities = [];
+    foreach ($cities_raw as $id => $value) {
       $cities[$id] = $value['city_name'];
     }
 
@@ -157,6 +174,6 @@ class WCIS_Method extends WC_Shipping_Method {
   private function _set_license_cache() {
     
   }
-
-
 }
+
+endif;

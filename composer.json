@@ -1,9 +1,9 @@
 {
-  "name": "pixelstudio/woocommerce-indo-shipping",
-  "description": "WooCommerce FREE Shipping plugin for JNE, J&T, TIKI, POS, etc. Requires PRO License from RajaOngkir.",
+  "name": "pixelstudio/woocommerce-ongkir",
+  "description": "Calculate shipping cost for Indonesian couriers like JNE, J&T, TIKI, POS, etc. Requires PRO or FREE License from RajaOngkir. Not affiliated with RajaOngkir.",
   "keywords": ["wordpress", "woocommerce", "plugin", "library"],
   "type": "wordpress-plugin",
-  "homepage": "https://github.com/hrsetyono/woocommerce-indo-shipping/",
+  "homepage": "https://github.com/hrsetyono/woocommerce-ongkir/",
   "authors": [
     {
       "name": "Pixel Studio",

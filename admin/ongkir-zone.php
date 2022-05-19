@@ -1,19 +1,27 @@
 <?php
+if (!defined('ABSPATH')) { exit; }
+
+require_once ONGKIR_DIR . '/includes/rajaongkir.php';
+require_once ONGKIR_DIR . '/includes/ongkir-data.php';
+
+
+if (!class_exists('Ongkir_Zone')):
+
 /**
  * Zone setting for Indo Shipping
  */
-class WCIS_Zones_Method extends WC_Shipping_Method {
+class Ongkir_Zone extends WC_Shipping_Method {
   private $api;
   private $main_settings;
 
   public function __construct($instance_id = 0) {
-		$this->id = 'wcis_zone';
+		$this->id = 'wcis_zone'; // wcis is the old plugin name
     $this->instance_id = absint($instance_id);
 
-    $this->title = __('Indo Shipping');
-		$this->method_title = __('Indo Shipping');
+    $this->title = __('Indo Ongkir');
+		$this->method_title = __('Indo Ongkir');
     $this->method_description = __('Indonesian domestic shipping with JNE, TIKI, or POS');
-    $this->supports = array('shipping-zones', 'instance-settings',);
+    $this->supports = ['shipping-zones', 'instance-settings'];
 
     // global
     $this->main_settings = get_option('woocommerce_wcis_settings');
@@ -31,7 +39,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
 	function calculate_shipping($package = []) {
     // if district not exists or empty
     $id_exists = array_key_exists('destination_id', $package['destination']);
-    if(!$id_exists || empty($package['destination']['destination_id'])) {
+    if (!$id_exists || empty($package['destination']['destination_id'])) {
       return false;
     }
 
@@ -72,37 +80,38 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
    * @param array $costs - Cost list from API
    */
   private function _set_rate($costs) {
-    if(!$costs) { return; }
+    if (!$costs) { return; }
 
     // format the costs from API to WooCommerce
-    foreach($costs as $courier):
-      if(empty($courier)) { break; }
+    foreach ($costs as $courier):
+      if (empty($courier)) { break; }
 
       // get full list of services
       $code = $courier['code'];
-      if($code === 'J&T') { $code = 'jnt'; } // for weird reason, the response code for 'jnt' is 'J&T'
-      $all_services = wcis_get_services($code);
+      if ($code === 'J&T') { $code = 'jnt'; } // for weird reason, the response code for 'jnt' is 'J&T'
+
+      $all_services = Ongkir_Data::get_services($code);
 
       // get allowed service from this courier
       $setting_id = $code . '_services';
       $allowed_services = isset($this->main_settings[$setting_id]) ? $this->main_settings[$setting_id] : array();
 
-      foreach($courier['costs'] as $service):
+      foreach ($courier['costs'] as $service):
         // check if this service is allowed
         $is_allowed = false;
-        foreach($allowed_services as $as) {
+        foreach ($allowed_services as $as) {
           // if has variation
-          if(isset($all_services[$as]['vars'])) {
+          if (isset($all_services[$as]['vars'])) {
             $is_allowed = in_array($service['service'], $all_services[$as]['vars']);
           }
           else {
             $is_allowed = $service['service'] === $as;
           }
 
-          if($is_allowed) { break; }
+          if ($is_allowed) { break; }
         }
 
-        if($is_allowed) {
+        if ($is_allowed) {
           $rate = array(
             'id' => $code . '_' . strtolower($service['service']) . $this->instance_id,
             'label' => strtoupper($code) . ' ' . $service['service'],
@@ -143,7 +152,7 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
     // if volume is heavier than weight, use the volume
     $weight = $weight_volume > $weight ? $weight_volume : $weight;
 
-    if($weight > 0) {
+    if ($weight > 0) {
       return $weight;
     }
     // if no weight data, return default weight or 1kg
@@ -153,17 +162,17 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
     }
   }
 
-  /*
-    Get selected services from the courier
-
-    @return string - The courier format accepted by RajaOngkir, separated by semicolon (jne:tiki:pos)
-  */
+  /**
+   * Get selected services from the courier
+   * 
+   * @return string - The courier format accepted by RajaOngkir, separated by semicolon (jne:tiki:pos)
+   */
   private function _get_selected_couriers() {
-    $couriers = wcis_get_couriers();
+    $couriers = Ongkir_Data::get_couriers();
 
     $selected_couriers = [];
-    foreach($couriers as $id => $name) {
-      if(!empty($this->main_settings[$id . '_services'])) {
+    foreach ($couriers as $id => $name) {
+      if (!empty($this->main_settings[$id . '_services'])) {
         $selected_couriers[] = $id;
       }
     }
@@ -171,3 +180,5 @@ class WCIS_Zones_Method extends WC_Shipping_Method {
     return join(':', $selected_couriers);
   }
 }
+
+endif;

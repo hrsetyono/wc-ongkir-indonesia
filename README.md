@@ -67,6 +67,10 @@ Done! You will now see additional fields for City and District (Kecamatan) when 
 
 ## 3. Changelog
 
+2.2.0 (19 May 2022)
+
+- Refactored the plugin in preparation to be submitted to official repository.
+
 2.1.0 (17 Jan 2022)
 
 - Added support for WooCommerce 5.9.
