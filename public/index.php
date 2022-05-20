@@ -35,7 +35,7 @@ class Ongkir_Public {
     wp_enqueue_script('ongkir_script', ONGKIR_FILE . '/dist/ongkir-public.js', ONGKIR_VERSION, true);
     
     wp_localize_script('ongkir_script', 'ongkirLocalize', [
-      'ONGKIR_API' => ONGKIR_API,
+      'baseURL' => ONGKIR_API,
     ]);
   }
 }

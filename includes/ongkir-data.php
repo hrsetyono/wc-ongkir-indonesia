@@ -15,7 +15,7 @@ class Ongkir_Data {
     }
 
     // if exists, scan for duplicate city name
-    if($data) {
+    if ($data) {
       $data = self::_prefix_dupe_city_name($prov_id, $data);
       return $data;
     } else {

@@ -1,1 +1,1 @@
-.select2-container{width:100% !important}.ongkir-form-row-hidden{display:none !important}
+.select2-container{width:100% !important}.ongkir-form-row-hidden{display:none !important}form.has-ongkir-dropdown #billing_city_field,form.has-ongkir-dropdown #shipping_city_field{display:none !important}form:not(.has-ongkir-dropdown) #_billing_city_field,form:not(.has-ongkir-dropdown) #_shipping_city_field,form:not(.has-ongkir-dropdown) #_billing_district_field,form:not(.has-ongkir-dropdown) #_shipping_district_field{display:none !important}

@@ -1,12 +1,12 @@
 # WooCommerce Indonesia Shipping v2
 
+> This plugin requires PRO License from RajaOngkir.com. We are not affiliated with them in any way.
+
 ![](https://raw.github.com/hrsetyono/cdn/master/woocommerce-indo-shipping/ongkir-banner.jpg)
 
 Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
 
-This plugin requires PRO License purchase from RajaOngkir.com. We are not affiliated with RajaOngkir in any way.
-
-This plugin is free and provided as is. We are not responsible for any damage caused by bugs. If you found a bug, please submit it [here](https://github.com/hrsetyono/woocommerce-indo-shipping/issues).
+This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/woocommerce-indo-shipping/issues).
 
 **Supported Couriers:**
 

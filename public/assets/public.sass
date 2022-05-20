@@ -3,3 +3,15 @@
 
 .ongkir-form-row-hidden
   display: none !important
+
+form.has-ongkir-dropdown
+  #billing_city_field,
+  #shipping_city_field
+    display: none !important
+
+form:not(.has-ongkir-dropdown)
+  #_billing_city_field,
+  #_shipping_city_field,
+  #_billing_district_field,
+  #_shipping_district_field
+    display: none !important

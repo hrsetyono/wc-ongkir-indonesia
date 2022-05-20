@@ -7,7 +7,7 @@ if (!class_exists('RajaOngkir')):
  */
 class RajaOngkir {
   private $api_key;
-  private $base_url;
+  private $base_url = 'https://pro.rajaongkir.com/api';
 
   function __construct($key = null) {
     // set API key
@@ -18,15 +18,6 @@ class RajaOngkir {
       $cached_license = get_transient('wcis_license');
       $this->api_key = $cached_license['key'];
     }
-
-    // set base URL
-    $urls = [
-      'starter' => 'https://api.rajaongkir.com/starter',
-      'pro' => 'https://pro.rajaongkir.com/api',
-    ];
-
-    $license_type = 'pro';
-    $this->base_url = $urls[$license_type];
   }
 
 

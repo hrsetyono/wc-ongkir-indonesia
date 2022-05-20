@@ -4,10 +4,9 @@ import api from './api';
 const $ = jQuery;
 
 const checkoutFields = {
-  init() {
-    // fix the weird WooCommerce interaction where it initially trigger 'change' on State field
-    this.isFirstRun = true;
+  isFirstRun: true, // fix the weird WooCommerce interaction where it initially trigger 'change' on State field
 
+  init() {
     const $body = document.querySelector('body');
 
     // abort if not in Checkout page
@@ -45,9 +44,10 @@ const checkoutFields = {
       // get custom fields and append it after the City field
       const result = await api.get(`/fields/${type}/${provCode}/${districtID}`);
       $($wrapper).after(result);
+    });
 
-      // hide the custom field if country not ID
-      $('#billing_country, #shipping_country').trigger('change');
+    this.toggleCityField({
+      currentTarget: document.querySelector('#billing_country, #shipping_country'),
     });
   },
 
@@ -55,34 +55,13 @@ const checkoutFields = {
    * Show or Hide the original City field depending on the Country selected
    */
   toggleCityField(e) {
-    const $wrapper = e.currentTarget.closest('.woocommerce-billing-fields, .woocommerce-shipping-fields');
-    const $ogCityField = $wrapper.querySelector('#billing_city_field, #shipping_city_field');
+    const $form = e.currentTarget.closest('form');
 
-    // the custom dropdown
-    const $citiesField = $wrapper.querySelector('#_billing_city_field, #_shipping_city_field');
-    const $districtsField = $wrapper.querySelector('#_billing_district_field, #_shipping_district_field');
-
-    // If country is ID, hide the original City field
+    // If country is ID, add a class to hide the original city field
     if (e.currentTarget.value === 'ID') {
-      $ogCityField.style.display = 'none';
-
-      if ($citiesField) {
-        $citiesField.style.display = 'block';
-      }
-
-      if ($districtsField) {
-        $districtsField.style.display = 'block';
-      }
-    } else { // Else, hide the dropdown and show the original field
-      $ogCityField.style.display = 'block';
-
-      if ($citiesField) {
-        $citiesField.style.display = 'none';
-      }
-
-      if ($districtsField) {
-        $districtsField.style.display = 'none';
-      }
+      $form.classList.add('has-ongkir-dropdown');
+    } else {
+      $form.classList.remove('has-ongkir-dropdown');
     }
   },
 
@@ -95,9 +74,10 @@ const checkoutFields = {
     const provCode = $(e.currentTarget).val() || '0';
     const $wrapper = $(e.currentTarget).closest('.woocommerce-billing-fields, .woocommerce-shipping-fields');
 
+    const $ogCityField = $wrapper.find('#billing_city_field, #shipping_city_field');
+
     // if not first run, empty out the city field
     if (!this.isFirstRun) {
-      const $ogCityField = $wrapper.find('#billing_city_field, #shipping_city_field');
       $ogCityField.find('input').val('');
     }
 
@@ -111,12 +91,15 @@ const checkoutFields = {
 
     const result = await api.get(`/cities/${provCode}`);
 
+    // Create the <option>
     let options = '';
+
     Object.keys(result).forEach((id) => {
       options += `<option value="${id}">${result[id]}</option>`;
     });
 
     $citiesSelect.html(options);
+    $citiesSelect.trigger('change');
     this.isFirstRun = false;
   },
 
@@ -129,6 +112,9 @@ const checkoutFields = {
     const cityID = $(e.currentTarget).val();
     const $wrapper = $(e.currentTarget).closest('.woocommerce-billing-fields, .woocommerce-shipping-fields');
     const provCode = $wrapper.find('#billing_state, #shipping_state').val();
+
+    // Abort if province not selected
+    if (!provCode) { return; }
 
     // add 'Loading' message to district field
     const $districtsSelect = $wrapper.find('#_billing_district_field select, #_shipping_district_field select');

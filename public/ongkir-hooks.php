@@ -61,7 +61,7 @@ class Ongkir_Hooks {
     // look for district ID in city field
     preg_match('/\[(\d+)\]/', $packages[0]['destination']['city'], $matches);
     if (count($matches)) {
-      $packages[0]['destination']['destination_id'] = $matches[1];
+      $packages[0]['destination']['destination_id'] = sanitize_text_field($matches[1]);
     }
 
     return $packages;
@@ -76,8 +76,8 @@ class Ongkir_Hooks {
    */
   private function _clean_city_field($city_raw) {
     preg_match('/[\w\s,]+/', $city_raw, $city);
-
-    return trim($city[0]);
+    $city = sanitize_text_field(trim($city[0]));
+    return $city;
   }
 }
 

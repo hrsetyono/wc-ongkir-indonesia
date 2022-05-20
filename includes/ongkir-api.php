@@ -68,7 +68,7 @@ class Ongkir_API {
    */
   function get_districts_api($params) {
     $prov_id = Ongkir_Data::get_province_id($params['prov_code']);
-    $cities = Ongkir_Data::get_cities($prov_id, true);
+    $cities = Ongkir_Data::get_cities($prov_id);
     $city = $cities[$params['city_id']] ?? null;
     
     // abort if city not found
@@ -91,43 +91,32 @@ class Ongkir_API {
    * @return array
    */
   function get_fields_api($params) {
+    $city_id = 0;
+    $field_value = '';
+  
     // Convert District ID to City ID
     if ($params['district_id'] != '0') {
       $prov_id = Ongkir_Data::get_province_id($params['prov_code']);
-      $cities = Ongkir_Data::get_cities($prov_id, true);
+      $cities = Ongkir_Data::get_cities($prov_id);
 
-      foreach ($cities as $city_id => $c) {
-        foreach ($c['districts'] as $district_id => $name) {
+      foreach ($cities as $id => $c) {
+        foreach ($c['districts'] as $dist_id => $dist_name) {
           // find district that has the same ID as the one passed on
-          if ($params['district_id'] == $district_id) {
-            $params['city_id'] = $city_id;
+          if ($params['district_id'] == $dist_id) {
+            $city_id = $id;
+            $field_value = $c['city_name'] . ", {$dist_name} [{$dist_id}]";
             break;
           }
         }
+
+        if ($city_id > 0) {
+          break;
+        }
       }
-    } else {
-      $params['city_id'] = '0';
     }
 
-    $cities_field = $this->_get_cities_field($params['type'], $params['prov_code']);
-    $districts_field = $this->_get_districts_field($params['type'], $params['prov_code'], $params['city_id']);
-
-    // add selected attribute
-    if (isset($params['city_id'])) {
-      $cities_field = preg_replace(
-        '/(_city_field[\s\S]+)(\"' . $params['city_id'] . '\"\s)(\>)([\s\S]+\/p>)/Ui',
-        '$1$2selected$3$4',
-        $cities_field
-      );
-    }
-
-    if ($params['district_id'] != '0') {
-      $districts_field = preg_replace(
-        '/(_district_field[\s\S]+)(' . $params['district_id'] . '\]\"\s)(\>)([\s\S]+\/p>)/Ui',
-        '$1$2selected$3$4',
-        $districts_field
-      );
-    }
+    $cities_field = $this->_get_cities_field($params['type'], $params['prov_code'], $city_id);
+    $districts_field = $this->_get_districts_field($params['type'], $params['prov_code'], $city_id, $field_value);
 
     return $cities_field . $districts_field;
   }
@@ -139,18 +128,18 @@ class Ongkir_API {
    * 
    * @return array - Currently only has one item: 'field' which contains the HTML form field.
    */
-  private function _get_cities_field($type, $prov_code = '0') {
+  private function _get_cities_field($type, $prov_code = '0', $city_id = 0) {
     $field = '';
 
     // if code is 0, show empty placeholder dropdown
     if ($prov_code == '0') {
-      $field = woocommerce_form_field( "_{$type}_city", [
+      $field = woocommerce_form_field("_{$type}_city", [
         'type' => 'select',
         'label' => __('City', 'woocommerce'),
         'options' => [0 => __('Pilih Provinsi terlebih dahulu...')],
         'return' => true,
         'required' => true,
-      ] );
+      ]);
     }
     // else
     else {
@@ -162,7 +151,7 @@ class Ongkir_API {
         'options' => $cities,
         'return' => true,
         'required' => true,
-      ] );
+      ], $city_id);
     }
 
     return $field;
@@ -176,12 +165,13 @@ class Ongkir_API {
   private function _get_districts_field(
     $type,
     $prov_code,
-    $city_id = '0'
+    $city_id = 0,
+    $field_value = ''
   ) {
     $field = '';
 
     // If city ID is empty, show placeholder
-    if ($city_id == '0') {
+    if ($city_id === 0) {
       $field = woocommerce_form_field("_{$type}_district", [
         'type' => 'select',
         'label' => __('Kecamatan'),
@@ -203,7 +193,7 @@ class Ongkir_API {
         'options' => $districts,
         'return' => true,
         'required' => true
-      ]);
+      ], $field_value);
     }
 
     return $field;

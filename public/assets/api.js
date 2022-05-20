@@ -5,12 +5,15 @@
  *   api.get(url).then((result) => { .. });
  *   api.post(url, data).then((result) => { ... });
  */
-const baseURL = ongkirLocalize.ONGKIR_API;
+const { baseURL } = ongkirLocalize;
+
 const api = {
   get(endpoint) {
     return window.fetch(`${baseURL}${endpoint}`, {
       method: 'GET',
-      headers: { Accept: 'application/json' },
+      headers: {
+        Accept: 'application/json',
+      },
     })
       .then(this.handleError)
       .then(this.handleContentType)
