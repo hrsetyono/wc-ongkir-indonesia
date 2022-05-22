@@ -1,10 +1,10 @@
 # Ongkos Kirim Indonesia for WooCommerce
 
-> This plugin requires PRO License from RajaOngkir.com. We are not affiliated with them in any way.
-
 ![](https://raw.github.com/hrsetyono/cdn/master/woocommerce-indo-shipping/ongkir-banner.jpg)
 
-Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
+Calculate the shipping costs for Indonesian couriers in WooCommerce.
+
+> This plugin requires PRO License from RajaOngkir.com. We are not affiliated with them in any way.
 
 This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/woocommerce-indo-shipping/issues).
 
@@ -27,7 +27,7 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 ## 1. How to Install
 
-1. Download our latest version at https://github.com/hrsetyono/woocommerce-indo-shipping/releases/
+1. Download our latest version at https://github.com/hrsetyono/wc-ongkir-indonesia/releases/
 
 1. Go to your WP Admin panel > Plugins > Add New
 
@@ -37,7 +37,7 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 This plugin is available in Composer under this name:
 
-    "pixelstudio/woocommerce-indo-shipping": "~2.1.0"
+    "pixelstudio/wc-ongkir-indonesia": "~2.3.0"
 
 If you don't know how to use Composer to manage plugins, visit here https://wptips.dev/composer-to-manage-plugins/
 
@@ -47,21 +47,21 @@ If you don't know how to use Composer to manage plugins, visit here https://wpti
 
 1. Go to WooCommerce > Settings > Shipping > Indo Shipping.
 
-2. Enter RajaOngkir PRO API Key and press "Save". If it's correct, it will say "Connected" and the rest of the fields will appear.
+1. Enter RajaOngkir PRO API Key and press "Save". If it's correct, it will say "Connected" and the rest of the fields will appear.
 
-3. Tick Enable.
+1. Tick Enable.
 
-4. Set your shop's city/district location. It is based on the Province you set in the General setting.
+1. Set your shop's city / district location. It is based on the Province you set in General setting.
 
-5. Select the service you want to enable from each courier. Leave empty if you want to disable it.
+1. Select the service you want to enable from each courier. Leave empty if you want to disable it.
 
 ![](https://raw.github.com/hrsetyono/cdn/master/woocommerce-indo-shipping/ongkir-zone.jpg)
 
-1. Go to Shipping Zone and click the "Add Shipping Zone" button. You will see the screen above.
+1. Go to Shipping Zone and click "Add Shipping Zone" button. You will see the screen above.
 
-2. Set regions as "Indonesia".
+1. Set regions as "Indonesia".
 
-3. Click "Add shipping method" and select "Indo Shipping".
+1. Click "Add shipping method" and select "Indo Shipping".
 
 Done! You will now see additional fields for City and District (Kecamatan) when Checkout.
 
