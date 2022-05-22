@@ -1,9 +1,9 @@
 {
-  "name": "woocommerce-ongkir",
+  "name": "wc-ongkir-indonesia",
   "license": "AGPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hrsetyono/woocommerce-ongkir.git"
+    "url": "git+https://github.com/hrsetyono/wc-ongkir-indonesia.git"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5"
