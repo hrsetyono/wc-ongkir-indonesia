@@ -1,9 +1,9 @@
 {
-  "name": "pixelstudio/woocommerce-ongkir",
+  "name": "pixelstudio/wc-ongkir-indonesia",
   "description": "Calculate shipping cost for Indonesian couriers like JNE, J&T, TIKI, POS, etc. Requires PRO or FREE License from RajaOngkir. Not affiliated with RajaOngkir.",
   "keywords": ["wordpress", "woocommerce", "plugin", "library"],
   "type": "wordpress-plugin",
-  "homepage": "https://github.com/hrsetyono/woocommerce-ongkir/",
+  "homepage": "https://github.com/hrsetyono/wc-ongkir-indonesia/",
   "authors": [
     {
       "name": "Pixel Studio",
