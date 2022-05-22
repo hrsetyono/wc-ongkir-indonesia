@@ -2,7 +2,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
-const outputPath = 'dist';
+const outputPath = 'assets';
 
 const entryPoints = {
   'ongkir-public': './public/assets/public.js',

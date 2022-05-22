@@ -31,8 +31,8 @@ class Ongkir_Public {
    * @action wp_enqueue_scripts
    */
   function enqueue_assets() {
-    wp_enqueue_style('ongkir_style', ONGKIR_FILE . '/dist/ongkir-public.css', [], ONGKIR_VERSION);
-    wp_enqueue_script('ongkir_script', ONGKIR_FILE . '/dist/ongkir-public.js', ONGKIR_VERSION, true);
+    wp_enqueue_style('ongkir_style', ONGKIR_FILE . '/assets/ongkir-public.css', [], ONGKIR_VERSION);
+    wp_enqueue_script('ongkir_script', ONGKIR_FILE . '/assets/ongkir-public.js', ONGKIR_VERSION, true);
     
     wp_localize_script('ongkir_script', 'ongkirLocalize', [
       'baseURL' => ONGKIR_API,

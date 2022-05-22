@@ -1,10 +1,10 @@
-# WooCommerce Indonesia Shipping v2
-
-> This plugin requires PRO License from RajaOngkir.com. We are not affiliated with them in any way.
+# Ongkos Kirim Indonesia for WooCommerce
 
 ![](https://raw.github.com/hrsetyono/cdn/master/woocommerce-indo-shipping/ongkir-banner.jpg)
 
-Ultimate *Ongkos Kirim* Plugin for major Indonesian Shipping courier.
+Calculate the shipping costs for Indonesian couriers in WooCommerce.
+
+> This plugin requires PRO License from RajaOngkir.com. We are not affiliated with them in any way.
 
 This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/woocommerce-indo-shipping/issues).
 
@@ -27,7 +27,7 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 ## 1. How to Install
 
-1. Download our latest version at https://github.com/hrsetyono/woocommerce-indo-shipping/releases/
+1. Download our latest version at https://github.com/hrsetyono/wc-ongkir-indonesia/releases/
 
 1. Go to your WP Admin panel > Plugins > Add New
 
@@ -37,7 +37,7 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 This plugin is available in Composer under this name:
 
-    "pixelstudio/woocommerce-indo-shipping": "~2.1.0"
+    "pixelstudio/wc-ongkir-indonesia": "~2.3.0"
 
 If you don't know how to use Composer to manage plugins, visit here https://wptips.dev/composer-to-manage-plugins/
 
