@@ -17,6 +17,9 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 - SiCepat
 - Ninja Express
 - AnterAja
+- LION Parcel
+- ID Express
+- SAP
 
 **Tested working on:**
 
@@ -37,7 +40,7 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 This plugin is available in Composer under this name:
 
-    "pixelstudio/wc-ongkir-indonesia": "~2.3.0"
+    "pixelstudio/wc-ongkir-indonesia": "~2.4.0"
 
 If you don't know how to use Composer to manage plugins, visit here https://wptips.dev/composer-to-manage-plugins/
 
@@ -64,30 +67,3 @@ If you don't know how to use Composer to manage plugins, visit here https://wpti
 1. Click "Add shipping method" and select "Indo Shipping".
 
 Done! You will now see additional fields for City and District (Kecamatan) when Checkout.
-
-## 3. Changelog
-
-2.2.0 (19 May 2022)
-
-- Refactored the plugin in preparation to be submitted to official repository.
-
-2.1.0 (17 Jan 2022)
-
-- Added support for WooCommerce 5.9.
-- Added support for Localhost installation.
-- Added volume calculation. If it's higher than weight, it will use volume. The formula is `volume / 6000`.
-- Added support for SiCepat, AnterAja, and Ninja couriers.
-
-2.0.0 (24 May 2021)
-
-- Added support for PHP 7.3
-- Added support for WooCommerce 5.3
-- Splitted the City and District selection into 2 dropdowns
-- Added guidance and loading text for better user experience.
-- Smoother City and District selection.
-- Added condition to disable the selection if Country is not Indonesia.
-
-Planned future updates:
-
-- English language translation
-- Support for RajaOngkir free license
