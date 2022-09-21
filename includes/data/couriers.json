@@ -108,5 +108,41 @@
       "title": "Regular"
     }
   }
+},
+
+"ide": {
+  "code": "ide",
+  "name": "ID Express",
+  "services": {
+    "STD": {
+      "title": "Standard Service"
+    }
+  }
+},
+
+"lion": {
+  "code": "lion",
+  "name": "LION Parcel",
+  "services": {
+    "REGPACK": {
+      "title": "Regular Service"
+    },
+    "JAGOPACK": {
+      "title": "Economy Service"
+    }
+  }
+},
+
+"sap": {
+  "code": "sap",
+  "name": "SAP Express",
+  "services": {
+    "REG": {
+      "title": "Reguler"
+    },
+    "CARGO DARAT": {
+      "title": "Reguler Darat (Min 5kg)"
+    }
+  }
 }
 }

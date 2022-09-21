@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Ongkos Kirim Indonesia for WooCommerce
+ * Plugin Name:       Ongkir Indonesia for WooCommerce
  * Plugin URI:        http://github.com/hrsetyono/wc-ongkir-indonesia
- * Description:       Calculate the shipping costs for Indonesian couriers like JNE, J&T, TIKI, POS, etc. Requires RajaOngkir PRO License.
- * Version:           2.3.2
+ * Description:       Calculate the shipping costs for Indonesian couriers like JNE, J&T, Ninja Xpress, Sicepat, TIKI, POS, etc. Requires RajaOngkir PRO License.
+ * Version:           2.4.0
  * Author:            Pixel Studio
  * Author URI:        https://pixelstudio.id/
  * License:           GPL-3.0+
@@ -18,7 +18,7 @@ if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get
   return;
 }
 
-define('ONGKIR_VERSION', '2.3.2');
+define('ONGKIR_VERSION', '2.4.0');
 define('ONGKIR_FILE', plugins_url('', __FILE__));
 define('ONGKIR_DIR', __DIR__);
 define('ONGKIR_NAMESPACE', 'ongkir/v1');
@@ -34,7 +34,7 @@ if (!function_exists('ongkir_run_plugin')):
    * Run the plugin
    */
   function ongkir_run_plugin() {
-    $settings = get_option('woocommerce_wcis_settings');
+    $settings = get_option('woocommerce_ongkir_settings');
     $enabled = isset($settings['enabled']) ? $settings['enabled'] : 'no';
 
     new Ongkir_Admin($enabled);

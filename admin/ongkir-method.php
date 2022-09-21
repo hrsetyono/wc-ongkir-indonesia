@@ -14,10 +14,10 @@ class Ongkir_Method extends WC_Shipping_Method {
   private $api;
 
   public function __construct($instance_id = 0) {
-		$this->id = 'wcis'; // wcis is the old plugin name
-    $this->title = __('Indo Ongkir');
-		$this->method_title = __('Indo Ongkir');
-		$this->method_description = __('Indonesian domestic shipping with JNE, TIKI, or POS');
+		$this->id = 'ongkir';
+    $this->title = __('Ongkir Indonesia');
+		$this->method_title = __('Ongkir Indonesia');
+		$this->method_description = __('Indonesian domestic shipping with JNE, J&T, Ninja Xpress, Sicepat, TIKI, or POS');
 
     $this->enabled = $this->get_option('enabled');
     $this->init_form_fields();
@@ -28,7 +28,7 @@ class Ongkir_Method extends WC_Shipping_Method {
 	}
 
   /**
-   * Initiate global setting page for WCIS
+   * Initiate global setting page
    */
   function init_form_fields() {
     $enabled_field = [
@@ -52,7 +52,7 @@ class Ongkir_Method extends WC_Shipping_Method {
     $key_field = [
       'title' => __('API Key'),
       'type' => 'password',
-      'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here'),
+      'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here. <br> ⚠️ <span style="color:#f44336">If nothing happen after saving, try refreshing the page as it takes a while to validate the key.</span>'),
     ];
 
     $city_field = [
@@ -65,7 +65,6 @@ class Ongkir_Method extends WC_Shipping_Method {
 
     $this->form_fields = [
       'key' => $key_field,
-      // 'type' => $type_field,
     ];
 
     // if key is valid, show the other setting fields
@@ -77,6 +76,7 @@ class Ongkir_Method extends WC_Shipping_Method {
 
       // set service fields by each courier
       $couriers = Ongkir_Data::get_couriers();
+
       foreach ($couriers as $id => $name) {
         $this->form_fields[$id . '_services'] = [
           'title' => $name,
@@ -86,8 +86,7 @@ class Ongkir_Method extends WC_Shipping_Method {
           'options' => Ongkir_Data::get_services($id, true)
         ];
       }
-
-    } // if valid
+    }
   }
 
 
@@ -95,27 +94,26 @@ class Ongkir_Method extends WC_Shipping_Method {
    * Add API Key to Transient so it's cached
    */
   function process_admin_transients() {
-    $t_license = get_transient('wcis_license');
+    $cached_license = get_transient('ongkir_license');
 
     $post_data = $this->get_post_data();
-    $key = $post_data['woocommerce_wcis_key'];
+    $key = $post_data['woocommerce_ongkir_key'];
 
     // check license
-    $license_valid = isset($t_license['valid']) && $t_license['valid'];
-    $license_different = isset($t_license['key']) && $t_license['key'] === $key;
+    $license_different = isset($cached_license['key']) && $cached_license['key'] === $key;
+    $license_valid = isset($cached_license['valid']) && $cached_license['valid'];
 
     // if not valid OR different from before, update transient
-    if (!$license_valid || $license_different) {
+    if ($license_different || !$license_valid) {
       $rj = new RajaOngkir($key);
-      $t_license = [
+      $license = [
         'key' => $key,
         'valid' => $rj->is_valid()
       ];
 
-      set_transient('wcis_license', $t_license, 60*60*24*30);
+      set_transient('ongkir_license', $license, 60*60*24*30);
+      // return $license;
     }
-
-    return $t_license;
   }
 
 
@@ -125,12 +123,16 @@ class Ongkir_Method extends WC_Shipping_Method {
   /**
    * Validate API Key by doing a sample AJAX call
    * @return bool
+   * 
+   * @warn - due to woocommerce update, the transient isn't saved when the page first refreshed. So need to refresh the page again
    */
   private function check_key_valid() {
-    $license = get_transient('wcis_license');
-
-    // if key doesn't exist, abort
-    if (!isset($license['key'])) { return false; }
+    $license = get_transient('ongkir_license');
+    
+    // if key doesn't exist OR empty, abort
+    if (!isset($license['key']) || $license['key'] === '') {
+      return false;
+    }
 
     // if valid, return success
     if (isset($license['valid']) && $license['valid']) {

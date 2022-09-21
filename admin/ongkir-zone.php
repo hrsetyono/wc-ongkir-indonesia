@@ -15,16 +15,16 @@ class Ongkir_Zone extends WC_Shipping_Method {
   private $main_settings;
 
   public function __construct($instance_id = 0) {
-		$this->id = 'wcis_zone'; // wcis is the old plugin name
+		$this->id = 'ongkir_zone';
     $this->instance_id = absint($instance_id);
 
-    $this->title = __('Indo Ongkir');
-		$this->method_title = __('Indo Ongkir');
-    $this->method_description = __('Indonesian domestic shipping with JNE, TIKI, or POS');
+    $this->title = __('Ongkir Indonesia');
+		$this->method_title = __('Ongkir Indonesia');
+    $this->method_description = __('Indonesian domestic shipping with JNE, TIKI, Ninja Xpress, Sicepat, or POS');
     $this->supports = ['shipping-zones', 'instance-settings'];
 
     // global
-    $this->main_settings = get_option('woocommerce_wcis_settings');
+    $this->main_settings = get_option('woocommerce_ongkir_settings');
     $this->api = new RajaOngkir($this->main_settings['key']);
 
     // allow save setting
@@ -157,7 +157,7 @@ class Ongkir_Zone extends WC_Shipping_Method {
     }
     // if no weight data, return default weight or 1kg
     else {
-      $weight = (int) ceil(apply_filters('wcis_default_weight', 1000));
+      $weight = (int) ceil(apply_filters('ongkir_default_weight', 1000));
       return $weight;
     }
   }

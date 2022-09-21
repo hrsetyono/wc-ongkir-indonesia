@@ -25,8 +25,8 @@ class Ongkir_Admin {
    * @filter woocommerce_shipping_methods
    */
   function shipping_method($methods) {
-  	$methods['wcis'] = 'Ongkir_Method';
-    $methods['wcis_zone'] = 'Ongkir_Zone';
+  	$methods['ongkir'] = 'Ongkir_Method';
+    $methods['ongkir_zone'] = 'Ongkir_Zone';
   	return $methods;
   }
 }

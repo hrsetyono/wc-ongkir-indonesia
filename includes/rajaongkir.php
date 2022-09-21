@@ -15,7 +15,7 @@ class RajaOngkir {
       $this->api_key = $key;
     }
     else {
-      $cached_license = get_transient('wcis_license');
+      $cached_license = get_transient('ongkir_license');
       $this->api_key = $cached_license['key'];
     }
   }
