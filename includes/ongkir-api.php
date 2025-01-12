@@ -50,13 +50,13 @@ class Ongkir_API {
         $cities_mapped[$id] = $item['city_name'];
       }
     
-      $cities_mapped = [0 => __( 'Pilih Kota...' )] + $cities_mapped;
+      $cities_mapped = [0 => __( 'Pilih Kota...', 'wc-ongkir-indonesia')] + $cities_mapped;
       return $cities_mapped;
     }
     // If province code not given, show error message
     else {
       return [
-        0 => __('Pilih Provinsi terlebih dahulu...')
+        0 => __('Pilih Provinsi terlebih dahulu...', 'wc-ongkir-indonesia')
       ];
     }
   }
@@ -75,7 +75,7 @@ class Ongkir_API {
     if (!$city) { return; }
     
     // Format the district value so the City name is included
-    $districts = [ '0' => __('Pilih Kecamatan...') ];
+    $districts = [ '0' => __('Pilih Kecamatan...', 'wc-ongkir-indonesia') ];
     foreach ($city['districts'] as $id => $name) {
       $districts[$city['city_name'] . ", $name [$id]"] = $name;
     }
@@ -135,8 +135,8 @@ class Ongkir_API {
     if ($prov_code == '0') {
       $field = woocommerce_form_field("_{$type}_city", [
         'type' => 'select',
-        'label' => __('City', 'woocommerce'),
-        'options' => [0 => __('Pilih Provinsi terlebih dahulu...')],
+        'label' => __('City', 'wc-ongkir-indonesia'),
+        'options' => [0 => __('Pilih Provinsi terlebih dahulu...', 'wc-ongkir-indonesia')],
         'return' => true,
         'required' => true,
       ]);
@@ -147,7 +147,7 @@ class Ongkir_API {
 
       $field = woocommerce_form_field("_{$type}_city", [
         'type' => 'select',
-        'label' => __('City', 'woocommerce'),
+        'label' => __('City', 'wc-ongkir-indonesia'),
         'options' => $cities,
         'return' => true,
         'required' => true,
@@ -174,8 +174,8 @@ class Ongkir_API {
     if ($city_id === 0) {
       $field = woocommerce_form_field("_{$type}_district", [
         'type' => 'select',
-        'label' => __('Kecamatan'),
-        'options' => [ 0 => __('Pilih Kota terlebih dahulu...') ],
+        'label' => __('Kecamatan', 'wc-ongkir-indonesia'),
+        'options' => [ 0 => __('Pilih Kota terlebih dahulu...', 'wc-ongkir-indonesia') ],
         'return' => true,
         'required' => true
       ] );
@@ -189,7 +189,7 @@ class Ongkir_API {
 
       $field = woocommerce_form_field("_{$type}_district", [
         'type' => 'select',
-        'label' => __('Kecamatan'),
+        'label' => __('Kecamatan', 'wc-ongkir-indonesia'),
         'options' => $districts,
         'return' => true,
         'required' => true

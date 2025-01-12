@@ -15,9 +15,9 @@ class Ongkir_Method extends WC_Shipping_Method {
 
   public function __construct($instance_id = 0) {
 		$this->id = 'ongkir';
-    $this->title = __('Ongkir Indonesia');
-		$this->method_title = __('Ongkir Indonesia');
-		$this->method_description = __('Indonesian domestic shipping with JNE, J&T, Ninja Xpress, Sicepat, TIKI, or POS');
+    $this->title = __('Ongkir Indonesia', 'wc-ongkir-indonesia');
+		$this->method_title = __('Ongkir Indonesia', 'wc-ongkir-indonesia');
+		$this->method_description = __('Indonesian domestic shipping with JNE, J&T, Ninja Xpress, Sicepat, TIKI, or POS', 'wc-ongkir-indonesia');
 
     $this->enabled = $this->get_option('enabled');
     $this->init_form_fields();
@@ -32,10 +32,10 @@ class Ongkir_Method extends WC_Shipping_Method {
    */
   function init_form_fields() {
     $enabled_field = [
-      'title' => __('Enable/Disable'),
+      'title' => __('Enable/Disable', 'wc-ongkir-indonesia'),
       'type' => 'checkbox',
-      'label' => __('Enable Indo Shipping'),
-      'description' => __( 'Tick this then go to Shipping Zone > Create Indonesia Zone > Add Shipping Method > Choose "Indo Shipping"' ),
+      'label' => __('Enable Indo Shipping', 'wc-ongkir-indonesia'),
+      'description' => __( 'Tick this then go to Shipping Zone > Create Indonesia Zone > Add Shipping Method > Choose "Indo Shipping"', 'wc-ongkir-indonesia'),
       'default' => 'yes'
     ];
 
@@ -50,16 +50,16 @@ class Ongkir_Method extends WC_Shipping_Method {
     // ];
 
     $key_field = [
-      'title' => __('API Key'),
+      'title' => 'API Key',
       'type' => 'password',
-      'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here. <br> ⚠️ <span style="color:#f44336">If nothing happen after saving, try refreshing the page as it takes a while to validate the key.</span>'),
+      'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here. <br> ⚠️ <span style="color:#f44336">If nothing happen after saving, try refreshing the page as it takes a while to validate the key.</span>', 'wc-ongkir-indonesia'),
     ];
 
     $city_field = [
-      'title' => __('City Origin'),
+      'title' => __('City Origin', 'wc-ongkir-indonesia'),
       'type' => 'select',
       // 'class'    => 'wc-enhanced-select', // bugged!! doesn't save the value
-      'description' => __('Ship from where? <br> Change your province at General > Store Address'),
+      'description' => __('Ship from where? <br> Change your province at General > Store Address', 'wc-ongkir-indonesia'),
       'options' => [],
     ];
 
@@ -82,7 +82,7 @@ class Ongkir_Method extends WC_Shipping_Method {
           'title' => $name,
           'type' => 'multiselect',
           'class' => 'wc-enhanced-select',
-          'description' => __("Choose allowed services by $name."),
+          'description' => __("Choose allowed services by $name.", 'wc-ongkir-indonesia'),
           'options' => Ongkir_Data::get_services($id, true)
         ];
       }
@@ -91,10 +91,10 @@ class Ongkir_Method extends WC_Shipping_Method {
 
 
   /**
-   * Add API Key to Transient so it's cached
+   * Add API Key to Option so it's cached
    */
-  function process_admin_transients() {
-    $cached_license = get_transient('ongkir_license');
+  function process_admin_options() {
+    $cached_license = get_option('ongkir_license');
 
     $post_data = $this->get_post_data();
     $key = $post_data['woocommerce_ongkir_key'];
@@ -103,7 +103,7 @@ class Ongkir_Method extends WC_Shipping_Method {
     $license_different = isset($cached_license['key']) && $cached_license['key'] === $key;
     $license_valid = isset($cached_license['valid']) && $cached_license['valid'];
 
-    // if not valid OR different from before, update transient
+    // if not valid OR different from before, update option
     if ($license_different || !$license_valid) {
       $rj = new RajaOngkir($key);
       $license = [
@@ -111,7 +111,7 @@ class Ongkir_Method extends WC_Shipping_Method {
         'valid' => $rj->is_valid()
       ];
 
-      set_transient('ongkir_license', $license, 60*60*24*30);
+      update_option('ongkir_license', $license);
       // return $license;
     }
   }
@@ -124,10 +124,10 @@ class Ongkir_Method extends WC_Shipping_Method {
    * Validate API Key by doing a sample AJAX call
    * @return bool
    * 
-   * @warn - due to woocommerce update, the transient isn't saved when the page first refreshed. So need to refresh the page again
+   * @warn - due to woocommerce update, the option isn't saved when the page first refreshed. So need to refresh the page again
    */
   private function check_key_valid() {
-    $license = get_transient('ongkir_license');
+    $license = get_option('ongkir_license');
     
     // if key doesn't exist OR empty, abort
     if (!isset($license['key']) || $license['key'] === '') {
@@ -136,11 +136,11 @@ class Ongkir_Method extends WC_Shipping_Method {
 
     // if valid, return success
     if (isset($license['valid']) && $license['valid']) {
-      $msg = __('API Connected!');
+      $msg = __('API Connected!', 'wc-ongkir-indonesia');
       $this->form_fields['key']['description'] = '<span style="color: #4caf50;">' . $msg . '</span>';
     }
     else {
-      $msg = __('Invalid API Key. Make sure it is a PRO license');
+      $msg = __('Invalid API Key. Make sure it is a PRO license', 'wc-ongkir-indonesia');
       $this->form_fields['key']['description'] = '<span style="color:#f44336;">' . $msg . '</span>';
     }
 

@@ -18,14 +18,16 @@ class Ongkir_Zone extends WC_Shipping_Method {
 		$this->id = 'ongkir_zone';
     $this->instance_id = absint($instance_id);
 
-    $this->title = __('Ongkir Indonesia');
-		$this->method_title = __('Ongkir Indonesia');
-    $this->method_description = __('Indonesian domestic shipping with JNE, TIKI, Ninja Xpress, Sicepat, or POS');
+    $this->title = __('Ongkir Indonesia', 'wc-ongkir-indonesia');
+		$this->method_title = __('Ongkir Indonesia', 'wc-ongkir-indonesia');
+    $this->method_description = __('Indonesian domestic shipping with JNE, TIKI, Ninja Xpress, Sicepat, or POS', 'wc-ongkir-indonesia');
     $this->supports = ['shipping-zones', 'instance-settings'];
 
     // global
     $this->main_settings = get_option('woocommerce_ongkir_settings');
-    $this->api = new RajaOngkir($this->main_settings['key']);
+    if (isset($this->main_settings['key'])) {
+      $this->api = new RajaOngkir($this->main_settings['key']);
+    }
 
     // allow save setting
     add_action('woocommerce_update_options_shipping_' . $this->id, [$this, 'process_admin_options']);
@@ -84,7 +86,7 @@ class Ongkir_Zone extends WC_Shipping_Method {
 
     // format the costs from API to WooCommerce
     foreach ($costs as $courier):
-      if (empty($courier)) { break; }
+      if (empty($courier['code'])) { break; }
 
       // get full list of services
       $code = $courier['code'];
@@ -94,7 +96,8 @@ class Ongkir_Zone extends WC_Shipping_Method {
 
       // get allowed service from this courier
       $setting_id = $code . '_services';
-      $allowed_services = isset($this->main_settings[$setting_id]) ? $this->main_settings[$setting_id] : array();
+      $allowed_services = $this->main_settings[$setting_id] ?? [];
+      $allowed_services = is_array($allowed_services) ? $allowed_services : [];
 
       foreach ($courier['costs'] as $service):
         // check if this service is allowed
@@ -139,9 +142,9 @@ class Ongkir_Zone extends WC_Shipping_Method {
     // @warn - Setting default to "1" can cause item to be much larger if unit is set to "inch"
     $volume = array_reduce($woocommerce->cart->get_cart_contents(), function($result, $item) {
       $product = $item['data'];
-      $length = (int) $product->get_length() ?? 1;
-      $width = (int) $product->get_width() ?? 1;
-      $height = (int) $product->get_height() ?? 1;
+      $length = absint($product->get_length() ?? 1);
+      $width = absint($product->get_width() ?? 1);
+      $height = absint($product->get_height() ?? 1);
       $result += $length * $width * $height;
       return $result;
     }, 0);

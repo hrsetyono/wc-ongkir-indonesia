@@ -102,19 +102,14 @@ class Ongkir_Data {
    * @return array
    */
   private static function _read_json($filename) {
-    $fileurl = ONGKIR_FILE . "/includes/data/$filename";
+    $path = ONGKIR_DIR . "/includes/data/{$filename}";
 
-    if (!function_exists('curl_init')){ 
-      die('Your server needs CURL for this plugin to work');
+    if (!file_exists($path)) {
+      die('The data file does not exist');
     }
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $fileurl);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $fileraw = curl_exec($ch);
-    curl_close($ch);
-
-    return json_decode($fileraw, true);
+    $data = wp_json_file_decode($path, ['associative' => true]);
+    return $data;
   }
 
   /**
