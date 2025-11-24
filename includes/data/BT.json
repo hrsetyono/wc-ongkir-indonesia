@@ -1,0 +1,658 @@
+[
+    {
+        "id": 143,
+        "name": "CILEGON",
+        "districts": [
+            {
+                "id": 1386,
+                "name": "CILEGON"
+            },
+            {
+                "id": 1387,
+                "name": "PULOMERAK"
+            },
+            {
+                "id": 1388,
+                "name": "CIBEBER"
+            },
+            {
+                "id": 1389,
+                "name": "CITANGKIL"
+            },
+            {
+                "id": 1390,
+                "name": "CIWANDAN"
+            },
+            {
+                "id": 1391,
+                "name": "GEROGOL"
+            },
+            {
+                "id": 1392,
+                "name": "JOMBANG"
+            },
+            {
+                "id": 1393,
+                "name": "PURWAKARTA"
+            }
+        ]
+    },
+    {
+        "id": 144,
+        "name": "PANDEGLANG",
+        "districts": [
+            {
+                "id": 1394,
+                "name": "PANDEGLANG"
+            },
+            {
+                "id": 1395,
+                "name": "BANJAR"
+            },
+            {
+                "id": 1396,
+                "name": "BOJONG"
+            },
+            {
+                "id": 1397,
+                "name": "CIBALIUNG"
+            },
+            {
+                "id": 1398,
+                "name": "CIKEUSIK"
+            },
+            {
+                "id": 1399,
+                "name": "CIMANGGU"
+            },
+            {
+                "id": 1400,
+                "name": "CIMANUK"
+            },
+            {
+                "id": 1401,
+                "name": "JIPUT"
+            },
+            {
+                "id": 1402,
+                "name": "LABUAN"
+            },
+            {
+                "id": 1403,
+                "name": "MANDALAWANGI"
+            },
+            {
+                "id": 1404,
+                "name": "MENES"
+            },
+            {
+                "id": 1405,
+                "name": "MUNJUL"
+            },
+            {
+                "id": 1406,
+                "name": "PAGELARAN"
+            },
+            {
+                "id": 1407,
+                "name": "SAKETI"
+            },
+            {
+                "id": 1408,
+                "name": "SUMUR"
+            },
+            {
+                "id": 1409,
+                "name": "ANGSANA"
+            },
+            {
+                "id": 1410,
+                "name": "CARITA"
+            },
+            {
+                "id": 1411,
+                "name": "CIBITUNG"
+            },
+            {
+                "id": 1412,
+                "name": "CIGEULIS"
+            },
+            {
+                "id": 1413,
+                "name": "CIKEUDAL (CIKEDAL)"
+            },
+            {
+                "id": 1414,
+                "name": "CIPEUCANG"
+            },
+            {
+                "id": 1415,
+                "name": "CISATA"
+            },
+            {
+                "id": 1416,
+                "name": "KADUHEJO"
+            },
+            {
+                "id": 1417,
+                "name": "PANIMBANG"
+            },
+            {
+                "id": 1418,
+                "name": "PATIA"
+            },
+            {
+                "id": 1419,
+                "name": "PICUNG"
+            },
+            {
+                "id": 1420,
+                "name": "SUKARESMI"
+            },
+            {
+                "id": 1421,
+                "name": "KORONCONG"
+            },
+            {
+                "id": 1422,
+                "name": "MEKARJAYA"
+            },
+            {
+                "id": 1423,
+                "name": "PULOSARI"
+            },
+            {
+                "id": 1424,
+                "name": "SINDANGRESMI"
+            },
+            {
+                "id": 1425,
+                "name": "SOBANG"
+            },
+            {
+                "id": 1426,
+                "name": "CADASARI"
+            },
+            {
+                "id": 1427,
+                "name": "KARANG TANJUNG"
+            },
+            {
+                "id": 1428,
+                "name": "MAJASARI"
+            }
+        ]
+    },
+    {
+        "id": 147,
+        "name": "LEBAK",
+        "districts": [
+            {
+                "id": 1429,
+                "name": "RANGKASBITUNG"
+            },
+            {
+                "id": 1430,
+                "name": "BANJARSARI"
+            },
+            {
+                "id": 1431,
+                "name": "BAYAH"
+            },
+            {
+                "id": 1432,
+                "name": "BOJONGMANIK"
+            },
+            {
+                "id": 1433,
+                "name": "CIBADAK"
+            },
+            {
+                "id": 1434,
+                "name": "CIBEBER"
+            },
+            {
+                "id": 1435,
+                "name": "CIJAKU"
+            },
+            {
+                "id": 1436,
+                "name": "CIKULUR"
+            },
+            {
+                "id": 1437,
+                "name": "CILELES"
+            },
+            {
+                "id": 1438,
+                "name": "CIMARGA"
+            },
+            {
+                "id": 1439,
+                "name": "CIPANAS"
+            },
+            {
+                "id": 1440,
+                "name": "GUNUNG KENCANA"
+            },
+            {
+                "id": 1441,
+                "name": "LEUWIDAMAR"
+            },
+            {
+                "id": 1442,
+                "name": "MAJA"
+            },
+            {
+                "id": 1443,
+                "name": "MALINGPING"
+            },
+            {
+                "id": 1444,
+                "name": "MUNCANG"
+            },
+            {
+                "id": 1445,
+                "name": "PANGGARANGAN"
+            },
+            {
+                "id": 1446,
+                "name": "SAJIRA"
+            },
+            {
+                "id": 1447,
+                "name": "WANASALAM"
+            },
+            {
+                "id": 1448,
+                "name": "WARUNGGUNUNG"
+            },
+            {
+                "id": 1449,
+                "name": "CURUGBITUNG"
+            },
+            {
+                "id": 1450,
+                "name": "SOBANG"
+            },
+            {
+                "id": 1451,
+                "name": "CIGEMBLONG"
+            },
+            {
+                "id": 1452,
+                "name": "CIHARA"
+            },
+            {
+                "id": 1453,
+                "name": "CILOGRANG"
+            },
+            {
+                "id": 1454,
+                "name": "CIRINTEN"
+            },
+            {
+                "id": 1455,
+                "name": "KALANGANYAR"
+            },
+            {
+                "id": 1456,
+                "name": "LEBAKGEDONG"
+            }
+        ]
+    },
+    {
+        "id": 148,
+        "name": "SERANG",
+        "districts": [
+            {
+                "id": 1457,
+                "name": "SERANG"
+            },
+            {
+                "id": 1458,
+                "name": "CURUG"
+            },
+            {
+                "id": 1459,
+                "name": "KASEMEN"
+            },
+            {
+                "id": 1460,
+                "name": "TAKTAKAN"
+            },
+            {
+                "id": 1461,
+                "name": "WALANTAKA"
+            },
+            {
+                "id": 1462,
+                "name": "CIPOCOK JAYA"
+            },
+            {
+                "id": 1463,
+                "name": "BAROS"
+            },
+            {
+                "id": 1464,
+                "name": "ANYAR"
+            },
+            {
+                "id": 1465,
+                "name": "BINUANG"
+            },
+            {
+                "id": 1466,
+                "name": "BOJONEGARA"
+            },
+            {
+                "id": 1467,
+                "name": "CARENANG (CERENANG)"
+            },
+            {
+                "id": 1468,
+                "name": "CIKANDE"
+            },
+            {
+                "id": 1469,
+                "name": "CIKEUSAL"
+            },
+            {
+                "id": 1470,
+                "name": "CINANGKA"
+            },
+            {
+                "id": 1471,
+                "name": "CIOMAS"
+            },
+            {
+                "id": 1472,
+                "name": "CIRUAS"
+            },
+            {
+                "id": 1473,
+                "name": "JAWILAN"
+            },
+            {
+                "id": 1474,
+                "name": "KIBIN"
+            },
+            {
+                "id": 1475,
+                "name": "KOPO"
+            },
+            {
+                "id": 1476,
+                "name": "KRAGILAN"
+            },
+            {
+                "id": 1477,
+                "name": "KRAMATWATU"
+            },
+            {
+                "id": 1478,
+                "name": "MANCAK"
+            },
+            {
+                "id": 1479,
+                "name": "PABUARAN"
+            },
+            {
+                "id": 1480,
+                "name": "PADARINCANG"
+            },
+            {
+                "id": 1481,
+                "name": "PAMARAYAN"
+            },
+            {
+                "id": 1482,
+                "name": "PETIR"
+            },
+            {
+                "id": 1483,
+                "name": "PONTANG"
+            },
+            {
+                "id": 1484,
+                "name": "PULO AMPEL"
+            },
+            {
+                "id": 1485,
+                "name": "TANARA"
+            },
+            {
+                "id": 1486,
+                "name": "TIRTAYASA"
+            },
+            {
+                "id": 1487,
+                "name": "TUNJUNG TEJA"
+            },
+            {
+                "id": 1488,
+                "name": "WARINGIN KURUNG"
+            },
+            {
+                "id": 1489,
+                "name": "BANDUNG"
+            },
+            {
+                "id": 1490,
+                "name": "GUNUNGSARI"
+            },
+            {
+                "id": 1491,
+                "name": "LEBAK WANGI"
+            }
+        ]
+    },
+    {
+        "id": 592,
+        "name": "TANGERANG",
+        "districts": [
+            {
+                "id": 6158,
+                "name": "TANGERANG"
+            },
+            {
+                "id": 6159,
+                "name": "CILEDUG"
+            },
+            {
+                "id": 6160,
+                "name": "BATUCEPER"
+            },
+            {
+                "id": 6161,
+                "name": "BENDA"
+            },
+            {
+                "id": 6162,
+                "name": "CIBODAS"
+            },
+            {
+                "id": 6163,
+                "name": "CIPONDOH"
+            },
+            {
+                "id": 6164,
+                "name": "JATIUWUNG"
+            },
+            {
+                "id": 6165,
+                "name": "KARAWACI"
+            },
+            {
+                "id": 6166,
+                "name": "LARANGAN"
+            },
+            {
+                "id": 6167,
+                "name": "NEGLASARI"
+            },
+            {
+                "id": 6168,
+                "name": "PERIUK"
+            },
+            {
+                "id": 6169,
+                "name": "PINANG (PENANG)"
+            },
+            {
+                "id": 6170,
+                "name": "KARANG TENGAH"
+            },
+            {
+                "id": 6171,
+                "name": "TIGARAKSA"
+            },
+            {
+                "id": 6172,
+                "name": "BALARAJA"
+            },
+            {
+                "id": 6173,
+                "name": "CIKUPA"
+            },
+            {
+                "id": 6174,
+                "name": "CISOKA"
+            },
+            {
+                "id": 6175,
+                "name": "CURUG"
+            },
+            {
+                "id": 6176,
+                "name": "KRONJO"
+            },
+            {
+                "id": 6177,
+                "name": "KRESEK"
+            },
+            {
+                "id": 6178,
+                "name": "LEGOK"
+            },
+            {
+                "id": 6179,
+                "name": "MAUK"
+            },
+            {
+                "id": 6180,
+                "name": "PASAR KEMIS"
+            },
+            {
+                "id": 6181,
+                "name": "PAKUHAJI"
+            },
+            {
+                "id": 6182,
+                "name": "RAJEG"
+            },
+            {
+                "id": 6183,
+                "name": "SEPATAN"
+            },
+            {
+                "id": 6185,
+                "name": "TELUKNAGA"
+            },
+            {
+                "id": 6189,
+                "name": "CISAUK"
+            },
+            {
+                "id": 6190,
+                "name": "JAMBE"
+            },
+            {
+                "id": 6191,
+                "name": "JAYANTI"
+            },
+            {
+                "id": 6192,
+                "name": "KEMIRI"
+            },
+            {
+                "id": 6193,
+                "name": "KOSAMBI"
+            },
+            {
+                "id": 6194,
+                "name": "PAGEDANGAN"
+            },
+            {
+                "id": 6195,
+                "name": "PANONGAN"
+            },
+            {
+                "id": 6196,
+                "name": "SUKADIRI"
+            },
+            {
+                "id": 6197,
+                "name": "SUKAMULYA"
+            },
+            {
+                "id": 6198,
+                "name": "SOLEAR"
+            },
+            {
+                "id": 6199,
+                "name": "SINDANG JAYA"
+            },
+            {
+                "id": 6202,
+                "name": "SEPATAN TIMUR"
+            },
+            {
+                "id": 6203,
+                "name": "MEKAR BARU"
+            },
+            {
+                "id": 6204,
+                "name": "KELAPA DUA"
+            },
+            {
+                "id": 6205,
+                "name": "GUNUNG KALER"
+            }
+        ]
+    },
+    {
+        "id": 594,
+        "name": "TANGERANG SELATAN",
+        "districts": [
+            {
+                "id": 6184,
+                "name": "SERPONG"
+            },
+            {
+                "id": 6186,
+                "name": "PONDOK AREN"
+            },
+            {
+                "id": 6187,
+                "name": "PAMULANG"
+            },
+            {
+                "id": 6188,
+                "name": "CIPUTAT"
+            },
+            {
+                "id": 6200,
+                "name": "SETU"
+            },
+            {
+                "id": 6201,
+                "name": "SERPONG UTARA"
+            },
+            {
+                "id": 6206,
+                "name": "CIPUTAT TIMUR"
+            }
+        ]
+    }
+]

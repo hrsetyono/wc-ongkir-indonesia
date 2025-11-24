@@ -1,0 +1,214 @@
+[
+    {
+        "id": 135,
+        "name": "JAKARTA BARAT",
+        "districts": [
+            {
+                "id": 1322,
+                "name": "GROGOL PETAMBURAN"
+            },
+            {
+                "id": 1323,
+                "name": "KALIDERES"
+            },
+            {
+                "id": 1324,
+                "name": "KEBON JERUK"
+            },
+            {
+                "id": 1325,
+                "name": "KEMBANGAN"
+            },
+            {
+                "id": 1326,
+                "name": "PALMERAH"
+            },
+            {
+                "id": 1327,
+                "name": "TAMAN SARI"
+            },
+            {
+                "id": 1328,
+                "name": "TAMBORA"
+            },
+            {
+                "id": 1329,
+                "name": "CENGKARENG"
+            }
+        ]
+    },
+    {
+        "id": 136,
+        "name": "JAKARTA SELATAN",
+        "districts": [
+            {
+                "id": 1330,
+                "name": "JAGAKARSA"
+            },
+            {
+                "id": 1331,
+                "name": "KEBAYORAN BARU"
+            },
+            {
+                "id": 1332,
+                "name": "KEBAYORAN LAMA"
+            },
+            {
+                "id": 1333,
+                "name": "MAMPANG PRAPATAN"
+            },
+            {
+                "id": 1334,
+                "name": "PANCORAN"
+            },
+            {
+                "id": 1335,
+                "name": "PASAR MINGGU"
+            },
+            {
+                "id": 1336,
+                "name": "PESANGGRAHAN"
+            },
+            {
+                "id": 1337,
+                "name": "SETIA BUDI"
+            },
+            {
+                "id": 1338,
+                "name": "TEBET"
+            },
+            {
+                "id": 1339,
+                "name": "CILANDAK"
+            }
+        ]
+    },
+    {
+        "id": 137,
+        "name": "JAKARTA PUSAT",
+        "districts": [
+            {
+                "id": 1340,
+                "name": "CEMPAKA PUTIH"
+            },
+            {
+                "id": 1341,
+                "name": "GAMBIR"
+            },
+            {
+                "id": 1342,
+                "name": "JOHAR BARU"
+            },
+            {
+                "id": 1343,
+                "name": "KEMAYORAN"
+            },
+            {
+                "id": 1344,
+                "name": "MENTENG"
+            },
+            {
+                "id": 1345,
+                "name": "SAWAH BESAR"
+            },
+            {
+                "id": 1346,
+                "name": "SENEN"
+            },
+            {
+                "id": 1347,
+                "name": "TANAH ABANG"
+            }
+        ]
+    },
+    {
+        "id": 138,
+        "name": "JAKARTA UTARA",
+        "districts": [
+            {
+                "id": 1348,
+                "name": "KELAPA GADING"
+            },
+            {
+                "id": 1349,
+                "name": "KOJA"
+            },
+            {
+                "id": 1350,
+                "name": "PADEMANGAN"
+            },
+            {
+                "id": 1351,
+                "name": "PENJARINGAN"
+            },
+            {
+                "id": 1352,
+                "name": "TANJUNG PRIOK"
+            },
+            {
+                "id": 1353,
+                "name": "CILINCING"
+            }
+        ]
+    },
+    {
+        "id": 139,
+        "name": "JAKARTA TIMUR",
+        "districts": [
+            {
+                "id": 1354,
+                "name": "CAKUNG"
+            },
+            {
+                "id": 1355,
+                "name": "CIPAYUNG"
+            },
+            {
+                "id": 1356,
+                "name": "CIRACAS"
+            },
+            {
+                "id": 1357,
+                "name": "DUREN SAWIT"
+            },
+            {
+                "id": 1358,
+                "name": "JATINEGARA"
+            },
+            {
+                "id": 1359,
+                "name": "KRAMAT JATI"
+            },
+            {
+                "id": 1360,
+                "name": "MAKASAR"
+            },
+            {
+                "id": 1361,
+                "name": "MATRAMAN"
+            },
+            {
+                "id": 1362,
+                "name": "PASAR REBO"
+            },
+            {
+                "id": 1363,
+                "name": "PULO GADUNG"
+            }
+        ]
+    },
+    {
+        "id": 141,
+        "name": "KEPULAUAN SERIBU",
+        "districts": [
+            {
+                "id": 1364,
+                "name": "KEPULAUAN SERIBU SELATAN"
+            },
+            {
+                "id": 1365,
+                "name": "KEPULAUAN SERIBU UTARA"
+            }
+        ]
+    }
+]

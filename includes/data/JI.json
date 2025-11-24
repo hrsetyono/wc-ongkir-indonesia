@@ -1,0 +1,2852 @@
+[
+    {
+        "id": 256,
+        "name": "JEMBER",
+        "districts": [
+            {
+                "id": 2503,
+                "name": "AMBULU"
+            },
+            {
+                "id": 2504,
+                "name": "ARJASA"
+            },
+            {
+                "id": 2505,
+                "name": "BALUNG"
+            },
+            {
+                "id": 2506,
+                "name": "BANGSALSARI"
+            },
+            {
+                "id": 2507,
+                "name": "GUMUK MAS"
+            },
+            {
+                "id": 2508,
+                "name": "JELBUK"
+            },
+            {
+                "id": 2509,
+                "name": "JENGGAWAH"
+            },
+            {
+                "id": 2510,
+                "name": "KALISAT"
+            },
+            {
+                "id": 2511,
+                "name": "KENCONG"
+            },
+            {
+                "id": 2512,
+                "name": "LEDOKOMBO"
+            },
+            {
+                "id": 2513,
+                "name": "MAYANG"
+            },
+            {
+                "id": 2514,
+                "name": "MUMBULSARI"
+            },
+            {
+                "id": 2515,
+                "name": "PAKUSARI"
+            },
+            {
+                "id": 2516,
+                "name": "PANTI"
+            },
+            {
+                "id": 2517,
+                "name": "PUGER"
+            },
+            {
+                "id": 2518,
+                "name": "RAMBIPUJI"
+            },
+            {
+                "id": 2519,
+                "name": "SILO"
+            },
+            {
+                "id": 2520,
+                "name": "SUKORAMBI"
+            },
+            {
+                "id": 2521,
+                "name": "SUKOWONO"
+            },
+            {
+                "id": 2522,
+                "name": "SUMBER BARU"
+            },
+            {
+                "id": 2523,
+                "name": "SUMBER JAMBE"
+            },
+            {
+                "id": 2524,
+                "name": "TANGGUL"
+            },
+            {
+                "id": 2525,
+                "name": "TEMPUREJO"
+            },
+            {
+                "id": 2526,
+                "name": "UMBULSARI"
+            },
+            {
+                "id": 2527,
+                "name": "WULUHAN"
+            },
+            {
+                "id": 2528,
+                "name": "AJUNG"
+            },
+            {
+                "id": 2529,
+                "name": "JOMBANG"
+            },
+            {
+                "id": 2530,
+                "name": "KALIWATES"
+            },
+            {
+                "id": 2531,
+                "name": "PATRANG"
+            },
+            {
+                "id": 2532,
+                "name": "SEMBORO"
+            },
+            {
+                "id": 2533,
+                "name": "SUMBER SARI"
+            }
+        ]
+    },
+    {
+        "id": 257,
+        "name": "BANYUWANGI",
+        "districts": [
+            {
+                "id": 2534,
+                "name": "BANYUWANGI"
+            },
+            {
+                "id": 2535,
+                "name": "BANGOREJO"
+            },
+            {
+                "id": 2536,
+                "name": "CLURING"
+            },
+            {
+                "id": 2537,
+                "name": "GAMBIRAN"
+            },
+            {
+                "id": 2538,
+                "name": "GENTENG"
+            },
+            {
+                "id": 2539,
+                "name": "GLENMORE"
+            },
+            {
+                "id": 2540,
+                "name": "KABAT"
+            },
+            {
+                "id": 2541,
+                "name": "KALIBARU"
+            },
+            {
+                "id": 2542,
+                "name": "MUNCAR"
+            },
+            {
+                "id": 2543,
+                "name": "PESANGGARAN"
+            },
+            {
+                "id": 2544,
+                "name": "PURWOHARJO"
+            },
+            {
+                "id": 2545,
+                "name": "ROGOJAMPI"
+            },
+            {
+                "id": 2546,
+                "name": "SINGOJURUH"
+            },
+            {
+                "id": 2547,
+                "name": "SONGGON"
+            },
+            {
+                "id": 2548,
+                "name": "SRONO"
+            },
+            {
+                "id": 2549,
+                "name": "TEGALDLIMO"
+            },
+            {
+                "id": 2550,
+                "name": "WONGSOREJO"
+            },
+            {
+                "id": 2551,
+                "name": "GLAGAH"
+            },
+            {
+                "id": 2552,
+                "name": "GIRI"
+            },
+            {
+                "id": 2553,
+                "name": "KALIPURO"
+            },
+            {
+                "id": 2554,
+                "name": "LICIN"
+            },
+            {
+                "id": 2555,
+                "name": "SEMPU"
+            },
+            {
+                "id": 2556,
+                "name": "SILIRAGUNG"
+            },
+            {
+                "id": 2557,
+                "name": "TEGALSARI"
+            },
+            {
+                "id": 7106,
+                "name": "BLIMBINGSARI"
+            }
+        ]
+    },
+    {
+        "id": 258,
+        "name": "BONDOWOSO",
+        "districts": [
+            {
+                "id": 2558,
+                "name": "BONDOWOSO"
+            },
+            {
+                "id": 2559,
+                "name": "CERMEE"
+            },
+            {
+                "id": 2560,
+                "name": "CURAHDAMI"
+            },
+            {
+                "id": 2561,
+                "name": "GRUJUGAN"
+            },
+            {
+                "id": 2562,
+                "name": "KLABANG"
+            },
+            {
+                "id": 2563,
+                "name": "MAESAN"
+            },
+            {
+                "id": 2564,
+                "name": "PAKEM"
+            },
+            {
+                "id": 2565,
+                "name": "PRAJEKAN"
+            },
+            {
+                "id": 2566,
+                "name": "PUJER"
+            },
+            {
+                "id": 2567,
+                "name": "SEMPOL"
+            },
+            {
+                "id": 2568,
+                "name": "SUKOSARI"
+            },
+            {
+                "id": 2569,
+                "name": "TAMANAN"
+            },
+            {
+                "id": 2570,
+                "name": "TAPEN"
+            },
+            {
+                "id": 2571,
+                "name": "TEGALAMPEL"
+            },
+            {
+                "id": 2572,
+                "name": "TENGGARANG"
+            },
+            {
+                "id": 2573,
+                "name": "TLOGOSARI"
+            },
+            {
+                "id": 2574,
+                "name": "WONOSARI"
+            },
+            {
+                "id": 2575,
+                "name": "WRINGIN"
+            },
+            {
+                "id": 2576,
+                "name": "BINAKAL"
+            },
+            {
+                "id": 2577,
+                "name": "SUMBER WRINGIN"
+            },
+            {
+                "id": 2578,
+                "name": "TAMAN KROCOK"
+            },
+            {
+                "id": 2579,
+                "name": "JAMBESARI DARUS SHOLAH"
+            },
+            {
+                "id": 2580,
+                "name": "BOTOLINGGO"
+            }
+        ]
+    },
+    {
+        "id": 289,
+        "name": "KEDIRI",
+        "districts": [
+            {
+                "id": 2868,
+                "name": "KEDIRI KOTA"
+            },
+            {
+                "id": 2869,
+                "name": "GAMPENGREJO"
+            },
+            {
+                "id": 2870,
+                "name": "GROGOL"
+            },
+            {
+                "id": 2871,
+                "name": "GURAH"
+            },
+            {
+                "id": 2872,
+                "name": "KANDAT"
+            },
+            {
+                "id": 2873,
+                "name": "KRAS"
+            },
+            {
+                "id": 2874,
+                "name": "KUNJANG"
+            },
+            {
+                "id": 2875,
+                "name": "MOJO"
+            },
+            {
+                "id": 2876,
+                "name": "NGADILUWIH"
+            },
+            {
+                "id": 2877,
+                "name": "PAGU"
+            },
+            {
+                "id": 2878,
+                "name": "PAPAR"
+            },
+            {
+                "id": 2879,
+                "name": "PLEMAHAN"
+            },
+            {
+                "id": 2880,
+                "name": "PLOSOKLATEN"
+            },
+            {
+                "id": 2881,
+                "name": "PURWOASRI"
+            },
+            {
+                "id": 2882,
+                "name": "SEMEN"
+            },
+            {
+                "id": 2883,
+                "name": "TAROKAN"
+            },
+            {
+                "id": 2884,
+                "name": "WATES"
+            },
+            {
+                "id": 2885,
+                "name": "PARE"
+            },
+            {
+                "id": 2886,
+                "name": "KANDANGAN"
+            },
+            {
+                "id": 2887,
+                "name": "KEPUNG"
+            },
+            {
+                "id": 2888,
+                "name": "NGANCAR"
+            },
+            {
+                "id": 2889,
+                "name": "PUNCU"
+            },
+            {
+                "id": 2890,
+                "name": "BANYAKAN"
+            },
+            {
+                "id": 2891,
+                "name": "KAYEN KIDUL"
+            },
+            {
+                "id": 2892,
+                "name": "RINGINREJO"
+            },
+            {
+                "id": 2893,
+                "name": "MOJOROTO"
+            },
+            {
+                "id": 2894,
+                "name": "PESANTREN"
+            },
+            {
+                "id": 2895,
+                "name": "NGASEM"
+            },
+            {
+                "id": 2896,
+                "name": "BADAS"
+            }
+        ]
+    },
+    {
+        "id": 353,
+        "name": "MADIUN",
+        "districts": [
+            {
+                "id": 3400,
+                "name": "MADIUN"
+            },
+            {
+                "id": 3401,
+                "name": "KARTOHARJO"
+            },
+            {
+                "id": 3402,
+                "name": "MANGUHARJO"
+            },
+            {
+                "id": 3403,
+                "name": "TAMAN"
+            },
+            {
+                "id": 3404,
+                "name": "BALEREJO"
+            },
+            {
+                "id": 3405,
+                "name": "DAGANGAN"
+            },
+            {
+                "id": 3406,
+                "name": "DOLOPO"
+            },
+            {
+                "id": 3407,
+                "name": "GEGER"
+            },
+            {
+                "id": 3408,
+                "name": "GEMARANG"
+            },
+            {
+                "id": 3409,
+                "name": "JIWAN"
+            },
+            {
+                "id": 3410,
+                "name": "KARE"
+            },
+            {
+                "id": 3411,
+                "name": "KEBONSARI"
+            },
+            {
+                "id": 3412,
+                "name": "MEJAYAN"
+            },
+            {
+                "id": 3413,
+                "name": "PILANGKENCENG"
+            },
+            {
+                "id": 3414,
+                "name": "SARADAN"
+            },
+            {
+                "id": 3415,
+                "name": "SAWAHAN"
+            },
+            {
+                "id": 3416,
+                "name": "WONOASRI"
+            },
+            {
+                "id": 3417,
+                "name": "WUNGU"
+            }
+        ]
+    },
+    {
+        "id": 355,
+        "name": "MAGETAN",
+        "districts": [
+            {
+                "id": 3418,
+                "name": "MAGETAN"
+            },
+            {
+                "id": 3419,
+                "name": "BENDO"
+            },
+            {
+                "id": 3420,
+                "name": "KARANGREJO"
+            },
+            {
+                "id": 3421,
+                "name": "KAWEDANAN"
+            },
+            {
+                "id": 3422,
+                "name": "LEMBEYAN"
+            },
+            {
+                "id": 3423,
+                "name": "MAOSPATI"
+            },
+            {
+                "id": 3424,
+                "name": "PANEKAN"
+            },
+            {
+                "id": 3425,
+                "name": "PARANG"
+            },
+            {
+                "id": 3426,
+                "name": "PLAOSAN"
+            },
+            {
+                "id": 3427,
+                "name": "PONCOL"
+            },
+            {
+                "id": 3428,
+                "name": "SUKOMORO"
+            },
+            {
+                "id": 3429,
+                "name": "TAKERAN"
+            },
+            {
+                "id": 3430,
+                "name": "BARAT"
+            },
+            {
+                "id": 3431,
+                "name": "KARAS"
+            },
+            {
+                "id": 3432,
+                "name": "NGARIBOYO"
+            },
+            {
+                "id": 3433,
+                "name": "NGUNTORONADI"
+            },
+            {
+                "id": 3434,
+                "name": "SIDOREJO"
+            },
+            {
+                "id": 3435,
+                "name": "KARTOHARJO (KERTOHARJO)"
+            }
+        ]
+    },
+    {
+        "id": 357,
+        "name": "NGAWI",
+        "districts": [
+            {
+                "id": 3436,
+                "name": "NGAWI"
+            },
+            {
+                "id": 3437,
+                "name": "BRINGIN"
+            },
+            {
+                "id": 3438,
+                "name": "GENENG"
+            },
+            {
+                "id": 3439,
+                "name": "JOGOROGO"
+            },
+            {
+                "id": 3440,
+                "name": "KARANGJATI"
+            },
+            {
+                "id": 3441,
+                "name": "KEDUNGGALAR"
+            },
+            {
+                "id": 3442,
+                "name": "KENDAL"
+            },
+            {
+                "id": 3443,
+                "name": "KWADUNGAN"
+            },
+            {
+                "id": 3444,
+                "name": "MANTINGAN"
+            },
+            {
+                "id": 3445,
+                "name": "NGRAMBE"
+            },
+            {
+                "id": 3446,
+                "name": "PADAS"
+            },
+            {
+                "id": 3447,
+                "name": "PANGKUR"
+            },
+            {
+                "id": 3448,
+                "name": "PARON"
+            },
+            {
+                "id": 3449,
+                "name": "PITU"
+            },
+            {
+                "id": 3450,
+                "name": "SINE"
+            },
+            {
+                "id": 3451,
+                "name": "WIDODAREN"
+            },
+            {
+                "id": 3452,
+                "name": "KARANGANYAR"
+            },
+            {
+                "id": 3453,
+                "name": "KASREMAN"
+            },
+            {
+                "id": 3454,
+                "name": "GERIH"
+            }
+        ]
+    },
+    {
+        "id": 359,
+        "name": "PACITAN",
+        "districts": [
+            {
+                "id": 3455,
+                "name": "PACITAN"
+            },
+            {
+                "id": 3456,
+                "name": "ARJOSARI"
+            },
+            {
+                "id": 3457,
+                "name": "BANDAR"
+            },
+            {
+                "id": 3458,
+                "name": "DONOROJO"
+            },
+            {
+                "id": 3459,
+                "name": "KEBON AGUNG"
+            },
+            {
+                "id": 3460,
+                "name": "NAWANGAN"
+            },
+            {
+                "id": 3461,
+                "name": "NGADIROJO"
+            },
+            {
+                "id": 3462,
+                "name": "PRINGKUKU"
+            },
+            {
+                "id": 3463,
+                "name": "PUNUNG"
+            },
+            {
+                "id": 3464,
+                "name": "SUDIMORO"
+            },
+            {
+                "id": 3465,
+                "name": "TEGALOMBO"
+            },
+            {
+                "id": 3466,
+                "name": "TULAKAN"
+            }
+        ]
+    },
+    {
+        "id": 360,
+        "name": "PONOROGO",
+        "districts": [
+            {
+                "id": 3467,
+                "name": "PONOROGO"
+            },
+            {
+                "id": 3468,
+                "name": "BABADAN"
+            },
+            {
+                "id": 3469,
+                "name": "BADEGAN"
+            },
+            {
+                "id": 3470,
+                "name": "BALONG"
+            },
+            {
+                "id": 3471,
+                "name": "BUNGKAL"
+            },
+            {
+                "id": 3472,
+                "name": "JENANGAN"
+            },
+            {
+                "id": 3473,
+                "name": "JETIS"
+            },
+            {
+                "id": 3474,
+                "name": "KAUMAN"
+            },
+            {
+                "id": 3475,
+                "name": "MLARAK"
+            },
+            {
+                "id": 3476,
+                "name": "NGEBEL"
+            },
+            {
+                "id": 3477,
+                "name": "NGRAYUN"
+            },
+            {
+                "id": 3478,
+                "name": "PULUNG"
+            },
+            {
+                "id": 3479,
+                "name": "SAMBIT"
+            },
+            {
+                "id": 3480,
+                "name": "SAMPUNG"
+            },
+            {
+                "id": 3481,
+                "name": "SAWOO"
+            },
+            {
+                "id": 3482,
+                "name": "SIMAN"
+            },
+            {
+                "id": 3483,
+                "name": "SLAHUNG"
+            },
+            {
+                "id": 3484,
+                "name": "SOOKO"
+            },
+            {
+                "id": 3485,
+                "name": "SUKOREJO"
+            },
+            {
+                "id": 3486,
+                "name": "JAMBON"
+            },
+            {
+                "id": 3487,
+                "name": "PUDAK"
+            }
+        ]
+    },
+    {
+        "id": 388,
+        "name": "MOJOKERTO",
+        "districts": [
+            {
+                "id": 3832,
+                "name": "BANGSAL"
+            },
+            {
+                "id": 3833,
+                "name": "DAWAR BLANDONG"
+            },
+            {
+                "id": 3834,
+                "name": "DLANGGU"
+            },
+            {
+                "id": 3835,
+                "name": "GEDEG"
+            },
+            {
+                "id": 3836,
+                "name": "GONDANG"
+            },
+            {
+                "id": 3837,
+                "name": "JATIREJO"
+            },
+            {
+                "id": 3838,
+                "name": "JETIS"
+            },
+            {
+                "id": 3839,
+                "name": "KEMLAGI"
+            },
+            {
+                "id": 3840,
+                "name": "KUTOREJO"
+            },
+            {
+                "id": 3841,
+                "name": "MOJOSARI"
+            },
+            {
+                "id": 3842,
+                "name": "NGORO"
+            },
+            {
+                "id": 3843,
+                "name": "PACET"
+            },
+            {
+                "id": 3844,
+                "name": "PUNGGING"
+            },
+            {
+                "id": 3845,
+                "name": "PURI"
+            },
+            {
+                "id": 3846,
+                "name": "SOOKO"
+            },
+            {
+                "id": 3847,
+                "name": "TRAWAS"
+            },
+            {
+                "id": 3848,
+                "name": "TROWULAN"
+            },
+            {
+                "id": 3849,
+                "name": "MOJOANYAR"
+            },
+            {
+                "id": 3850,
+                "name": "MAGERSARI"
+            },
+            {
+                "id": 3851,
+                "name": "PRAJURIT KULON"
+            },
+            {
+                "id": 7108,
+                "name": "KRANGGAN"
+            }
+        ]
+    },
+    {
+        "id": 389,
+        "name": "JOMBANG",
+        "districts": [
+            {
+                "id": 3852,
+                "name": "JOMBANG"
+            },
+            {
+                "id": 3853,
+                "name": "BANDAR KEDUNG MULYO"
+            },
+            {
+                "id": 3854,
+                "name": "BARENG"
+            },
+            {
+                "id": 3855,
+                "name": "DIWEK"
+            },
+            {
+                "id": 3856,
+                "name": "GUDO"
+            },
+            {
+                "id": 3857,
+                "name": "JOGOROTO"
+            },
+            {
+                "id": 3858,
+                "name": "KABUH"
+            },
+            {
+                "id": 3859,
+                "name": "KESAMBEN"
+            },
+            {
+                "id": 3860,
+                "name": "KUDU"
+            },
+            {
+                "id": 3861,
+                "name": "MEGALUH"
+            },
+            {
+                "id": 3862,
+                "name": "MOJOAGUNG"
+            },
+            {
+                "id": 3863,
+                "name": "MOJOWARNO"
+            },
+            {
+                "id": 3864,
+                "name": "NGORO"
+            },
+            {
+                "id": 3865,
+                "name": "PERAK"
+            },
+            {
+                "id": 3866,
+                "name": "PETERONGAN"
+            },
+            {
+                "id": 3867,
+                "name": "PLANDAAN"
+            },
+            {
+                "id": 3868,
+                "name": "PLOSO"
+            },
+            {
+                "id": 3869,
+                "name": "SUMOBITO"
+            },
+            {
+                "id": 3870,
+                "name": "TEMBELANG"
+            },
+            {
+                "id": 3871,
+                "name": "WONOSALAM"
+            },
+            {
+                "id": 3872,
+                "name": "NGUSIKAN"
+            }
+        ]
+    },
+    {
+        "id": 390,
+        "name": "NGANJUK",
+        "districts": [
+            {
+                "id": 3873,
+                "name": "NGANJUK"
+            },
+            {
+                "id": 3874,
+                "name": "BAGOR"
+            },
+            {
+                "id": 3875,
+                "name": "BERBEK"
+            },
+            {
+                "id": 3876,
+                "name": "GONDANG"
+            },
+            {
+                "id": 3877,
+                "name": "LOCERET"
+            },
+            {
+                "id": 3878,
+                "name": "NGETOS"
+            },
+            {
+                "id": 3879,
+                "name": "NGLUYU"
+            },
+            {
+                "id": 3880,
+                "name": "PACE"
+            },
+            {
+                "id": 3881,
+                "name": "PRAMBON"
+            },
+            {
+                "id": 3882,
+                "name": "REJOSO"
+            },
+            {
+                "id": 3883,
+                "name": "SAWAHAN"
+            },
+            {
+                "id": 3884,
+                "name": "SUKOMORO"
+            },
+            {
+                "id": 3885,
+                "name": "TANJUNGANOM"
+            },
+            {
+                "id": 3886,
+                "name": "WILANGAN"
+            },
+            {
+                "id": 3887,
+                "name": "KERTOSONO"
+            },
+            {
+                "id": 3888,
+                "name": "BARON"
+            },
+            {
+                "id": 3889,
+                "name": "JATIKALEN"
+            },
+            {
+                "id": 3890,
+                "name": "LENGKONG"
+            },
+            {
+                "id": 3891,
+                "name": "NGRONGGOT"
+            },
+            {
+                "id": 3892,
+                "name": "PATIANROWO"
+            }
+        ]
+    },
+    {
+        "id": 391,
+        "name": "MALANG",
+        "districts": [
+            {
+                "id": 3893,
+                "name": "BLIMBING"
+            },
+            {
+                "id": 3894,
+                "name": "KEDUNGKANDANG"
+            },
+            {
+                "id": 3895,
+                "name": "KLOJEN"
+            },
+            {
+                "id": 3896,
+                "name": "LOWOKWARU"
+            },
+            {
+                "id": 3897,
+                "name": "SUKUN"
+            },
+            {
+                "id": 3926,
+                "name": "KEPANJEN"
+            },
+            {
+                "id": 3927,
+                "name": "AMPELGADING"
+            },
+            {
+                "id": 3928,
+                "name": "BANTUR"
+            },
+            {
+                "id": 3929,
+                "name": "BULULAWANG"
+            },
+            {
+                "id": 3930,
+                "name": "DAMPIT"
+            },
+            {
+                "id": 3931,
+                "name": "DAU"
+            },
+            {
+                "id": 3932,
+                "name": "DONOMULYO"
+            },
+            {
+                "id": 3933,
+                "name": "GEDANGAN"
+            },
+            {
+                "id": 3934,
+                "name": "GONDANGLEGI"
+            },
+            {
+                "id": 3935,
+                "name": "JABUNG"
+            },
+            {
+                "id": 3936,
+                "name": "KALIPARE"
+            },
+            {
+                "id": 3937,
+                "name": "KARANGPLOSO"
+            },
+            {
+                "id": 3938,
+                "name": "KROMENGAN"
+            },
+            {
+                "id": 3939,
+                "name": "NGAJUNG (NGAJUM)"
+            },
+            {
+                "id": 3940,
+                "name": "PAGAK"
+            },
+            {
+                "id": 3941,
+                "name": "PAKIS"
+            },
+            {
+                "id": 3942,
+                "name": "PAKISAJI"
+            },
+            {
+                "id": 3943,
+                "name": "PONCOKUSUMO"
+            },
+            {
+                "id": 3944,
+                "name": "SINGOSARI"
+            },
+            {
+                "id": 3945,
+                "name": "SUMBERPUCUNG"
+            },
+            {
+                "id": 3946,
+                "name": "SUMBERMANJING WETAN"
+            },
+            {
+                "id": 3947,
+                "name": "TAJINAN"
+            },
+            {
+                "id": 3948,
+                "name": "TIRTOYUDO"
+            },
+            {
+                "id": 3949,
+                "name": "TUREN"
+            },
+            {
+                "id": 3950,
+                "name": "TUMPANG"
+            },
+            {
+                "id": 3951,
+                "name": "WAGIR"
+            },
+            {
+                "id": 3952,
+                "name": "WAJAK"
+            },
+            {
+                "id": 3953,
+                "name": "WONOSARI"
+            },
+            {
+                "id": 3954,
+                "name": "NGANTANG"
+            },
+            {
+                "id": 3955,
+                "name": "PUJON"
+            },
+            {
+                "id": 3956,
+                "name": "KASEMBON"
+            },
+            {
+                "id": 3957,
+                "name": "LAWANG"
+            },
+            {
+                "id": 3958,
+                "name": "PAGELARAN"
+            }
+        ]
+    },
+    {
+        "id": 392,
+        "name": "BLITAR",
+        "districts": [
+            {
+                "id": 3898,
+                "name": "BAKUNG"
+            },
+            {
+                "id": 3899,
+                "name": "BINANGUN"
+            },
+            {
+                "id": 3900,
+                "name": "DOKO"
+            },
+            {
+                "id": 3901,
+                "name": "GANDUSARI"
+            },
+            {
+                "id": 3902,
+                "name": "GARUM"
+            },
+            {
+                "id": 3903,
+                "name": "KADEMANGAN"
+            },
+            {
+                "id": 3904,
+                "name": "KANIGORO"
+            },
+            {
+                "id": 3905,
+                "name": "KESAMBEN"
+            },
+            {
+                "id": 3906,
+                "name": "NGLEGOK"
+            },
+            {
+                "id": 3907,
+                "name": "PANGGUNGREJO"
+            },
+            {
+                "id": 3908,
+                "name": "PONGGOK"
+            },
+            {
+                "id": 3909,
+                "name": "SANAN KULON"
+            },
+            {
+                "id": 3910,
+                "name": "SELOREJO"
+            },
+            {
+                "id": 3911,
+                "name": "SRENGAT"
+            },
+            {
+                "id": 3912,
+                "name": "SUTOJAYAN"
+            },
+            {
+                "id": 3913,
+                "name": "TALUN"
+            },
+            {
+                "id": 3914,
+                "name": "UDANAWU"
+            },
+            {
+                "id": 3915,
+                "name": "WATES"
+            },
+            {
+                "id": 3916,
+                "name": "WLINGI"
+            },
+            {
+                "id": 3917,
+                "name": "WONODADI"
+            },
+            {
+                "id": 3918,
+                "name": "WONOTIRTO"
+            },
+            {
+                "id": 3919,
+                "name": "SELOPURO"
+            },
+            {
+                "id": 3920,
+                "name": "KEPANJEN KIDUL"
+            },
+            {
+                "id": 3921,
+                "name": "SANAN WETAN"
+            },
+            {
+                "id": 3922,
+                "name": "SUKOREJO"
+            }
+        ]
+    },
+    {
+        "id": 393,
+        "name": "BATU",
+        "districts": [
+            {
+                "id": 3923,
+                "name": "BATU"
+            },
+            {
+                "id": 3924,
+                "name": "BUMIAJI"
+            },
+            {
+                "id": 3925,
+                "name": "JUNREJO"
+            }
+        ]
+    },
+    {
+        "id": 394,
+        "name": "PROBOLINGGO",
+        "districts": [
+            {
+                "id": 3959,
+                "name": "BANYU ANYAR"
+            },
+            {
+                "id": 3960,
+                "name": "BANTARAN"
+            },
+            {
+                "id": 3961,
+                "name": "BESUK"
+            },
+            {
+                "id": 3962,
+                "name": "DRINGU"
+            },
+            {
+                "id": 3963,
+                "name": "GENDING"
+            },
+            {
+                "id": 3964,
+                "name": "KOTA ANYAR"
+            },
+            {
+                "id": 3965,
+                "name": "KRAKSAAN"
+            },
+            {
+                "id": 3966,
+                "name": "KREJENGAN"
+            },
+            {
+                "id": 3967,
+                "name": "KRUCIL"
+            },
+            {
+                "id": 3968,
+                "name": "KURIPAN"
+            },
+            {
+                "id": 3969,
+                "name": "LECES"
+            },
+            {
+                "id": 3970,
+                "name": "LUMBANG"
+            },
+            {
+                "id": 3971,
+                "name": "MARON"
+            },
+            {
+                "id": 3972,
+                "name": "PAITON"
+            },
+            {
+                "id": 3973,
+                "name": "PAJARAKAN"
+            },
+            {
+                "id": 3974,
+                "name": "PAKUNIRAN"
+            },
+            {
+                "id": 3975,
+                "name": "SUKAPURA"
+            },
+            {
+                "id": 3976,
+                "name": "SUMBER"
+            },
+            {
+                "id": 3977,
+                "name": "SUMBERASIH"
+            },
+            {
+                "id": 3978,
+                "name": "TEGAL SIWALAN"
+            },
+            {
+                "id": 3979,
+                "name": "TIRIS"
+            },
+            {
+                "id": 3980,
+                "name": "TONGAS"
+            },
+            {
+                "id": 3981,
+                "name": "WONOMERTO"
+            },
+            {
+                "id": 3982,
+                "name": "KADEMANGAN"
+            },
+            {
+                "id": 3983,
+                "name": "MAYANGAN"
+            },
+            {
+                "id": 3984,
+                "name": "GADING"
+            },
+            {
+                "id": 3985,
+                "name": "WONOASIH"
+            },
+            {
+                "id": 3986,
+                "name": "KEDOPOK (KEDOPAK)"
+            },
+            {
+                "id": 3987,
+                "name": "KANIGARAN"
+            }
+        ]
+    },
+    {
+        "id": 395,
+        "name": "LUMAJANG",
+        "districts": [
+            {
+                "id": 3988,
+                "name": "LUMAJANG"
+            },
+            {
+                "id": 3989,
+                "name": "CANDIPURO"
+            },
+            {
+                "id": 3990,
+                "name": "GUCIALIT"
+            },
+            {
+                "id": 3991,
+                "name": "JATIROTO"
+            },
+            {
+                "id": 3992,
+                "name": "KLAKAH"
+            },
+            {
+                "id": 3993,
+                "name": "KEDUNGJAJANG"
+            },
+            {
+                "id": 3994,
+                "name": "KUNIR"
+            },
+            {
+                "id": 3995,
+                "name": "PASIRIAN"
+            },
+            {
+                "id": 3996,
+                "name": "PRONOJIWO"
+            },
+            {
+                "id": 3997,
+                "name": "RANDUAGUNG"
+            },
+            {
+                "id": 3998,
+                "name": "RANUYOSO"
+            },
+            {
+                "id": 3999,
+                "name": "ROWOKANGKUNG"
+            },
+            {
+                "id": 4000,
+                "name": "SENDURO"
+            },
+            {
+                "id": 4001,
+                "name": "SUKODONO"
+            },
+            {
+                "id": 4002,
+                "name": "TEKUNG"
+            },
+            {
+                "id": 4003,
+                "name": "TEMPURSARI"
+            },
+            {
+                "id": 4004,
+                "name": "TEMPEH"
+            },
+            {
+                "id": 4005,
+                "name": "YOSOWILANGUN"
+            },
+            {
+                "id": 4006,
+                "name": "PADANG"
+            },
+            {
+                "id": 4007,
+                "name": "PASRUJAMBE\/PASUJAMBE"
+            },
+            {
+                "id": 4008,
+                "name": "SUMBERSUKO"
+            }
+        ]
+    },
+    {
+        "id": 396,
+        "name": "SITUBONDO",
+        "districts": [
+            {
+                "id": 4009,
+                "name": "SITUBONDO"
+            },
+            {
+                "id": 4010,
+                "name": "ARJASA"
+            },
+            {
+                "id": 4011,
+                "name": "ASEMBAGUS"
+            },
+            {
+                "id": 4012,
+                "name": "BANYUPUTIH"
+            },
+            {
+                "id": 4013,
+                "name": "BANYUGLUGUR"
+            },
+            {
+                "id": 4014,
+                "name": "BESUKI"
+            },
+            {
+                "id": 4015,
+                "name": "BUNGATAN"
+            },
+            {
+                "id": 4016,
+                "name": "JANGKAR"
+            },
+            {
+                "id": 4017,
+                "name": "JATIBANTENG"
+            },
+            {
+                "id": 4018,
+                "name": "KAPONGAN"
+            },
+            {
+                "id": 4019,
+                "name": "KENDIT"
+            },
+            {
+                "id": 4020,
+                "name": "MANGARAN"
+            },
+            {
+                "id": 4021,
+                "name": "MLANDINGAN"
+            },
+            {
+                "id": 4022,
+                "name": "PANARUKAN"
+            },
+            {
+                "id": 4023,
+                "name": "SUBOH"
+            },
+            {
+                "id": 4024,
+                "name": "SUMBERMALANG"
+            },
+            {
+                "id": 4025,
+                "name": "PANJI"
+            }
+        ]
+    },
+    {
+        "id": 531,
+        "name": "PASURUAN",
+        "districts": [
+            {
+                "id": 5084,
+                "name": "BUGUL KIDUL"
+            },
+            {
+                "id": 5085,
+                "name": "GADINGREJO"
+            },
+            {
+                "id": 5086,
+                "name": "PURWOREJO"
+            },
+            {
+                "id": 5087,
+                "name": "BEJI"
+            },
+            {
+                "id": 5088,
+                "name": "GEMPOL"
+            },
+            {
+                "id": 5089,
+                "name": "GONDANG WETAN"
+            },
+            {
+                "id": 5090,
+                "name": "GRATI"
+            },
+            {
+                "id": 5091,
+                "name": "KEJAYAN"
+            },
+            {
+                "id": 5092,
+                "name": "KRATON"
+            },
+            {
+                "id": 5093,
+                "name": "LEKOK"
+            },
+            {
+                "id": 5094,
+                "name": "LUMBANG"
+            },
+            {
+                "id": 5095,
+                "name": "NGULING"
+            },
+            {
+                "id": 5096,
+                "name": "PASREPAN"
+            },
+            {
+                "id": 5097,
+                "name": "POHJENTREK"
+            },
+            {
+                "id": 5098,
+                "name": "PRIGEN"
+            },
+            {
+                "id": 5099,
+                "name": "PURWODADI"
+            },
+            {
+                "id": 5100,
+                "name": "PURWOSARI"
+            },
+            {
+                "id": 5101,
+                "name": "PUSPO"
+            },
+            {
+                "id": 5102,
+                "name": "REJOSO"
+            },
+            {
+                "id": 5103,
+                "name": "REMBANG"
+            },
+            {
+                "id": 5104,
+                "name": "SUKOREJO"
+            },
+            {
+                "id": 5105,
+                "name": "TOSARI"
+            },
+            {
+                "id": 5106,
+                "name": "TUTUR"
+            },
+            {
+                "id": 5107,
+                "name": "WINONGAN"
+            },
+            {
+                "id": 5108,
+                "name": "WONOREJO"
+            },
+            {
+                "id": 5109,
+                "name": "PANGGUNGREJO"
+            },
+            {
+                "id": 5110,
+                "name": "PANDAAN"
+            },
+            {
+                "id": 5111,
+                "name": "BANGIL"
+            }
+        ]
+    },
+    {
+        "id": 566,
+        "name": "BOJONEGORO",
+        "districts": [
+            {
+                "id": 5663,
+                "name": "BOJONEGORO"
+            },
+            {
+                "id": 5664,
+                "name": "BALEN"
+            },
+            {
+                "id": 5665,
+                "name": "BAURENO"
+            },
+            {
+                "id": 5666,
+                "name": "BUBULAN"
+            },
+            {
+                "id": 5667,
+                "name": "DANDER"
+            },
+            {
+                "id": 5668,
+                "name": "KALITIDU"
+            },
+            {
+                "id": 5669,
+                "name": "KANOR"
+            },
+            {
+                "id": 5670,
+                "name": "KAPAS"
+            },
+            {
+                "id": 5671,
+                "name": "KASIMAN"
+            },
+            {
+                "id": 5672,
+                "name": "KEDUNGADEM"
+            },
+            {
+                "id": 5673,
+                "name": "KEPOH BARU"
+            },
+            {
+                "id": 5674,
+                "name": "MALO"
+            },
+            {
+                "id": 5675,
+                "name": "MARGOMULYO"
+            },
+            {
+                "id": 5676,
+                "name": "NGAMBON"
+            },
+            {
+                "id": 5677,
+                "name": "NGASEM"
+            },
+            {
+                "id": 5678,
+                "name": "NGRAHO"
+            },
+            {
+                "id": 5679,
+                "name": "PADANGAN"
+            },
+            {
+                "id": 5680,
+                "name": "PURWOSARI"
+            },
+            {
+                "id": 5681,
+                "name": "SUGIHWARAS"
+            },
+            {
+                "id": 5682,
+                "name": "SUMBERREJO"
+            },
+            {
+                "id": 5683,
+                "name": "TAMBAKREJO"
+            },
+            {
+                "id": 5684,
+                "name": "TEMAYANG"
+            },
+            {
+                "id": 5685,
+                "name": "TRUCUK"
+            },
+            {
+                "id": 5686,
+                "name": "KEDEWAN"
+            },
+            {
+                "id": 5687,
+                "name": "SEKAR"
+            },
+            {
+                "id": 5688,
+                "name": "SUKOSEWU"
+            },
+            {
+                "id": 5689,
+                "name": "GONDANG"
+            },
+            {
+                "id": 5690,
+                "name": "GAYAM"
+            }
+        ]
+    },
+    {
+        "id": 577,
+        "name": "SURABAYA",
+        "districts": [
+            {
+                "id": 5873,
+                "name": "ASEMROWO"
+            },
+            {
+                "id": 5874,
+                "name": "BENOWO"
+            },
+            {
+                "id": 5875,
+                "name": "BUBUTAN"
+            },
+            {
+                "id": 5876,
+                "name": "BULAK"
+            },
+            {
+                "id": 5877,
+                "name": "DUKUH PAKIS"
+            },
+            {
+                "id": 5878,
+                "name": "GAYUNGAN"
+            },
+            {
+                "id": 5879,
+                "name": "GENTENG"
+            },
+            {
+                "id": 5880,
+                "name": "GUBENG"
+            },
+            {
+                "id": 5881,
+                "name": "GUNUNGANYAR"
+            },
+            {
+                "id": 5882,
+                "name": "JAMBANGAN"
+            },
+            {
+                "id": 5883,
+                "name": "KARANGPILANG"
+            },
+            {
+                "id": 5884,
+                "name": "KENJERAN"
+            },
+            {
+                "id": 5885,
+                "name": "KREMBANGAN"
+            },
+            {
+                "id": 5886,
+                "name": "LAKARSANTRI"
+            },
+            {
+                "id": 5887,
+                "name": "MULYOREJO"
+            },
+            {
+                "id": 5888,
+                "name": "PABEAN CANTIKAN"
+            },
+            {
+                "id": 5889,
+                "name": "PAKAL"
+            },
+            {
+                "id": 5890,
+                "name": "RUNGKUT"
+            },
+            {
+                "id": 5891,
+                "name": "SAMBIKEREP"
+            },
+            {
+                "id": 5892,
+                "name": "SAWAHAN"
+            },
+            {
+                "id": 5893,
+                "name": "SEMAMPIR"
+            },
+            {
+                "id": 5894,
+                "name": "SIMOKERTO"
+            },
+            {
+                "id": 5895,
+                "name": "SUKOLILO"
+            },
+            {
+                "id": 5896,
+                "name": "SUKOMANUNGGAL"
+            },
+            {
+                "id": 5897,
+                "name": "TAMBAKSARI"
+            },
+            {
+                "id": 5898,
+                "name": "TANDES"
+            },
+            {
+                "id": 5899,
+                "name": "TEGALSARI"
+            },
+            {
+                "id": 5900,
+                "name": "TENGGILIS MEJOYO"
+            },
+            {
+                "id": 5901,
+                "name": "WIYUNG"
+            },
+            {
+                "id": 5902,
+                "name": "WONOCOLO"
+            },
+            {
+                "id": 5903,
+                "name": "WONOKROMO"
+            }
+        ]
+    },
+    {
+        "id": 578,
+        "name": "GRESIK",
+        "districts": [
+            {
+                "id": 5904,
+                "name": "GRESIK"
+            },
+            {
+                "id": 5905,
+                "name": "BALONG PANGGANG"
+            },
+            {
+                "id": 5906,
+                "name": "BENJENG"
+            },
+            {
+                "id": 5907,
+                "name": "BUNGAH"
+            },
+            {
+                "id": 5908,
+                "name": "CERME"
+            },
+            {
+                "id": 5909,
+                "name": "DRIYOREJO"
+            },
+            {
+                "id": 5910,
+                "name": "DUDUK SAMPEYAN"
+            },
+            {
+                "id": 5911,
+                "name": "DUKUN"
+            },
+            {
+                "id": 5912,
+                "name": "KEDAMEAN"
+            },
+            {
+                "id": 5913,
+                "name": "MANYAR"
+            },
+            {
+                "id": 5914,
+                "name": "MENGANTI"
+            },
+            {
+                "id": 5915,
+                "name": "PANCENG"
+            },
+            {
+                "id": 5916,
+                "name": "SANGKAPURA"
+            },
+            {
+                "id": 5917,
+                "name": "SIDAYU"
+            },
+            {
+                "id": 5918,
+                "name": "TAMBAK"
+            },
+            {
+                "id": 5919,
+                "name": "UJUNG PANGKAH"
+            },
+            {
+                "id": 5920,
+                "name": "WRINGIN ANOM"
+            },
+            {
+                "id": 5921,
+                "name": "KEBOMAS"
+            }
+        ]
+    },
+    {
+        "id": 579,
+        "name": "LAMONGAN",
+        "districts": [
+            {
+                "id": 5922,
+                "name": "LAMONGAN"
+            },
+            {
+                "id": 5923,
+                "name": "BABAT"
+            },
+            {
+                "id": 5924,
+                "name": "BLULUK"
+            },
+            {
+                "id": 5925,
+                "name": "BRONDONG"
+            },
+            {
+                "id": 5926,
+                "name": "DEKET"
+            },
+            {
+                "id": 5927,
+                "name": "GLAGAH"
+            },
+            {
+                "id": 5928,
+                "name": "KALITENGAH"
+            },
+            {
+                "id": 5929,
+                "name": "KARANGBINANGUN"
+            },
+            {
+                "id": 5930,
+                "name": "KARANG GENENG"
+            },
+            {
+                "id": 5931,
+                "name": "KEDUNGPRING"
+            },
+            {
+                "id": 5932,
+                "name": "KEMBANGBAHU"
+            },
+            {
+                "id": 5933,
+                "name": "LAREN"
+            },
+            {
+                "id": 5934,
+                "name": "MANTUP"
+            },
+            {
+                "id": 5935,
+                "name": "MODO"
+            },
+            {
+                "id": 5936,
+                "name": "NGIMBANG"
+            },
+            {
+                "id": 5937,
+                "name": "PACIRAN"
+            },
+            {
+                "id": 5938,
+                "name": "PUCUK"
+            },
+            {
+                "id": 5939,
+                "name": "SAMBENG"
+            },
+            {
+                "id": 5940,
+                "name": "SOLOKURO"
+            },
+            {
+                "id": 5941,
+                "name": "SEKARAN"
+            },
+            {
+                "id": 5942,
+                "name": "SUGIO"
+            },
+            {
+                "id": 5943,
+                "name": "SUKODADI"
+            },
+            {
+                "id": 5944,
+                "name": "SUKORAME"
+            },
+            {
+                "id": 5945,
+                "name": "TIKUNG"
+            },
+            {
+                "id": 5946,
+                "name": "TURI"
+            },
+            {
+                "id": 5947,
+                "name": "MADURAN"
+            },
+            {
+                "id": 5948,
+                "name": "SARIREJO"
+            }
+        ]
+    },
+    {
+        "id": 580,
+        "name": "BANGKALAN",
+        "districts": [
+            {
+                "id": 5949,
+                "name": "BANGKALAN"
+            },
+            {
+                "id": 5950,
+                "name": "AROSBAYA"
+            },
+            {
+                "id": 5951,
+                "name": "BLEGA"
+            },
+            {
+                "id": 5952,
+                "name": "GALIS"
+            },
+            {
+                "id": 5953,
+                "name": "GEGER"
+            },
+            {
+                "id": 5954,
+                "name": "KAMAL"
+            },
+            {
+                "id": 5955,
+                "name": "KWANYAR"
+            },
+            {
+                "id": 5956,
+                "name": "KLAMPIS"
+            },
+            {
+                "id": 5957,
+                "name": "KOKOP"
+            },
+            {
+                "id": 5958,
+                "name": "KONANG"
+            },
+            {
+                "id": 5959,
+                "name": "LABANG"
+            },
+            {
+                "id": 5960,
+                "name": "MODUNG"
+            },
+            {
+                "id": 5961,
+                "name": "SEPULU"
+            },
+            {
+                "id": 5962,
+                "name": "SOCAH"
+            },
+            {
+                "id": 5963,
+                "name": "TANAH MERAH"
+            },
+            {
+                "id": 5964,
+                "name": "TANJUNGBUMI"
+            },
+            {
+                "id": 5965,
+                "name": "TRAGAH"
+            },
+            {
+                "id": 5966,
+                "name": "BURNEH"
+            }
+        ]
+    },
+    {
+        "id": 581,
+        "name": "PAMEKASAN",
+        "districts": [
+            {
+                "id": 5967,
+                "name": "PAMEKASAN"
+            },
+            {
+                "id": 5968,
+                "name": "BATUMARMAR"
+            },
+            {
+                "id": 5969,
+                "name": "GALIS"
+            },
+            {
+                "id": 5970,
+                "name": "KADUR"
+            },
+            {
+                "id": 5971,
+                "name": "LARANGAN"
+            },
+            {
+                "id": 5972,
+                "name": "PAKONG"
+            },
+            {
+                "id": 5973,
+                "name": "PALENGA'AN"
+            },
+            {
+                "id": 5974,
+                "name": "PASEAN"
+            },
+            {
+                "id": 5975,
+                "name": "PEGANTENAN"
+            },
+            {
+                "id": 5976,
+                "name": "PROPPO"
+            },
+            {
+                "id": 5977,
+                "name": "TLANAKAN"
+            },
+            {
+                "id": 5978,
+                "name": "WARU"
+            },
+            {
+                "id": 5979,
+                "name": "PADEMAWU"
+            }
+        ]
+    },
+    {
+        "id": 582,
+        "name": "SAMPANG",
+        "districts": [
+            {
+                "id": 5980,
+                "name": "SAMPANG"
+            },
+            {
+                "id": 5981,
+                "name": "BANYUATES"
+            },
+            {
+                "id": 5982,
+                "name": "CAMPLONG"
+            },
+            {
+                "id": 5983,
+                "name": "JRENGIK"
+            },
+            {
+                "id": 5984,
+                "name": "KEDUNGDUNG"
+            },
+            {
+                "id": 5985,
+                "name": "KETAPANG"
+            },
+            {
+                "id": 5986,
+                "name": "OMBEN"
+            },
+            {
+                "id": 5987,
+                "name": "ROBATAL"
+            },
+            {
+                "id": 5988,
+                "name": "SOKOBANAH"
+            },
+            {
+                "id": 5989,
+                "name": "SRESEH"
+            },
+            {
+                "id": 5990,
+                "name": "TAMBELANGAN"
+            },
+            {
+                "id": 5991,
+                "name": "TORJUN"
+            },
+            {
+                "id": 5992,
+                "name": "PANGARENGAN"
+            },
+            {
+                "id": 5993,
+                "name": "KARANG PENANG"
+            }
+        ]
+    },
+    {
+        "id": 583,
+        "name": "SIDOARJO",
+        "districts": [
+            {
+                "id": 5994,
+                "name": "SIDOARJO"
+            },
+            {
+                "id": 5995,
+                "name": "BUDURAN"
+            },
+            {
+                "id": 5996,
+                "name": "CANDI"
+            },
+            {
+                "id": 5997,
+                "name": "GEDANGAN"
+            },
+            {
+                "id": 5998,
+                "name": "JABON"
+            },
+            {
+                "id": 5999,
+                "name": "KREMBUNG"
+            },
+            {
+                "id": 6000,
+                "name": "PORONG"
+            },
+            {
+                "id": 6001,
+                "name": "SEDATI"
+            },
+            {
+                "id": 6002,
+                "name": "SUKODONO"
+            },
+            {
+                "id": 6003,
+                "name": "TANGGULANGIN"
+            },
+            {
+                "id": 6004,
+                "name": "TULANGAN"
+            },
+            {
+                "id": 6005,
+                "name": "WARU"
+            },
+            {
+                "id": 6006,
+                "name": "WONOAYU"
+            },
+            {
+                "id": 6007,
+                "name": "KRIAN"
+            },
+            {
+                "id": 6008,
+                "name": "TAMAN"
+            },
+            {
+                "id": 6009,
+                "name": "BALONGBENDO"
+            },
+            {
+                "id": 6010,
+                "name": "TARIK"
+            },
+            {
+                "id": 6011,
+                "name": "PRAMBON"
+            }
+        ]
+    },
+    {
+        "id": 584,
+        "name": "SUMENEP",
+        "districts": [
+            {
+                "id": 6012,
+                "name": "KOTA SUMENEP"
+            },
+            {
+                "id": 6013,
+                "name": "AMBUNTEN"
+            },
+            {
+                "id": 6014,
+                "name": "ARJASA"
+            },
+            {
+                "id": 6015,
+                "name": "BATANG BATANG"
+            },
+            {
+                "id": 6016,
+                "name": "BATUPUTIH"
+            },
+            {
+                "id": 6017,
+                "name": "BLUTO"
+            },
+            {
+                "id": 6018,
+                "name": "DASUK"
+            },
+            {
+                "id": 6019,
+                "name": "DUNGKEK"
+            },
+            {
+                "id": 6020,
+                "name": "GANDING"
+            },
+            {
+                "id": 6021,
+                "name": "GAPURA"
+            },
+            {
+                "id": 6022,
+                "name": "GAYAM"
+            },
+            {
+                "id": 6023,
+                "name": "GILI GINTING"
+            },
+            {
+                "id": 6024,
+                "name": "GULUK GULUK"
+            },
+            {
+                "id": 6025,
+                "name": "KALIANGET"
+            },
+            {
+                "id": 6026,
+                "name": "LENTENG"
+            },
+            {
+                "id": 6027,
+                "name": "MANDING"
+            },
+            {
+                "id": 6028,
+                "name": "MASALEMBU"
+            },
+            {
+                "id": 6029,
+                "name": "NONGGUNONG"
+            },
+            {
+                "id": 6030,
+                "name": "PASONGSONGAN"
+            },
+            {
+                "id": 6031,
+                "name": "PRAGAAN"
+            },
+            {
+                "id": 6032,
+                "name": "RA'AS"
+            },
+            {
+                "id": 6033,
+                "name": "RUBARU"
+            },
+            {
+                "id": 6034,
+                "name": "SAPEKEN"
+            },
+            {
+                "id": 6035,
+                "name": "SARONGGI"
+            },
+            {
+                "id": 6036,
+                "name": "TALANGO"
+            },
+            {
+                "id": 6037,
+                "name": "BATUAN"
+            },
+            {
+                "id": 6038,
+                "name": "KANGAYAN"
+            }
+        ]
+    },
+    {
+        "id": 585,
+        "name": "TUBAN",
+        "districts": [
+            {
+                "id": 6039,
+                "name": "TUBAN"
+            },
+            {
+                "id": 6040,
+                "name": "BANCAR"
+            },
+            {
+                "id": 6041,
+                "name": "BANGILAN"
+            },
+            {
+                "id": 6042,
+                "name": "JATIROGO"
+            },
+            {
+                "id": 6043,
+                "name": "JENU"
+            },
+            {
+                "id": 6044,
+                "name": "KENDURUAN"
+            },
+            {
+                "id": 6045,
+                "name": "KEREK"
+            },
+            {
+                "id": 6046,
+                "name": "MERAKURAK"
+            },
+            {
+                "id": 6047,
+                "name": "MONTONG"
+            },
+            {
+                "id": 6048,
+                "name": "PALANG"
+            },
+            {
+                "id": 6049,
+                "name": "PARENGAN"
+            },
+            {
+                "id": 6050,
+                "name": "PLUMPANG"
+            },
+            {
+                "id": 6051,
+                "name": "RENGEL"
+            },
+            {
+                "id": 6052,
+                "name": "SEMANDING"
+            },
+            {
+                "id": 6053,
+                "name": "SENORI"
+            },
+            {
+                "id": 6054,
+                "name": "SINGGAHAN"
+            },
+            {
+                "id": 6055,
+                "name": "SOKO"
+            },
+            {
+                "id": 6056,
+                "name": "TAMBAKBOYO"
+            },
+            {
+                "id": 6057,
+                "name": "WIDANG"
+            },
+            {
+                "id": 6058,
+                "name": "GRABAGAN"
+            }
+        ]
+    },
+    {
+        "id": 586,
+        "name": "TULUNGAGUNG",
+        "districts": [
+            {
+                "id": 6059,
+                "name": "TULUNGAGUNG"
+            },
+            {
+                "id": 6060,
+                "name": "BANDUNG"
+            },
+            {
+                "id": 6061,
+                "name": "BESUKI"
+            },
+            {
+                "id": 6062,
+                "name": "CAMPUR DARAT"
+            },
+            {
+                "id": 6063,
+                "name": "GONDANG"
+            },
+            {
+                "id": 6064,
+                "name": "KALIDAWIR"
+            },
+            {
+                "id": 6065,
+                "name": "KARANG REJO"
+            },
+            {
+                "id": 6066,
+                "name": "NGANTRU"
+            },
+            {
+                "id": 6067,
+                "name": "NGUNUT"
+            },
+            {
+                "id": 6068,
+                "name": "PAGERWOJO"
+            },
+            {
+                "id": 6069,
+                "name": "PAKEL"
+            },
+            {
+                "id": 6070,
+                "name": "PUCANGLABAN"
+            },
+            {
+                "id": 6071,
+                "name": "REJOTANGAN"
+            },
+            {
+                "id": 6072,
+                "name": "SENDANG"
+            },
+            {
+                "id": 6073,
+                "name": "SUMBERGEMPOL"
+            },
+            {
+                "id": 6074,
+                "name": "TANGGUNG GUNUNG"
+            },
+            {
+                "id": 6075,
+                "name": "BOYOLANGU"
+            },
+            {
+                "id": 6076,
+                "name": "KAUMAN"
+            },
+            {
+                "id": 6077,
+                "name": "KEDUNGWARU"
+            }
+        ]
+    },
+    {
+        "id": 587,
+        "name": "TRENGGALEK",
+        "districts": [
+            {
+                "id": 6078,
+                "name": "TRENGGALEK"
+            },
+            {
+                "id": 6079,
+                "name": "BENDUNGAN"
+            },
+            {
+                "id": 6080,
+                "name": "DONGKO"
+            },
+            {
+                "id": 6081,
+                "name": "DURENAN"
+            },
+            {
+                "id": 6082,
+                "name": "GANDUSARI"
+            },
+            {
+                "id": 6083,
+                "name": "KAMPAK"
+            },
+            {
+                "id": 6084,
+                "name": "KARANGAN"
+            },
+            {
+                "id": 6085,
+                "name": "MUNJUNGAN"
+            },
+            {
+                "id": 6086,
+                "name": "PANGGUL"
+            },
+            {
+                "id": 6087,
+                "name": "POGALAN"
+            },
+            {
+                "id": 6088,
+                "name": "PULE"
+            },
+            {
+                "id": 6089,
+                "name": "TUGU"
+            },
+            {
+                "id": 6090,
+                "name": "WATULIMO"
+            },
+            {
+                "id": 6091,
+                "name": "SURUH"
+            }
+        ]
+    }
+]

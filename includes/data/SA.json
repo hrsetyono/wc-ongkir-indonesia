@@ -1,0 +1,760 @@
+[
+    {
+        "id": 330,
+        "name": "MANADO",
+        "districts": [
+            {
+                "id": 3233,
+                "name": "BUNAKEN"
+            },
+            {
+                "id": 3234,
+                "name": "MALALAYANG"
+            },
+            {
+                "id": 3235,
+                "name": "MAPANGET"
+            },
+            {
+                "id": 3236,
+                "name": "SARIO"
+            },
+            {
+                "id": 3237,
+                "name": "SINGKIL"
+            },
+            {
+                "id": 3238,
+                "name": "TIKALA"
+            },
+            {
+                "id": 3239,
+                "name": "TUMINITING"
+            },
+            {
+                "id": 3240,
+                "name": "WANEA"
+            },
+            {
+                "id": 3241,
+                "name": "WENANG"
+            },
+            {
+                "id": 3242,
+                "name": "BUNAKEN KEPULAUAN"
+            },
+            {
+                "id": 3243,
+                "name": "PAAL DUA"
+            }
+        ]
+    },
+    {
+        "id": 331,
+        "name": "KOTAMOBAGU",
+        "districts": [
+            {
+                "id": 3393,
+                "name": "KOTAMOBAGU BARAT"
+            },
+            {
+                "id": 3394,
+                "name": "KOTAMOBAGU SELATAN"
+            },
+            {
+                "id": 3395,
+                "name": "KOTAMOBAGU TIMUR"
+            },
+            {
+                "id": 3396,
+                "name": "KOTAMOBAGU UTARA"
+            }
+        ]
+    },
+    {
+        "id": 332,
+        "name": "BOLAANG MONGONDOW UTARA",
+        "districts": [
+            {
+                "id": 3244,
+                "name": "BINTAUNA"
+            },
+            {
+                "id": 3247,
+                "name": "KAIDIPANG"
+            },
+            {
+                "id": 3259,
+                "name": "PINOGALUMAN"
+            },
+            {
+                "id": 3323,
+                "name": "BOLANG ITANG BARAT"
+            },
+            {
+                "id": 3324,
+                "name": "BOLANG ITANG TIMUR"
+            },
+            {
+                "id": 3325,
+                "name": "SANGKUB"
+            }
+        ]
+    },
+    {
+        "id": 333,
+        "name": "BOLAANG MONGONDOW",
+        "districts": [
+            {
+                "id": 3245,
+                "name": "BOLAANG"
+            },
+            {
+                "id": 3249,
+                "name": "LOLAYAN"
+            },
+            {
+                "id": 3250,
+                "name": "LOLAK"
+            },
+            {
+                "id": 3253,
+                "name": "POIGAR"
+            },
+            {
+                "id": 3254,
+                "name": "SANG TOMBOLANG"
+            },
+            {
+                "id": 3255,
+                "name": "DUMOGA BARAT"
+            },
+            {
+                "id": 3256,
+                "name": "DUMOGA TIMUR"
+            },
+            {
+                "id": 3257,
+                "name": "DUMOGA UTARA"
+            },
+            {
+                "id": 3261,
+                "name": "BILALANG"
+            },
+            {
+                "id": 3262,
+                "name": "BOLAANG TIMUR"
+            },
+            {
+                "id": 3263,
+                "name": "PASSI BARAT"
+            },
+            {
+                "id": 3264,
+                "name": "PASSI TIMUR"
+            },
+            {
+                "id": 3265,
+                "name": "DUMOGA"
+            },
+            {
+                "id": 3266,
+                "name": "DUMOGA TENGAH"
+            },
+            {
+                "id": 3267,
+                "name": "DUMOGA TENGGARA"
+            }
+        ]
+    },
+    {
+        "id": 335,
+        "name": "BOLAANG MONGONDOW SELATAN",
+        "districts": [
+            {
+                "id": 3246,
+                "name": "BOLAANG UKI"
+            },
+            {
+                "id": 3252,
+                "name": "PINOLOSIAN"
+            },
+            {
+                "id": 3260,
+                "name": "POSIGADAN"
+            },
+            {
+                "id": 3391,
+                "name": "PINOLOSIAN TENGAH"
+            },
+            {
+                "id": 3392,
+                "name": "PINOLOSIAN TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 336,
+        "name": "BOLAANG MONGONDOW TIMUR",
+        "districts": [
+            {
+                "id": 3248,
+                "name": "KOTABUNAN"
+            },
+            {
+                "id": 3251,
+                "name": "MODAYAG"
+            },
+            {
+                "id": 3258,
+                "name": "NUANGAN"
+            },
+            {
+                "id": 3389,
+                "name": "MODAYAG BARAT"
+            },
+            {
+                "id": 3390,
+                "name": "TUTUYAN"
+            }
+        ]
+    },
+    {
+        "id": 338,
+        "name": "KEPULAUAN SANGIHE",
+        "districts": [
+            {
+                "id": 3268,
+                "name": "TAHUNA"
+            },
+            {
+                "id": 3269,
+                "name": "KENDAHE"
+            },
+            {
+                "id": 3270,
+                "name": "MANGANITU"
+            },
+            {
+                "id": 3273,
+                "name": "TABUKAN UTARA"
+            },
+            {
+                "id": 3274,
+                "name": "TABUKAN SELATAN"
+            },
+            {
+                "id": 3275,
+                "name": "TABUKAN TENGAH"
+            },
+            {
+                "id": 3277,
+                "name": "TAMAKO"
+            },
+            {
+                "id": 3279,
+                "name": "MANGANITU SELATAN"
+            },
+            {
+                "id": 3280,
+                "name": "NUSA TABUKAN"
+            },
+            {
+                "id": 3284,
+                "name": "TATOARENG"
+            },
+            {
+                "id": 3285,
+                "name": "TABUKAN SELATAN TENGAH"
+            },
+            {
+                "id": 3286,
+                "name": "TABUKAN SELATAN TENGGARA"
+            },
+            {
+                "id": 3287,
+                "name": "TAHUNA BARAT"
+            },
+            {
+                "id": 3288,
+                "name": "TAHUNA TIMUR"
+            },
+            {
+                "id": 3289,
+                "name": "KEPULAUAN MARORE"
+            }
+        ]
+    },
+    {
+        "id": 339,
+        "name": "KEPULAUAN SIAU TAGULANDANG BIARO (SITARO)",
+        "districts": [
+            {
+                "id": 3271,
+                "name": "SIAU TIMUR"
+            },
+            {
+                "id": 3272,
+                "name": "SIAU BARAT"
+            },
+            {
+                "id": 3276,
+                "name": "TAGULANDANG"
+            },
+            {
+                "id": 3278,
+                "name": "BIARO"
+            },
+            {
+                "id": 3281,
+                "name": "SIAU BARAT SELATAN"
+            },
+            {
+                "id": 3282,
+                "name": "SIAU TIMUR SELATAN"
+            },
+            {
+                "id": 3283,
+                "name": "TAGULANDANG UTARA"
+            },
+            {
+                "id": 3397,
+                "name": "SIAU BARAT UTARA"
+            },
+            {
+                "id": 3398,
+                "name": "SIAU TENGAH"
+            },
+            {
+                "id": 3399,
+                "name": "TAGULANDANG SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 341,
+        "name": "MINAHASA",
+        "districts": [
+            {
+                "id": 3290,
+                "name": "ERIS"
+            },
+            {
+                "id": 3291,
+                "name": "KAKAS"
+            },
+            {
+                "id": 3292,
+                "name": "KAWANGKOAN"
+            },
+            {
+                "id": 3293,
+                "name": "KOMBI"
+            },
+            {
+                "id": 3294,
+                "name": "REMBOKEN"
+            },
+            {
+                "id": 3295,
+                "name": "SONDER"
+            },
+            {
+                "id": 3296,
+                "name": "TOMPASO"
+            },
+            {
+                "id": 3297,
+                "name": "LANGOWAN BARAT"
+            },
+            {
+                "id": 3298,
+                "name": "LANGOWAN SELATAN"
+            },
+            {
+                "id": 3299,
+                "name": "LANGOWAN TIMUR"
+            },
+            {
+                "id": 3300,
+                "name": "LEMBEAN TIMUR"
+            },
+            {
+                "id": 3301,
+                "name": "PINELENG"
+            },
+            {
+                "id": 3302,
+                "name": "TOMBARIRI"
+            },
+            {
+                "id": 3303,
+                "name": "TOMBULU"
+            },
+            {
+                "id": 3304,
+                "name": "TONDANO BARAT"
+            },
+            {
+                "id": 3305,
+                "name": "TONDANO SELATAN"
+            },
+            {
+                "id": 3306,
+                "name": "TONDANO TIMUR"
+            },
+            {
+                "id": 3307,
+                "name": "TONDANO UTARA"
+            },
+            {
+                "id": 3308,
+                "name": "LANGOWAN UTARA"
+            },
+            {
+                "id": 3309,
+                "name": "KAKAS BARAT"
+            },
+            {
+                "id": 3310,
+                "name": "KAWANGKOAN BARAT"
+            },
+            {
+                "id": 3311,
+                "name": "KAWANGKOAN UTARA"
+            },
+            {
+                "id": 3312,
+                "name": "MANDOLANG"
+            },
+            {
+                "id": 3313,
+                "name": "TOMBARIRI TIMUR"
+            },
+            {
+                "id": 3314,
+                "name": "TOMPASO BARAT"
+            }
+        ]
+    },
+    {
+        "id": 342,
+        "name": "BITUNG",
+        "districts": [
+            {
+                "id": 3315,
+                "name": "MATUARI (BITUNG BARAT)"
+            },
+            {
+                "id": 3316,
+                "name": "LEMBEH SELATAN (BITUNG SELATAN)"
+            },
+            {
+                "id": 3317,
+                "name": "MADIDIR (BITUNG TENGAH)"
+            },
+            {
+                "id": 3318,
+                "name": "AERTEMBAGA (BITUNG TIMUR)"
+            },
+            {
+                "id": 3319,
+                "name": "RANOWULU (BITUNG UTARA)"
+            },
+            {
+                "id": 3320,
+                "name": "LEMBEH UTARA"
+            },
+            {
+                "id": 3321,
+                "name": "MAESA"
+            },
+            {
+                "id": 3322,
+                "name": "GIRIAN"
+            }
+        ]
+    },
+    {
+        "id": 347,
+        "name": "KEPULAUAN TALAUD",
+        "districts": [
+            {
+                "id": 3326,
+                "name": "MELONGUANE"
+            },
+            {
+                "id": 3327,
+                "name": "BEO"
+            },
+            {
+                "id": 3328,
+                "name": "ESSANG"
+            },
+            {
+                "id": 3329,
+                "name": "GEMEH"
+            },
+            {
+                "id": 3330,
+                "name": "KABARUAN"
+            },
+            {
+                "id": 3331,
+                "name": "LIRUNG"
+            },
+            {
+                "id": 3332,
+                "name": "NANUSA"
+            },
+            {
+                "id": 3333,
+                "name": "RAINIS"
+            },
+            {
+                "id": 3334,
+                "name": "BEO SELATAN"
+            },
+            {
+                "id": 3335,
+                "name": "BEO UTARA"
+            },
+            {
+                "id": 3336,
+                "name": "DAMAO (DAMAU)"
+            },
+            {
+                "id": 3337,
+                "name": "ESSANG SELATAN"
+            },
+            {
+                "id": 3338,
+                "name": "KALONGAN"
+            },
+            {
+                "id": 3339,
+                "name": "MELONGUANE TIMUR"
+            },
+            {
+                "id": 3340,
+                "name": "MIANGAS"
+            },
+            {
+                "id": 3341,
+                "name": "MORONGE"
+            },
+            {
+                "id": 3342,
+                "name": "PULUTAN"
+            },
+            {
+                "id": 3343,
+                "name": "TAMPAN AMMA"
+            },
+            {
+                "id": 3344,
+                "name": "SALIBABU"
+            }
+        ]
+    },
+    {
+        "id": 348,
+        "name": "MINAHASA UTARA",
+        "districts": [
+            {
+                "id": 3345,
+                "name": "AIRMADIDI"
+            },
+            {
+                "id": 3346,
+                "name": "DIMEMBE"
+            },
+            {
+                "id": 3347,
+                "name": "KALAWAT"
+            },
+            {
+                "id": 3348,
+                "name": "KAUDITAN"
+            },
+            {
+                "id": 3349,
+                "name": "KEMA"
+            },
+            {
+                "id": 3350,
+                "name": "LIKUPANG BARAT"
+            },
+            {
+                "id": 3351,
+                "name": "LIKUPANG TIMUR"
+            },
+            {
+                "id": 3352,
+                "name": "WORI"
+            },
+            {
+                "id": 3353,
+                "name": "LIKUPANG SELATAN"
+            },
+            {
+                "id": 3354,
+                "name": "TALAWAAN"
+            }
+        ]
+    },
+    {
+        "id": 349,
+        "name": "MINAHASA SELATAN",
+        "districts": [
+            {
+                "id": 3355,
+                "name": "AMURANG"
+            },
+            {
+                "id": 3356,
+                "name": "MODOINDING"
+            },
+            {
+                "id": 3357,
+                "name": "MOTOLING"
+            },
+            {
+                "id": 3358,
+                "name": "RANOYAPO"
+            },
+            {
+                "id": 3359,
+                "name": "SINONSAYANG"
+            },
+            {
+                "id": 3360,
+                "name": "TARERAN"
+            },
+            {
+                "id": 3361,
+                "name": "TENGA"
+            },
+            {
+                "id": 3362,
+                "name": "TOMPASO BARU"
+            },
+            {
+                "id": 3363,
+                "name": "TUMPAAN"
+            },
+            {
+                "id": 3364,
+                "name": "KUMELEMBUAI"
+            },
+            {
+                "id": 3365,
+                "name": "MAESAAN"
+            },
+            {
+                "id": 3366,
+                "name": "MOTOLING BARAT"
+            },
+            {
+                "id": 3367,
+                "name": "MOTOLING TIMUR"
+            },
+            {
+                "id": 3368,
+                "name": "SULUUN TARERAN"
+            },
+            {
+                "id": 3369,
+                "name": "TATAPAAN"
+            },
+            {
+                "id": 3370,
+                "name": "AMURANG BARAT"
+            },
+            {
+                "id": 3371,
+                "name": "AMURANG TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 351,
+        "name": "MINAHASA TENGGARA",
+        "districts": [
+            {
+                "id": 3372,
+                "name": "RATAHAN"
+            },
+            {
+                "id": 3373,
+                "name": "BELANG"
+            },
+            {
+                "id": 3374,
+                "name": "TOMBATU"
+            },
+            {
+                "id": 3375,
+                "name": "TOULUAAN"
+            },
+            {
+                "id": 3376,
+                "name": "RATATOTOK"
+            },
+            {
+                "id": 3377,
+                "name": "PUSOMAEN"
+            },
+            {
+                "id": 3378,
+                "name": "PASAN"
+            },
+            {
+                "id": 3379,
+                "name": "RATAHAN TIMUR"
+            },
+            {
+                "id": 3380,
+                "name": "SILIAN RAYA"
+            },
+            {
+                "id": 3381,
+                "name": "TOMBATU TIMUR"
+            },
+            {
+                "id": 3382,
+                "name": "TOMBATU UTARA"
+            },
+            {
+                "id": 3383,
+                "name": "TOULUAAN SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 352,
+        "name": "TOMOHON",
+        "districts": [
+            {
+                "id": 3384,
+                "name": "TOMOHON BARAT"
+            },
+            {
+                "id": 3385,
+                "name": "TOMOHON SELATAN"
+            },
+            {
+                "id": 3386,
+                "name": "TOMOHON TENGAH"
+            },
+            {
+                "id": 3387,
+                "name": "TOMOHON TIMUR"
+            },
+            {
+                "id": 3388,
+                "name": "TOMOHON UTARA"
+            }
+        ]
+    }
+]

@@ -1,0 +1,312 @@
+[
+    {
+        "id": 90,
+        "name": "BATAM",
+        "districts": [
+            {
+                "id": 847,
+                "name": "BATAM KOTA"
+            },
+            {
+                "id": 848,
+                "name": "NONGSA"
+            },
+            {
+                "id": 849,
+                "name": "SEKUPANG"
+            },
+            {
+                "id": 850,
+                "name": "BATU AMPAR"
+            },
+            {
+                "id": 851,
+                "name": "BELAKANG PADANG"
+            },
+            {
+                "id": 852,
+                "name": "BULANG"
+            },
+            {
+                "id": 853,
+                "name": "GALANG"
+            },
+            {
+                "id": 854,
+                "name": "LUBUK BAJA"
+            },
+            {
+                "id": 855,
+                "name": "SEI\/SUNGAI BEDUK"
+            },
+            {
+                "id": 856,
+                "name": "SAGULUNG"
+            },
+            {
+                "id": 857,
+                "name": "BENGKONG"
+            },
+            {
+                "id": 858,
+                "name": "BATU AJI"
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "name": "LINGGA",
+        "districts": [
+            {
+                "id": 859,
+                "name": "LINGGA"
+            },
+            {
+                "id": 860,
+                "name": "LINGGA UTARA"
+            },
+            {
+                "id": 861,
+                "name": "SENAYANG"
+            },
+            {
+                "id": 862,
+                "name": "SINGKEP"
+            },
+            {
+                "id": 863,
+                "name": "SINGKEP BARAT"
+            },
+            {
+                "id": 864,
+                "name": "LINGGA TIMUR"
+            },
+            {
+                "id": 865,
+                "name": "SELAYAR"
+            },
+            {
+                "id": 866,
+                "name": "SINGKEP PESISIR"
+            },
+            {
+                "id": 867,
+                "name": "SINGKEP SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "name": "NATUNA",
+        "districts": [
+            {
+                "id": 868,
+                "name": "BUNGURAN BARAT"
+            },
+            {
+                "id": 869,
+                "name": "BUNGURAN TIMUR"
+            },
+            {
+                "id": 870,
+                "name": "BUNGURAN TIMUR LAUT"
+            },
+            {
+                "id": 871,
+                "name": "BUNGURAN TENGAH"
+            },
+            {
+                "id": 872,
+                "name": "BUNGURAN UTARA"
+            },
+            {
+                "id": 875,
+                "name": "MIDAI"
+            },
+            {
+                "id": 877,
+                "name": "SERASAN"
+            },
+            {
+                "id": 881,
+                "name": "SUBI"
+            },
+            {
+                "id": 882,
+                "name": "PULAU LAUT"
+            },
+            {
+                "id": 883,
+                "name": "PULAU TIGA"
+            },
+            {
+                "id": 884,
+                "name": "BUNGURAN SELATAN"
+            },
+            {
+                "id": 885,
+                "name": "SERASAN TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "name": "KEPULAUAN ANAMBAS",
+        "districts": [
+            {
+                "id": 873,
+                "name": "JEMAJA"
+            },
+            {
+                "id": 874,
+                "name": "JEMAJA TIMUR"
+            },
+            {
+                "id": 876,
+                "name": "PALMATAK"
+            },
+            {
+                "id": 878,
+                "name": "SIANTAN"
+            },
+            {
+                "id": 879,
+                "name": "SIANTAN SELATAN"
+            },
+            {
+                "id": 880,
+                "name": "SIANTAN TIMUR"
+            },
+            {
+                "id": 898,
+                "name": "SIANTAN TENGAH"
+            },
+            {
+                "id": 7109,
+                "name": "KUTE SIANTAN"
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "name": "KARIMUN",
+        "districts": [
+            {
+                "id": 886,
+                "name": "BURU"
+            },
+            {
+                "id": 887,
+                "name": "KARIMUN"
+            },
+            {
+                "id": 888,
+                "name": "KUNDUR"
+            },
+            {
+                "id": 889,
+                "name": "KUNDUR BARAT"
+            },
+            {
+                "id": 890,
+                "name": "KUNDUR UTARA"
+            },
+            {
+                "id": 891,
+                "name": "MERAL"
+            },
+            {
+                "id": 892,
+                "name": "MORO"
+            },
+            {
+                "id": 893,
+                "name": "TEBING"
+            },
+            {
+                "id": 894,
+                "name": "DURAI"
+            },
+            {
+                "id": 895,
+                "name": "BELAT"
+            },
+            {
+                "id": 896,
+                "name": "MERAL BARAT"
+            },
+            {
+                "id": 897,
+                "name": "UNGAR"
+            }
+        ]
+    },
+    {
+        "id": 619,
+        "name": "TANJUNG PINANG",
+        "districts": [
+            {
+                "id": 6462,
+                "name": "BUKIT BESTARI"
+            },
+            {
+                "id": 6463,
+                "name": "TANJUNG PINANG BARAT"
+            },
+            {
+                "id": 6464,
+                "name": "TANJUNG PINANG KOTA"
+            },
+            {
+                "id": 6465,
+                "name": "TANJUNG PINANG TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 624,
+        "name": "BINTAN",
+        "districts": [
+            {
+                "id": 6466,
+                "name": "BINTAN TIMUR"
+            },
+            {
+                "id": 6467,
+                "name": "BINTAN UTARA"
+            },
+            {
+                "id": 6468,
+                "name": "GUNUNG KIJANG"
+            },
+            {
+                "id": 6469,
+                "name": "TAMBELAN"
+            },
+            {
+                "id": 6470,
+                "name": "TELUK BINTAN"
+            },
+            {
+                "id": 6471,
+                "name": "TELUK SEBONG"
+            },
+            {
+                "id": 6472,
+                "name": "TOAPAYA"
+            },
+            {
+                "id": 6473,
+                "name": "SERI\/SRI KUALA LOBAM"
+            },
+            {
+                "id": 6474,
+                "name": "MANTANG"
+            },
+            {
+                "id": 6475,
+                "name": "BINTAN PESISIR"
+            }
+        ]
+    }
+]

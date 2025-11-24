@@ -1,9 +1,6 @@
 <?php
 if (!defined('ABSPATH')) { exit; }
 
-require_once ONGKIR_DIR . '/includes/rajaongkir.php';
-require_once ONGKIR_DIR . '/includes/ongkir-data.php';
-
 
 if (!class_exists('Ongkir_Method')):
 
@@ -17,61 +14,53 @@ class Ongkir_Method extends WC_Shipping_Method {
 		$this->id = 'ongkir';
     $this->title = __('Ongkir Indonesia', 'wc-ongkir-indonesia');
 		$this->method_title = __('Ongkir Indonesia', 'wc-ongkir-indonesia');
-		$this->method_description = __('Indonesian domestic shipping with JNE, J&T, Ninja Xpress, Sicepat, TIKI, or POS', 'wc-ongkir-indonesia');
+		$this->method_description = __('Indonesian domestic shipping with JNE, TIKI, Ninja Xpress, Sicepat, or POS', 'wc-ongkir-indonesia');
 
     $this->enabled = $this->get_option('enabled');
-    $this->init_form_fields();
 
     // allow save setting
     add_action('woocommerce_update_options_shipping_' . $this->id, [$this, 'process_admin_options']);
-    add_action('woocommerce_update_options_shipping_' . $this->id, [$this, 'process_admin_transients']);
+
+    $this->init_form_fields();
 	}
 
   /**
    * Initiate global setting page
    */
   function init_form_fields() {
-    $enabled_field = [
-      'title' => __('Enable/Disable', 'wc-ongkir-indonesia'),
-      'type' => 'checkbox',
-      'label' => __('Enable Indo Shipping', 'wc-ongkir-indonesia'),
-      'description' => __( 'Tick this then go to Shipping Zone > Create Indonesia Zone > Add Shipping Method > Choose "Indo Shipping"', 'wc-ongkir-indonesia'),
-      'default' => 'yes'
-    ];
-
-    // $type_field = [
-    //   'title' => __('License Type'),
-    //   'type' => '',
-    //   'description' => __('Starter is free, but limited to JNE, TIKI, and POS'),
-    //   'options' => [
-    //     'pro' => 'Pro',
-    //     'starter' => 'Starter',
-    //   ],
-    // ];
-
-    $key_field = [
-      'title' => 'API Key',
-      'type' => 'password',
-      'description' => __('Signup at <a href="http://rajaongkir.com/akun/daftar" target="_blank">rajaongkir.com</a> and choose Pro license (Paid). Paste the API Key here. <br> ⚠️ <span style="color:#f44336">If nothing happen after saving, try refreshing the page as it takes a while to validate the key.</span>', 'wc-ongkir-indonesia'),
-    ];
-
-    $city_field = [
-      'title' => __('City Origin', 'wc-ongkir-indonesia'),
-      'type' => 'select',
-      // 'class'    => 'wc-enhanced-select', // bugged!! doesn't save the value
-      'description' => __('Ship from where? <br> Change your province at General > Store Address', 'wc-ongkir-indonesia'),
-      'options' => [],
-    ];
-
     $this->form_fields = [
-      'key' => $key_field,
+      'key' => [
+        'title' => 'API Key',
+        'type' => 'password',
+        'description' => __('Signup at <a href="https://collaborator.komerce.id/registration" target="_blank">rajaongkir.com</a> (Free Starter plan works). Paste the API Key here. <br> ⚠️ <span style="color:red">If nothing happen after saving, try refreshing the page as it takes a while to validate the key.</span>', 'wc-ongkir-indonesia'),
+      ],
     ];
 
     // if key is valid, show the other setting fields
     if ($this->check_key_valid()) {
+      $this->form_fields['enabled'] = [
+        'title' => __('Enable/Disable', 'wc-ongkir-indonesia'),
+        'type' => 'checkbox',
+        'label' => __('Enable Indo Shipping', 'wc-ongkir-indonesia'),
+        'description' => __( 'Tick this then go to Shipping Zone > Create Indonesia Zone > Add Shipping Method > Choose "Indo Shipping"', 'wc-ongkir-indonesia'),
+        'default' => 'yes'
+      ];
+
+      // format city field
+      $city_field = [
+        'title' => __('City Origin', 'wc-ongkir-indonesia'),
+        'type' => 'select',
+        // 'class'    => 'wc-enhanced-select', // bugged!! doesn't save the value
+        'description' => sprintf(__('Ship from where? Change your province <a href="%s">here</a>', 'wc-ongkir-indonesia'), admin_url('admin.php?page=wc-settings&tab=general')),
+        'options' => [],
+      ];
       $city_field['options'] = $this->get_cities_origin();
 
-      $this->form_fields['enabled'] = $enabled_field;
+      if (is_wp_error($city_field['options'])) {
+        $city_field['description'] .= '<br><span style="color:red">' . $city_field['options']->get_error_message() . '</span>';
+        $city_field['options'] = [0 => __('-- No Cities Available --', 'wc-ongkir-indonesia')];
+      }
+
       $this->form_fields['city'] = $city_field;
 
       // set service fields by each courier
@@ -112,10 +101,10 @@ class Ongkir_Method extends WC_Shipping_Method {
       ];
 
       update_option('ongkir_license', $license);
-      // return $license;
     }
-  }
 
+    return parent::process_admin_options();
+  }
 
   /////
 
@@ -140,8 +129,8 @@ class Ongkir_Method extends WC_Shipping_Method {
       $this->form_fields['key']['description'] = '<span style="color: #4caf50;">' . $msg . '</span>';
     }
     else {
-      $msg = __('Invalid API Key. Make sure it is a PRO license', 'wc-ongkir-indonesia');
-      $this->form_fields['key']['description'] = '<span style="color:#f44336;">' . $msg . '</span>';
+      $msg = __('Invalid API Key.', 'wc-ongkir-indonesia');
+      $this->form_fields['key']['description'] = '<span style="color:red;">' . $msg . '</span>';
     }
 
     return $license['valid'];
@@ -153,15 +142,21 @@ class Ongkir_Method extends WC_Shipping_Method {
    */
   private function get_cities_origin() {
     $country = wc_get_base_location();
-    $prov_id = Ongkir_Data::get_province_id($country['state']);
+    $prov_code = $country['state'];
 
-    // get cities data
-    $cities_raw = Ongkir_Data::get_cities($prov_id);
+    if (!$prov_code) {
+      return new WP_Error('no_province', __('⚠️ Please set your province first', 'wc-ongkir-indonesia'));
+    }
 
-    // parse raw data
+    $cities_raw = Ongkir_Data::get_cities($prov_code);
+
     $cities = [];
-    foreach ($cities_raw as $id => $value) {
-      $cities[$id] = $value['city_name'];
+    foreach ($cities_raw as $c) {
+      $cities[$c['id']] = $c['name'];
+
+      foreach ($c['districts'] as $d) {
+        $cities[$d['id']] = '— ' . ucwords(strtolower($d['name']));
+      }
     }
 
     return $cities;

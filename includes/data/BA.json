@@ -1,0 +1,284 @@
+[
+    {
+        "id": 201,
+        "name": "DENPASAR",
+        "districts": [
+            {
+                "id": 2174,
+                "name": "DENPASAR BARAT"
+            },
+            {
+                "id": 2175,
+                "name": "DENPASAR SELATAN"
+            },
+            {
+                "id": 2176,
+                "name": "DENPASAR TIMUR"
+            },
+            {
+                "id": 2177,
+                "name": "DENPASAR UTARA"
+            }
+        ]
+    },
+    {
+        "id": 203,
+        "name": "KARANGASEM",
+        "districts": [
+            {
+                "id": 2178,
+                "name": "ABANG"
+            },
+            {
+                "id": 2179,
+                "name": "BEBANDEM"
+            },
+            {
+                "id": 2180,
+                "name": "KUBU"
+            },
+            {
+                "id": 2181,
+                "name": "MANGGIS"
+            },
+            {
+                "id": 2182,
+                "name": "RENDANG"
+            },
+            {
+                "id": 2183,
+                "name": "SELAT"
+            },
+            {
+                "id": 2184,
+                "name": "SIDEMEN"
+            },
+            {
+                "id": 2185,
+                "name": "KARANG ASEM"
+            }
+        ]
+    },
+    {
+        "id": 204,
+        "name": "BANGLI",
+        "districts": [
+            {
+                "id": 2186,
+                "name": "BANGLI"
+            },
+            {
+                "id": 2187,
+                "name": "KINTAMANI"
+            },
+            {
+                "id": 2188,
+                "name": "SUSUT"
+            },
+            {
+                "id": 2189,
+                "name": "TEMBUKU"
+            }
+        ]
+    },
+    {
+        "id": 205,
+        "name": "GIANYAR",
+        "districts": [
+            {
+                "id": 2190,
+                "name": "GIANYAR"
+            },
+            {
+                "id": 2191,
+                "name": "BELAH BATUH (BLAHBATUH)"
+            },
+            {
+                "id": 2192,
+                "name": "PAYANGAN"
+            },
+            {
+                "id": 2193,
+                "name": "SUKAWATI"
+            },
+            {
+                "id": 2194,
+                "name": "TAMPAK SIRING"
+            },
+            {
+                "id": 2195,
+                "name": "TEGALLALANG"
+            },
+            {
+                "id": 2196,
+                "name": "UBUD"
+            }
+        ]
+    },
+    {
+        "id": 206,
+        "name": "JEMBRANA",
+        "districts": [
+            {
+                "id": 2197,
+                "name": "NEGARA"
+            },
+            {
+                "id": 2198,
+                "name": "MELAYA"
+            },
+            {
+                "id": 2199,
+                "name": "MENDOYO"
+            },
+            {
+                "id": 2200,
+                "name": "PEKUTATAN"
+            },
+            {
+                "id": 2201,
+                "name": "JEMBRANA"
+            }
+        ]
+    },
+    {
+        "id": 208,
+        "name": "KLUNGKUNG",
+        "districts": [
+            {
+                "id": 2202,
+                "name": "DAWAN"
+            },
+            {
+                "id": 2203,
+                "name": "KLUNGKUNG"
+            },
+            {
+                "id": 2204,
+                "name": "NUSAPENIDA"
+            },
+            {
+                "id": 2205,
+                "name": "BANJARANGKAN"
+            }
+        ]
+    },
+    {
+        "id": 210,
+        "name": "BULELENG",
+        "districts": [
+            {
+                "id": 2206,
+                "name": "BANJAR"
+            },
+            {
+                "id": 2207,
+                "name": "BUSUNGBIU"
+            },
+            {
+                "id": 2208,
+                "name": "GEROKGAK"
+            },
+            {
+                "id": 2209,
+                "name": "KUBUTAMBAHAN"
+            },
+            {
+                "id": 2210,
+                "name": "SAWAN"
+            },
+            {
+                "id": 2211,
+                "name": "SERIRIT"
+            },
+            {
+                "id": 2212,
+                "name": "SUKASADA"
+            },
+            {
+                "id": 2213,
+                "name": "TEJAKULA"
+            },
+            {
+                "id": 2214,
+                "name": "BULELENG"
+            }
+        ]
+    },
+    {
+        "id": 211,
+        "name": "TABANAN",
+        "districts": [
+            {
+                "id": 2215,
+                "name": "TABANAN"
+            },
+            {
+                "id": 2216,
+                "name": "BATURITI"
+            },
+            {
+                "id": 2217,
+                "name": "KEDIRI"
+            },
+            {
+                "id": 2218,
+                "name": "KERAMBITAN"
+            },
+            {
+                "id": 2219,
+                "name": "MARGA"
+            },
+            {
+                "id": 2220,
+                "name": "PUPUAN"
+            },
+            {
+                "id": 2221,
+                "name": "PENEBEL"
+            },
+            {
+                "id": 2222,
+                "name": "SELEMADEG"
+            },
+            {
+                "id": 2223,
+                "name": "SALEMADEG BARAT"
+            },
+            {
+                "id": 2224,
+                "name": "SALEMADEG TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 212,
+        "name": "BADUNG",
+        "districts": [
+            {
+                "id": 2225,
+                "name": "MENGWI"
+            },
+            {
+                "id": 2226,
+                "name": "ABIANSEMAL"
+            },
+            {
+                "id": 2227,
+                "name": "KUTA"
+            },
+            {
+                "id": 2228,
+                "name": "PETANG"
+            },
+            {
+                "id": 2229,
+                "name": "KUTA SELATAN"
+            },
+            {
+                "id": 2230,
+                "name": "KUTA UTARA"
+            }
+        ]
+    }
+]

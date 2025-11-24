@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . '/ongkir-data.php';
-
 if (!class_exists('Ongkir_API')):
 
 class Ongkir_API {
@@ -32,6 +30,20 @@ class Ongkir_API {
       'callback' => [$this, 'get_fields_api'],
       'permission_callback' => '__return_true'
     ]);
+
+    // this API is only for testing and not used anywhere
+    register_rest_route(ONGKIR_NAMESPACE, '/cost/', [
+      'methods' => 'POST',
+      'callback' => [$this, 'test_cost_api'],
+      'permission_callback' => '__return_true'
+    ]);
+
+    // @warn - disable this after updating the JSON files
+    // register_rest_route(ONGKIR_NAMESPACE, '/update-json', [
+    //   'methods' => 'GET',
+    //   'permission_callback' => '__return_true',
+    //   'callback' => [$this, 'update_json_files'],
+    // ]);
   }
 
   /**
@@ -41,17 +53,16 @@ class Ongkir_API {
    */
   function get_cities_api($params) {
     if ($params['prov_code']) {
-      $prov_id = Ongkir_Data::get_province_id($params['prov_code']);
-      $cities = Ongkir_Data::get_cities($prov_id);
+      $cities_raw = Ongkir_Data::get_cities($params['prov_code']);
     
       // map to `id:name`
-      $cities_mapped = [];
-      foreach ($cities as $id => $item) {
-        $cities_mapped[$id] = $item['city_name'];
+      $cities = [];
+      foreach ($cities_raw as $c) {
+        $cities[$c['id']] = $c['name'];
       }
     
-      $cities_mapped = [0 => __( 'Pilih Kota...', 'wc-ongkir-indonesia')] + $cities_mapped;
-      return $cities_mapped;
+      $cities = [0 => __( 'Pilih Kota...', 'wc-ongkir-indonesia')] + $cities;
+      return $cities;
     }
     // If province code not given, show error message
     else {
@@ -67,20 +78,21 @@ class Ongkir_API {
    * @return array - All districts within that city.
    */
   function get_districts_api($params) {
-    $prov_id = Ongkir_Data::get_province_id($params['prov_code']);
-    $cities = Ongkir_Data::get_cities($prov_id);
-    $city = $cities[$params['city_id']] ?? null;
-    
-    // abort if city not found
-    if (!$city) { return; }
-    
-    // Format the district value so the City name is included
-    $districts = [ '0' => __('Pilih Kecamatan...', 'wc-ongkir-indonesia') ];
-    foreach ($city['districts'] as $id => $name) {
-      $districts[$city['city_name'] . ", $name [$id]"] = $name;
+    $cities_raw = Ongkir_Data::get_cities($params['prov_code']);
+    $index = array_search($params['city_id'], array_column($cities_raw, 'id'));
+
+    if ($index === false) {
+      return new WP_Error('no_city', __('City not found', 'wc-ongkir-indonesia'));
+    }
+   
+    $dists_raw = $cities_raw[$index]['districts'];
+    $dists = [];
+    foreach ($dists_raw as $d) {
+      $dists[$d['id']] = $d['name'];
     }
 
-    return $districts;
+    $dists = [ '0' => __('Pilih Kecamatan...', 'wc-ongkir-indonesia') ] + $dists;
+    return $dists;
   }
 
 
@@ -96,22 +108,19 @@ class Ongkir_API {
   
     // Convert District ID to City ID
     if ($params['district_id'] != '0') {
-      $prov_id = Ongkir_Data::get_province_id($params['prov_code']);
-      $cities = Ongkir_Data::get_cities($prov_id);
+      $cities_raw = Ongkir_Data::get_cities($params['prov_code']);
 
-      foreach ($cities as $id => $c) {
-        foreach ($c['districts'] as $dist_id => $dist_name) {
+      foreach ($cities_raw as $c) {
+        foreach ($c['districts'] as $d) {
           // find district that has the same ID as the one passed on
-          if ($params['district_id'] == $dist_id) {
-            $city_id = $id;
-            $field_value = $c['city_name'] . ", {$dist_name} [{$dist_id}]";
+          if ($params['district_id'] == $d['id']) {
+            $city_id = $c['id'];
+            $field_value = $c['name'] . ", {$d['name']} [{$d['id']}]";
             break;
           }
         }
 
-        if ($city_id > 0) {
-          break;
-        }
+        if ($city_id > 0) { break; }
       }
     }
 
@@ -121,7 +130,58 @@ class Ongkir_API {
     return $cities_field . $districts_field;
   }
 
+  /**
+   * Get the list of cities and upload the JSON to wp-content/uploads. You need to move those files manually to this plugin's /includes/data for them to work
+   */
+  function update_json_files() {
+    $api = new RajaOngkir();
 
+    $upload = wp_upload_dir();
+    $dir = trailingslashit($upload['basedir']) . 'wc-ongkir-indonesia';
+    if (!file_exists($dir)) {
+      wp_mkdir_p($dir);
+    }
+
+    // @warn - don't loop too much here because it will cause timeout
+    // $provs = Ongkir_Data::get_provinces();
+    $provs = [
+      "KS" => 3,
+      "KU" => 31,
+      "SA" => 22,
+      "ST" => 27,
+      "SG" => 20,
+      "PA" => 14,
+      "PB" => 29
+    ];
+
+    foreach ($provs as $code => $id) {
+      $cities = $api->get_city_list($id, true);
+
+      if (!is_wp_error($cities)) {
+        $file_path = $dir . "/{$code}.json";
+        file_put_contents($file_path, json_encode($cities, JSON_PRETTY_PRINT));
+        echo "Updated {$code}.json <br>";
+      }
+    }
+  }
+
+  /**
+   *
+   */
+  function test_cost_api($request) {
+    $params = $request->get_params();
+    $api = new RajaOngkir();
+
+    $args = [
+      'origin' => $params['origin'],
+      'destination' => $params['destination'],
+      'weight' => $params['weight'],
+      'courier' => $params['courier']
+    ];
+
+    $costs = $api->get_costs($args);
+    return $costs;
+  }
 
   /**
    * Get the form field for City Dropdown

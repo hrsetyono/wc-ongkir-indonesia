@@ -1,0 +1,940 @@
+[
+    {
+        "id": 264,
+        "name": "KENDARI",
+        "districts": [
+            {
+                "id": 2659,
+                "name": "KENDARI"
+            },
+            {
+                "id": 2660,
+                "name": "ABELI"
+            },
+            {
+                "id": 2661,
+                "name": "BARUGA"
+            },
+            {
+                "id": 2662,
+                "name": "KENDARI BARAT"
+            },
+            {
+                "id": 2663,
+                "name": "MANDONGA"
+            },
+            {
+                "id": 2664,
+                "name": "POASIA"
+            },
+            {
+                "id": 2665,
+                "name": "KADIA"
+            },
+            {
+                "id": 2666,
+                "name": "KAMBU"
+            },
+            {
+                "id": 2667,
+                "name": "PUUWATU"
+            },
+            {
+                "id": 2668,
+                "name": "WUA-WUA"
+            }
+        ]
+    },
+    {
+        "id": 267,
+        "name": "BAU-BAU",
+        "districts": [
+            {
+                "id": 2669,
+                "name": "BUNGI"
+            },
+            {
+                "id": 2670,
+                "name": "BETOAMBARI"
+            },
+            {
+                "id": 2671,
+                "name": "KOKALUKUNA"
+            },
+            {
+                "id": 2672,
+                "name": "MURHUM"
+            },
+            {
+                "id": 2673,
+                "name": "SORA WALIO (SOROWALIO)"
+            },
+            {
+                "id": 2674,
+                "name": "WOLIO"
+            },
+            {
+                "id": 2675,
+                "name": "BATUPOARO"
+            },
+            {
+                "id": 2676,
+                "name": "LEA-LEA"
+            }
+        ]
+    },
+    {
+        "id": 268,
+        "name": "KOLAKA",
+        "districts": [
+            {
+                "id": 2677,
+                "name": "KOLAKA"
+            },
+            {
+                "id": 2680,
+                "name": "POMALAA"
+            },
+            {
+                "id": 2682,
+                "name": "WATUBANGGA"
+            },
+            {
+                "id": 2683,
+                "name": "WOLO"
+            },
+            {
+                "id": 2684,
+                "name": "WUNDULAKO"
+            },
+            {
+                "id": 2685,
+                "name": "BAULA"
+            },
+            {
+                "id": 2687,
+                "name": "LATAMBAGA"
+            },
+            {
+                "id": 2688,
+                "name": "SAMATURU"
+            },
+            {
+                "id": 2689,
+                "name": "TANGGETADA"
+            },
+            {
+                "id": 2691,
+                "name": "POLINGGONA"
+            },
+            {
+                "id": 2692,
+                "name": "TOARI"
+            },
+            {
+                "id": 2693,
+                "name": "IWOIMENDAA"
+            }
+        ]
+    },
+    {
+        "id": 269,
+        "name": "KOLAKA TIMUR",
+        "districts": [
+            {
+                "id": 2678,
+                "name": "LADONGI"
+            },
+            {
+                "id": 2679,
+                "name": "MOWEWE"
+            },
+            {
+                "id": 2681,
+                "name": "TIRAWUTA"
+            },
+            {
+                "id": 2686,
+                "name": "LAMBANDIA"
+            },
+            {
+                "id": 2690,
+                "name": "ULUIWOI"
+            },
+            {
+                "id": 2846,
+                "name": "LALOLAE"
+            },
+            {
+                "id": 2847,
+                "name": "LOEA"
+            },
+            {
+                "id": 2848,
+                "name": "POLI POLIA"
+            },
+            {
+                "id": 2849,
+                "name": "TINONDO"
+            },
+            {
+                "id": 2850,
+                "name": "AERE"
+            },
+            {
+                "id": 2851,
+                "name": "DANGIA"
+            },
+            {
+                "id": 2852,
+                "name": "UEESI"
+            }
+        ]
+    },
+    {
+        "id": 271,
+        "name": "BUTON UTARA",
+        "districts": [
+            {
+                "id": 2694,
+                "name": "BONEGUNU"
+            },
+            {
+                "id": 2698,
+                "name": "KULISUSU (KALINGSUSU\/KALISUSU)"
+            },
+            {
+                "id": 2709,
+                "name": "KULISUSU BARAT"
+            },
+            {
+                "id": 2710,
+                "name": "KULISUSU UTARA"
+            },
+            {
+                "id": 2718,
+                "name": "KAMBOWA"
+            },
+            {
+                "id": 2867,
+                "name": "WAKORUMBA UTARA"
+            }
+        ]
+    },
+    {
+        "id": 272,
+        "name": "MUNA",
+        "districts": [
+            {
+                "id": 2695,
+                "name": "DURUKA"
+            },
+            {
+                "id": 2696,
+                "name": "KABANGKA"
+            },
+            {
+                "id": 2697,
+                "name": "KABAWO"
+            },
+            {
+                "id": 2700,
+                "name": "LOHIA"
+            },
+            {
+                "id": 2701,
+                "name": "NAPABALANO"
+            },
+            {
+                "id": 2702,
+                "name": "PARIGI"
+            },
+            {
+                "id": 2704,
+                "name": "TONGKUNO"
+            },
+            {
+                "id": 2705,
+                "name": "WAKORUMBA SELATAN"
+            },
+            {
+                "id": 2706,
+                "name": "BATALAIWARU (BATALAIWORU)"
+            },
+            {
+                "id": 2707,
+                "name": "KATOBU"
+            },
+            {
+                "id": 2708,
+                "name": "KONTUNAGA"
+            },
+            {
+                "id": 2712,
+                "name": "LASALEPA"
+            },
+            {
+                "id": 2714,
+                "name": "MALIGANO"
+            },
+            {
+                "id": 2715,
+                "name": "PASIR PUTIH"
+            },
+            {
+                "id": 2719,
+                "name": "WATOPUTE"
+            },
+            {
+                "id": 2720,
+                "name": "BONE (BONE TONDO)"
+            },
+            {
+                "id": 2726,
+                "name": "TOWEA"
+            },
+            {
+                "id": 2727,
+                "name": "BATUKARA"
+            },
+            {
+                "id": 2728,
+                "name": "KONTU KOWUNA"
+            },
+            {
+                "id": 2729,
+                "name": "MAROBO"
+            },
+            {
+                "id": 2730,
+                "name": "PASI KOLAGA"
+            },
+            {
+                "id": 2731,
+                "name": "TONGKUNO SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 273,
+        "name": "MUNA BARAT",
+        "districts": [
+            {
+                "id": 2699,
+                "name": "LAWA"
+            },
+            {
+                "id": 2703,
+                "name": "SAWERIGADI"
+            },
+            {
+                "id": 2711,
+                "name": "KUSAMBI"
+            },
+            {
+                "id": 2713,
+                "name": "MAGINTI"
+            },
+            {
+                "id": 2716,
+                "name": "TIWORO TENGAH"
+            },
+            {
+                "id": 2717,
+                "name": "BARANGKA"
+            },
+            {
+                "id": 2721,
+                "name": "TIWORO KEPULAUAN"
+            },
+            {
+                "id": 2722,
+                "name": "NAPANO KUSAMBI"
+            },
+            {
+                "id": 2723,
+                "name": "TIWORO SELATAN"
+            },
+            {
+                "id": 2724,
+                "name": "TIWORO UTARA"
+            },
+            {
+                "id": 2725,
+                "name": "WADAGA"
+            }
+        ]
+    },
+    {
+        "id": 276,
+        "name": "KONAWE",
+        "districts": [
+            {
+                "id": 2732,
+                "name": "UNAAHA"
+            },
+            {
+                "id": 2733,
+                "name": "ABUKI"
+            },
+            {
+                "id": 2734,
+                "name": "LAMBUYA"
+            },
+            {
+                "id": 2735,
+                "name": "PONDIDAHA"
+            },
+            {
+                "id": 2736,
+                "name": "WAWOTOBI"
+            },
+            {
+                "id": 2739,
+                "name": "SOROPIA"
+            },
+            {
+                "id": 2740,
+                "name": "BONDOALA"
+            },
+            {
+                "id": 2741,
+                "name": "LATOMA"
+            },
+            {
+                "id": 2743,
+                "name": "TONGAUNA"
+            },
+            {
+                "id": 2744,
+                "name": "UEPAI (UWEPAI)"
+            },
+            {
+                "id": 2745,
+                "name": "WONGGEDUKU"
+            },
+            {
+                "id": 2746,
+                "name": "AMONGGEDO"
+            },
+            {
+                "id": 2747,
+                "name": "ANGGABERI"
+            },
+            {
+                "id": 2748,
+                "name": "ASINUA"
+            },
+            {
+                "id": 2749,
+                "name": "BESULUTU"
+            },
+            {
+                "id": 2750,
+                "name": "KAPOIALA (KAPOYALA)"
+            },
+            {
+                "id": 2751,
+                "name": "KONAWE"
+            },
+            {
+                "id": 2752,
+                "name": "MELUHU"
+            },
+            {
+                "id": 2753,
+                "name": "PURIALA"
+            },
+            {
+                "id": 2754,
+                "name": "ROUTA"
+            },
+            {
+                "id": 2755,
+                "name": "SAMPARA"
+            },
+            {
+                "id": 2756,
+                "name": "LALONGGASUMEETO"
+            },
+            {
+                "id": 2757,
+                "name": "ONEMBUTE"
+            }
+        ]
+    },
+    {
+        "id": 277,
+        "name": "KONAWE UTARA",
+        "districts": [
+            {
+                "id": 2737,
+                "name": "ASERA"
+            },
+            {
+                "id": 2738,
+                "name": "LASOLO"
+            },
+            {
+                "id": 2742,
+                "name": "SAWA"
+            },
+            {
+                "id": 2853,
+                "name": "LANGGIKIMA"
+            },
+            {
+                "id": 2854,
+                "name": "LEMBO"
+            },
+            {
+                "id": 2855,
+                "name": "MOLAWE"
+            },
+            {
+                "id": 2856,
+                "name": "WIWIRANO"
+            },
+            {
+                "id": 2857,
+                "name": "ANDOWIA"
+            },
+            {
+                "id": 2858,
+                "name": "MOTUI"
+            },
+            {
+                "id": 2859,
+                "name": "OHEO"
+            }
+        ]
+    },
+    {
+        "id": 280,
+        "name": "BOMBANA",
+        "districts": [
+            {
+                "id": 2758,
+                "name": "RUMBIA"
+            },
+            {
+                "id": 2759,
+                "name": "KABAENA"
+            },
+            {
+                "id": 2760,
+                "name": "KABAENA TIMUR"
+            },
+            {
+                "id": 2761,
+                "name": "POLEANG"
+            },
+            {
+                "id": 2762,
+                "name": "POLEANG BARAT"
+            },
+            {
+                "id": 2763,
+                "name": "POLEANG TIMUR"
+            },
+            {
+                "id": 2764,
+                "name": "RAROWATU"
+            },
+            {
+                "id": 2765,
+                "name": "KABAENA BARAT"
+            },
+            {
+                "id": 2766,
+                "name": "KABAENA SELATAN"
+            },
+            {
+                "id": 2767,
+                "name": "KABAENA TENGAH"
+            },
+            {
+                "id": 2768,
+                "name": "KABAENA UTARA"
+            },
+            {
+                "id": 2769,
+                "name": "KEPULAUAN MASALOKA RAYA"
+            },
+            {
+                "id": 2770,
+                "name": "LENTARAI JAYA S. (LANTARI JAYA)"
+            },
+            {
+                "id": 2771,
+                "name": "MATA OLEO"
+            },
+            {
+                "id": 2772,
+                "name": "MATA USU"
+            },
+            {
+                "id": 2773,
+                "name": "POLEANG SELATAN"
+            },
+            {
+                "id": 2774,
+                "name": "POLEANG TENGAH"
+            },
+            {
+                "id": 2775,
+                "name": "POLEANG TENGGARA"
+            },
+            {
+                "id": 2776,
+                "name": "POLEANG UTARA"
+            },
+            {
+                "id": 2777,
+                "name": "RAROWATU UTARA"
+            },
+            {
+                "id": 2778,
+                "name": "RUMBIA TENGAH"
+            },
+            {
+                "id": 2779,
+                "name": "TONTONUNU (TONTONUWU)"
+            }
+        ]
+    },
+    {
+        "id": 281,
+        "name": "BUTON",
+        "districts": [
+            {
+                "id": 2780,
+                "name": "PASAR WAJO"
+            },
+            {
+                "id": 2785,
+                "name": "KAPONTORI"
+            },
+            {
+                "id": 2787,
+                "name": "LASALIMU"
+            },
+            {
+                "id": 2788,
+                "name": "LASALIMU SELATAN"
+            },
+            {
+                "id": 2798,
+                "name": "SIONTAPIA (SIONTAPINA)"
+            },
+            {
+                "id": 2799,
+                "name": "WABULA"
+            },
+            {
+                "id": 2800,
+                "name": "WOLOWA"
+            }
+        ]
+    },
+    {
+        "id": 282,
+        "name": "BUTON SELATAN",
+        "districts": [
+            {
+                "id": 2781,
+                "name": "BATAUGA"
+            },
+            {
+                "id": 2782,
+                "name": "BATU ATAS"
+            },
+            {
+                "id": 2784,
+                "name": "KADATUA"
+            },
+            {
+                "id": 2791,
+                "name": "SAMPOLAWA"
+            },
+            {
+                "id": 2792,
+                "name": "SIOMPU"
+            },
+            {
+                "id": 2794,
+                "name": "LAPANDEWA"
+            },
+            {
+                "id": 2797,
+                "name": "SIOMPU BARAT"
+            }
+        ]
+    },
+    {
+        "id": 283,
+        "name": "BUTON TENGAH",
+        "districts": [
+            {
+                "id": 2783,
+                "name": "GU"
+            },
+            {
+                "id": 2786,
+                "name": "LAKUDO"
+            },
+            {
+                "id": 2789,
+                "name": "MAWASANGKA"
+            },
+            {
+                "id": 2790,
+                "name": "MAWASANGKA TIMUR"
+            },
+            {
+                "id": 2793,
+                "name": "TALAGA RAYA"
+            },
+            {
+                "id": 2795,
+                "name": "MAWASANGKA TENGAH"
+            },
+            {
+                "id": 2796,
+                "name": "SANGIA WAMBULU"
+            }
+        ]
+    },
+    {
+        "id": 285,
+        "name": "KOLAKA UTARA",
+        "districts": [
+            {
+                "id": 2801,
+                "name": "LASUSUA"
+            },
+            {
+                "id": 2802,
+                "name": "BATU PUTIH"
+            },
+            {
+                "id": 2803,
+                "name": "KODEOHA"
+            },
+            {
+                "id": 2804,
+                "name": "NGAPA"
+            },
+            {
+                "id": 2805,
+                "name": "PAKUE"
+            },
+            {
+                "id": 2806,
+                "name": "RANTE ANGIN"
+            },
+            {
+                "id": 2807,
+                "name": "KATOI"
+            },
+            {
+                "id": 2808,
+                "name": "LAMBAI"
+            },
+            {
+                "id": 2809,
+                "name": "PAKUE TENGAH"
+            },
+            {
+                "id": 2810,
+                "name": "PAKUE UTARA"
+            },
+            {
+                "id": 2811,
+                "name": "POREHU"
+            },
+            {
+                "id": 2812,
+                "name": "WATUNOHU"
+            },
+            {
+                "id": 2813,
+                "name": "WAWO"
+            },
+            {
+                "id": 2814,
+                "name": "TIWU"
+            },
+            {
+                "id": 2815,
+                "name": "TOLALA"
+            }
+        ]
+    },
+    {
+        "id": 286,
+        "name": "KONAWE SELATAN",
+        "districts": [
+            {
+                "id": 2816,
+                "name": "ANDOOLO"
+            },
+            {
+                "id": 2817,
+                "name": "ANGATA"
+            },
+            {
+                "id": 2818,
+                "name": "KOLONO"
+            },
+            {
+                "id": 2819,
+                "name": "KONDA"
+            },
+            {
+                "id": 2820,
+                "name": "LAINEA"
+            },
+            {
+                "id": 2821,
+                "name": "LANDONO"
+            },
+            {
+                "id": 2822,
+                "name": "LAONTI"
+            },
+            {
+                "id": 2823,
+                "name": "MORAMO"
+            },
+            {
+                "id": 2824,
+                "name": "PALANGGA"
+            },
+            {
+                "id": 2825,
+                "name": "RANOMEETO"
+            },
+            {
+                "id": 2826,
+                "name": "TINANGGEA"
+            },
+            {
+                "id": 2827,
+                "name": "BAITO"
+            },
+            {
+                "id": 2828,
+                "name": "BASALA"
+            },
+            {
+                "id": 2829,
+                "name": "BENUA"
+            },
+            {
+                "id": 2830,
+                "name": "BUKE"
+            },
+            {
+                "id": 2831,
+                "name": "LAEYA"
+            },
+            {
+                "id": 2832,
+                "name": "LALEMBUU"
+            },
+            {
+                "id": 2833,
+                "name": "MORAMO UTARA"
+            },
+            {
+                "id": 2834,
+                "name": "MOWILA"
+            },
+            {
+                "id": 2835,
+                "name": "PALANGGA SELATAN"
+            },
+            {
+                "id": 2836,
+                "name": "RANOMEETO BARAT"
+            },
+            {
+                "id": 2837,
+                "name": "WOLASI"
+            }
+        ]
+    },
+    {
+        "id": 287,
+        "name": "WAKATOBI",
+        "districts": [
+            {
+                "id": 2838,
+                "name": "WANGI-WANGI"
+            },
+            {
+                "id": 2839,
+                "name": "WANGI-WANGI SELATAN"
+            },
+            {
+                "id": 2840,
+                "name": "KALEDUPA"
+            },
+            {
+                "id": 2841,
+                "name": "TOMIA"
+            },
+            {
+                "id": 2842,
+                "name": "BINONGKO"
+            },
+            {
+                "id": 2843,
+                "name": "KALEDUPA SELATAN"
+            },
+            {
+                "id": 2844,
+                "name": "TOGO BINONGKO"
+            },
+            {
+                "id": 2845,
+                "name": "TOMIA TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 288,
+        "name": "KONAWE KEPULAUAN",
+        "districts": [
+            {
+                "id": 2860,
+                "name": "WAWONII BARAT"
+            },
+            {
+                "id": 2861,
+                "name": "WAWONII SELATAN"
+            },
+            {
+                "id": 2862,
+                "name": "WAWONII TENGAH"
+            },
+            {
+                "id": 2863,
+                "name": "WAWONII TIMUR"
+            },
+            {
+                "id": 2864,
+                "name": "WAWONII UTARA"
+            },
+            {
+                "id": 2865,
+                "name": "WAWONII TENGGARA"
+            },
+            {
+                "id": 2866,
+                "name": "WAWONII TIMUR LAUT"
+            }
+        ]
+    }
+]

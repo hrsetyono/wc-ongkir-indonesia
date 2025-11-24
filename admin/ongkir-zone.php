@@ -1,10 +1,6 @@
 <?php
 if (!defined('ABSPATH')) { exit; }
 
-require_once ONGKIR_DIR . '/includes/rajaongkir.php';
-require_once ONGKIR_DIR . '/includes/ongkir-data.php';
-
-
 if (!class_exists('Ongkir_Zone')):
 
 /**
@@ -64,9 +60,7 @@ class Ongkir_Zone extends WC_Shipping_Method {
 
     $args = [
       'origin' => $this->main_settings['city'],
-      'originType' => 'city',
       'destination' => $package['destination']['destination_id'],
-      'destinationType' => 'subdistrict',
       'weight' => $weight,
       'courier' => $selected_couriers
     ];
@@ -98,6 +92,8 @@ class Ongkir_Zone extends WC_Shipping_Method {
       $setting_id = $code . '_services';
       $allowed_services = $this->main_settings[$setting_id] ?? [];
       $allowed_services = is_array($allowed_services) ? $allowed_services : [];
+
+      var_dump($courier);
 
       foreach ($courier['costs'] as $service):
         // check if this service is allowed

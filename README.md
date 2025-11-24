@@ -4,9 +4,9 @@
 
 Calculate the shipping costs for Indonesian couriers in WooCommerce.
 
-> This plugin requires PRO License from RajaOngkir.com. We are not affiliated with them in any way.
+> This plugin works with the new Free STARTER license, but only for 100 requests per day
 
-This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/woocommerce-indo-shipping/issues).
+This plugin is free and provided as is. If you found a bug, please submit it [here](https://github.com/hrsetyono/wc-ongkir-indonesia/issues).
 
 **Supported Couriers:**
 
@@ -40,7 +40,7 @@ This plugin is free and provided as is. If you found a bug, please submit it [he
 
 This plugin is available in Composer under this name:
 
-    "pixelstudio/wc-ongkir-indonesia": "~2.4.0"
+    "pixelstudio/wc-ongkir-indonesia": "~2.5.0"
 
 If you don't know how to use Composer to manage plugins, visit here https://wptips.dev/composer-to-manage-plugins/
 

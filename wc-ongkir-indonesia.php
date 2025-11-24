@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       Ongkir Indonesia for WooCommerce
  * Plugin URI:        http://github.com/hrsetyono/wc-ongkir-indonesia
- * Description:       Calculate the shipping costs for Indonesian couriers like JNE, J&T, Ninja Xpress, Sicepat, TIKI, POS, etc. Requires RajaOngkir PRO License.
- * Version:           2.4.2
+ * Description:       Calculate the shipping costs for Indonesian couriers like JNE, J&T, Ninja Xpress, Sicepat, TIKI, POS, etc. Requires RajaOngkir License
+ * Version:           2.5.0
  * Author:            Pixel Studio
  * Author URI:        https://pixelstudio.id/
  * License:           GPL-3.0+
@@ -18,14 +18,17 @@ if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get
   return;
 }
 
-define('ONGKIR_VERSION', '2.4.2');
+define('ONGKIR_VERSION', '2.5.0');
 define('ONGKIR_FILE', plugins_url('', __FILE__));
 define('ONGKIR_DIR', __DIR__);
 define('ONGKIR_NAMESPACE', 'ongkir/v1');
 define('ONGKIR_API', get_site_url() . '/wp-json/' . ONGKIR_NAMESPACE);
 
 
+require_once __DIR__ . '/includes/rajaongkir.php';
 require_once __DIR__ . '/includes/ongkir-api.php';
+require_once __DIR__ . '/includes/ongkir-data.php';
+
 require_once __DIR__ . '/admin/index.php';
 require_once __DIR__ . '/public/index.php';
 

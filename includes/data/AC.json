@@ -1,0 +1,1296 @@
+[
+    {
+        "id": 97,
+        "name": "BANDA ACEH",
+        "districts": [
+            {
+                "id": 899,
+                "name": "MEURAXA"
+            },
+            {
+                "id": 900,
+                "name": "JAYA BARU"
+            },
+            {
+                "id": 901,
+                "name": "BANDA RAYA"
+            },
+            {
+                "id": 902,
+                "name": "BAITURRAHMAN"
+            },
+            {
+                "id": 903,
+                "name": "LUENG BATA"
+            },
+            {
+                "id": 904,
+                "name": "KUTA ALAM"
+            },
+            {
+                "id": 905,
+                "name": "KUTA RAJA"
+            },
+            {
+                "id": 906,
+                "name": "SYIAH KUALA"
+            },
+            {
+                "id": 907,
+                "name": "ULEE KARENG"
+            }
+        ]
+    },
+    {
+        "id": 98,
+        "name": "LANGSA",
+        "districts": [
+            {
+                "id": 908,
+                "name": "LANGSA BARAT"
+            },
+            {
+                "id": 909,
+                "name": "LANGSA KOTA"
+            },
+            {
+                "id": 910,
+                "name": "LANGSA LAMA"
+            },
+            {
+                "id": 911,
+                "name": "LANGSA TIMUR"
+            },
+            {
+                "id": 912,
+                "name": "LANGSA BARO"
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "name": "LHOKSEUMAWE",
+        "districts": [
+            {
+                "id": 913,
+                "name": "MUARA DUA"
+            },
+            {
+                "id": 914,
+                "name": "BANDA SAKTI"
+            },
+            {
+                "id": 915,
+                "name": "BLANG MANGAT"
+            },
+            {
+                "id": 916,
+                "name": "MUARA SATU"
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "name": "ACEH BESAR",
+        "districts": [
+            {
+                "id": 917,
+                "name": "KOTA JANTHO"
+            },
+            {
+                "id": 918,
+                "name": "DARUL IMARAH"
+            },
+            {
+                "id": 919,
+                "name": "DARUSSALAM"
+            },
+            {
+                "id": 920,
+                "name": "INDRAPURI"
+            },
+            {
+                "id": 921,
+                "name": "INGIN JAYA"
+            },
+            {
+                "id": 922,
+                "name": "KUTA BARO"
+            },
+            {
+                "id": 923,
+                "name": "LHOKNGA (LHO'NGA)"
+            },
+            {
+                "id": 924,
+                "name": "LHOONG"
+            },
+            {
+                "id": 925,
+                "name": "MESJID RAYA"
+            },
+            {
+                "id": 926,
+                "name": "MANTASIEK (MONTASIK)"
+            },
+            {
+                "id": 927,
+                "name": "PEUKAN BADA"
+            },
+            {
+                "id": 928,
+                "name": "SUKA MAKMUR"
+            },
+            {
+                "id": 929,
+                "name": "SIMPANG TIGA"
+            },
+            {
+                "id": 930,
+                "name": "BAITUSSALAM"
+            },
+            {
+                "id": 931,
+                "name": "DARUL KAMAL"
+            },
+            {
+                "id": 932,
+                "name": "KRUENG BARONA JAYA"
+            },
+            {
+                "id": 933,
+                "name": "KOTA COT GLIE (KUTA COT GLIE)"
+            },
+            {
+                "id": 934,
+                "name": "KOTA MALAKA (KUTA MALAKA)"
+            },
+            {
+                "id": 935,
+                "name": "LEMBAH SEULAWAH"
+            },
+            {
+                "id": 936,
+                "name": "LEUPUNG"
+            },
+            {
+                "id": 937,
+                "name": "PULO ACEH"
+            },
+            {
+                "id": 938,
+                "name": "SEULIMEUM"
+            },
+            {
+                "id": 939,
+                "name": "BLANK BINTANG"
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "name": "BIREUEN",
+        "districts": [
+            {
+                "id": 940,
+                "name": "JEUNIEB"
+            },
+            {
+                "id": 941,
+                "name": "PEUSANGAN"
+            },
+            {
+                "id": 942,
+                "name": "PEUDADA"
+            },
+            {
+                "id": 943,
+                "name": "SAMALANGA"
+            },
+            {
+                "id": 944,
+                "name": "GANDA PURA"
+            },
+            {
+                "id": 945,
+                "name": "MAKMUR"
+            },
+            {
+                "id": 946,
+                "name": "KUALA"
+            },
+            {
+                "id": 947,
+                "name": "JANGKA"
+            },
+            {
+                "id": 948,
+                "name": "JEUMPA"
+            },
+            {
+                "id": 949,
+                "name": "JULI"
+            },
+            {
+                "id": 950,
+                "name": "KOTA JUANG"
+            },
+            {
+                "id": 951,
+                "name": "KUTA BLANG"
+            },
+            {
+                "id": 952,
+                "name": "PANDRAH"
+            },
+            {
+                "id": 953,
+                "name": "PEUSANGAN SELATAN"
+            },
+            {
+                "id": 954,
+                "name": "PEUSANGAN SIBLAH KRUENG"
+            },
+            {
+                "id": 955,
+                "name": "PEULIMBANG (PLIMBANG)"
+            },
+            {
+                "id": 956,
+                "name": "SIMPANG MAMPLAM"
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "name": "ACEH TENGGARA",
+        "districts": [
+            {
+                "id": 957,
+                "name": "BADAR"
+            },
+            {
+                "id": 958,
+                "name": "BAMBEL"
+            },
+            {
+                "id": 959,
+                "name": "LAWE ALAS"
+            },
+            {
+                "id": 960,
+                "name": "LAWE SIGALA-GALA"
+            },
+            {
+                "id": 961,
+                "name": "BABUL MAKMUR"
+            },
+            {
+                "id": 962,
+                "name": "BABUL RAHMAH"
+            },
+            {
+                "id": 963,
+                "name": "BABUSSALAM"
+            },
+            {
+                "id": 964,
+                "name": "BUKIT TUSAM"
+            },
+            {
+                "id": 965,
+                "name": "DARUL HASANAH"
+            },
+            {
+                "id": 966,
+                "name": "LAWE BULAN"
+            },
+            {
+                "id": 967,
+                "name": "SEMADAM"
+            },
+            {
+                "id": 968,
+                "name": "TANAH ALAS"
+            },
+            {
+                "id": 969,
+                "name": "LEUSER"
+            },
+            {
+                "id": 970,
+                "name": "LAWE SUMUR"
+            },
+            {
+                "id": 971,
+                "name": "KETAMBE"
+            },
+            {
+                "id": 972,
+                "name": "DELENG POKHISEN"
+            }
+        ]
+    },
+    {
+        "id": 106,
+        "name": "ACEH BARAT",
+        "districts": [
+            {
+                "id": 973,
+                "name": "KAWAY XVI"
+            },
+            {
+                "id": 974,
+                "name": "SAMATIGA"
+            },
+            {
+                "id": 975,
+                "name": "SUNGAI MAS"
+            },
+            {
+                "id": 976,
+                "name": "WOYLA"
+            },
+            {
+                "id": 977,
+                "name": "BUBON"
+            },
+            {
+                "id": 978,
+                "name": "ARONGAN LAMBALEK"
+            },
+            {
+                "id": 979,
+                "name": "JOHAN PAHLAWAN"
+            },
+            {
+                "id": 980,
+                "name": "WOYLA BARAT"
+            },
+            {
+                "id": 981,
+                "name": "WOYLA TIMUR"
+            },
+            {
+                "id": 982,
+                "name": "PANTE CEUREUMEN (PANTAI CEUREMEN)"
+            },
+            {
+                "id": 983,
+                "name": "PANTON REU"
+            },
+            {
+                "id": 984,
+                "name": "MEUREUBO"
+            }
+        ]
+    },
+    {
+        "id": 107,
+        "name": "PIDIE",
+        "districts": [
+            {
+                "id": 985,
+                "name": "KOTA SIGLI"
+            },
+            {
+                "id": 986,
+                "name": "BATEE"
+            },
+            {
+                "id": 987,
+                "name": "DELIMA"
+            },
+            {
+                "id": 988,
+                "name": "GEUMPANG"
+            },
+            {
+                "id": 989,
+                "name": "GLUMPANG TIGA (GEULUMPANG TIGA)"
+            },
+            {
+                "id": 990,
+                "name": "INDRAJAYA"
+            },
+            {
+                "id": 991,
+                "name": "KEMBANG TANJONG"
+            },
+            {
+                "id": 992,
+                "name": "MILA"
+            },
+            {
+                "id": 993,
+                "name": "MUARA TIGA"
+            },
+            {
+                "id": 994,
+                "name": "MUTIARA"
+            },
+            {
+                "id": 995,
+                "name": "PADANG TIJI"
+            },
+            {
+                "id": 996,
+                "name": "PEUKAN BARO"
+            },
+            {
+                "id": 997,
+                "name": "PIDIE"
+            },
+            {
+                "id": 998,
+                "name": "SAKTI"
+            },
+            {
+                "id": 999,
+                "name": "SIMPANG TIGA"
+            },
+            {
+                "id": 1000,
+                "name": "TANGSE"
+            },
+            {
+                "id": 1001,
+                "name": "TIRO\/TRUSEB"
+            },
+            {
+                "id": 1002,
+                "name": "TITEUE"
+            },
+            {
+                "id": 1003,
+                "name": "GLUMPANG BARO"
+            },
+            {
+                "id": 1004,
+                "name": "GRONG GRONG"
+            },
+            {
+                "id": 1005,
+                "name": "MANE"
+            },
+            {
+                "id": 1006,
+                "name": "MUTIARA TIMUR"
+            },
+            {
+                "id": 1007,
+                "name": "KEUMALA"
+            }
+        ]
+    },
+    {
+        "id": 109,
+        "name": "ACEH TENGAH",
+        "districts": [
+            {
+                "id": 1008,
+                "name": "BEBESEN"
+            },
+            {
+                "id": 1009,
+                "name": "BINTANG"
+            },
+            {
+                "id": 1010,
+                "name": "LINGE"
+            },
+            {
+                "id": 1011,
+                "name": "PEGASING"
+            },
+            {
+                "id": 1012,
+                "name": "SILIH NARA"
+            },
+            {
+                "id": 1013,
+                "name": "ATU LINTANG"
+            },
+            {
+                "id": 1014,
+                "name": "BIES"
+            },
+            {
+                "id": 1015,
+                "name": "CELALA"
+            },
+            {
+                "id": 1016,
+                "name": "JAGONG JEGET"
+            },
+            {
+                "id": 1017,
+                "name": "KEBAYAKAN"
+            },
+            {
+                "id": 1018,
+                "name": "KETOL"
+            },
+            {
+                "id": 1019,
+                "name": "KUTE PANANG"
+            },
+            {
+                "id": 1020,
+                "name": "LUT TAWAR"
+            },
+            {
+                "id": 1021,
+                "name": "RUSIP ANTARA"
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "name": "ACEH SELATAN",
+        "districts": [
+            {
+                "id": 1022,
+                "name": "TAPAK TUAN"
+            },
+            {
+                "id": 1023,
+                "name": "BAKONGAN"
+            },
+            {
+                "id": 1024,
+                "name": "KLUET UTARA"
+            },
+            {
+                "id": 1025,
+                "name": "KLUET SELATAN"
+            },
+            {
+                "id": 1026,
+                "name": "LABUHAN HAJI"
+            },
+            {
+                "id": 1027,
+                "name": "MEUKEK"
+            },
+            {
+                "id": 1028,
+                "name": "SAMA DUA"
+            },
+            {
+                "id": 1029,
+                "name": "TRUMON"
+            },
+            {
+                "id": 1030,
+                "name": "BAKONGAN TIMUR"
+            },
+            {
+                "id": 1031,
+                "name": "KLUET TENGAH"
+            },
+            {
+                "id": 1032,
+                "name": "KLUET TIMUR"
+            },
+            {
+                "id": 1033,
+                "name": "LABUHAN HAJI BARAT"
+            },
+            {
+                "id": 1034,
+                "name": "LABUHAN HAJI TIMUR"
+            },
+            {
+                "id": 1035,
+                "name": "PASIE RAJA"
+            },
+            {
+                "id": 1036,
+                "name": "TRUMON TIMUR"
+            },
+            {
+                "id": 1037,
+                "name": "SAWANG"
+            },
+            {
+                "id": 1038,
+                "name": "KOTA BAHAGIA"
+            },
+            {
+                "id": 1039,
+                "name": "TRUMON TENGAH"
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "name": "SABANG",
+        "districts": [
+            {
+                "id": 1040,
+                "name": "SUKAKARYA"
+            },
+            {
+                "id": 1041,
+                "name": "SUKAJAYA"
+            }
+        ]
+    },
+    {
+        "id": 112,
+        "name": "ACEH BARAT DAYA",
+        "districts": [
+            {
+                "id": 1042,
+                "name": "BLANG PIDIE"
+            },
+            {
+                "id": 1043,
+                "name": "BABAH ROT"
+            },
+            {
+                "id": 1044,
+                "name": "KUALA BATEE"
+            },
+            {
+                "id": 1045,
+                "name": "MANGGENG"
+            },
+            {
+                "id": 1046,
+                "name": "SUSOH"
+            },
+            {
+                "id": 1047,
+                "name": "TANGAN-TANGAN"
+            },
+            {
+                "id": 1048,
+                "name": "JEUMPA"
+            },
+            {
+                "id": 1049,
+                "name": "SETIA"
+            },
+            {
+                "id": 1050,
+                "name": "LEMBAH SABIL"
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "name": "ACEH JAYA",
+        "districts": [
+            {
+                "id": 1051,
+                "name": "KRUENG SABEE"
+            },
+            {
+                "id": 1052,
+                "name": "JAYA"
+            },
+            {
+                "id": 1053,
+                "name": "KEUDE PANGA"
+            },
+            {
+                "id": 1054,
+                "name": "SAMPOINIET"
+            },
+            {
+                "id": 1055,
+                "name": "SETIA BAKTI"
+            },
+            {
+                "id": 1056,
+                "name": "TEUNOM"
+            },
+            {
+                "id": 1057,
+                "name": "DARUL HIKMAH"
+            },
+            {
+                "id": 1058,
+                "name": "INDRA JAYA"
+            },
+            {
+                "id": 1059,
+                "name": "PASIE RAYA"
+            }
+        ]
+    },
+    {
+        "id": 114,
+        "name": "ACEH SINGKIL",
+        "districts": [
+            {
+                "id": 1060,
+                "name": "SINGKIL"
+            },
+            {
+                "id": 1061,
+                "name": "DANAU PARIS"
+            },
+            {
+                "id": 1062,
+                "name": "GUNUNG MERIAH (MARIAH)"
+            },
+            {
+                "id": 1063,
+                "name": "KOTA BAHARU"
+            },
+            {
+                "id": 1064,
+                "name": "PULAU BANYAK"
+            },
+            {
+                "id": 1065,
+                "name": "SIMPANG KANAN"
+            },
+            {
+                "id": 1066,
+                "name": "SINGKIL UTARA"
+            },
+            {
+                "id": 1067,
+                "name": "SINGKOHOR"
+            },
+            {
+                "id": 1068,
+                "name": "SURO MAKMUR"
+            },
+            {
+                "id": 1069,
+                "name": "KUALA BARU"
+            },
+            {
+                "id": 1070,
+                "name": "PULAU BANYAK BARAT"
+            }
+        ]
+    },
+    {
+        "id": 116,
+        "name": "ACEH TAMIANG",
+        "districts": [
+            {
+                "id": 1071,
+                "name": "KOTA KUALA SIMPANG"
+            },
+            {
+                "id": 1072,
+                "name": "BENDAHARA"
+            },
+            {
+                "id": 1073,
+                "name": "KARANG BARU"
+            },
+            {
+                "id": 1074,
+                "name": "KEJURUAN MUDA"
+            },
+            {
+                "id": 1075,
+                "name": "MANYAK PAYED"
+            },
+            {
+                "id": 1076,
+                "name": "RANTAU"
+            },
+            {
+                "id": 1077,
+                "name": "SERUWAY"
+            },
+            {
+                "id": 1078,
+                "name": "TAMIANG HULU"
+            },
+            {
+                "id": 1079,
+                "name": "TENGGULUN"
+            },
+            {
+                "id": 1080,
+                "name": "SEKERAK"
+            },
+            {
+                "id": 1081,
+                "name": "BANDAR PUSAKA"
+            },
+            {
+                "id": 1082,
+                "name": "BANDA MULIA"
+            }
+        ]
+    },
+    {
+        "id": 117,
+        "name": "ACEH TIMUR",
+        "districts": [
+            {
+                "id": 1083,
+                "name": "IDI RAYEUK"
+            },
+            {
+                "id": 1084,
+                "name": "BANDA ALAM"
+            },
+            {
+                "id": 1085,
+                "name": "BIREM BAYEUN"
+            },
+            {
+                "id": 1086,
+                "name": "DARUL AMAN"
+            },
+            {
+                "id": 1087,
+                "name": "DARUL IKSAN (IHSAN)"
+            },
+            {
+                "id": 1088,
+                "name": "IDI TUNONG"
+            },
+            {
+                "id": 1089,
+                "name": "INDRA MAKMUR"
+            },
+            {
+                "id": 1090,
+                "name": "JULOK"
+            },
+            {
+                "id": 1091,
+                "name": "MADAT"
+            },
+            {
+                "id": 1092,
+                "name": "NURUSSALAM"
+            },
+            {
+                "id": 1093,
+                "name": "PANTE BIDARI"
+            },
+            {
+                "id": 1094,
+                "name": "PEUDAWA"
+            },
+            {
+                "id": 1095,
+                "name": "PEUREULAK"
+            },
+            {
+                "id": 1096,
+                "name": "PEUREULAK BARAT"
+            },
+            {
+                "id": 1097,
+                "name": "PEUREULAK TIMUR"
+            },
+            {
+                "id": 1098,
+                "name": "RANTAU SELAMAT"
+            },
+            {
+                "id": 1099,
+                "name": "RANTO PEUREULAK"
+            },
+            {
+                "id": 1100,
+                "name": "SERBAJADI"
+            },
+            {
+                "id": 1101,
+                "name": "SIMPANG JERNIH"
+            },
+            {
+                "id": 1102,
+                "name": "SIMPANG ULIM"
+            },
+            {
+                "id": 1103,
+                "name": "SUNGAI RAYA"
+            },
+            {
+                "id": 1104,
+                "name": "PEUNARON"
+            },
+            {
+                "id": 1105,
+                "name": "IDI TIMUR"
+            },
+            {
+                "id": 1106,
+                "name": "DARUL FALAH"
+            }
+        ]
+    },
+    {
+        "id": 118,
+        "name": "ACEH UTARA",
+        "districts": [
+            {
+                "id": 1107,
+                "name": "LHOKSUKON"
+            },
+            {
+                "id": 1108,
+                "name": "BAKTIYA"
+            },
+            {
+                "id": 1109,
+                "name": "BAKTIYA BARAT"
+            },
+            {
+                "id": 1110,
+                "name": "COT GIREK"
+            },
+            {
+                "id": 1111,
+                "name": "DEWANTARA"
+            },
+            {
+                "id": 1112,
+                "name": "KUTA MAKMUR"
+            },
+            {
+                "id": 1113,
+                "name": "LANGKAHAN"
+            },
+            {
+                "id": 1114,
+                "name": "MATANGKULI"
+            },
+            {
+                "id": 1115,
+                "name": "MEURAH MULIA"
+            },
+            {
+                "id": 1116,
+                "name": "MUARA BATU"
+            },
+            {
+                "id": 1117,
+                "name": "NIBONG"
+            },
+            {
+                "id": 1118,
+                "name": "NISAM"
+            },
+            {
+                "id": 1119,
+                "name": "PAYA BAKONG"
+            },
+            {
+                "id": 1120,
+                "name": "SAMUDERA"
+            },
+            {
+                "id": 1121,
+                "name": "SAWANG"
+            },
+            {
+                "id": 1122,
+                "name": "SEUNUDDON (SEUNUDON)"
+            },
+            {
+                "id": 1123,
+                "name": "SIMPANG KRAMAT (KERAMAT)"
+            },
+            {
+                "id": 1124,
+                "name": "SYAMTALIRA ARON"
+            },
+            {
+                "id": 1125,
+                "name": "SYAMTALIRA BAYU"
+            },
+            {
+                "id": 1126,
+                "name": "TANAH LUAS"
+            },
+            {
+                "id": 1127,
+                "name": "TANAH JAMBO AYE"
+            },
+            {
+                "id": 1128,
+                "name": "TANAH PASIR"
+            },
+            {
+                "id": 1129,
+                "name": "PIRAK TIMUR"
+            },
+            {
+                "id": 1130,
+                "name": "NISAM ANTARA"
+            },
+            {
+                "id": 1131,
+                "name": "LAPANG"
+            },
+            {
+                "id": 1132,
+                "name": "GEUREDONG PASE"
+            },
+            {
+                "id": 1133,
+                "name": "BANDA BARO"
+            }
+        ]
+    },
+    {
+        "id": 120,
+        "name": "BENER MERIAH",
+        "districts": [
+            {
+                "id": 1134,
+                "name": "BANDAR"
+            },
+            {
+                "id": 1135,
+                "name": "BUKIT"
+            },
+            {
+                "id": 1136,
+                "name": "PERMATA"
+            },
+            {
+                "id": 1137,
+                "name": "PINTU RIME GAYO"
+            },
+            {
+                "id": 1138,
+                "name": "TIMANG GAJAH"
+            },
+            {
+                "id": 1139,
+                "name": "WIH PESAM"
+            },
+            {
+                "id": 1140,
+                "name": "SYIAH UTAMA"
+            },
+            {
+                "id": 1141,
+                "name": "BENER KELIPAH"
+            },
+            {
+                "id": 1142,
+                "name": "GAJAH PUTIH"
+            },
+            {
+                "id": 1143,
+                "name": "MESIDAH"
+            }
+        ]
+    },
+    {
+        "id": 122,
+        "name": "GAYO LUES",
+        "districts": [
+            {
+                "id": 1144,
+                "name": "BLANG KEJEREN"
+            },
+            {
+                "id": 1145,
+                "name": "KUTA PANJANG"
+            },
+            {
+                "id": 1146,
+                "name": "PINING (PINDING)"
+            },
+            {
+                "id": 1147,
+                "name": "RIKIT GAIB"
+            },
+            {
+                "id": 1148,
+                "name": "TERANGUN (TERANGON)"
+            },
+            {
+                "id": 1149,
+                "name": "PUTRI BETUNG"
+            },
+            {
+                "id": 1150,
+                "name": "BLANG PEGAYON"
+            },
+            {
+                "id": 1151,
+                "name": "DABUN GELANG (DEBUN GELANG)"
+            },
+            {
+                "id": 1152,
+                "name": "BLANG JERANGO"
+            },
+            {
+                "id": 1153,
+                "name": "TERIPE\/TRIPE JAYA"
+            },
+            {
+                "id": 1154,
+                "name": "PANTAN CUACA"
+            }
+        ]
+    },
+    {
+        "id": 124,
+        "name": "NAGAN RAYA",
+        "districts": [
+            {
+                "id": 1155,
+                "name": "SUKA MAKMUE"
+            },
+            {
+                "id": 1156,
+                "name": "BEUTONG"
+            },
+            {
+                "id": 1157,
+                "name": "DARUL MAKMUR"
+            },
+            {
+                "id": 1158,
+                "name": "KUALA"
+            },
+            {
+                "id": 1159,
+                "name": "SEUNAGAN"
+            },
+            {
+                "id": 1160,
+                "name": "SEUNAGAN TIMUR"
+            },
+            {
+                "id": 1161,
+                "name": "KUALA PESISIR"
+            },
+            {
+                "id": 1162,
+                "name": "TADU RAYA"
+            },
+            {
+                "id": 1163,
+                "name": "BEUTONG ATEUH BANGGALANG"
+            },
+            {
+                "id": 1164,
+                "name": "TRIPA MAKMUR"
+            }
+        ]
+    },
+    {
+        "id": 125,
+        "name": "PIDIE JAYA",
+        "districts": [
+            {
+                "id": 1165,
+                "name": "MEUREUDU"
+            },
+            {
+                "id": 1166,
+                "name": "ULIM"
+            },
+            {
+                "id": 1167,
+                "name": "JANGKA BUYA"
+            },
+            {
+                "id": 1168,
+                "name": "BANDAR DUA"
+            },
+            {
+                "id": 1169,
+                "name": "MEURAH DUA"
+            },
+            {
+                "id": 1170,
+                "name": "BANDAR BARU"
+            },
+            {
+                "id": 1171,
+                "name": "PANTERAJA"
+            },
+            {
+                "id": 1172,
+                "name": "TRIENGGADENG"
+            }
+        ]
+    },
+    {
+        "id": 127,
+        "name": "SIMEULUE",
+        "districts": [
+            {
+                "id": 1173,
+                "name": "ALAPAN (ALAFAN)"
+            },
+            {
+                "id": 1174,
+                "name": "SALANG"
+            },
+            {
+                "id": 1175,
+                "name": "SIMEULEU TENGAH"
+            },
+            {
+                "id": 1176,
+                "name": "SIMEULEU TIMUR"
+            },
+            {
+                "id": 1177,
+                "name": "SIMEULEU BARAT"
+            },
+            {
+                "id": 1178,
+                "name": "TELUK DALAM"
+            },
+            {
+                "id": 1179,
+                "name": "TEUPAH SELATAN"
+            },
+            {
+                "id": 1180,
+                "name": "TEUPAH BARAT"
+            },
+            {
+                "id": 1181,
+                "name": "SIMEULUE CUT"
+            },
+            {
+                "id": 1182,
+                "name": "TEUPAH TENGAH"
+            }
+        ]
+    },
+    {
+        "id": 128,
+        "name": "SUBULUSSALAM",
+        "districts": [
+            {
+                "id": 1183,
+                "name": "SIMPANG KIRI"
+            },
+            {
+                "id": 1184,
+                "name": "PENANGGALAN"
+            },
+            {
+                "id": 1185,
+                "name": "RUNDENG"
+            },
+            {
+                "id": 1186,
+                "name": "SULTAN DAULAT"
+            },
+            {
+                "id": 1187,
+                "name": "LONGKIB"
+            }
+        ]
+    }
+]

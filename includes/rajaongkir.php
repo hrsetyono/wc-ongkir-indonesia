@@ -7,7 +7,7 @@ if (!class_exists('RajaOngkir')):
  */
 class RajaOngkir {
   private $api_key;
-  private $base_url = 'https://pro.rajaongkir.com/api';
+  private $base_url = 'https://rajaongkir.komerce.id/api/v1';
 
   function __construct($key = null) {
     // set API key
@@ -27,7 +27,7 @@ class RajaOngkir {
    * @return bool
    */
   function is_valid() {
-    $result = $this->get('/province', [], false);
+    $result = $this->get('/destination/province', [], false);
     $status =  wp_remote_retrieve_response_code($result);
     return $status === 200;
   }
@@ -40,14 +40,32 @@ class RajaOngkir {
    * @return array - JSON response
    */
   function get_costs($args) {
-    $result = $this->post('/cost', $args);
+    $result = $this->post('/calculate/district/domestic-cost', $args);
 
     if ($result) {
-      $costs = $result['rajaongkir']['results'] ?? null;
+      $costs = $result['data'] ?? null;
       return $costs;
     } else {
       return $result;
     }
+  }
+
+  /**
+   * Get list of city and its district of a province
+   */
+  function get_city_list($province_id, $include_district = false) {
+    $cities = $this->get("/destination/city/{$province_id}");
+    $cities = $cities['data'] ?? null;
+
+    if ($cities && $include_district) {
+      foreach ($cities as &$c) {
+        $districts = $this->get("/destination/district/{$c['id']}");
+        $districts = $districts['data'] ?? null;
+        $c['districts'] = $districts;
+      }
+    }
+
+    return $cities;
   }
 
   /////
@@ -98,7 +116,10 @@ class RajaOngkir {
     $url = $this->get_endpoint_url($endpoint);
 
     $result = wp_remote_post($url, [
-      'headers' => [ 'key' => $this->api_key ],
+      'headers' => [
+        'key' => $this->api_key,
+        'content-type' => 'application/x-www-form-urlencoded'
+      ],
       'body' => $args,
       'sslverify' => WP_DEBUG === true ? false : true,
     ]);

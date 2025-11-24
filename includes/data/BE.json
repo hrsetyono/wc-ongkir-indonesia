@@ -1,0 +1,574 @@
+[
+    {
+        "id": 64,
+        "name": "BENGKULU",
+        "districts": [
+            {
+                "id": 619,
+                "name": "GADING CEMPAKA"
+            },
+            {
+                "id": 620,
+                "name": "KAMPUNG MELAYU"
+            },
+            {
+                "id": 621,
+                "name": "MUARA BANGKA HULU"
+            },
+            {
+                "id": 622,
+                "name": "RATU AGUNG"
+            },
+            {
+                "id": 623,
+                "name": "RATU SAMBAN"
+            },
+            {
+                "id": 624,
+                "name": "SELEBAR"
+            },
+            {
+                "id": 625,
+                "name": "SUNGAI SERUT"
+            },
+            {
+                "id": 626,
+                "name": "TELUK SEGARA"
+            },
+            {
+                "id": 627,
+                "name": "SINGARAN PATI"
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "name": "BENGKULU UTARA",
+        "districts": [
+            {
+                "id": 628,
+                "name": "ARGA MAKMUR"
+            },
+            {
+                "id": 629,
+                "name": "BATIK NAU"
+            },
+            {
+                "id": 630,
+                "name": "GIRI MULIA"
+            },
+            {
+                "id": 631,
+                "name": "LAIS"
+            },
+            {
+                "id": 632,
+                "name": "PADANG JAYA"
+            },
+            {
+                "id": 633,
+                "name": "AIR BESI"
+            },
+            {
+                "id": 634,
+                "name": "AIR NAPAL"
+            },
+            {
+                "id": 635,
+                "name": "ENGGANO"
+            },
+            {
+                "id": 637,
+                "name": "KERKAP"
+            },
+            {
+                "id": 638,
+                "name": "KETAHUN"
+            },
+            {
+                "id": 643,
+                "name": "NAPAL PUTIH"
+            },
+            {
+                "id": 644,
+                "name": "PUTRI HIJAU"
+            },
+            {
+                "id": 645,
+                "name": "AIR PADANG"
+            },
+            {
+                "id": 651,
+                "name": "ARMA JAYA"
+            },
+            {
+                "id": 652,
+                "name": "HULU PALIK"
+            },
+            {
+                "id": 653,
+                "name": "TANJUNG AGUNG PALIK"
+            },
+            {
+                "id": 654,
+                "name": "ULOK KUPAI"
+            },
+            {
+                "id": 7122,
+                "name": "PINANG RAYA"
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "name": "BENGKULU TENGAH",
+        "districts": [
+            {
+                "id": 636,
+                "name": "KARANG TINGGI"
+            },
+            {
+                "id": 639,
+                "name": "PAGAR JATI"
+            },
+            {
+                "id": 640,
+                "name": "PEMATANG TIGA"
+            },
+            {
+                "id": 641,
+                "name": "PONDOK KELAPA"
+            },
+            {
+                "id": 642,
+                "name": "TABA PENANJUNG"
+            },
+            {
+                "id": 646,
+                "name": "TALANG EMPAT"
+            },
+            {
+                "id": 647,
+                "name": "BANG HAJI"
+            },
+            {
+                "id": 648,
+                "name": "MERIGI KELINDANG"
+            },
+            {
+                "id": 649,
+                "name": "MERIGI SAKTI"
+            },
+            {
+                "id": 650,
+                "name": "PONDOK KUBANG"
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "name": "REJANG LEBONG",
+        "districts": [
+            {
+                "id": 655,
+                "name": "CURUP"
+            },
+            {
+                "id": 656,
+                "name": "KOTA PADANG"
+            },
+            {
+                "id": 657,
+                "name": "PADANG ULAK TANDING"
+            },
+            {
+                "id": 658,
+                "name": "BERMANI ULU"
+            },
+            {
+                "id": 659,
+                "name": "SELUPU REJANG"
+            },
+            {
+                "id": 660,
+                "name": "SINDANG KELINGI"
+            },
+            {
+                "id": 661,
+                "name": "BERMANI ULU RAYA"
+            },
+            {
+                "id": 662,
+                "name": "BINDURIANG"
+            },
+            {
+                "id": 663,
+                "name": "CURUP SELATAN"
+            },
+            {
+                "id": 664,
+                "name": "CURUP TENGAH"
+            },
+            {
+                "id": 665,
+                "name": "CURUP TIMUR"
+            },
+            {
+                "id": 666,
+                "name": "CURUP UTARA"
+            },
+            {
+                "id": 667,
+                "name": "SINDANG BELITI ILIR"
+            },
+            {
+                "id": 668,
+                "name": "SINDANG BELITI ULU"
+            },
+            {
+                "id": 669,
+                "name": "SINDANG DARATAN"
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "name": "BENGKULU SELATAN",
+        "districts": [
+            {
+                "id": 670,
+                "name": "KOTA MANNA"
+            },
+            {
+                "id": 671,
+                "name": "KEDURANG"
+            },
+            {
+                "id": 672,
+                "name": "PINO"
+            },
+            {
+                "id": 673,
+                "name": "MANNA"
+            },
+            {
+                "id": 674,
+                "name": "PINORAYA"
+            },
+            {
+                "id": 675,
+                "name": "SEGINIM"
+            },
+            {
+                "id": 676,
+                "name": "AIR NIPIS"
+            },
+            {
+                "id": 677,
+                "name": "BUNGA MAS"
+            },
+            {
+                "id": 678,
+                "name": "KEDURANG ILIR"
+            },
+            {
+                "id": 679,
+                "name": "PASAR MANNA"
+            },
+            {
+                "id": 680,
+                "name": "ULU MANNA"
+            }
+        ]
+    },
+    {
+        "id": 69,
+        "name": "KAUR",
+        "districts": [
+            {
+                "id": 681,
+                "name": "KAUR SELATAN"
+            },
+            {
+                "id": 682,
+                "name": "KAUR TENGAH"
+            },
+            {
+                "id": 683,
+                "name": "KAUR UTARA"
+            },
+            {
+                "id": 684,
+                "name": "KINAL"
+            },
+            {
+                "id": 685,
+                "name": "NASAL"
+            },
+            {
+                "id": 686,
+                "name": "TANJUNG KEMUNING"
+            },
+            {
+                "id": 687,
+                "name": "MAJE"
+            },
+            {
+                "id": 688,
+                "name": "KELAM TENGAH"
+            },
+            {
+                "id": 689,
+                "name": "LUAS"
+            },
+            {
+                "id": 690,
+                "name": "LUNGKANG KULE"
+            },
+            {
+                "id": 691,
+                "name": "PADANG GUCI HILIR"
+            },
+            {
+                "id": 692,
+                "name": "PADANG GUCI HULU"
+            },
+            {
+                "id": 693,
+                "name": "SEMIDANG GUMAI (GUMAY)"
+            },
+            {
+                "id": 694,
+                "name": "TETAP (MUARA TETAP)"
+            },
+            {
+                "id": 695,
+                "name": "MUARA SAHUNG"
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "name": "KEPAHIANG",
+        "districts": [
+            {
+                "id": 696,
+                "name": "KEPAHIANG"
+            },
+            {
+                "id": 697,
+                "name": "BERMANI ILIR"
+            },
+            {
+                "id": 698,
+                "name": "TEBAT KARAI"
+            },
+            {
+                "id": 699,
+                "name": "UJAN MAS"
+            },
+            {
+                "id": 700,
+                "name": "KEBAWETAN"
+            },
+            {
+                "id": 701,
+                "name": "MERIGI"
+            },
+            {
+                "id": 702,
+                "name": "MUARA KEMUMU"
+            },
+            {
+                "id": 703,
+                "name": "SEBERANG MUSI"
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "name": "LEBONG",
+        "districts": [
+            {
+                "id": 704,
+                "name": "LEBONG ATAS"
+            },
+            {
+                "id": 705,
+                "name": "LEBONG SELATAN"
+            },
+            {
+                "id": 706,
+                "name": "LEBONG TENGAH"
+            },
+            {
+                "id": 707,
+                "name": "LEBONG UTARA"
+            },
+            {
+                "id": 708,
+                "name": "RIMBO PENGADANG"
+            },
+            {
+                "id": 709,
+                "name": "AMEN"
+            },
+            {
+                "id": 710,
+                "name": "BINGIN KUNING"
+            },
+            {
+                "id": 711,
+                "name": "LEBONG SAKTI"
+            },
+            {
+                "id": 712,
+                "name": "PELABAI"
+            },
+            {
+                "id": 713,
+                "name": "PINANG BELAPIS"
+            },
+            {
+                "id": 714,
+                "name": "TOPOS"
+            },
+            {
+                "id": 715,
+                "name": "URAM JAYA"
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "name": "MUKO MUKO",
+        "districts": [
+            {
+                "id": 716,
+                "name": "LUBUK PINANG"
+            },
+            {
+                "id": 717,
+                "name": "KOTA MUKOMUKO (MUKOMUKO UTARA)"
+            },
+            {
+                "id": 718,
+                "name": "PONDOK SUGUH"
+            },
+            {
+                "id": 719,
+                "name": "TERAS TERUNJAM"
+            },
+            {
+                "id": 720,
+                "name": "AIR DIKIT"
+            },
+            {
+                "id": 721,
+                "name": "AIR MAJUNTO"
+            },
+            {
+                "id": 722,
+                "name": "AIR RAMI"
+            },
+            {
+                "id": 723,
+                "name": "MALIN DEMAN"
+            },
+            {
+                "id": 724,
+                "name": "PENARIK"
+            },
+            {
+                "id": 725,
+                "name": "SELAGAN RAYA"
+            },
+            {
+                "id": 726,
+                "name": "SUNGAI RUMBAI"
+            },
+            {
+                "id": 727,
+                "name": "TERAMANG JAYA"
+            },
+            {
+                "id": 728,
+                "name": "V KOTO"
+            },
+            {
+                "id": 729,
+                "name": "XIV KOTO"
+            },
+            {
+                "id": 730,
+                "name": "IPUH (MUKO-MUKO SELATAN)"
+            },
+            {
+                "id": 7113,
+                "name": "TIRTA MULYA"
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "name": "SELUMA",
+        "districts": [
+            {
+                "id": 731,
+                "name": "AIR PERIUKAN"
+            },
+            {
+                "id": 732,
+                "name": "ILIR TALO"
+            },
+            {
+                "id": 733,
+                "name": "LUBUK SANDI"
+            },
+            {
+                "id": 734,
+                "name": "SELUMA"
+            },
+            {
+                "id": 735,
+                "name": "SELUMA BARAT"
+            },
+            {
+                "id": 736,
+                "name": "SELUMA SELATAN"
+            },
+            {
+                "id": 737,
+                "name": "SELUMA TIMUR"
+            },
+            {
+                "id": 738,
+                "name": "SELUMA UTARA"
+            },
+            {
+                "id": 739,
+                "name": "SEMIDANG ALAS"
+            },
+            {
+                "id": 740,
+                "name": "SEMIDANG ALAS MARAS"
+            },
+            {
+                "id": 741,
+                "name": "SUKARAJA"
+            },
+            {
+                "id": 742,
+                "name": "TALO"
+            },
+            {
+                "id": 743,
+                "name": "ULU TALO"
+            },
+            {
+                "id": 744,
+                "name": "TALO KECIL"
+            }
+        ]
+    }
+]

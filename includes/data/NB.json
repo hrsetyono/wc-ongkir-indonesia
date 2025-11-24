@@ -1,0 +1,524 @@
+[
+    {
+        "id": 1,
+        "name": "MATARAM",
+        "districts": [
+            {
+                "id": 1,
+                "name": "MATARAM"
+            },
+            {
+                "id": 2,
+                "name": "AMPENAN"
+            },
+            {
+                "id": 3,
+                "name": "CAKRANEGARA"
+            },
+            {
+                "id": 4,
+                "name": "SELAPARANG (SELAPRANG)"
+            },
+            {
+                "id": 5,
+                "name": "SEKARBELA"
+            },
+            {
+                "id": 6,
+                "name": "SANDUBAYA (SANDUJAYA)"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "BIMA",
+        "districts": [
+            {
+                "id": 7,
+                "name": "ASAKOTA"
+            },
+            {
+                "id": 8,
+                "name": "RASANAE BARAT"
+            },
+            {
+                "id": 9,
+                "name": "RASANAE TIMUR"
+            },
+            {
+                "id": 10,
+                "name": "RABA"
+            },
+            {
+                "id": 11,
+                "name": "MPUNDA"
+            },
+            {
+                "id": 99,
+                "name": "WOHA"
+            },
+            {
+                "id": 100,
+                "name": "AMBALAWI"
+            },
+            {
+                "id": 101,
+                "name": "BELO"
+            },
+            {
+                "id": 102,
+                "name": "BOLO"
+            },
+            {
+                "id": 103,
+                "name": "DONGGO"
+            },
+            {
+                "id": 104,
+                "name": "LAMBU"
+            },
+            {
+                "id": 105,
+                "name": "LANGGUDU"
+            },
+            {
+                "id": 106,
+                "name": "MADAPANGGA"
+            },
+            {
+                "id": 107,
+                "name": "MONTA"
+            },
+            {
+                "id": 108,
+                "name": "SANGGAR"
+            },
+            {
+                "id": 109,
+                "name": "SAPE"
+            },
+            {
+                "id": 110,
+                "name": "TAMBORA"
+            },
+            {
+                "id": 111,
+                "name": "WAWO"
+            },
+            {
+                "id": 112,
+                "name": "WERA"
+            },
+            {
+                "id": 113,
+                "name": "SOROMANDI"
+            },
+            {
+                "id": 114,
+                "name": "PARADO"
+            },
+            {
+                "id": 115,
+                "name": "PALIBELO"
+            },
+            {
+                "id": 116,
+                "name": "LAMBITU"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "DOMPU",
+        "districts": [
+            {
+                "id": 12,
+                "name": "DOMPU"
+            },
+            {
+                "id": 13,
+                "name": "HU'U"
+            },
+            {
+                "id": 14,
+                "name": "KEMPO"
+            },
+            {
+                "id": 15,
+                "name": "KILO"
+            },
+            {
+                "id": 16,
+                "name": "PAJO"
+            },
+            {
+                "id": 17,
+                "name": "PEKAT"
+            },
+            {
+                "id": 18,
+                "name": "WOJA"
+            },
+            {
+                "id": 19,
+                "name": "MANGGALEWA"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "LOMBOK TENGAH",
+        "districts": [
+            {
+                "id": 20,
+                "name": "PRAYA"
+            },
+            {
+                "id": 21,
+                "name": "BATUKLIANG"
+            },
+            {
+                "id": 22,
+                "name": "JANAPRIA"
+            },
+            {
+                "id": 23,
+                "name": "JONGGAT"
+            },
+            {
+                "id": 24,
+                "name": "KOPANG"
+            },
+            {
+                "id": 25,
+                "name": "PRAYA BARAT"
+            },
+            {
+                "id": 26,
+                "name": "PRAYA TIMUR"
+            },
+            {
+                "id": 27,
+                "name": "PRINGGARATA"
+            },
+            {
+                "id": 28,
+                "name": "PUJUT"
+            },
+            {
+                "id": 29,
+                "name": "BATUKLIANG UTARA"
+            },
+            {
+                "id": 30,
+                "name": "PRAYA BARAT DAYA"
+            },
+            {
+                "id": 31,
+                "name": "PRAYA TENGAH"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "LOMBOK TIMUR",
+        "districts": [
+            {
+                "id": 32,
+                "name": "SELONG"
+            },
+            {
+                "id": 33,
+                "name": "AIKMEL"
+            },
+            {
+                "id": 34,
+                "name": "KERUAK"
+            },
+            {
+                "id": 35,
+                "name": "MASBAGIK"
+            },
+            {
+                "id": 36,
+                "name": "PRINGGABAYA"
+            },
+            {
+                "id": 37,
+                "name": "SAKRA"
+            },
+            {
+                "id": 38,
+                "name": "SAMBALIA (SAMBELIA)"
+            },
+            {
+                "id": 39,
+                "name": "SIKUR"
+            },
+            {
+                "id": 40,
+                "name": "SUKAMULIA"
+            },
+            {
+                "id": 41,
+                "name": "TERARA"
+            },
+            {
+                "id": 42,
+                "name": "JEROWARU"
+            },
+            {
+                "id": 43,
+                "name": "MONTONG GADING"
+            },
+            {
+                "id": 44,
+                "name": "PRINGGASELA"
+            },
+            {
+                "id": 45,
+                "name": "SAKRA BARAT"
+            },
+            {
+                "id": 46,
+                "name": "SAKRA TIMUR"
+            },
+            {
+                "id": 47,
+                "name": "SEMBALUN"
+            },
+            {
+                "id": 48,
+                "name": "SUELA (SUWELA)"
+            },
+            {
+                "id": 49,
+                "name": "SURALAGA"
+            },
+            {
+                "id": 50,
+                "name": "WANASABA"
+            },
+            {
+                "id": 51,
+                "name": "LABUHAN HAJI"
+            },
+            {
+                "id": 7124,
+                "name": "LENEK"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "SUMBAWA",
+        "districts": [
+            {
+                "id": 52,
+                "name": "ALAS"
+            },
+            {
+                "id": 53,
+                "name": "BATULANTEH"
+            },
+            {
+                "id": 54,
+                "name": "EMPANG"
+            },
+            {
+                "id": 55,
+                "name": "LAPE (LAPE LOPOK)"
+            },
+            {
+                "id": 56,
+                "name": "LUNYUK"
+            },
+            {
+                "id": 57,
+                "name": "MOYO HILIR"
+            },
+            {
+                "id": 58,
+                "name": "MOYO HULU"
+            },
+            {
+                "id": 59,
+                "name": "PLAMPANG"
+            },
+            {
+                "id": 60,
+                "name": "ROPANG"
+            },
+            {
+                "id": 61,
+                "name": "RHEE"
+            },
+            {
+                "id": 62,
+                "name": "ALAS BARAT"
+            },
+            {
+                "id": 63,
+                "name": "LABANGKA"
+            },
+            {
+                "id": 64,
+                "name": "LABUHAN BADAS"
+            },
+            {
+                "id": 65,
+                "name": "SUMBAWA"
+            },
+            {
+                "id": 66,
+                "name": "UTAN"
+            },
+            {
+                "id": 67,
+                "name": "UNTER IWES (UNTERWIRIS)"
+            },
+            {
+                "id": 68,
+                "name": "TARANO"
+            },
+            {
+                "id": 69,
+                "name": "ORONG TELU"
+            },
+            {
+                "id": 70,
+                "name": "MOYO UTARA"
+            },
+            {
+                "id": 71,
+                "name": "MARONGE"
+            },
+            {
+                "id": 72,
+                "name": "LOPOK"
+            },
+            {
+                "id": 73,
+                "name": "LENANGGUAR"
+            },
+            {
+                "id": 74,
+                "name": "LANTUNG"
+            },
+            {
+                "id": 75,
+                "name": "BUER"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "LOMBOK BARAT",
+        "districts": [
+            {
+                "id": 76,
+                "name": "GERUNG"
+            },
+            {
+                "id": 79,
+                "name": "KEDIRI"
+            },
+            {
+                "id": 80,
+                "name": "LABUAPI"
+            },
+            {
+                "id": 81,
+                "name": "NARMADA"
+            },
+            {
+                "id": 82,
+                "name": "SEKOTONG"
+            },
+            {
+                "id": 84,
+                "name": "BATU LAYAR"
+            },
+            {
+                "id": 85,
+                "name": "GUNUNGSARI"
+            },
+            {
+                "id": 87,
+                "name": "KURIPAN"
+            },
+            {
+                "id": 88,
+                "name": "LEMBAR"
+            },
+            {
+                "id": 89,
+                "name": "LINGSAR"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "LOMBOK UTARA",
+        "districts": [
+            {
+                "id": 77,
+                "name": "BAYAN"
+            },
+            {
+                "id": 78,
+                "name": "GANGGA"
+            },
+            {
+                "id": 83,
+                "name": "TANJUNG"
+            },
+            {
+                "id": 86,
+                "name": "KAYANGAN"
+            },
+            {
+                "id": 90,
+                "name": "PEMENANG"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "SUMBAWA BARAT",
+        "districts": [
+            {
+                "id": 91,
+                "name": "TALIWANG"
+            },
+            {
+                "id": 92,
+                "name": "JEREWEH"
+            },
+            {
+                "id": 93,
+                "name": "SATELUK (SETELUK)"
+            },
+            {
+                "id": 94,
+                "name": "SEKONGKANG"
+            },
+            {
+                "id": 95,
+                "name": "BRANG REA"
+            },
+            {
+                "id": 96,
+                "name": "POTO TANO"
+            },
+            {
+                "id": 97,
+                "name": "MALUK"
+            },
+            {
+                "id": 98,
+                "name": "BRANG ENE"
+            }
+        ]
+    }
+]

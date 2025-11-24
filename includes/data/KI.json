@@ -1,0 +1,474 @@
+[
+    {
+        "id": 78,
+        "name": "BALIKPAPAN",
+        "districts": [
+            {
+                "id": 792,
+                "name": "BALIKPAPAN BARAT"
+            },
+            {
+                "id": 793,
+                "name": "BALIKPAPAN SELATAN"
+            },
+            {
+                "id": 794,
+                "name": "BALIKPAPAN TENGAH"
+            },
+            {
+                "id": 795,
+                "name": "BALIKPAPAN TIMUR"
+            },
+            {
+                "id": 796,
+                "name": "BALIKPAPAN UTARA"
+            },
+            {
+                "id": 798,
+                "name": "BALIKPAPAN KOTA"
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "name": "KUTAI KARTANEGARA",
+        "districts": [
+            {
+                "id": 791,
+                "name": "SAMBOJA (SEMBOJA)"
+            },
+            {
+                "id": 797,
+                "name": "MUARA JAWA"
+            },
+            {
+                "id": 5169,
+                "name": "TENGGARONG"
+            },
+            {
+                "id": 5170,
+                "name": "KEMBANG JANGGUT"
+            },
+            {
+                "id": 5171,
+                "name": "KENOHAN"
+            },
+            {
+                "id": 5172,
+                "name": "KOTA BANGUN"
+            },
+            {
+                "id": 5173,
+                "name": "LOA KULU"
+            },
+            {
+                "id": 5174,
+                "name": "MUARA KAMAN"
+            },
+            {
+                "id": 5175,
+                "name": "MUARA MUNTAI"
+            },
+            {
+                "id": 5176,
+                "name": "SEBULU"
+            },
+            {
+                "id": 5177,
+                "name": "TABANG"
+            },
+            {
+                "id": 5178,
+                "name": "LOA JANAN"
+            },
+            {
+                "id": 5179,
+                "name": "MUARA BADAK"
+            },
+            {
+                "id": 5180,
+                "name": "SANGA-SANGA"
+            },
+            {
+                "id": 5181,
+                "name": "MARANG KAYU"
+            },
+            {
+                "id": 5182,
+                "name": "MUARA WIS"
+            },
+            {
+                "id": 5183,
+                "name": "TENGGARONG SEBERANG"
+            },
+            {
+                "id": 5184,
+                "name": "ANGGANA"
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "name": "PASER",
+        "districts": [
+            {
+                "id": 799,
+                "name": "TANAH GROGOT"
+            },
+            {
+                "id": 800,
+                "name": "BATU SOPANG"
+            },
+            {
+                "id": 801,
+                "name": "KUARO"
+            },
+            {
+                "id": 802,
+                "name": "LONG KALI"
+            },
+            {
+                "id": 803,
+                "name": "LONG IKIS"
+            },
+            {
+                "id": 804,
+                "name": "MUARA KOMAM"
+            },
+            {
+                "id": 805,
+                "name": "PASIR BELENGKONG"
+            },
+            {
+                "id": 806,
+                "name": "BATU ENGAU"
+            },
+            {
+                "id": 807,
+                "name": "TANJUNG HARAPAN"
+            },
+            {
+                "id": 808,
+                "name": "MUARA SAMU"
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "name": "BERAU",
+        "districts": [
+            {
+                "id": 809,
+                "name": "TANJUNG REDEB"
+            },
+            {
+                "id": 810,
+                "name": "BIDUK-BIDUK"
+            },
+            {
+                "id": 811,
+                "name": "GUNUNG TABUR"
+            },
+            {
+                "id": 812,
+                "name": "KELAY"
+            },
+            {
+                "id": 813,
+                "name": "DERAWAN (PULAU DERAWAN)"
+            },
+            {
+                "id": 814,
+                "name": "SAMBALIUNG"
+            },
+            {
+                "id": 815,
+                "name": "SEGAH"
+            },
+            {
+                "id": 816,
+                "name": "TALISAYAN"
+            },
+            {
+                "id": 817,
+                "name": "MARATUA"
+            },
+            {
+                "id": 818,
+                "name": "TELUK BAYUR"
+            },
+            {
+                "id": 819,
+                "name": "BIATAN"
+            },
+            {
+                "id": 820,
+                "name": "BATU PUTIH"
+            },
+            {
+                "id": 821,
+                "name": "TABALAR"
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "name": "PENAJAM PASER UTARA",
+        "districts": [
+            {
+                "id": 822,
+                "name": "PENAJAM"
+            },
+            {
+                "id": 823,
+                "name": "WARU"
+            },
+            {
+                "id": 824,
+                "name": "BABULU"
+            },
+            {
+                "id": 825,
+                "name": "SEPAKU"
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "name": "BONTANG",
+        "districts": [
+            {
+                "id": 826,
+                "name": "BONTANG BARAT"
+            },
+            {
+                "id": 827,
+                "name": "BONTANG SELATAN"
+            },
+            {
+                "id": 828,
+                "name": "BONTANG UTARA"
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "name": "KUTAI TIMUR",
+        "districts": [
+            {
+                "id": 829,
+                "name": "TELUK PANDAN"
+            },
+            {
+                "id": 830,
+                "name": "BATU AMPAR"
+            },
+            {
+                "id": 831,
+                "name": "BENGALON"
+            },
+            {
+                "id": 832,
+                "name": "BUSANG"
+            },
+            {
+                "id": 833,
+                "name": "KALIORANG"
+            },
+            {
+                "id": 834,
+                "name": "KARANGAN"
+            },
+            {
+                "id": 835,
+                "name": "KAUBUN"
+            },
+            {
+                "id": 836,
+                "name": "KONGBENG"
+            },
+            {
+                "id": 837,
+                "name": "LONG MESANGAT (MESENGAT)"
+            },
+            {
+                "id": 838,
+                "name": "MUARA ANCALONG"
+            },
+            {
+                "id": 839,
+                "name": "MUARA BENGKAL"
+            },
+            {
+                "id": 840,
+                "name": "MUARA WAHAU"
+            },
+            {
+                "id": 841,
+                "name": "RANTAU PULUNG"
+            },
+            {
+                "id": 842,
+                "name": "SANDARAN"
+            },
+            {
+                "id": 843,
+                "name": "SANGATTA SELATAN"
+            },
+            {
+                "id": 844,
+                "name": "SANGKULIRANG"
+            },
+            {
+                "id": 845,
+                "name": "TELEN"
+            },
+            {
+                "id": 846,
+                "name": "SANGATTA UTARA"
+            }
+        ]
+    },
+    {
+        "id": 534,
+        "name": "SAMARINDA",
+        "districts": [
+            {
+                "id": 5159,
+                "name": "SAMARINDA SEBERANG"
+            },
+            {
+                "id": 5160,
+                "name": "PALARAN"
+            },
+            {
+                "id": 5161,
+                "name": "SAMARINDA ILIR"
+            },
+            {
+                "id": 5162,
+                "name": "SAMARINDA ULU"
+            },
+            {
+                "id": 5163,
+                "name": "SAMARINDA UTARA"
+            },
+            {
+                "id": 5164,
+                "name": "SUNGAI KUNJANG"
+            },
+            {
+                "id": 5165,
+                "name": "LOA JANAN ILIR"
+            },
+            {
+                "id": 5166,
+                "name": "SAMARINDA KOTA"
+            },
+            {
+                "id": 5167,
+                "name": "SAMBUTAN"
+            },
+            {
+                "id": 5168,
+                "name": "SUNGAI PINANG"
+            }
+        ]
+    },
+    {
+        "id": 536,
+        "name": "KUTAI BARAT",
+        "districts": [
+            {
+                "id": 5185,
+                "name": "BARONG TONGKOK"
+            },
+            {
+                "id": 5186,
+                "name": "BENTIAN BESAR"
+            },
+            {
+                "id": 5187,
+                "name": "BONGAN"
+            },
+            {
+                "id": 5188,
+                "name": "DAMAI"
+            },
+            {
+                "id": 5189,
+                "name": "JEMPANG"
+            },
+            {
+                "id": 5191,
+                "name": "LONG IRAM"
+            },
+            {
+                "id": 5194,
+                "name": "MELAK"
+            },
+            {
+                "id": 5195,
+                "name": "MUARA PAHU"
+            },
+            {
+                "id": 5196,
+                "name": "MUARA LAWA"
+            },
+            {
+                "id": 5197,
+                "name": "PENYINGGAHAN"
+            },
+            {
+                "id": 5198,
+                "name": "LINGGANG BIGUNG"
+            },
+            {
+                "id": 5200,
+                "name": "NYUATAN"
+            },
+            {
+                "id": 5201,
+                "name": "TERING"
+            },
+            {
+                "id": 5202,
+                "name": "SILUQ NGURAI"
+            },
+            {
+                "id": 5203,
+                "name": "SEKOLAQ DARAT"
+            },
+            {
+                "id": 5204,
+                "name": "MOOK MANAAR BULATN"
+            }
+        ]
+    },
+    {
+        "id": 537,
+        "name": "MAHAKAM ULU",
+        "districts": [
+            {
+                "id": 5190,
+                "name": "LONG APARI"
+            },
+            {
+                "id": 5192,
+                "name": "LONG PAHANGAI"
+            },
+            {
+                "id": 5193,
+                "name": "LONG BAGUN"
+            },
+            {
+                "id": 5199,
+                "name": "LONG HUBUNG"
+            },
+            {
+                "id": 5205,
+                "name": "LAHAM"
+            }
+        ]
+    }
+]

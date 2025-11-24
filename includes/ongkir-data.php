@@ -7,20 +7,24 @@ class Ongkir_Data {
   /**
    * Get all cities in a province
    */
-  static function get_cities($prov_id, $raw = false) {
-    $data = self::_read_json($prov_id . '.json');
-
-    if ($raw) {
-      return $data;
+  static function get_cities($prov_code, $raw = false) {
+    // if provided param is ID, convert to code
+    if (is_int($prov_code)) {
+      $prov_code = self::get_province_code($prov_code);
     }
 
-    // if exists, scan for duplicate city name
-    if ($data) {
-      $data = self::_prefix_dupe_city_name($prov_id, $data);
-      return $data;
-    } else {
-      return $data;
-    }
+    $prov_code = strtoupper($prov_code);
+    $data = self::_read_json($prov_code . '.json');
+    return $data;
+  }
+
+  /**
+   * Convert ID to Province Code based on RajaOngkir list.
+   */
+  static function get_province_code($prov_id) {
+    $provs = self::_read_json('provinces.json');
+    $code = array_search($prov_id, $provs);
+    return $code;
   }
 
   /**
@@ -30,8 +34,8 @@ class Ongkir_Data {
    * @return int - the province's ID
    */
   static function get_province_id($prov_code) {
-    $provinces = self::_read_json('provinces.json');
-    $id = array_key_exists($prov_code, $provinces) ? $provinces[$prov_code] : 0;
+    $provs = self::_read_json('provinces.json');
+    $id = array_key_exists($prov_code, $provs) ? $provs[$prov_code] : 0;
     return $id;
   }
 
@@ -153,27 +157,5 @@ class Ongkir_Data {
     return $data;
   }
 }
-
-/**
- * Refresh the JSON data with latest City and Subdistricts
- * 
- * WARNING: only uncomment this to update the JSON data
- */
-// add_action('admin_init', 'ongkir_refresh_json_data');
-
-// function ongkir_refresh_json_data() {
-//   $prov = Ongkir_Data::get_provinces();
-
-//   foreach ($prov as $code => $id) {
-//     $result = wp_remote_get(ONGKIR_API . "/all-cities/$id");
-
-//     // if not error
-//     if (!is_wp_error($result)) {
-//       $data = $result['body'];
-//       file_put_contents(__DIR__ . "/data/$id.json", $data);
-//       break;
-//     }
-//   }
-// }
 
 endif;

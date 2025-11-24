@@ -1,0 +1,1352 @@
+[
+    {
+        "id": 290,
+        "name": "KUPANG",
+        "districts": [
+            {
+                "id": 2897,
+                "name": "ALAK"
+            },
+            {
+                "id": 2898,
+                "name": "KELAPA LIMA"
+            },
+            {
+                "id": 2899,
+                "name": "MAULAFA"
+            },
+            {
+                "id": 2900,
+                "name": "OEBOBO"
+            },
+            {
+                "id": 2901,
+                "name": "KOTA LAMA"
+            },
+            {
+                "id": 2902,
+                "name": "KOTA RAJA"
+            },
+            {
+                "id": 3167,
+                "name": "AMABI OEFETO TIMUR"
+            },
+            {
+                "id": 3168,
+                "name": "AMARASI BARAT"
+            },
+            {
+                "id": 3169,
+                "name": "AMARASI SELATAN"
+            },
+            {
+                "id": 3170,
+                "name": "AMARASI TIMUR"
+            },
+            {
+                "id": 3171,
+                "name": "AMARASI"
+            },
+            {
+                "id": 3172,
+                "name": "AMFOANG BARAT DAYA"
+            },
+            {
+                "id": 3173,
+                "name": "AMFOANG BARAT LAUT"
+            },
+            {
+                "id": 3174,
+                "name": "AMFOANG SELATAN"
+            },
+            {
+                "id": 3175,
+                "name": "AMFOANG UTARA"
+            },
+            {
+                "id": 3176,
+                "name": "FATULEU"
+            },
+            {
+                "id": 3177,
+                "name": "FATULEU BARAT"
+            },
+            {
+                "id": 3178,
+                "name": "FATULEU TENGAH"
+            },
+            {
+                "id": 3180,
+                "name": "KUPANG BARAT"
+            },
+            {
+                "id": 3181,
+                "name": "KUPANG TENGAH"
+            },
+            {
+                "id": 3182,
+                "name": "KUPANG TIMUR"
+            },
+            {
+                "id": 3183,
+                "name": "NEKAMESE"
+            },
+            {
+                "id": 3188,
+                "name": "SEMAU"
+            },
+            {
+                "id": 3189,
+                "name": "SEMAU SELATAN"
+            },
+            {
+                "id": 3190,
+                "name": "SULAMU"
+            },
+            {
+                "id": 3191,
+                "name": "TAEBENU"
+            },
+            {
+                "id": 3192,
+                "name": "TAKARI"
+            },
+            {
+                "id": 3193,
+                "name": "AMFOANG TIMUR"
+            },
+            {
+                "id": 3194,
+                "name": "AMABI OEFETO"
+            },
+            {
+                "id": 3195,
+                "name": "AMFOANG TENGAH"
+            }
+        ]
+    },
+    {
+        "id": 292,
+        "name": "SUMBA TENGAH",
+        "districts": [
+            {
+                "id": 2903,
+                "name": "MAMBORO"
+            },
+            {
+                "id": 2904,
+                "name": "UMBU RATU NGGAY"
+            },
+            {
+                "id": 2905,
+                "name": "UMBU RATU NGGAY BARAT"
+            },
+            {
+                "id": 2906,
+                "name": "KATIKU TANA"
+            },
+            {
+                "id": 2907,
+                "name": "KATIKUTANA SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 293,
+        "name": "BELU",
+        "districts": [
+            {
+                "id": 2908,
+                "name": "ATAMBUA KOTA"
+            },
+            {
+                "id": 2910,
+                "name": "LAMAKNEN"
+            },
+            {
+                "id": 2914,
+                "name": "TASIFETO BARAT"
+            },
+            {
+                "id": 2915,
+                "name": "TASIFETO TIMUR"
+            },
+            {
+                "id": 2916,
+                "name": "KAKULUK MESAK"
+            },
+            {
+                "id": 2917,
+                "name": "RAIHAT"
+            },
+            {
+                "id": 2920,
+                "name": "RAIMANUK"
+            },
+            {
+                "id": 2921,
+                "name": "NANAET DUABESI"
+            },
+            {
+                "id": 2922,
+                "name": "LASIOLAT"
+            },
+            {
+                "id": 2923,
+                "name": "LAMAKNEN SELATAN"
+            },
+            {
+                "id": 2924,
+                "name": "ATAMBUA SELATAN"
+            },
+            {
+                "id": 2925,
+                "name": "ATAMBUA BARAT"
+            }
+        ]
+    },
+    {
+        "id": 294,
+        "name": "MALAKA",
+        "districts": [
+            {
+                "id": 2909,
+                "name": "KOBALIMA"
+            },
+            {
+                "id": 2911,
+                "name": "MALAKA TIMUR"
+            },
+            {
+                "id": 2912,
+                "name": "MALAKA TENGAH"
+            },
+            {
+                "id": 2913,
+                "name": "MALAKA BARAT"
+            },
+            {
+                "id": 2918,
+                "name": "RINHAT"
+            },
+            {
+                "id": 2919,
+                "name": "SASITAMEAN"
+            },
+            {
+                "id": 3196,
+                "name": "WEWIKU"
+            },
+            {
+                "id": 3197,
+                "name": "WELIMAN"
+            },
+            {
+                "id": 3198,
+                "name": "LAENMANEN"
+            },
+            {
+                "id": 3199,
+                "name": "KOBALIMA TIMUR"
+            },
+            {
+                "id": 3200,
+                "name": "IO KUFEU"
+            },
+            {
+                "id": 3201,
+                "name": "BOTIN LEOBELE"
+            }
+        ]
+    },
+    {
+        "id": 296,
+        "name": "ALOR",
+        "districts": [
+            {
+                "id": 2926,
+                "name": "ALOR TIMUR"
+            },
+            {
+                "id": 2927,
+                "name": "PANTAR"
+            },
+            {
+                "id": 2928,
+                "name": "ALOR SELATAN"
+            },
+            {
+                "id": 2929,
+                "name": "ALOR BARAT DAYA"
+            },
+            {
+                "id": 2930,
+                "name": "ALOR BARAT LAUT"
+            },
+            {
+                "id": 2931,
+                "name": "ALOR TENGAH UTARA"
+            },
+            {
+                "id": 2932,
+                "name": "ALOR TIMUR LAUT"
+            },
+            {
+                "id": 2933,
+                "name": "PANTAR BARAT"
+            },
+            {
+                "id": 2934,
+                "name": "TELUK MUTIARA"
+            },
+            {
+                "id": 2935,
+                "name": "PUREMAN"
+            },
+            {
+                "id": 2936,
+                "name": "PULAU PURA"
+            },
+            {
+                "id": 2937,
+                "name": "PANTAR TIMUR"
+            },
+            {
+                "id": 2938,
+                "name": "PANTAR TENGAH"
+            },
+            {
+                "id": 2939,
+                "name": "PANTAR BARAT LAUT"
+            },
+            {
+                "id": 2940,
+                "name": "MATARU"
+            },
+            {
+                "id": 2941,
+                "name": "LEMBUR"
+            },
+            {
+                "id": 2942,
+                "name": "KABOLA"
+            }
+        ]
+    },
+    {
+        "id": 297,
+        "name": "TIMOR TENGAH UTARA",
+        "districts": [
+            {
+                "id": 2943,
+                "name": "KOTA KEFAMENANU"
+            },
+            {
+                "id": 2944,
+                "name": "BIBOKI SELATAN"
+            },
+            {
+                "id": 2945,
+                "name": "BIBOKI UTARA"
+            },
+            {
+                "id": 2946,
+                "name": "INSANA"
+            },
+            {
+                "id": 2947,
+                "name": "MIOMAFO TIMUR"
+            },
+            {
+                "id": 2948,
+                "name": "MIOMAFO BARAT"
+            },
+            {
+                "id": 2949,
+                "name": "BIBOKI ANLEU"
+            },
+            {
+                "id": 2950,
+                "name": "INSANA UTARA"
+            },
+            {
+                "id": 2951,
+                "name": "NOEMUTI"
+            },
+            {
+                "id": 2952,
+                "name": "NOEMUTI TIMUR"
+            },
+            {
+                "id": 2953,
+                "name": "NAIBENU"
+            },
+            {
+                "id": 2954,
+                "name": "MUTIS"
+            },
+            {
+                "id": 2955,
+                "name": "MUSI"
+            },
+            {
+                "id": 2956,
+                "name": "MIOMAFO TENGAH"
+            },
+            {
+                "id": 2957,
+                "name": "INSANA TENGAH"
+            },
+            {
+                "id": 2958,
+                "name": "INSANA FAFINESU"
+            },
+            {
+                "id": 2959,
+                "name": "INSANA BARAT"
+            },
+            {
+                "id": 2960,
+                "name": "BIKOMI UTARA"
+            },
+            {
+                "id": 2961,
+                "name": "BIKOMI TENGAH"
+            },
+            {
+                "id": 2962,
+                "name": "BIKOMI SELATAN"
+            },
+            {
+                "id": 2963,
+                "name": "BIKOMI NILULAT"
+            },
+            {
+                "id": 2964,
+                "name": "BIBOKI TAN PAH"
+            },
+            {
+                "id": 2965,
+                "name": "BIBOKI MOENLEU"
+            },
+            {
+                "id": 2966,
+                "name": "BIBOKI FEOTLEU"
+            }
+        ]
+    },
+    {
+        "id": 298,
+        "name": "FLORES TIMUR",
+        "districts": [
+            {
+                "id": 2967,
+                "name": "LARANTUKA"
+            },
+            {
+                "id": 2968,
+                "name": "ADONARA BARAT"
+            },
+            {
+                "id": 2969,
+                "name": "ADONARA TIMUR"
+            },
+            {
+                "id": 2970,
+                "name": "SOLOR BARAT"
+            },
+            {
+                "id": 2971,
+                "name": "SOLOR TIMUR"
+            },
+            {
+                "id": 2972,
+                "name": "TANJUNG BUNGA"
+            },
+            {
+                "id": 2973,
+                "name": "WULANGGITANG"
+            },
+            {
+                "id": 2974,
+                "name": "ILE BOLENG"
+            },
+            {
+                "id": 2975,
+                "name": "ILE MANDIRI"
+            },
+            {
+                "id": 2976,
+                "name": "KELUBAGOLIT"
+            },
+            {
+                "id": 2977,
+                "name": "TITEHENA"
+            },
+            {
+                "id": 2978,
+                "name": "WITIHAMA"
+            },
+            {
+                "id": 2979,
+                "name": "WOTAN ULUMANDO"
+            },
+            {
+                "id": 2980,
+                "name": "LEWOLEMA"
+            },
+            {
+                "id": 2981,
+                "name": "ILE BURA"
+            },
+            {
+                "id": 2982,
+                "name": "DEMON PAGONG"
+            },
+            {
+                "id": 2983,
+                "name": "ADONARA TENGAH"
+            },
+            {
+                "id": 2984,
+                "name": "ADONARA"
+            },
+            {
+                "id": 2985,
+                "name": "SOLOR SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 300,
+        "name": "SIKKA",
+        "districts": [
+            {
+                "id": 2986,
+                "name": "BOLA"
+            },
+            {
+                "id": 2987,
+                "name": "KEWAPANTE"
+            },
+            {
+                "id": 2988,
+                "name": "LELA"
+            },
+            {
+                "id": 2989,
+                "name": "NITA"
+            },
+            {
+                "id": 2990,
+                "name": "PAGA"
+            },
+            {
+                "id": 2991,
+                "name": "TALIBURA"
+            },
+            {
+                "id": 2992,
+                "name": "ALOK"
+            },
+            {
+                "id": 2993,
+                "name": "MEGO"
+            },
+            {
+                "id": 2994,
+                "name": "PALUE"
+            },
+            {
+                "id": 2995,
+                "name": "WAIGETE"
+            },
+            {
+                "id": 2996,
+                "name": "WAIBLAMA"
+            },
+            {
+                "id": 2997,
+                "name": "TANA WAWO"
+            },
+            {
+                "id": 2998,
+                "name": "NELLE (MAUMEREI)"
+            },
+            {
+                "id": 2999,
+                "name": "MAPITARA"
+            },
+            {
+                "id": 3000,
+                "name": "MAGEPANDA"
+            },
+            {
+                "id": 3001,
+                "name": "KOTING"
+            },
+            {
+                "id": 3002,
+                "name": "KANGAE"
+            },
+            {
+                "id": 3003,
+                "name": "HEWOKLOANG"
+            },
+            {
+                "id": 3004,
+                "name": "DORENG"
+            },
+            {
+                "id": 3005,
+                "name": "ALOK TIMUR"
+            },
+            {
+                "id": 3006,
+                "name": "ALOK BARAT"
+            }
+        ]
+    },
+    {
+        "id": 301,
+        "name": "MANGGARAI",
+        "districts": [
+            {
+                "id": 3007,
+                "name": "RUTENG"
+            },
+            {
+                "id": 3008,
+                "name": "CIBAL"
+            },
+            {
+                "id": 3009,
+                "name": "REOK"
+            },
+            {
+                "id": 3010,
+                "name": "SATAR MESE"
+            },
+            {
+                "id": 3011,
+                "name": "WAE RII"
+            },
+            {
+                "id": 3012,
+                "name": "SATAR MESE BARAT"
+            },
+            {
+                "id": 3013,
+                "name": "RAHONG UTARA"
+            },
+            {
+                "id": 3014,
+                "name": "LELAK"
+            },
+            {
+                "id": 3015,
+                "name": "LANGKE REMBONG"
+            },
+            {
+                "id": 3016,
+                "name": "CIBAL BARAT"
+            },
+            {
+                "id": 3017,
+                "name": "REOK BARAT"
+            }
+        ]
+    },
+    {
+        "id": 308,
+        "name": "TIMOR TENGAH SELATAN",
+        "districts": [
+            {
+                "id": 3018,
+                "name": "AMANATUN UTARA"
+            },
+            {
+                "id": 3019,
+                "name": "AMANATUN SELATAN"
+            },
+            {
+                "id": 3020,
+                "name": "AMANUBAN SELATAN"
+            },
+            {
+                "id": 3021,
+                "name": "AMANUBAN BARAT"
+            },
+            {
+                "id": 3022,
+                "name": "MOLLO UTARA"
+            },
+            {
+                "id": 3023,
+                "name": "MOLLO SELATAN"
+            },
+            {
+                "id": 3024,
+                "name": "AMANUBAN TENGAH"
+            },
+            {
+                "id": 3025,
+                "name": "AMANUBAN TIMUR"
+            },
+            {
+                "id": 3026,
+                "name": "BATU PUTIH"
+            },
+            {
+                "id": 3027,
+                "name": "BOKING"
+            },
+            {
+                "id": 3028,
+                "name": "FATUMNASI"
+            },
+            {
+                "id": 3029,
+                "name": "KOLBANO"
+            },
+            {
+                "id": 3030,
+                "name": "KIE (KI'E)"
+            },
+            {
+                "id": 3031,
+                "name": "KOT OLIN"
+            },
+            {
+                "id": 3032,
+                "name": "KUALIN"
+            },
+            {
+                "id": 3033,
+                "name": "KUANFATU"
+            },
+            {
+                "id": 3034,
+                "name": "NUNKOLO"
+            },
+            {
+                "id": 3035,
+                "name": "OENINO"
+            },
+            {
+                "id": 3036,
+                "name": "POLEN"
+            },
+            {
+                "id": 3037,
+                "name": "TOIANAS"
+            },
+            {
+                "id": 3038,
+                "name": "SANTIAN"
+            },
+            {
+                "id": 3039,
+                "name": "NUNBENA"
+            },
+            {
+                "id": 3040,
+                "name": "NOEBANA"
+            },
+            {
+                "id": 3041,
+                "name": "MOLLO TENGAH"
+            },
+            {
+                "id": 3042,
+                "name": "MOLLO BARAT"
+            },
+            {
+                "id": 3043,
+                "name": "KUATNANA"
+            },
+            {
+                "id": 3044,
+                "name": "KOTA SOE"
+            },
+            {
+                "id": 3045,
+                "name": "TOBU"
+            },
+            {
+                "id": 3046,
+                "name": "KOK BAUN"
+            },
+            {
+                "id": 3047,
+                "name": "FAUTMOLO"
+            },
+            {
+                "id": 3048,
+                "name": "FATUKOPA"
+            },
+            {
+                "id": 3049,
+                "name": "NOEBEBA"
+            }
+        ]
+    },
+    {
+        "id": 309,
+        "name": "ENDE",
+        "districts": [
+            {
+                "id": 3050,
+                "name": "ENDE"
+            },
+            {
+                "id": 3051,
+                "name": "DETUSOKO"
+            },
+            {
+                "id": 3052,
+                "name": "NANGAPANDA"
+            },
+            {
+                "id": 3053,
+                "name": "NDONA"
+            },
+            {
+                "id": 3054,
+                "name": "WOLOWARU"
+            },
+            {
+                "id": 3055,
+                "name": "DETUKELI"
+            },
+            {
+                "id": 3056,
+                "name": "ENDE SELATAN"
+            },
+            {
+                "id": 3057,
+                "name": "ENDE TENGAH"
+            },
+            {
+                "id": 3058,
+                "name": "ENDE TIMUR"
+            },
+            {
+                "id": 3059,
+                "name": "ENDE UTARA"
+            },
+            {
+                "id": 3060,
+                "name": "KELIMUTU"
+            },
+            {
+                "id": 3061,
+                "name": "KOTA BARU"
+            },
+            {
+                "id": 3062,
+                "name": "LIO TIMUR"
+            },
+            {
+                "id": 3063,
+                "name": "MAUKARO"
+            },
+            {
+                "id": 3064,
+                "name": "NDONA TIMUR"
+            },
+            {
+                "id": 3065,
+                "name": "PULAU ENDE"
+            },
+            {
+                "id": 3066,
+                "name": "WEWARIA"
+            },
+            {
+                "id": 3067,
+                "name": "WOLOJITA"
+            },
+            {
+                "id": 3068,
+                "name": "MAUROLE"
+            },
+            {
+                "id": 3069,
+                "name": "NDORI"
+            },
+            {
+                "id": 3070,
+                "name": "LEPEMBUSU KELISOKE"
+            }
+        ]
+    },
+    {
+        "id": 310,
+        "name": "NGADA",
+        "districts": [
+            {
+                "id": 3071,
+                "name": "BAJAWA"
+            },
+            {
+                "id": 3072,
+                "name": "AIMERE"
+            },
+            {
+                "id": 3073,
+                "name": "RIUNG"
+            },
+            {
+                "id": 3074,
+                "name": "JEREBUU"
+            },
+            {
+                "id": 3075,
+                "name": "RIUNG BARAT"
+            },
+            {
+                "id": 3076,
+                "name": "SOA"
+            },
+            {
+                "id": 3077,
+                "name": "GOLEWA"
+            },
+            {
+                "id": 3078,
+                "name": "WOLOMEZE (RIUNG SELATAN)"
+            },
+            {
+                "id": 3079,
+                "name": "BAJAWA UTARA"
+            },
+            {
+                "id": 3080,
+                "name": "GOLEWA BARAT"
+            },
+            {
+                "id": 3081,
+                "name": "GOLEWA SELATAN"
+            },
+            {
+                "id": 3082,
+                "name": "INERIE"
+            }
+        ]
+    },
+    {
+        "id": 313,
+        "name": "SUMBA TIMUR",
+        "districts": [
+            {
+                "id": 3083,
+                "name": "KOTA WAINGAPU"
+            },
+            {
+                "id": 3084,
+                "name": "LEWA"
+            },
+            {
+                "id": 3085,
+                "name": "PABERIWAI"
+            },
+            {
+                "id": 3086,
+                "name": "PAHUNGA LODU"
+            },
+            {
+                "id": 3087,
+                "name": "TABUNDUNG"
+            },
+            {
+                "id": 3088,
+                "name": "HAHARU"
+            },
+            {
+                "id": 3089,
+                "name": "KAHAUNGUWETI (KAHAUNGU ETI)"
+            },
+            {
+                "id": 3090,
+                "name": "KARERA"
+            },
+            {
+                "id": 3091,
+                "name": "MATAWAI LAPPAU (LA PAWU)"
+            },
+            {
+                "id": 3092,
+                "name": "NGGAHA ORIANGU"
+            },
+            {
+                "id": 3093,
+                "name": "PANDAWAI"
+            },
+            {
+                "id": 3094,
+                "name": "PINUPAHAR (PIRAPAHAR)"
+            },
+            {
+                "id": 3095,
+                "name": "RINDI"
+            },
+            {
+                "id": 3096,
+                "name": "UMALULU"
+            },
+            {
+                "id": 3097,
+                "name": "WULA WAIJELU"
+            },
+            {
+                "id": 3098,
+                "name": "NGADU NGALA"
+            },
+            {
+                "id": 3099,
+                "name": "MAHU"
+            },
+            {
+                "id": 3100,
+                "name": "LEWA TIDAHU"
+            },
+            {
+                "id": 3101,
+                "name": "KATALA HAMU LINGU"
+            },
+            {
+                "id": 3102,
+                "name": "KAMBERA"
+            },
+            {
+                "id": 3103,
+                "name": "KAMBATA MAPAMBUHANG"
+            },
+            {
+                "id": 3104,
+                "name": "KANATANG"
+            }
+        ]
+    },
+    {
+        "id": 314,
+        "name": "SUMBA BARAT",
+        "districts": [
+            {
+                "id": 3105,
+                "name": "KOTA WAIKABUBAK"
+            },
+            {
+                "id": 3106,
+                "name": "WANOKAKA"
+            },
+            {
+                "id": 3107,
+                "name": "TANA RIGHU"
+            },
+            {
+                "id": 3108,
+                "name": "LOLI"
+            },
+            {
+                "id": 3109,
+                "name": "LAMBOYA BARAT"
+            },
+            {
+                "id": 3110,
+                "name": "LAMBOYA"
+            }
+        ]
+    },
+    {
+        "id": 318,
+        "name": "MANGGARAI BARAT",
+        "districts": [
+            {
+                "id": 3111,
+                "name": "KOMODO"
+            },
+            {
+                "id": 3112,
+                "name": "KUWUS"
+            },
+            {
+                "id": 3113,
+                "name": "LEMBOR"
+            },
+            {
+                "id": 3114,
+                "name": "MACANG PACAR"
+            },
+            {
+                "id": 3115,
+                "name": "SANO NGGOANG"
+            },
+            {
+                "id": 3116,
+                "name": "WELAK"
+            },
+            {
+                "id": 3117,
+                "name": "BOLENG"
+            },
+            {
+                "id": 3118,
+                "name": "LEMBOR SELATAN"
+            },
+            {
+                "id": 3119,
+                "name": "MBELILING"
+            },
+            {
+                "id": 3120,
+                "name": "NDOSO"
+            }
+        ]
+    },
+    {
+        "id": 319,
+        "name": "MANGGARAI TIMUR",
+        "districts": [
+            {
+                "id": 3121,
+                "name": "BORONG"
+            },
+            {
+                "id": 3122,
+                "name": "ELAR"
+            },
+            {
+                "id": 3123,
+                "name": "LAMBA LEDA"
+            },
+            {
+                "id": 3124,
+                "name": "POCO RANAKA"
+            },
+            {
+                "id": 3125,
+                "name": "KOTA KOMBA"
+            },
+            {
+                "id": 3126,
+                "name": "SAMBI RAMPAS"
+            },
+            {
+                "id": 3127,
+                "name": "ELAR SELATAN"
+            },
+            {
+                "id": 3128,
+                "name": "POCO RANAKA TIMUR"
+            },
+            {
+                "id": 3129,
+                "name": "RANA MESE"
+            }
+        ]
+    },
+    {
+        "id": 321,
+        "name": "NAGEKEO",
+        "districts": [
+            {
+                "id": 3130,
+                "name": "AESESA"
+            },
+            {
+                "id": 3131,
+                "name": "BOAWAE"
+            },
+            {
+                "id": 3132,
+                "name": "MAUPONGGO"
+            },
+            {
+                "id": 3133,
+                "name": "NANGARORO"
+            },
+            {
+                "id": 3134,
+                "name": "KEO TENGAH"
+            },
+            {
+                "id": 3135,
+                "name": "WOLOWAE"
+            },
+            {
+                "id": 3136,
+                "name": "AESESA SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 323,
+        "name": "ROTE NDAO",
+        "districts": [
+            {
+                "id": 3137,
+                "name": "LOBALAIN"
+            },
+            {
+                "id": 3138,
+                "name": "PANTAI BARU"
+            },
+            {
+                "id": 3139,
+                "name": "ROTE BARAT DAYA"
+            },
+            {
+                "id": 3140,
+                "name": "ROTE BARAT LAUT"
+            },
+            {
+                "id": 3141,
+                "name": "ROTE TENGAH"
+            },
+            {
+                "id": 3142,
+                "name": "ROTE TIMUR"
+            },
+            {
+                "id": 3143,
+                "name": "ROTE SELATAN"
+            },
+            {
+                "id": 3144,
+                "name": "ROTE BARAT"
+            },
+            {
+                "id": 3145,
+                "name": "LANDU LEKO"
+            },
+            {
+                "id": 3146,
+                "name": "NDAO NUSE"
+            }
+        ]
+    },
+    {
+        "id": 325,
+        "name": "SUMBA BARAT DAYA",
+        "districts": [
+            {
+                "id": 3147,
+                "name": "KODI"
+            },
+            {
+                "id": 3148,
+                "name": "WEWEWA BARAT"
+            },
+            {
+                "id": 3149,
+                "name": "WEWEWA TIMUR"
+            },
+            {
+                "id": 3150,
+                "name": "KODI BANGEDO"
+            },
+            {
+                "id": 3151,
+                "name": "KODI UTARA"
+            },
+            {
+                "id": 3152,
+                "name": "LOURA (LAURA)"
+            },
+            {
+                "id": 3153,
+                "name": "WEWEWA SELATAN"
+            },
+            {
+                "id": 3154,
+                "name": "WEWEWA UTARA"
+            },
+            {
+                "id": 3155,
+                "name": "KODI BALAGHAR"
+            },
+            {
+                "id": 3156,
+                "name": "KOTA TAMBOLAKA"
+            },
+            {
+                "id": 3157,
+                "name": "WEWEWA TENGAH (WEWERA TENGAH)"
+            }
+        ]
+    },
+    {
+        "id": 326,
+        "name": "LEMBATA",
+        "districts": [
+            {
+                "id": 3158,
+                "name": "BUYASURI"
+            },
+            {
+                "id": 3159,
+                "name": "OMESURI"
+            },
+            {
+                "id": 3160,
+                "name": "LEBATUKAN"
+            },
+            {
+                "id": 3161,
+                "name": "ILE APE"
+            },
+            {
+                "id": 3162,
+                "name": "NUBATUKAN"
+            },
+            {
+                "id": 3163,
+                "name": "ATADEI"
+            },
+            {
+                "id": 3164,
+                "name": "NAGA WUTUNG"
+            },
+            {
+                "id": 3165,
+                "name": "WULANDONI"
+            },
+            {
+                "id": 3166,
+                "name": "ILE APE TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 328,
+        "name": "SABU RAIJUA",
+        "districts": [
+            {
+                "id": 3179,
+                "name": "HAWU MEHARA"
+            },
+            {
+                "id": 3184,
+                "name": "RAIJUA"
+            },
+            {
+                "id": 3185,
+                "name": "SABU BARAT"
+            },
+            {
+                "id": 3186,
+                "name": "SABU LIAE"
+            },
+            {
+                "id": 3187,
+                "name": "SABU TIMUR"
+            },
+            {
+                "id": 3202,
+                "name": "SABU TENGAH"
+            }
+        ]
+    }
+]

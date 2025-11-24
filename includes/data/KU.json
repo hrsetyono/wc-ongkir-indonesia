@@ -1,0 +1,232 @@
+[
+    {
+        "id": 626,
+        "name": "TARAKAN",
+        "districts": [
+            {
+                "id": 6476,
+                "name": "TARAKAN BARAT"
+            },
+            {
+                "id": 6477,
+                "name": "TARAKAN TENGAH"
+            },
+            {
+                "id": 6478,
+                "name": "TARAKAN TIMUR"
+            },
+            {
+                "id": 6479,
+                "name": "TARAKAN UTARA"
+            }
+        ]
+    },
+    {
+        "id": 627,
+        "name": "BULUNGAN",
+        "districts": [
+            {
+                "id": 6480,
+                "name": "TANJUNG SELOR"
+            },
+            {
+                "id": 6481,
+                "name": "PESO"
+            },
+            {
+                "id": 6482,
+                "name": "PULAU BUNYU"
+            },
+            {
+                "id": 6483,
+                "name": "PESO HILIR\/ILIR"
+            },
+            {
+                "id": 6484,
+                "name": "SEKATAK"
+            },
+            {
+                "id": 6485,
+                "name": "TANJUNG PALAS"
+            },
+            {
+                "id": 6486,
+                "name": "TANJUNG PALAS BARAT"
+            },
+            {
+                "id": 6487,
+                "name": "TANJUNG PALAS TENGAH"
+            },
+            {
+                "id": 6488,
+                "name": "TANJUNG PALAS TIMUR"
+            },
+            {
+                "id": 6489,
+                "name": "TANJUNG PALAS UTARA"
+            }
+        ]
+    },
+    {
+        "id": 628,
+        "name": "MALINAU",
+        "districts": [
+            {
+                "id": 6490,
+                "name": "MALINAU KOTA"
+            },
+            {
+                "id": 6491,
+                "name": "MENTARANG"
+            },
+            {
+                "id": 6492,
+                "name": "KAYAN HULU"
+            },
+            {
+                "id": 6493,
+                "name": "KAYAN HILIR"
+            },
+            {
+                "id": 6494,
+                "name": "PUJUNGAN"
+            },
+            {
+                "id": 6495,
+                "name": "MALINAU BARAT"
+            },
+            {
+                "id": 6496,
+                "name": "MALINAU SELATAN"
+            },
+            {
+                "id": 6497,
+                "name": "MALINAU UTARA"
+            },
+            {
+                "id": 6498,
+                "name": "SUNGAI BOH"
+            },
+            {
+                "id": 6499,
+                "name": "MENTARANG HULU"
+            },
+            {
+                "id": 6500,
+                "name": "KAYAN SELATAN"
+            },
+            {
+                "id": 6501,
+                "name": "BAHAU HULU"
+            },
+            {
+                "id": 6502,
+                "name": "MALINAU SELATAN HILIR"
+            },
+            {
+                "id": 6503,
+                "name": "MALINAU SELATAN HULU"
+            },
+            {
+                "id": 6504,
+                "name": "SUNGAI TUBU"
+            }
+        ]
+    },
+    {
+        "id": 629,
+        "name": "NUNUKAN",
+        "districts": [
+            {
+                "id": 6505,
+                "name": "NUNUKAN"
+            },
+            {
+                "id": 6506,
+                "name": "KRAYAN"
+            },
+            {
+                "id": 6507,
+                "name": "LUMBIS"
+            },
+            {
+                "id": 6508,
+                "name": "KRAYAN SELATAN"
+            },
+            {
+                "id": 6509,
+                "name": "SEBATIK"
+            },
+            {
+                "id": 6510,
+                "name": "SEBUKU"
+            },
+            {
+                "id": 6511,
+                "name": "SEBATIK BARAT"
+            },
+            {
+                "id": 6512,
+                "name": "LUMBIS OGONG"
+            },
+            {
+                "id": 6513,
+                "name": "NUNUKAN SELATAN"
+            },
+            {
+                "id": 6514,
+                "name": "SEBATIK TENGAH"
+            },
+            {
+                "id": 6515,
+                "name": "SEBATIK TIMUR"
+            },
+            {
+                "id": 6516,
+                "name": "SEBATIK UTARA"
+            },
+            {
+                "id": 6517,
+                "name": "SEI MENGGARIS"
+            },
+            {
+                "id": 6518,
+                "name": "SEMBAKUNG ATULAI"
+            },
+            {
+                "id": 6519,
+                "name": "TULIN ONSOI"
+            },
+            {
+                "id": 6520,
+                "name": "SEMBAKUNG"
+            }
+        ]
+    },
+    {
+        "id": 631,
+        "name": "TANA TIDUNG",
+        "districts": [
+            {
+                "id": 6521,
+                "name": "SESAYAP"
+            },
+            {
+                "id": 6522,
+                "name": "SESAYAP HILIR"
+            },
+            {
+                "id": 6523,
+                "name": "TANA LIA"
+            },
+            {
+                "id": 6524,
+                "name": "BETAYAU"
+            },
+            {
+                "id": 6525,
+                "name": "MURUK RIAN"
+            }
+        ]
+    }
+]

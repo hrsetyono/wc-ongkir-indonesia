@@ -1,0 +1,2266 @@
+[
+    {
+        "id": 165,
+        "name": "JAYAPURA",
+        "districts": [
+            {
+                "id": 1657,
+                "name": "ABEPURA"
+            },
+            {
+                "id": 1658,
+                "name": "DEMTA"
+            },
+            {
+                "id": 1659,
+                "name": "DEPAPRE"
+            },
+            {
+                "id": 1660,
+                "name": "KAUREH"
+            },
+            {
+                "id": 1661,
+                "name": "KEMTUK GRESI"
+            },
+            {
+                "id": 1662,
+                "name": "NIMBORAN"
+            },
+            {
+                "id": 1663,
+                "name": "SENTANI"
+            },
+            {
+                "id": 1664,
+                "name": "UNURUM GUAY"
+            },
+            {
+                "id": 1665,
+                "name": "KEMTUK"
+            },
+            {
+                "id": 1666,
+                "name": "NIMBOKRANG"
+            },
+            {
+                "id": 1667,
+                "name": "SENTANI BARAT"
+            },
+            {
+                "id": 1668,
+                "name": "SENTANI TIMUR"
+            },
+            {
+                "id": 1669,
+                "name": "JAYAPURA SELATAN"
+            },
+            {
+                "id": 1670,
+                "name": "JAYAPURA UTARA"
+            },
+            {
+                "id": 1671,
+                "name": "MUARA TAMI"
+            },
+            {
+                "id": 1672,
+                "name": "HERAM"
+            },
+            {
+                "id": 1673,
+                "name": "NAMBLUONG"
+            },
+            {
+                "id": 1674,
+                "name": "RAVENIRARA"
+            },
+            {
+                "id": 1675,
+                "name": "WAIBU"
+            },
+            {
+                "id": 1676,
+                "name": "YAPSI"
+            },
+            {
+                "id": 1677,
+                "name": "YOKARI"
+            },
+            {
+                "id": 1678,
+                "name": "EBUNGFAU (EBUNGFA)"
+            },
+            {
+                "id": 1679,
+                "name": "AIRU"
+            },
+            {
+                "id": 1680,
+                "name": "GRESI SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 166,
+        "name": "BIAK NUMFOR",
+        "districts": [
+            {
+                "id": 1681,
+                "name": "BIAK KOTA"
+            },
+            {
+                "id": 1682,
+                "name": "BIAK BARAT"
+            },
+            {
+                "id": 1683,
+                "name": "BIAK TIMUR"
+            },
+            {
+                "id": 1684,
+                "name": "BIAK UTARA"
+            },
+            {
+                "id": 1685,
+                "name": "NUMFOR BARAT"
+            },
+            {
+                "id": 1686,
+                "name": "NUMFOR TIMUR"
+            },
+            {
+                "id": 1687,
+                "name": "PADAIDO"
+            },
+            {
+                "id": 1688,
+                "name": "SAMOFA"
+            },
+            {
+                "id": 1689,
+                "name": "WARSA"
+            },
+            {
+                "id": 1690,
+                "name": "YENDIDORI"
+            },
+            {
+                "id": 1691,
+                "name": "AIMANDO PADAIDO"
+            },
+            {
+                "id": 1692,
+                "name": "ANDEY"
+            },
+            {
+                "id": 1693,
+                "name": "BONDIFUAR"
+            },
+            {
+                "id": 1694,
+                "name": "BRUYADORI"
+            },
+            {
+                "id": 1695,
+                "name": "ORIDEK"
+            },
+            {
+                "id": 1696,
+                "name": "POIRU"
+            },
+            {
+                "id": 1697,
+                "name": "SWANDIWE"
+            },
+            {
+                "id": 1698,
+                "name": "YAWOSI"
+            },
+            {
+                "id": 1699,
+                "name": "ORKERI"
+            }
+        ]
+    },
+    {
+        "id": 167,
+        "name": "MERAUKE",
+        "districts": [
+            {
+                "id": 1700,
+                "name": "MERAUKE"
+            },
+            {
+                "id": 1701,
+                "name": "KIMAAM"
+            },
+            {
+                "id": 1702,
+                "name": "MUTING"
+            },
+            {
+                "id": 1703,
+                "name": "OKABA"
+            },
+            {
+                "id": 1704,
+                "name": "ULILIN"
+            },
+            {
+                "id": 1705,
+                "name": "ELIKOBAL"
+            },
+            {
+                "id": 1706,
+                "name": "JAGEBOB"
+            },
+            {
+                "id": 1707,
+                "name": "KURIK"
+            },
+            {
+                "id": 1708,
+                "name": "SEMANGGA"
+            },
+            {
+                "id": 1709,
+                "name": "SOTA"
+            },
+            {
+                "id": 1710,
+                "name": "TANAH MIRING"
+            },
+            {
+                "id": 1711,
+                "name": "ANIMHA"
+            },
+            {
+                "id": 1712,
+                "name": "ILYAWAB"
+            },
+            {
+                "id": 1713,
+                "name": "KAPTEL"
+            },
+            {
+                "id": 1714,
+                "name": "MALIND"
+            },
+            {
+                "id": 1715,
+                "name": "NAUKENJERAI"
+            },
+            {
+                "id": 1716,
+                "name": "NGGUTI"
+            },
+            {
+                "id": 1717,
+                "name": "TABONJI"
+            },
+            {
+                "id": 1718,
+                "name": "TUBANG"
+            },
+            {
+                "id": 1719,
+                "name": "WAAN"
+            }
+        ]
+    },
+    {
+        "id": 168,
+        "name": "NABIRE",
+        "districts": [
+            {
+                "id": 1720,
+                "name": "NABIRE"
+            },
+            {
+                "id": 1723,
+                "name": "NAPAN"
+            },
+            {
+                "id": 1724,
+                "name": "YAUR"
+            },
+            {
+                "id": 1726,
+                "name": "MAKIMI"
+            },
+            {
+                "id": 1727,
+                "name": "SIRIWO"
+            },
+            {
+                "id": 1729,
+                "name": "TELUK UMAR"
+            },
+            {
+                "id": 1730,
+                "name": "UWAPA"
+            },
+            {
+                "id": 1731,
+                "name": "WANGGAR"
+            },
+            {
+                "id": 2142,
+                "name": "DIPA"
+            },
+            {
+                "id": 2143,
+                "name": "MENOU"
+            },
+            {
+                "id": 2144,
+                "name": "NABIRE BARAT"
+            },
+            {
+                "id": 2145,
+                "name": "TELUK KIMI"
+            },
+            {
+                "id": 2146,
+                "name": "WAPOGA"
+            },
+            {
+                "id": 2147,
+                "name": "YARO (YARO KABISAY)"
+            },
+            {
+                "id": 2148,
+                "name": "MOORA"
+            }
+        ]
+    },
+    {
+        "id": 169,
+        "name": "DOGIYAI",
+        "districts": [
+            {
+                "id": 1721,
+                "name": "KAMU"
+            },
+            {
+                "id": 1722,
+                "name": "MAPIA"
+            },
+            {
+                "id": 1725,
+                "name": "KAMU UTARA (IKRAR\/IKRAT)"
+            },
+            {
+                "id": 1728,
+                "name": "PIYAIYE (SUKIKAI)"
+            },
+            {
+                "id": 2149,
+                "name": "KAMU SELATAN"
+            },
+            {
+                "id": 2150,
+                "name": "KAMU TIMUR"
+            },
+            {
+                "id": 2151,
+                "name": "SUKIKAI SELATAN"
+            },
+            {
+                "id": 2152,
+                "name": "DOGIYAI"
+            },
+            {
+                "id": 2153,
+                "name": "MAPIA BARAT"
+            },
+            {
+                "id": 2154,
+                "name": "MAPIA TENGAH"
+            }
+        ]
+    },
+    {
+        "id": 171,
+        "name": "KEPULAUAN YAPEN",
+        "districts": [
+            {
+                "id": 1732,
+                "name": "YAPEN BARAT"
+            },
+            {
+                "id": 1733,
+                "name": "YAPEN TIMUR"
+            },
+            {
+                "id": 1734,
+                "name": "ANGKAISERA"
+            },
+            {
+                "id": 1735,
+                "name": "POOM"
+            },
+            {
+                "id": 1736,
+                "name": "YAPEN SELATAN"
+            },
+            {
+                "id": 1737,
+                "name": "KEPULAUAN AMBAI"
+            },
+            {
+                "id": 1738,
+                "name": "KOSIWO"
+            },
+            {
+                "id": 1739,
+                "name": "RAIMBAWI"
+            },
+            {
+                "id": 1740,
+                "name": "TELUK AMPIMOI"
+            },
+            {
+                "id": 1741,
+                "name": "WINDESI"
+            },
+            {
+                "id": 1742,
+                "name": "WONAWA"
+            },
+            {
+                "id": 1743,
+                "name": "YAPEN UTARA"
+            },
+            {
+                "id": 1744,
+                "name": "PULAU KURUDU"
+            },
+            {
+                "id": 1745,
+                "name": "PULAU YERUI"
+            }
+        ]
+    },
+    {
+        "id": 172,
+        "name": "JAYAWIJAYA",
+        "districts": [
+            {
+                "id": 1746,
+                "name": "WAMENA"
+            },
+            {
+                "id": 1747,
+                "name": "ASOLOGAIMA (ASALOGAIMA)"
+            },
+            {
+                "id": 1748,
+                "name": "KURULU"
+            },
+            {
+                "id": 1753,
+                "name": "BOLAKME"
+            },
+            {
+                "id": 1755,
+                "name": "HUBIKOSI (HOBIKOSI)"
+            },
+            {
+                "id": 1760,
+                "name": "ASOLOKOBAL"
+            },
+            {
+                "id": 1761,
+                "name": "MUSATFAK"
+            },
+            {
+                "id": 1762,
+                "name": "PELEBAGA"
+            },
+            {
+                "id": 1763,
+                "name": "WALELAGAMA"
+            },
+            {
+                "id": 1764,
+                "name": "WOLLO (WOLO)"
+            },
+            {
+                "id": 1765,
+                "name": "YALENGGA"
+            },
+            {
+                "id": 1766,
+                "name": "ASOTIPO"
+            },
+            {
+                "id": 1767,
+                "name": "BPIRI"
+            },
+            {
+                "id": 1768,
+                "name": "BUGI"
+            },
+            {
+                "id": 1769,
+                "name": "HUBIKIAK"
+            },
+            {
+                "id": 1770,
+                "name": "IBELE"
+            },
+            {
+                "id": 1771,
+                "name": "ITLAY HISAGE"
+            },
+            {
+                "id": 1772,
+                "name": "KORAGI"
+            },
+            {
+                "id": 1773,
+                "name": "LIBAREK"
+            },
+            {
+                "id": 1774,
+                "name": "MAIMA"
+            },
+            {
+                "id": 1775,
+                "name": "MOLAGALOME"
+            },
+            {
+                "id": 1776,
+                "name": "MULIAMA"
+            },
+            {
+                "id": 1777,
+                "name": "NAPUA"
+            },
+            {
+                "id": 1778,
+                "name": "PIRAMID"
+            },
+            {
+                "id": 1779,
+                "name": "PISUGI"
+            },
+            {
+                "id": 1780,
+                "name": "POPUGOBA"
+            },
+            {
+                "id": 1781,
+                "name": "SIEPKOSI"
+            },
+            {
+                "id": 1782,
+                "name": "SILO KARNO DOGA"
+            },
+            {
+                "id": 1783,
+                "name": "TAELAREK"
+            },
+            {
+                "id": 1784,
+                "name": "TAGIME"
+            },
+            {
+                "id": 1785,
+                "name": "TAGINERI"
+            },
+            {
+                "id": 1786,
+                "name": "TRIKORA"
+            },
+            {
+                "id": 1787,
+                "name": "USILIMO"
+            },
+            {
+                "id": 1788,
+                "name": "WADANGKU"
+            },
+            {
+                "id": 1789,
+                "name": "WALAIK"
+            },
+            {
+                "id": 1790,
+                "name": "WAME"
+            },
+            {
+                "id": 1791,
+                "name": "WELESI"
+            },
+            {
+                "id": 1792,
+                "name": "WESAPUT"
+            },
+            {
+                "id": 1793,
+                "name": "WITA WAYA"
+            },
+            {
+                "id": 1794,
+                "name": "WOUMA"
+            }
+        ]
+    },
+    {
+        "id": 174,
+        "name": "LANNY JAYA",
+        "districts": [
+            {
+                "id": 1749,
+                "name": "MAKKI"
+            },
+            {
+                "id": 1750,
+                "name": "TIOM"
+            },
+            {
+                "id": 1754,
+                "name": "GAMELIA"
+            },
+            {
+                "id": 1759,
+                "name": "PIRIME"
+            },
+            {
+                "id": 2073,
+                "name": "POGA"
+            },
+            {
+                "id": 2074,
+                "name": "BALINGGA"
+            },
+            {
+                "id": 2075,
+                "name": "DIMBA"
+            },
+            {
+                "id": 2076,
+                "name": "KUYAWAGE"
+            },
+            {
+                "id": 2111,
+                "name": "MELAGINERI"
+            },
+            {
+                "id": 2112,
+                "name": "TIOMNERI"
+            },
+            {
+                "id": 2113,
+                "name": "AWINA"
+            },
+            {
+                "id": 2114,
+                "name": "AYUMNATI"
+            },
+            {
+                "id": 2115,
+                "name": "BALINGGA BARAT"
+            },
+            {
+                "id": 2116,
+                "name": "BRUWA"
+            },
+            {
+                "id": 2117,
+                "name": "BUGUK GONA"
+            },
+            {
+                "id": 2118,
+                "name": "GELOK BEAM"
+            },
+            {
+                "id": 2119,
+                "name": "GOA BALIM"
+            },
+            {
+                "id": 2120,
+                "name": "GOLLO"
+            },
+            {
+                "id": 2121,
+                "name": "GUNA"
+            },
+            {
+                "id": 2122,
+                "name": "GUPURA"
+            },
+            {
+                "id": 2123,
+                "name": "KARU"
+            },
+            {
+                "id": 2124,
+                "name": "KELULOME"
+            },
+            {
+                "id": 2125,
+                "name": "KOLAWA"
+            },
+            {
+                "id": 2126,
+                "name": "KULY LANNY"
+            },
+            {
+                "id": 2127,
+                "name": "LANNYNA"
+            },
+            {
+                "id": 2128,
+                "name": "MELAGI"
+            },
+            {
+                "id": 2129,
+                "name": "MILIMBO"
+            },
+            {
+                "id": 2130,
+                "name": "MOKONI"
+            },
+            {
+                "id": 2131,
+                "name": "MUARA"
+            },
+            {
+                "id": 2132,
+                "name": "NIKOGWE"
+            },
+            {
+                "id": 2133,
+                "name": "NINAME"
+            },
+            {
+                "id": 2134,
+                "name": "NOGI"
+            },
+            {
+                "id": 2135,
+                "name": "TIOM OLLO"
+            },
+            {
+                "id": 2136,
+                "name": "WANO BARAT"
+            },
+            {
+                "id": 2137,
+                "name": "WEREKA"
+            },
+            {
+                "id": 2138,
+                "name": "WIRINGGAMBUT"
+            },
+            {
+                "id": 2139,
+                "name": "YIGINUA"
+            },
+            {
+                "id": 2140,
+                "name": "YILUK"
+            },
+            {
+                "id": 2141,
+                "name": "YUGUNGWI"
+            }
+        ]
+    },
+    {
+        "id": 175,
+        "name": "YALIMO",
+        "districts": [
+            {
+                "id": 1751,
+                "name": "ABENAHO"
+            },
+            {
+                "id": 1752,
+                "name": "APALAPSILI"
+            },
+            {
+                "id": 2070,
+                "name": "BENAWA"
+            },
+            {
+                "id": 2071,
+                "name": "ELELIM"
+            },
+            {
+                "id": 2072,
+                "name": "WELAREK"
+            }
+        ]
+    },
+    {
+        "id": 176,
+        "name": "NDUGA",
+        "districts": [
+            {
+                "id": 1756,
+                "name": "KENYAM"
+            },
+            {
+                "id": 1758,
+                "name": "MAPENDUMA"
+            },
+            {
+                "id": 2081,
+                "name": "GEAREK"
+            },
+            {
+                "id": 2082,
+                "name": "GESELMA (GESELEMA)"
+            },
+            {
+                "id": 2083,
+                "name": "MBUA (MBUGA)"
+            },
+            {
+                "id": 2084,
+                "name": "MUGI"
+            },
+            {
+                "id": 2085,
+                "name": "WOSAK"
+            },
+            {
+                "id": 2086,
+                "name": "YIGI"
+            },
+            {
+                "id": 2087,
+                "name": "ALAMA"
+            },
+            {
+                "id": 2088,
+                "name": "DAL"
+            },
+            {
+                "id": 2089,
+                "name": "EMBETPEN"
+            },
+            {
+                "id": 2090,
+                "name": "INIKGAL"
+            },
+            {
+                "id": 2091,
+                "name": "INIYE"
+            },
+            {
+                "id": 2092,
+                "name": "KEGAYEM"
+            },
+            {
+                "id": 2093,
+                "name": "KILMID"
+            },
+            {
+                "id": 2094,
+                "name": "KORA"
+            },
+            {
+                "id": 2095,
+                "name": "KOROPTAK"
+            },
+            {
+                "id": 2096,
+                "name": "KREPKURI"
+            },
+            {
+                "id": 2097,
+                "name": "MAM"
+            },
+            {
+                "id": 2098,
+                "name": "MBUA TENGAH"
+            },
+            {
+                "id": 2099,
+                "name": "MBULMU YALMA"
+            },
+            {
+                "id": 2100,
+                "name": "MEBAROK"
+            },
+            {
+                "id": 2101,
+                "name": "MOBA"
+            },
+            {
+                "id": 2102,
+                "name": "NENGGEAGIN"
+            },
+            {
+                "id": 2103,
+                "name": "NIRKURI"
+            },
+            {
+                "id": 2104,
+                "name": "PARO"
+            },
+            {
+                "id": 2105,
+                "name": "PASIR PUTIH"
+            },
+            {
+                "id": 2106,
+                "name": "PIJA"
+            },
+            {
+                "id": 2107,
+                "name": "WUSI"
+            },
+            {
+                "id": 2108,
+                "name": "WUTPAGA"
+            },
+            {
+                "id": 2109,
+                "name": "YAL"
+            },
+            {
+                "id": 2110,
+                "name": "YENGGELO"
+            }
+        ]
+    },
+    {
+        "id": 177,
+        "name": "MAMBERAMO TENGAH",
+        "districts": [
+            {
+                "id": 1757,
+                "name": "KOBAKMA"
+            },
+            {
+                "id": 2077,
+                "name": "ERAGAYAM"
+            },
+            {
+                "id": 2078,
+                "name": "ILUGWA"
+            },
+            {
+                "id": 2079,
+                "name": "MEGABILIS (MEGAMBILIS)"
+            },
+            {
+                "id": 2080,
+                "name": "KELILA"
+            }
+        ]
+    },
+    {
+        "id": 178,
+        "name": "ASMAT",
+        "districts": [
+            {
+                "id": 1795,
+                "name": "AGATS"
+            },
+            {
+                "id": 1796,
+                "name": "AKAT"
+            },
+            {
+                "id": 1797,
+                "name": "ATSY \/ ATSJ"
+            },
+            {
+                "id": 1798,
+                "name": "FAYIT"
+            },
+            {
+                "id": 1799,
+                "name": "PANTAI KASUARI"
+            },
+            {
+                "id": 1800,
+                "name": "SAWA ERMA"
+            },
+            {
+                "id": 1801,
+                "name": "SUATOR"
+            },
+            {
+                "id": 1802,
+                "name": "AYIP"
+            },
+            {
+                "id": 1803,
+                "name": "BETCBAMU"
+            },
+            {
+                "id": 1804,
+                "name": "DER KOUMUR"
+            },
+            {
+                "id": 1805,
+                "name": "JETSY"
+            },
+            {
+                "id": 1806,
+                "name": "JOERAT"
+            },
+            {
+                "id": 1807,
+                "name": "KOLF BRAZA"
+            },
+            {
+                "id": 1808,
+                "name": "KOPAY"
+            },
+            {
+                "id": 1809,
+                "name": "PULAU TIGA"
+            },
+            {
+                "id": 1810,
+                "name": "SAFAN"
+            },
+            {
+                "id": 1811,
+                "name": "SIRETS"
+            },
+            {
+                "id": 1812,
+                "name": "SURU-SURU"
+            },
+            {
+                "id": 1813,
+                "name": "UNIR SIRAU"
+            }
+        ]
+    },
+    {
+        "id": 180,
+        "name": "BOVEN DIGOEL",
+        "districts": [
+            {
+                "id": 1814,
+                "name": "BOMAKIA"
+            },
+            {
+                "id": 1815,
+                "name": "JAIR"
+            },
+            {
+                "id": 1816,
+                "name": "KOUH"
+            },
+            {
+                "id": 1817,
+                "name": "MANDOBO"
+            },
+            {
+                "id": 1818,
+                "name": "MINDIPTANA"
+            },
+            {
+                "id": 1819,
+                "name": "WAROPKO"
+            },
+            {
+                "id": 1820,
+                "name": "AMBATKWI (AMBATKUI)"
+            },
+            {
+                "id": 1821,
+                "name": "ARIMOP"
+            },
+            {
+                "id": 1822,
+                "name": "FIRIWAGE"
+            },
+            {
+                "id": 1823,
+                "name": "FOFI"
+            },
+            {
+                "id": 1824,
+                "name": "INIYANDIT"
+            },
+            {
+                "id": 1825,
+                "name": "KOMBUT"
+            },
+            {
+                "id": 1826,
+                "name": "MANGGELUM"
+            },
+            {
+                "id": 1827,
+                "name": "SUBUR"
+            },
+            {
+                "id": 1828,
+                "name": "YANIRUMA"
+            },
+            {
+                "id": 1829,
+                "name": "KAWAGIT"
+            },
+            {
+                "id": 1830,
+                "name": "KI"
+            },
+            {
+                "id": 1831,
+                "name": "KOMBAY"
+            },
+            {
+                "id": 1832,
+                "name": "NINATI"
+            },
+            {
+                "id": 1833,
+                "name": "SESNUK"
+            }
+        ]
+    },
+    {
+        "id": 181,
+        "name": "KEEROM",
+        "districts": [
+            {
+                "id": 1834,
+                "name": "WARIS"
+            },
+            {
+                "id": 1835,
+                "name": "ARSO"
+            },
+            {
+                "id": 1836,
+                "name": "SENGGI"
+            },
+            {
+                "id": 1837,
+                "name": "SKANTO"
+            },
+            {
+                "id": 1838,
+                "name": "WEB"
+            },
+            {
+                "id": 1839,
+                "name": "ARSO TIMUR"
+            },
+            {
+                "id": 1840,
+                "name": "TOWE"
+            }
+        ]
+    },
+    {
+        "id": 183,
+        "name": "MAPPI",
+        "districts": [
+            {
+                "id": 1841,
+                "name": "ASSUE"
+            },
+            {
+                "id": 1842,
+                "name": "CITAKMITAK"
+            },
+            {
+                "id": 1843,
+                "name": "EDERA"
+            },
+            {
+                "id": 1844,
+                "name": "HAJU"
+            },
+            {
+                "id": 1845,
+                "name": "NAMBIOMAN BAPAI (MAMBIOMAN)"
+            },
+            {
+                "id": 1846,
+                "name": "OBAA"
+            },
+            {
+                "id": 1847,
+                "name": "BAMGI"
+            },
+            {
+                "id": 1848,
+                "name": "KAIBAR"
+            },
+            {
+                "id": 1849,
+                "name": "MINYAMUR"
+            },
+            {
+                "id": 1850,
+                "name": "PASSUE"
+            },
+            {
+                "id": 1851,
+                "name": "PASSUE BAWAH"
+            },
+            {
+                "id": 1852,
+                "name": "SYAHCAME"
+            },
+            {
+                "id": 1853,
+                "name": "TI ZAIN"
+            },
+            {
+                "id": 1854,
+                "name": "VENAHA"
+            },
+            {
+                "id": 1855,
+                "name": "YAKOMI"
+            }
+        ]
+    },
+    {
+        "id": 184,
+        "name": "INTAN JAYA",
+        "districts": [
+            {
+                "id": 1856,
+                "name": "AGISIGA"
+            },
+            {
+                "id": 1858,
+                "name": "BIANDOGA"
+            },
+            {
+                "id": 1861,
+                "name": "HOMEYO"
+            },
+            {
+                "id": 2155,
+                "name": "SUGAPA"
+            },
+            {
+                "id": 2156,
+                "name": "HITADIPA"
+            },
+            {
+                "id": 2157,
+                "name": "WANDAI"
+            },
+            {
+                "id": 2158,
+                "name": "TOMOSIGA"
+            },
+            {
+                "id": 2159,
+                "name": "UGIMBA"
+            }
+        ]
+    },
+    {
+        "id": 185,
+        "name": "PANIAI",
+        "districts": [
+            {
+                "id": 1857,
+                "name": "ARADIDE"
+            },
+            {
+                "id": 1859,
+                "name": "BIBIDA"
+            },
+            {
+                "id": 1860,
+                "name": "BOGOBAIDA"
+            },
+            {
+                "id": 1862,
+                "name": "PANIAI BARAT"
+            },
+            {
+                "id": 1863,
+                "name": "PANIAI TIMUR"
+            },
+            {
+                "id": 1866,
+                "name": "EKADIDE"
+            },
+            {
+                "id": 1867,
+                "name": "KEBO"
+            },
+            {
+                "id": 1868,
+                "name": "YATAMO"
+            },
+            {
+                "id": 1869,
+                "name": "DUMADAMA"
+            },
+            {
+                "id": 1870,
+                "name": "SIRIWO"
+            }
+        ]
+    },
+    {
+        "id": 186,
+        "name": "DEIYAI",
+        "districts": [
+            {
+                "id": 1864,
+                "name": "TIGI"
+            },
+            {
+                "id": 1865,
+                "name": "TIGI TIMUR"
+            },
+            {
+                "id": 2160,
+                "name": "BOWOBADO"
+            },
+            {
+                "id": 2161,
+                "name": "KAPIRAYA"
+            },
+            {
+                "id": 2162,
+                "name": "TIGI BARAT"
+            }
+        ]
+    },
+    {
+        "id": 187,
+        "name": "PEGUNUNGAN BINTANG",
+        "districts": [
+            {
+                "id": 1871,
+                "name": "OKSIBIL"
+            },
+            {
+                "id": 1872,
+                "name": "BATOM"
+            },
+            {
+                "id": 1873,
+                "name": "BORME"
+            },
+            {
+                "id": 1874,
+                "name": "IWUR (OKIWUR)"
+            },
+            {
+                "id": 1875,
+                "name": "KIWIROK"
+            },
+            {
+                "id": 1876,
+                "name": "OKBIBAB"
+            },
+            {
+                "id": 1877,
+                "name": "ABOY"
+            },
+            {
+                "id": 1878,
+                "name": "BIME"
+            },
+            {
+                "id": 1879,
+                "name": "KIWIROK TIMUR"
+            },
+            {
+                "id": 1880,
+                "name": "PEPERA"
+            },
+            {
+                "id": 1881,
+                "name": "ALEMSOM"
+            },
+            {
+                "id": 1882,
+                "name": "BATANI"
+            },
+            {
+                "id": 1883,
+                "name": "EIPUMEK"
+            },
+            {
+                "id": 1884,
+                "name": "JETFA"
+            },
+            {
+                "id": 1885,
+                "name": "KALOMDOL"
+            },
+            {
+                "id": 1886,
+                "name": "KAWOR"
+            },
+            {
+                "id": 1887,
+                "name": "MOFINOP"
+            },
+            {
+                "id": 1888,
+                "name": "MURKIM"
+            },
+            {
+                "id": 1889,
+                "name": "NONGME"
+            },
+            {
+                "id": 1890,
+                "name": "OK AOM"
+            },
+            {
+                "id": 1891,
+                "name": "OKBAB"
+            },
+            {
+                "id": 1892,
+                "name": "OKBAPE"
+            },
+            {
+                "id": 1893,
+                "name": "OKBEMTAU"
+            },
+            {
+                "id": 1894,
+                "name": "OKHIKA"
+            },
+            {
+                "id": 1895,
+                "name": "OKLIP"
+            },
+            {
+                "id": 1896,
+                "name": "OKSAMOL"
+            },
+            {
+                "id": 1897,
+                "name": "OKSEBANG"
+            },
+            {
+                "id": 1898,
+                "name": "OKSOP"
+            },
+            {
+                "id": 1899,
+                "name": "PAMEK"
+            },
+            {
+                "id": 1900,
+                "name": "SERAMBAKON"
+            },
+            {
+                "id": 1901,
+                "name": "TARUP"
+            },
+            {
+                "id": 1902,
+                "name": "TEIRAPLU"
+            },
+            {
+                "id": 1903,
+                "name": "WEIME"
+            },
+            {
+                "id": 1904,
+                "name": "AWINBON"
+            }
+        ]
+    },
+    {
+        "id": 188,
+        "name": "PUNCAK JAYA",
+        "districts": [
+            {
+                "id": 1905,
+                "name": "MULIA"
+            },
+            {
+                "id": 1907,
+                "name": "FAWI"
+            },
+            {
+                "id": 1909,
+                "name": "ILU"
+            },
+            {
+                "id": 1914,
+                "name": "NIOGA"
+            },
+            {
+                "id": 1915,
+                "name": "MEWOLUK"
+            },
+            {
+                "id": 1917,
+                "name": "TINGGINAMBUT"
+            },
+            {
+                "id": 1918,
+                "name": "TORERE"
+            },
+            {
+                "id": 1920,
+                "name": "YAMO"
+            },
+            {
+                "id": 1921,
+                "name": "DAGAI"
+            },
+            {
+                "id": 1922,
+                "name": "DOKOME"
+            },
+            {
+                "id": 1923,
+                "name": "GUBUME"
+            },
+            {
+                "id": 1924,
+                "name": "GURAGE"
+            },
+            {
+                "id": 1925,
+                "name": "ILAMBURAWI"
+            },
+            {
+                "id": 1926,
+                "name": "IRIMULI"
+            },
+            {
+                "id": 1927,
+                "name": "KALOME"
+            },
+            {
+                "id": 1928,
+                "name": "KIYAGE"
+            },
+            {
+                "id": 1929,
+                "name": "LUMO"
+            },
+            {
+                "id": 1930,
+                "name": "MOLANIKIME"
+            },
+            {
+                "id": 1931,
+                "name": "MUARA"
+            },
+            {
+                "id": 1932,
+                "name": "NUME"
+            },
+            {
+                "id": 1933,
+                "name": "PAGALEME"
+            },
+            {
+                "id": 1934,
+                "name": "TAGANOMBAK"
+            },
+            {
+                "id": 1935,
+                "name": "WAEGI"
+            },
+            {
+                "id": 1936,
+                "name": "WANWI"
+            },
+            {
+                "id": 1937,
+                "name": "YAMBI"
+            },
+            {
+                "id": 1938,
+                "name": "YAMONERI"
+            }
+        ]
+    },
+    {
+        "id": 189,
+        "name": "PUNCAK",
+        "districts": [
+            {
+                "id": 1906,
+                "name": "BEOGA"
+            },
+            {
+                "id": 1908,
+                "name": "ILAGA"
+            },
+            {
+                "id": 1910,
+                "name": "SINAK"
+            },
+            {
+                "id": 1911,
+                "name": "AGADUGUME"
+            },
+            {
+                "id": 1912,
+                "name": "DOUFU"
+            },
+            {
+                "id": 1913,
+                "name": "GOME"
+            },
+            {
+                "id": 1916,
+                "name": "POGOMA"
+            },
+            {
+                "id": 1919,
+                "name": "WANGBE"
+            }
+        ]
+    },
+    {
+        "id": 190,
+        "name": "SARMI",
+        "districts": [
+            {
+                "id": 1939,
+                "name": "SARMI"
+            },
+            {
+                "id": 1940,
+                "name": "BONGGO"
+            },
+            {
+                "id": 1941,
+                "name": "PANTAI BARAT"
+            },
+            {
+                "id": 1942,
+                "name": "PANTAI TIMUR"
+            },
+            {
+                "id": 1943,
+                "name": "TOR ATAS"
+            },
+            {
+                "id": 1944,
+                "name": "APAWER HULU"
+            },
+            {
+                "id": 1945,
+                "name": "BONGGO TIMUR"
+            },
+            {
+                "id": 1946,
+                "name": "PANTAI TIMUR BAGIAN BARAT"
+            },
+            {
+                "id": 1947,
+                "name": "SARMI SELATAN"
+            },
+            {
+                "id": 1948,
+                "name": "SARMI TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 192,
+        "name": "SUPIORI",
+        "districts": [
+            {
+                "id": 1949,
+                "name": "SUPIORI SELATAN"
+            },
+            {
+                "id": 1950,
+                "name": "SUPIORI TIMUR"
+            },
+            {
+                "id": 1951,
+                "name": "SUPIORI UTARA"
+            },
+            {
+                "id": 1952,
+                "name": "KEPULAUAN ARURI"
+            },
+            {
+                "id": 1953,
+                "name": "SUPIORI BARAT"
+            }
+        ]
+    },
+    {
+        "id": 193,
+        "name": "TOLIKARA",
+        "districts": [
+            {
+                "id": 1954,
+                "name": "KARUBAGA"
+            },
+            {
+                "id": 1955,
+                "name": "BOKONDINI"
+            },
+            {
+                "id": 1956,
+                "name": "KANGGIME (KANGGIMA )"
+            },
+            {
+                "id": 1957,
+                "name": "KEMBU"
+            },
+            {
+                "id": 1958,
+                "name": "AIRGARAM"
+            },
+            {
+                "id": 1959,
+                "name": "BEWANI"
+            },
+            {
+                "id": 1960,
+                "name": "BOKONERI"
+            },
+            {
+                "id": 1961,
+                "name": "DOW"
+            },
+            {
+                "id": 1962,
+                "name": "DUNDU (NDUNDU)"
+            },
+            {
+                "id": 1963,
+                "name": "EGIAM"
+            },
+            {
+                "id": 1964,
+                "name": "GEYA"
+            },
+            {
+                "id": 1965,
+                "name": "GILUBANDU (GILUMBANDU\/GILIMBANDU)"
+            },
+            {
+                "id": 1966,
+                "name": "GOYAGE"
+            },
+            {
+                "id": 1967,
+                "name": "GUNDAGI (GUDAGE)"
+            },
+            {
+                "id": 1968,
+                "name": "KAMBONERI"
+            },
+            {
+                "id": 1969,
+                "name": "KONDAGA (KONDA)"
+            },
+            {
+                "id": 1970,
+                "name": "KUARI"
+            },
+            {
+                "id": 1971,
+                "name": "KUBU"
+            },
+            {
+                "id": 1972,
+                "name": "NABUNAGE"
+            },
+            {
+                "id": 1973,
+                "name": "NELAWI"
+            },
+            {
+                "id": 1974,
+                "name": "NUMBA"
+            },
+            {
+                "id": 1975,
+                "name": "NUNGGAWI (MUNGGAWI)"
+            },
+            {
+                "id": 1976,
+                "name": "PANAGA"
+            },
+            {
+                "id": 1977,
+                "name": "POGANERI"
+            },
+            {
+                "id": 1978,
+                "name": "TAGINERI"
+            },
+            {
+                "id": 1979,
+                "name": "TIMORI"
+            },
+            {
+                "id": 1980,
+                "name": "UMAGI"
+            },
+            {
+                "id": 1981,
+                "name": "WARI (TAIYEVE)"
+            },
+            {
+                "id": 1982,
+                "name": "WINA"
+            },
+            {
+                "id": 1983,
+                "name": "WONOKI (WONIKI)"
+            },
+            {
+                "id": 1984,
+                "name": "WUNIN (WUMIN)"
+            },
+            {
+                "id": 1985,
+                "name": "YUNERI"
+            },
+            {
+                "id": 1986,
+                "name": "ANAWI"
+            },
+            {
+                "id": 1987,
+                "name": "AWEKU"
+            },
+            {
+                "id": 1988,
+                "name": "BIUK"
+            },
+            {
+                "id": 1989,
+                "name": "BOGONUK"
+            },
+            {
+                "id": 1990,
+                "name": "DANIME"
+            },
+            {
+                "id": 1991,
+                "name": "GIKA"
+            },
+            {
+                "id": 1992,
+                "name": "KAI"
+            },
+            {
+                "id": 1993,
+                "name": "LI ANOGOMMA"
+            },
+            {
+                "id": 1994,
+                "name": "TAGIME"
+            },
+            {
+                "id": 1995,
+                "name": "TELENGGEME"
+            },
+            {
+                "id": 1996,
+                "name": "WAKUWO"
+            },
+            {
+                "id": 1997,
+                "name": "WENAM"
+            },
+            {
+                "id": 1998,
+                "name": "WUGI"
+            },
+            {
+                "id": 1999,
+                "name": "YUKO"
+            }
+        ]
+    },
+    {
+        "id": 195,
+        "name": "WAROPEN",
+        "districts": [
+            {
+                "id": 2000,
+                "name": "MASIREI"
+            },
+            {
+                "id": 2001,
+                "name": "WAROPEN BAWAH"
+            },
+            {
+                "id": 2002,
+                "name": "INGGERUS"
+            },
+            {
+                "id": 2003,
+                "name": "KIRIHI"
+            },
+            {
+                "id": 2004,
+                "name": "RISEI SAYATI"
+            },
+            {
+                "id": 2005,
+                "name": "UREI FAISEI"
+            },
+            {
+                "id": 2006,
+                "name": "DEMBA"
+            },
+            {
+                "id": 2007,
+                "name": "OUDATE"
+            },
+            {
+                "id": 2008,
+                "name": "SOYOI MAMBAI"
+            },
+            {
+                "id": 2009,
+                "name": "WAPOGA"
+            },
+            {
+                "id": 2010,
+                "name": "WONTI"
+            }
+        ]
+    },
+    {
+        "id": 196,
+        "name": "YAHUKIMO",
+        "districts": [
+            {
+                "id": 2011,
+                "name": "SUMO"
+            },
+            {
+                "id": 2012,
+                "name": "ANGGRUK"
+            },
+            {
+                "id": 2013,
+                "name": "KURIMA"
+            },
+            {
+                "id": 2014,
+                "name": "NINIA"
+            },
+            {
+                "id": 2015,
+                "name": "AMUMA"
+            },
+            {
+                "id": 2016,
+                "name": "BOMELA"
+            },
+            {
+                "id": 2017,
+                "name": "DEKAI"
+            },
+            {
+                "id": 2018,
+                "name": "DIRWEMNA (DIRUWENA)"
+            },
+            {
+                "id": 2019,
+                "name": "DURAM"
+            },
+            {
+                "id": 2020,
+                "name": "ENDOMEN"
+            },
+            {
+                "id": 2021,
+                "name": "HEREAPINI (HEREANINI)"
+            },
+            {
+                "id": 2022,
+                "name": "HILIPUK"
+            },
+            {
+                "id": 2023,
+                "name": "HOGIO (HUGIO)"
+            },
+            {
+                "id": 2024,
+                "name": "HOLUON"
+            },
+            {
+                "id": 2025,
+                "name": "KABIANGGAMA (KABIANGGEMA)"
+            },
+            {
+                "id": 2026,
+                "name": "KAYO"
+            },
+            {
+                "id": 2027,
+                "name": "KOROPUN (KORUPUN)"
+            },
+            {
+                "id": 2028,
+                "name": "KOSAREK"
+            },
+            {
+                "id": 2029,
+                "name": "KWELEMDUA (KWELAMDUA)"
+            },
+            {
+                "id": 2030,
+                "name": "KWIKMA"
+            },
+            {
+                "id": 2031,
+                "name": "LANGDA"
+            },
+            {
+                "id": 2032,
+                "name": "LOLAT"
+            },
+            {
+                "id": 2033,
+                "name": "MUGI"
+            },
+            {
+                "id": 2034,
+                "name": "MUSAIK"
+            },
+            {
+                "id": 2035,
+                "name": "NALCA"
+            },
+            {
+                "id": 2036,
+                "name": "NIPSAN"
+            },
+            {
+                "id": 2037,
+                "name": "OBIO"
+            },
+            {
+                "id": 2038,
+                "name": "PANGGEMA"
+            },
+            {
+                "id": 2039,
+                "name": "PASEMA"
+            },
+            {
+                "id": 2040,
+                "name": "PRONGGOLI (PROGGOLI)"
+            },
+            {
+                "id": 2041,
+                "name": "PULDAMA"
+            },
+            {
+                "id": 2042,
+                "name": "SAMENAGE"
+            },
+            {
+                "id": 2043,
+                "name": "SELA"
+            },
+            {
+                "id": 2044,
+                "name": "SEREDELA (SEREDALA)"
+            },
+            {
+                "id": 2045,
+                "name": "SILIMO"
+            },
+            {
+                "id": 2046,
+                "name": "SOBA"
+            },
+            {
+                "id": 2047,
+                "name": "SOBAHAM"
+            },
+            {
+                "id": 2048,
+                "name": "SOLOIKMA"
+            },
+            {
+                "id": 2049,
+                "name": "SUNTAMON"
+            },
+            {
+                "id": 2050,
+                "name": "SURU SURU"
+            },
+            {
+                "id": 2051,
+                "name": "TALAMBO"
+            },
+            {
+                "id": 2052,
+                "name": "TANGMA"
+            },
+            {
+                "id": 2053,
+                "name": "UBAHAK"
+            },
+            {
+                "id": 2054,
+                "name": "UBALIHI"
+            },
+            {
+                "id": 2055,
+                "name": "UKHA"
+            },
+            {
+                "id": 2056,
+                "name": "WALMA"
+            },
+            {
+                "id": 2057,
+                "name": "WERIMA"
+            },
+            {
+                "id": 2058,
+                "name": "WUSUMA"
+            },
+            {
+                "id": 2059,
+                "name": "YAHULIAMBUT"
+            },
+            {
+                "id": 2060,
+                "name": "YOGOSEM"
+            },
+            {
+                "id": 2061,
+                "name": "KONA"
+            }
+        ]
+    },
+    {
+        "id": 198,
+        "name": "MAMBERAMO RAYA",
+        "districts": [
+            {
+                "id": 2062,
+                "name": "MAMBERAMO TENGAH"
+            },
+            {
+                "id": 2063,
+                "name": "MAMBERAMO HILIR\/ILIR"
+            },
+            {
+                "id": 2064,
+                "name": "MAMBERAMO HULU"
+            },
+            {
+                "id": 2065,
+                "name": "MAMBERAMO TENGAH TIMUR"
+            },
+            {
+                "id": 2066,
+                "name": "RUFAER"
+            },
+            {
+                "id": 2067,
+                "name": "WAROPEN ATAS"
+            },
+            {
+                "id": 2068,
+                "name": "BENUKI"
+            },
+            {
+                "id": 2069,
+                "name": "SAWAI"
+            }
+        ]
+    },
+    {
+        "id": 595,
+        "name": "MIMIKA",
+        "districts": [
+            {
+                "id": 6207,
+                "name": "AGIMUGA"
+            },
+            {
+                "id": 6208,
+                "name": "JILA"
+            },
+            {
+                "id": 6209,
+                "name": "JITA"
+            },
+            {
+                "id": 6210,
+                "name": "KUALA KENCANA"
+            },
+            {
+                "id": 6211,
+                "name": "MIMIKA BARAT"
+            },
+            {
+                "id": 6212,
+                "name": "MIMIKA BARAT JAUH"
+            },
+            {
+                "id": 6213,
+                "name": "MIMIKA BARAT TENGAH"
+            },
+            {
+                "id": 6214,
+                "name": "MIMIKA BARU"
+            },
+            {
+                "id": 6215,
+                "name": "MIMIKA TIMUR"
+            },
+            {
+                "id": 6216,
+                "name": "MIMIKA TIMUR JAUH"
+            },
+            {
+                "id": 6217,
+                "name": "MIMIKA TENGAH"
+            },
+            {
+                "id": 6218,
+                "name": "TEMBAGAPURA"
+            },
+            {
+                "id": 6219,
+                "name": "ALAMA"
+            },
+            {
+                "id": 6220,
+                "name": "AMAR"
+            },
+            {
+                "id": 6221,
+                "name": "HOYA"
+            },
+            {
+                "id": 6222,
+                "name": "IWAKA"
+            },
+            {
+                "id": 6223,
+                "name": "KWAMKI NARAMA"
+            },
+            {
+                "id": 6224,
+                "name": "WANIA"
+            }
+        ]
+    }
+]

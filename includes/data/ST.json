@@ -1,0 +1,780 @@
+[
+    {
+        "id": 497,
+        "name": "PALU",
+        "districts": [
+            {
+                "id": 4735,
+                "name": "PALU BARAT"
+            },
+            {
+                "id": 4736,
+                "name": "PALU SELATAN"
+            },
+            {
+                "id": 4737,
+                "name": "PALU TIMUR"
+            },
+            {
+                "id": 4738,
+                "name": "PALU UTARA"
+            },
+            {
+                "id": 4739,
+                "name": "MANTIKULORE"
+            },
+            {
+                "id": 4740,
+                "name": "TATANGA"
+            },
+            {
+                "id": 4741,
+                "name": "ULUJADI"
+            },
+            {
+                "id": 4831,
+                "name": "TAWAELI"
+            }
+        ]
+    },
+    {
+        "id": 498,
+        "name": "BANGGAI",
+        "districts": [
+            {
+                "id": 4742,
+                "name": "LUWUK"
+            },
+            {
+                "id": 4743,
+                "name": "BALANTAK"
+            },
+            {
+                "id": 4744,
+                "name": "BATUI"
+            },
+            {
+                "id": 4745,
+                "name": "BUNTA"
+            },
+            {
+                "id": 4746,
+                "name": "KINTOM"
+            },
+            {
+                "id": 4747,
+                "name": "LAMALA"
+            },
+            {
+                "id": 4748,
+                "name": "PAGIMANA"
+            },
+            {
+                "id": 4749,
+                "name": "BUALEMO (BOALEMO)"
+            },
+            {
+                "id": 4750,
+                "name": "TOILI"
+            },
+            {
+                "id": 4751,
+                "name": "BALANTAK SELATAN"
+            },
+            {
+                "id": 4752,
+                "name": "BALANTAK UTARA"
+            },
+            {
+                "id": 4753,
+                "name": "BATUI SELATAN"
+            },
+            {
+                "id": 4754,
+                "name": "LOBU"
+            },
+            {
+                "id": 4755,
+                "name": "LUWUK SELATAN"
+            },
+            {
+                "id": 4756,
+                "name": "LUWUK TIMUR"
+            },
+            {
+                "id": 4757,
+                "name": "LUWUK UTARA"
+            },
+            {
+                "id": 4758,
+                "name": "MANTOH"
+            },
+            {
+                "id": 4759,
+                "name": "MASAMA"
+            },
+            {
+                "id": 4760,
+                "name": "MOILONG"
+            },
+            {
+                "id": 4761,
+                "name": "NAMBO"
+            },
+            {
+                "id": 4762,
+                "name": "NUHON"
+            },
+            {
+                "id": 4763,
+                "name": "SIMPANG RAYA"
+            },
+            {
+                "id": 4764,
+                "name": "TOILI BARAT"
+            }
+        ]
+    },
+    {
+        "id": 499,
+        "name": "POSO",
+        "districts": [
+            {
+                "id": 4765,
+                "name": "POSO KOTA"
+            },
+            {
+                "id": 4766,
+                "name": "LAGE"
+            },
+            {
+                "id": 4767,
+                "name": "LORE UTARA"
+            },
+            {
+                "id": 4768,
+                "name": "LORE SELATAN"
+            },
+            {
+                "id": 4769,
+                "name": "PAMONA SELATAN"
+            },
+            {
+                "id": 4770,
+                "name": "PAMONA UTARA"
+            },
+            {
+                "id": 4771,
+                "name": "POSO PESISIR"
+            },
+            {
+                "id": 4772,
+                "name": "LORE TENGAH"
+            },
+            {
+                "id": 4773,
+                "name": "PAMONA TIMUR"
+            },
+            {
+                "id": 4774,
+                "name": "LORE BARAT"
+            },
+            {
+                "id": 4775,
+                "name": "LORE PIORE"
+            },
+            {
+                "id": 4776,
+                "name": "LORE TIMUR"
+            },
+            {
+                "id": 4777,
+                "name": "PAMONA BARAT"
+            },
+            {
+                "id": 4778,
+                "name": "PAMONA PUSELEMBA"
+            },
+            {
+                "id": 4779,
+                "name": "PAMONA TENGGARA"
+            },
+            {
+                "id": 4780,
+                "name": "POSO KOTA SELATAN"
+            },
+            {
+                "id": 4781,
+                "name": "POSO KOTA UTARA"
+            },
+            {
+                "id": 4782,
+                "name": "POSO PESISIR SELATAN"
+            },
+            {
+                "id": 4783,
+                "name": "POSO PESISIR UTARA"
+            }
+        ]
+    },
+    {
+        "id": 500,
+        "name": "TOLI-TOLI",
+        "districts": [
+            {
+                "id": 4784,
+                "name": "DAMPAL UTARA"
+            },
+            {
+                "id": 4785,
+                "name": "DAMPAL SELATAN"
+            },
+            {
+                "id": 4786,
+                "name": "DONDO"
+            },
+            {
+                "id": 4787,
+                "name": "GALANG"
+            },
+            {
+                "id": 4788,
+                "name": "TOLITOLI UTARA"
+            },
+            {
+                "id": 4789,
+                "name": "BAOLAN"
+            },
+            {
+                "id": 4790,
+                "name": "BASIDONDO"
+            },
+            {
+                "id": 4791,
+                "name": "LAMPASIO"
+            },
+            {
+                "id": 4792,
+                "name": "OGODEIDE"
+            },
+            {
+                "id": 4793,
+                "name": "DAKO PAMEAN"
+            }
+        ]
+    },
+    {
+        "id": 501,
+        "name": "BANGGAI LAUT",
+        "districts": [
+            {
+                "id": 4794,
+                "name": "BANGGAI"
+            },
+            {
+                "id": 4795,
+                "name": "BOKAN KEPULAUAN"
+            },
+            {
+                "id": 4895,
+                "name": "BANGGAI SELATAN"
+            },
+            {
+                "id": 4896,
+                "name": "BANGGAI TENGAH"
+            },
+            {
+                "id": 4897,
+                "name": "BANGGAI UTARA"
+            },
+            {
+                "id": 4898,
+                "name": "BANGKURUNG"
+            },
+            {
+                "id": 4899,
+                "name": "LABOBO"
+            }
+        ]
+    },
+    {
+        "id": 502,
+        "name": "BANGGAI KEPULAUAN",
+        "districts": [
+            {
+                "id": 4796,
+                "name": "BUKO"
+            },
+            {
+                "id": 4797,
+                "name": "BULAGI"
+            },
+            {
+                "id": 4798,
+                "name": "BULAGI SELATAN"
+            },
+            {
+                "id": 4799,
+                "name": "LIANG"
+            },
+            {
+                "id": 4800,
+                "name": "TINANGKUNG"
+            },
+            {
+                "id": 4801,
+                "name": "TOTIKUM (TOTIKUNG)"
+            },
+            {
+                "id": 4802,
+                "name": "BUKO SELATAN"
+            },
+            {
+                "id": 4803,
+                "name": "BULAGI UTARA"
+            },
+            {
+                "id": 4804,
+                "name": "PELING TENGAH"
+            },
+            {
+                "id": 4805,
+                "name": "TINANGKUNG SELATAN"
+            },
+            {
+                "id": 4806,
+                "name": "TINANGKUNG UTARA"
+            },
+            {
+                "id": 4807,
+                "name": "TOTIKUM SELATAN"
+            }
+        ]
+    },
+    {
+        "id": 504,
+        "name": "BUOL",
+        "districts": [
+            {
+                "id": 4808,
+                "name": "BIAU"
+            },
+            {
+                "id": 4809,
+                "name": "BOKAT"
+            },
+            {
+                "id": 4810,
+                "name": "BUKAL"
+            },
+            {
+                "id": 4811,
+                "name": "BUNOBOGU"
+            },
+            {
+                "id": 4812,
+                "name": "GADUNG"
+            },
+            {
+                "id": 4813,
+                "name": "LAKEA (LIPUNOTO)"
+            },
+            {
+                "id": 4814,
+                "name": "MOMUNU"
+            },
+            {
+                "id": 4815,
+                "name": "PALELEH"
+            },
+            {
+                "id": 4816,
+                "name": "TILOAN"
+            },
+            {
+                "id": 4817,
+                "name": "KARAMAT"
+            },
+            {
+                "id": 4818,
+                "name": "PALELEH BARAT"
+            }
+        ]
+    },
+    {
+        "id": 505,
+        "name": "DONGGALA",
+        "districts": [
+            {
+                "id": 4819,
+                "name": "BANAWA"
+            },
+            {
+                "id": 4820,
+                "name": "BALAESANG"
+            },
+            {
+                "id": 4821,
+                "name": "DAMPELAS"
+            },
+            {
+                "id": 4826,
+                "name": "RIO PAKAVA"
+            },
+            {
+                "id": 4828,
+                "name": "SINDUE"
+            },
+            {
+                "id": 4829,
+                "name": "SIRENJA"
+            },
+            {
+                "id": 4830,
+                "name": "SOJOL"
+            },
+            {
+                "id": 4832,
+                "name": "SINDUE TOBATA"
+            },
+            {
+                "id": 4833,
+                "name": "SINDUE TOMBUSABORA"
+            },
+            {
+                "id": 4834,
+                "name": "SOJOL UTARA"
+            },
+            {
+                "id": 4835,
+                "name": "TANANTOVEA"
+            },
+            {
+                "id": 4836,
+                "name": "BANAWA SELATAN"
+            },
+            {
+                "id": 4837,
+                "name": "BANAWA TENGAH"
+            },
+            {
+                "id": 4838,
+                "name": "LABUAN"
+            },
+            {
+                "id": 4839,
+                "name": "PANEMBANI"
+            },
+            {
+                "id": 4840,
+                "name": "BALAESANG TANJUNG"
+            }
+        ]
+    },
+    {
+        "id": 507,
+        "name": "SIGI",
+        "districts": [
+            {
+                "id": 4822,
+                "name": "KULAWI"
+            },
+            {
+                "id": 4823,
+                "name": "MARAWOLA"
+            },
+            {
+                "id": 4824,
+                "name": "PALOLO"
+            },
+            {
+                "id": 4825,
+                "name": "PIPIKORO"
+            },
+            {
+                "id": 4827,
+                "name": "SIGI BIROMARU"
+            },
+            {
+                "id": 4900,
+                "name": "KULAWI SELATAN"
+            },
+            {
+                "id": 4901,
+                "name": "LINDU"
+            },
+            {
+                "id": 4902,
+                "name": "MARAWOLA BARAT"
+            },
+            {
+                "id": 4903,
+                "name": "NOKILALAKI"
+            },
+            {
+                "id": 4904,
+                "name": "TANAMBULAVA"
+            },
+            {
+                "id": 4905,
+                "name": "DOLO"
+            },
+            {
+                "id": 4906,
+                "name": "DOLO BARAT"
+            },
+            {
+                "id": 4907,
+                "name": "DOLO SELATAN"
+            },
+            {
+                "id": 4908,
+                "name": "GUMBASA"
+            },
+            {
+                "id": 4909,
+                "name": "KINOVARU"
+            }
+        ]
+    },
+    {
+        "id": 509,
+        "name": "MOROWALI",
+        "districts": [
+            {
+                "id": 4841,
+                "name": "BUNGKU BARAT"
+            },
+            {
+                "id": 4842,
+                "name": "BUNGKU SELATAN"
+            },
+            {
+                "id": 4843,
+                "name": "BUNGKU TENGAH"
+            },
+            {
+                "id": 4845,
+                "name": "BAHODOPI"
+            },
+            {
+                "id": 4846,
+                "name": "BUMI RAYA"
+            },
+            {
+                "id": 4849,
+                "name": "MENUI KEPULAUAN"
+            },
+            {
+                "id": 4853,
+                "name": "WITA PONDA"
+            },
+            {
+                "id": 4854,
+                "name": "BUNGKU PESISIR"
+            },
+            {
+                "id": 4855,
+                "name": "BUNGKU TIMUR"
+            },
+            {
+                "id": 4858,
+                "name": "PETASIA BARAT"
+            }
+        ]
+    },
+    {
+        "id": 510,
+        "name": "MOROWALI UTARA",
+        "districts": [
+            {
+                "id": 4844,
+                "name": "BUNGKU UTARA"
+            },
+            {
+                "id": 4847,
+                "name": "LEMBO"
+            },
+            {
+                "id": 4848,
+                "name": "MAMOSALATO"
+            },
+            {
+                "id": 4850,
+                "name": "MORI ATAS"
+            },
+            {
+                "id": 4851,
+                "name": "PETASIA"
+            },
+            {
+                "id": 4852,
+                "name": "SOYO JAYA"
+            },
+            {
+                "id": 4856,
+                "name": "LEMBO RAYA"
+            },
+            {
+                "id": 4857,
+                "name": "MORI UTARA"
+            },
+            {
+                "id": 4859,
+                "name": "PETASIA TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 511,
+        "name": "PARIGI MOUTONG",
+        "districts": [
+            {
+                "id": 4860,
+                "name": "PARIGI"
+            },
+            {
+                "id": 4861,
+                "name": "AMPIBABO"
+            },
+            {
+                "id": 4862,
+                "name": "BOLANO LAMBUNU"
+            },
+            {
+                "id": 4863,
+                "name": "KASIMBAR"
+            },
+            {
+                "id": 4864,
+                "name": "MOUTONG"
+            },
+            {
+                "id": 4865,
+                "name": "SAUSU"
+            },
+            {
+                "id": 4866,
+                "name": "TINOMBO"
+            },
+            {
+                "id": 4867,
+                "name": "TINOMBO SELATAN"
+            },
+            {
+                "id": 4868,
+                "name": "TOMINI"
+            },
+            {
+                "id": 4869,
+                "name": "TORUE"
+            },
+            {
+                "id": 4870,
+                "name": "BALINGGI"
+            },
+            {
+                "id": 4871,
+                "name": "BOLANO"
+            },
+            {
+                "id": 4872,
+                "name": "MEPANGA"
+            },
+            {
+                "id": 4873,
+                "name": "ONGKA MALINO"
+            },
+            {
+                "id": 4874,
+                "name": "PALASA"
+            },
+            {
+                "id": 4875,
+                "name": "PARIGI BARAT"
+            },
+            {
+                "id": 4876,
+                "name": "PARIGI SELATAN"
+            },
+            {
+                "id": 4877,
+                "name": "PARIGI TENGAH"
+            },
+            {
+                "id": 4878,
+                "name": "PARIGI UTARA"
+            },
+            {
+                "id": 4879,
+                "name": "SINIU"
+            },
+            {
+                "id": 4880,
+                "name": "TAOPA"
+            },
+            {
+                "id": 4881,
+                "name": "TORIBULU"
+            },
+            {
+                "id": 4882,
+                "name": "SIDOAN"
+            }
+        ]
+    },
+    {
+        "id": 512,
+        "name": "TOJO UNA-UNA",
+        "districts": [
+            {
+                "id": 4883,
+                "name": "AMPANA KOTA"
+            },
+            {
+                "id": 4884,
+                "name": "AMPANA TETE"
+            },
+            {
+                "id": 4885,
+                "name": "TOGEAN"
+            },
+            {
+                "id": 4886,
+                "name": "TOJO"
+            },
+            {
+                "id": 4887,
+                "name": "TOJO BARAT"
+            },
+            {
+                "id": 4888,
+                "name": "ULUBONGKA"
+            },
+            {
+                "id": 4889,
+                "name": "UNA UNA"
+            },
+            {
+                "id": 4890,
+                "name": "WALEA KEPULAUAN"
+            },
+            {
+                "id": 4891,
+                "name": "WALEA BESAR"
+            },
+            {
+                "id": 4892,
+                "name": "BATUDAKA"
+            },
+            {
+                "id": 4893,
+                "name": "RATOLINDO"
+            },
+            {
+                "id": 4894,
+                "name": "TALATAKO"
+            }
+        ]
+    }
+]

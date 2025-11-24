@@ -1,0 +1,630 @@
+[
+    {
+        "id": 46,
+        "name": "BARITO UTARA",
+        "districts": [
+            {
+                "id": 370,
+                "name": "GUNUNG PUREI"
+            },
+            {
+                "id": 371,
+                "name": "GUNUNG TIMANG"
+            },
+            {
+                "id": 372,
+                "name": "LAHEI"
+            },
+            {
+                "id": 373,
+                "name": "MONTALLAT (MONTALAT)"
+            },
+            {
+                "id": 374,
+                "name": "TEWEH TIMUR"
+            },
+            {
+                "id": 375,
+                "name": "TEWEH TENGAH"
+            },
+            {
+                "id": 376,
+                "name": "LAHEI BARAT"
+            },
+            {
+                "id": 377,
+                "name": "TEWEH SELATAN"
+            },
+            {
+                "id": 378,
+                "name": "TEWEH BARU"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "name": "BARITO TIMUR",
+        "districts": [
+            {
+                "id": 379,
+                "name": "AWANG"
+            },
+            {
+                "id": 380,
+                "name": "BENUA LIMA"
+            },
+            {
+                "id": 381,
+                "name": "DUSUN TENGAH"
+            },
+            {
+                "id": 382,
+                "name": "PATANGKEP TUTUI"
+            },
+            {
+                "id": 383,
+                "name": "PEMATANG KARAU"
+            },
+            {
+                "id": 384,
+                "name": "DUSUN TIMUR"
+            },
+            {
+                "id": 385,
+                "name": "KARUSEN JANANG"
+            },
+            {
+                "id": 386,
+                "name": "PAJU EPAT"
+            },
+            {
+                "id": 387,
+                "name": "PAKU"
+            },
+            {
+                "id": 388,
+                "name": "RAREN BATUAH"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "name": "MURUNG RAYA",
+        "districts": [
+            {
+                "id": 389,
+                "name": "LAUNG TUHUP"
+            },
+            {
+                "id": 390,
+                "name": "PERMATA INTAN"
+            },
+            {
+                "id": 391,
+                "name": "SUMBER BARITO"
+            },
+            {
+                "id": 392,
+                "name": "TANAH SIANG"
+            },
+            {
+                "id": 393,
+                "name": "MURUNG"
+            },
+            {
+                "id": 394,
+                "name": "BARITO TUHUP RAYA"
+            },
+            {
+                "id": 395,
+                "name": "SERIBU RIAM"
+            },
+            {
+                "id": 396,
+                "name": "SUNGAI BABUAT"
+            },
+            {
+                "id": 397,
+                "name": "TANAH SIANG SELATAN"
+            },
+            {
+                "id": 398,
+                "name": "UUT MURUNG"
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "name": "BARITO SELATAN",
+        "districts": [
+            {
+                "id": 399,
+                "name": "DUSUN HILIR"
+            },
+            {
+                "id": 400,
+                "name": "DUSUN UTARA"
+            },
+            {
+                "id": 401,
+                "name": "JENAMAS"
+            },
+            {
+                "id": 402,
+                "name": "KARAU KUALA"
+            },
+            {
+                "id": 403,
+                "name": "DUSUN SELATAN"
+            },
+            {
+                "id": 404,
+                "name": "GUNUNG BINTANG AWAI"
+            }
+        ]
+    },
+    {
+        "id": 456,
+        "name": "PALANGKA RAYA",
+        "districts": [
+            {
+                "id": 4403,
+                "name": "BUKIT BATU"
+            },
+            {
+                "id": 4404,
+                "name": "JEKAN RAYA"
+            },
+            {
+                "id": 4405,
+                "name": "PAHANDUT"
+            },
+            {
+                "id": 4406,
+                "name": "RAKUMPIT"
+            },
+            {
+                "id": 4407,
+                "name": "SEBANGAU"
+            }
+        ]
+    },
+    {
+        "id": 458,
+        "name": "KATINGAN",
+        "districts": [
+            {
+                "id": 4408,
+                "name": "KAMIPANG"
+            },
+            {
+                "id": 4409,
+                "name": "KATINGAN HULU"
+            },
+            {
+                "id": 4410,
+                "name": "KATINGAN KUALA"
+            },
+            {
+                "id": 4411,
+                "name": "KATINGAN TENGAH"
+            },
+            {
+                "id": 4412,
+                "name": "MARIKIT"
+            },
+            {
+                "id": 4413,
+                "name": "PULAU MALAN"
+            },
+            {
+                "id": 4414,
+                "name": "SANAMAN MANTIKEI (SENAMANG MANTIKEI)"
+            },
+            {
+                "id": 4415,
+                "name": "TASIK PAYAWAN"
+            },
+            {
+                "id": 4416,
+                "name": "TEWANG SANGGALANG GARING (SANGALANG)"
+            },
+            {
+                "id": 4417,
+                "name": "MENDAWAI"
+            },
+            {
+                "id": 4418,
+                "name": "KATINGAN HILIR"
+            },
+            {
+                "id": 4419,
+                "name": "BUKIT RAYA"
+            },
+            {
+                "id": 4420,
+                "name": "PETAK MALAI"
+            }
+        ]
+    },
+    {
+        "id": 460,
+        "name": "KAPUAS",
+        "districts": [
+            {
+                "id": 4421,
+                "name": "BASARANG"
+            },
+            {
+                "id": 4422,
+                "name": "KAPUAS BARAT"
+            },
+            {
+                "id": 4423,
+                "name": "KAPUAS MURUNG"
+            },
+            {
+                "id": 4424,
+                "name": "KAPUAS TENGAH"
+            },
+            {
+                "id": 4425,
+                "name": "KAPUAS TIMUR"
+            },
+            {
+                "id": 4426,
+                "name": "KAPUAS KUALA"
+            },
+            {
+                "id": 4427,
+                "name": "MANTANGAI"
+            },
+            {
+                "id": 4428,
+                "name": "PULAU PETAK"
+            },
+            {
+                "id": 4429,
+                "name": "TIMPAH"
+            },
+            {
+                "id": 4430,
+                "name": "KAPUAS HULU"
+            },
+            {
+                "id": 4431,
+                "name": "KAPUAS HILIR"
+            },
+            {
+                "id": 4432,
+                "name": "SELAT"
+            },
+            {
+                "id": 4433,
+                "name": "BATAGUH"
+            },
+            {
+                "id": 4434,
+                "name": "DADAHUP"
+            },
+            {
+                "id": 4435,
+                "name": "MANDAU TALAWANG"
+            },
+            {
+                "id": 4436,
+                "name": "PASAK TALAWANG"
+            },
+            {
+                "id": 4437,
+                "name": "TAMBAN CATUR"
+            }
+        ]
+    },
+    {
+        "id": 462,
+        "name": "GUNUNG MAS",
+        "districts": [
+            {
+                "id": 4438,
+                "name": "KAHAYAN HULU UTARA"
+            },
+            {
+                "id": 4439,
+                "name": "RUNGAN"
+            },
+            {
+                "id": 4440,
+                "name": "SEPANG (SEPANG SIMIN)"
+            },
+            {
+                "id": 4441,
+                "name": "TEWAH"
+            },
+            {
+                "id": 4442,
+                "name": "DAMANG BATU"
+            },
+            {
+                "id": 4443,
+                "name": "KURUN"
+            },
+            {
+                "id": 4444,
+                "name": "MANUHING"
+            },
+            {
+                "id": 4445,
+                "name": "MANUHING RAYA"
+            },
+            {
+                "id": 4446,
+                "name": "MIHING RAYA"
+            },
+            {
+                "id": 4447,
+                "name": "MIRI MANASA"
+            },
+            {
+                "id": 4448,
+                "name": "RUNGAN BARAT"
+            },
+            {
+                "id": 4449,
+                "name": "RUNGAN HULU"
+            }
+        ]
+    },
+    {
+        "id": 464,
+        "name": "SERUYAN",
+        "districts": [
+            {
+                "id": 4450,
+                "name": "DANAU SEMBULUH"
+            },
+            {
+                "id": 4451,
+                "name": "HANAU"
+            },
+            {
+                "id": 4452,
+                "name": "SERUYAN HULU"
+            },
+            {
+                "id": 4453,
+                "name": "SERUYAN TENGAH"
+            },
+            {
+                "id": 4454,
+                "name": "SERUYAN HILIR"
+            },
+            {
+                "id": 4455,
+                "name": "BATU AMPAR"
+            },
+            {
+                "id": 4456,
+                "name": "DANAU SELULUK"
+            },
+            {
+                "id": 4457,
+                "name": "SERUYAN HILIR TIMUR"
+            },
+            {
+                "id": 4458,
+                "name": "SERUYAN RAYA"
+            },
+            {
+                "id": 4459,
+                "name": "SULING TAMBUN"
+            }
+        ]
+    },
+    {
+        "id": 466,
+        "name": "KOTAWARINGIN BARAT",
+        "districts": [
+            {
+                "id": 4460,
+                "name": "ARUT UTARA"
+            },
+            {
+                "id": 4461,
+                "name": "KOTAWARINGIN LAMA"
+            },
+            {
+                "id": 4462,
+                "name": "KUMAI"
+            },
+            {
+                "id": 4463,
+                "name": "ARUT SELATAN"
+            },
+            {
+                "id": 4464,
+                "name": "PANGKALAN LADA"
+            },
+            {
+                "id": 4465,
+                "name": "PANGKALAN BANTENG"
+            }
+        ]
+    },
+    {
+        "id": 468,
+        "name": "KOTAWARINGIN TIMUR",
+        "districts": [
+            {
+                "id": 4466,
+                "name": "CEMPAGA"
+            },
+            {
+                "id": 4467,
+                "name": "KOTA BESI"
+            },
+            {
+                "id": 4468,
+                "name": "MENTAYA HILIR SELATAN"
+            },
+            {
+                "id": 4469,
+                "name": "MENTAYA HULU"
+            },
+            {
+                "id": 4470,
+                "name": "MENTAYA HILIR UTARA"
+            },
+            {
+                "id": 4471,
+                "name": "PARENGGEAN"
+            },
+            {
+                "id": 4472,
+                "name": "PULAU HANAUT"
+            },
+            {
+                "id": 4473,
+                "name": "ANTANG KALANG"
+            },
+            {
+                "id": 4474,
+                "name": "BAAMANG"
+            },
+            {
+                "id": 4475,
+                "name": "MENTAWA BARU KETAPANG"
+            },
+            {
+                "id": 4476,
+                "name": "BUKIT SANTUEI"
+            },
+            {
+                "id": 4477,
+                "name": "CEMPAGA HULU"
+            },
+            {
+                "id": 4478,
+                "name": "SERANAU"
+            },
+            {
+                "id": 4479,
+                "name": "TELAGA ANTANG"
+            },
+            {
+                "id": 4480,
+                "name": "TELAWANG"
+            },
+            {
+                "id": 4481,
+                "name": "TELUK SAMPIT"
+            },
+            {
+                "id": 4482,
+                "name": "TUALAN HULU"
+            }
+        ]
+    },
+    {
+        "id": 470,
+        "name": "LAMANDAU",
+        "districts": [
+            {
+                "id": 4483,
+                "name": "BULIK"
+            },
+            {
+                "id": 4484,
+                "name": "DELANG"
+            },
+            {
+                "id": 4485,
+                "name": "LAMANDAU"
+            },
+            {
+                "id": 4486,
+                "name": "BATANG KAWA"
+            },
+            {
+                "id": 4487,
+                "name": "BELANTIKAN RAYA"
+            },
+            {
+                "id": 4488,
+                "name": "BULIK TIMUR"
+            },
+            {
+                "id": 4489,
+                "name": "MENTHOBI RAYA"
+            },
+            {
+                "id": 4490,
+                "name": "SEMATU JAYA"
+            }
+        ]
+    },
+    {
+        "id": 471,
+        "name": "PULANG PISAU",
+        "districts": [
+            {
+                "id": 4491,
+                "name": "BANAMA TINGANG"
+            },
+            {
+                "id": 4492,
+                "name": "KAHAYAN HILIR"
+            },
+            {
+                "id": 4493,
+                "name": "KAHAYAN TENGAH"
+            },
+            {
+                "id": 4494,
+                "name": "KAHAYAN KUALA"
+            },
+            {
+                "id": 4495,
+                "name": "PANDIH BATU"
+            },
+            {
+                "id": 4496,
+                "name": "MALIKU"
+            },
+            {
+                "id": 4497,
+                "name": "JABIREN RAYA"
+            },
+            {
+                "id": 4498,
+                "name": "SEBANGAU KUALA"
+            }
+        ]
+    },
+    {
+        "id": 472,
+        "name": "SUKAMARA",
+        "districts": [
+            {
+                "id": 4499,
+                "name": "SUKAMARA"
+            },
+            {
+                "id": 4500,
+                "name": "BALAI RIAM"
+            },
+            {
+                "id": 4501,
+                "name": "JELAI"
+            },
+            {
+                "id": 4502,
+                "name": "PANTAI LUNCI"
+            },
+            {
+                "id": 4503,
+                "name": "PERMATA KECUBUNG"
+            }
+        ]
+    }
+]

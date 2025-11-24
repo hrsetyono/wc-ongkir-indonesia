@@ -1,0 +1,996 @@
+[
+    {
+        "id": 598,
+        "name": "BANDAR LAMPUNG",
+        "districts": [
+            {
+                "id": 6237,
+                "name": "KEDATON"
+            },
+            {
+                "id": 6238,
+                "name": "KEMILING"
+            },
+            {
+                "id": 6239,
+                "name": "PANJANG"
+            },
+            {
+                "id": 6240,
+                "name": "RAJABASA"
+            },
+            {
+                "id": 6241,
+                "name": "SUKABUMI"
+            },
+            {
+                "id": 6242,
+                "name": "SUKARAME"
+            },
+            {
+                "id": 6243,
+                "name": "TANJUNG KARANG BARAT"
+            },
+            {
+                "id": 6244,
+                "name": "TANJUNG KARANG PUSAT"
+            },
+            {
+                "id": 6245,
+                "name": "TANJUNG KARANG TIMUR"
+            },
+            {
+                "id": 6246,
+                "name": "TANJUNG SENANG"
+            },
+            {
+                "id": 6247,
+                "name": "TELUKBETUNG BARAT"
+            },
+            {
+                "id": 6248,
+                "name": "TELUKBETUNG SELATAN"
+            },
+            {
+                "id": 6249,
+                "name": "TELUKBETUNG UTARA"
+            },
+            {
+                "id": 6250,
+                "name": "BUMI WARAS"
+            },
+            {
+                "id": 6251,
+                "name": "ENGGAL"
+            },
+            {
+                "id": 6252,
+                "name": "KEDAMAIAN"
+            },
+            {
+                "id": 6253,
+                "name": "LANGKAPURA"
+            },
+            {
+                "id": 6254,
+                "name": "TELUKBETUNG TIMUR"
+            },
+            {
+                "id": 6255,
+                "name": "WAY HALIM"
+            },
+            {
+                "id": 6256,
+                "name": "LABUHAN RATU"
+            }
+        ]
+    },
+    {
+        "id": 599,
+        "name": "LAMPUNG SELATAN",
+        "districts": [
+            {
+                "id": 6257,
+                "name": "KALIANDA"
+            },
+            {
+                "id": 6258,
+                "name": "PALAS"
+            },
+            {
+                "id": 6259,
+                "name": "PENENGAHAN"
+            },
+            {
+                "id": 6260,
+                "name": "NATAR"
+            },
+            {
+                "id": 6261,
+                "name": "TANJUNG BINTANG"
+            },
+            {
+                "id": 6262,
+                "name": "CANDIPURO"
+            },
+            {
+                "id": 6263,
+                "name": "JATI AGUNG"
+            },
+            {
+                "id": 6264,
+                "name": "KATIBUNG"
+            },
+            {
+                "id": 6265,
+                "name": "KETAPANG"
+            },
+            {
+                "id": 6266,
+                "name": "MERBAU MATARAM"
+            },
+            {
+                "id": 6267,
+                "name": "RAJABASA"
+            },
+            {
+                "id": 6268,
+                "name": "SIDOMULYO"
+            },
+            {
+                "id": 6269,
+                "name": "SRAGI"
+            },
+            {
+                "id": 6270,
+                "name": "BAKAUHENI"
+            },
+            {
+                "id": 6271,
+                "name": "TANJUNG SARI"
+            },
+            {
+                "id": 6272,
+                "name": "WAY PANJI"
+            },
+            {
+                "id": 6273,
+                "name": "WAY SULAN"
+            }
+        ]
+    },
+    {
+        "id": 600,
+        "name": "LAMPUNG UTARA",
+        "districts": [
+            {
+                "id": 6274,
+                "name": "KOTABUMI"
+            },
+            {
+                "id": 6275,
+                "name": "ABUNG BARAT"
+            },
+            {
+                "id": 6276,
+                "name": "ABUNG SELATAN"
+            },
+            {
+                "id": 6277,
+                "name": "ABUNG TIMUR"
+            },
+            {
+                "id": 6278,
+                "name": "BUKIT KEMUNING"
+            },
+            {
+                "id": 6279,
+                "name": "SUNGKAI SELATAN"
+            },
+            {
+                "id": 6280,
+                "name": "SUNGKAI UTARA"
+            },
+            {
+                "id": 6281,
+                "name": "TANJUNG RAJA"
+            },
+            {
+                "id": 6282,
+                "name": "ABUNG SEMULI"
+            },
+            {
+                "id": 6283,
+                "name": "ABUNG SURAKARTA"
+            },
+            {
+                "id": 6284,
+                "name": "ABUNG TENGAH"
+            },
+            {
+                "id": 6285,
+                "name": "ABUNG TINGGI"
+            },
+            {
+                "id": 6286,
+                "name": "BUNGA MAYANG"
+            },
+            {
+                "id": 6287,
+                "name": "KOTABUMI SELATAN"
+            },
+            {
+                "id": 6288,
+                "name": "KOTABUMI UTARA"
+            },
+            {
+                "id": 6289,
+                "name": "MUARA SUNGKAI"
+            },
+            {
+                "id": 6290,
+                "name": "SUNGKAI TENGAH"
+            },
+            {
+                "id": 6291,
+                "name": "SUNGKAI JAYA"
+            },
+            {
+                "id": 6292,
+                "name": "SUNGKAI BARAT"
+            },
+            {
+                "id": 6293,
+                "name": "HULU SUNGKAI"
+            },
+            {
+                "id": 6294,
+                "name": "BLAMBANGAN PAGAR"
+            },
+            {
+                "id": 6295,
+                "name": "ABUNG PEKURUN"
+            },
+            {
+                "id": 6296,
+                "name": "ABUNG KUNANG"
+            }
+        ]
+    },
+    {
+        "id": 601,
+        "name": "METRO",
+        "districts": [
+            {
+                "id": 6297,
+                "name": "METRO BARAT"
+            },
+            {
+                "id": 6298,
+                "name": "METRO PUSAT"
+            },
+            {
+                "id": 6299,
+                "name": "METRO SELATAN"
+            },
+            {
+                "id": 6300,
+                "name": "METRO TIMUR"
+            },
+            {
+                "id": 6301,
+                "name": "METRO UTARA"
+            }
+        ]
+    },
+    {
+        "id": 603,
+        "name": "LAMPUNG BARAT",
+        "districts": [
+            {
+                "id": 6302,
+                "name": "BALIK BUKIT"
+            },
+            {
+                "id": 6303,
+                "name": "BELALAU"
+            },
+            {
+                "id": 6307,
+                "name": "SUMBER JAYA"
+            },
+            {
+                "id": 6308,
+                "name": "BATU BRAK"
+            },
+            {
+                "id": 6312,
+                "name": "SEKINCAU"
+            },
+            {
+                "id": 6313,
+                "name": "SUKAU"
+            },
+            {
+                "id": 6314,
+                "name": "SUOH"
+            },
+            {
+                "id": 6315,
+                "name": "WAY TENONG"
+            },
+            {
+                "id": 6317,
+                "name": "GEDUNG SURIAN"
+            },
+            {
+                "id": 6322,
+                "name": "AIR HITAM"
+            },
+            {
+                "id": 6323,
+                "name": "BANDAR NEGERI SUOH"
+            },
+            {
+                "id": 6324,
+                "name": "BATU KETULIS"
+            },
+            {
+                "id": 6325,
+                "name": "KEBUN TEBU"
+            },
+            {
+                "id": 6326,
+                "name": "LUMBOK SEMINUNG"
+            },
+            {
+                "id": 6327,
+                "name": "PAGAR DEWA"
+            }
+        ]
+    },
+    {
+        "id": 604,
+        "name": "PESISIR BARAT",
+        "districts": [
+            {
+                "id": 6304,
+                "name": "PESISIR UTARA"
+            },
+            {
+                "id": 6305,
+                "name": "PESISIR TENGAH"
+            },
+            {
+                "id": 6306,
+                "name": "PESISIR SELATAN"
+            },
+            {
+                "id": 6309,
+                "name": "BENGKUNAT"
+            },
+            {
+                "id": 6310,
+                "name": "KARYA PENGGAWA"
+            },
+            {
+                "id": 6311,
+                "name": "LEMONG"
+            },
+            {
+                "id": 6316,
+                "name": "NGAMBUR"
+            },
+            {
+                "id": 6318,
+                "name": "BENGKUNAT BELIMBING"
+            },
+            {
+                "id": 6319,
+                "name": "KRUI SELATAN"
+            },
+            {
+                "id": 6320,
+                "name": "PULAU PISANG"
+            },
+            {
+                "id": 6321,
+                "name": "WAY KRUI"
+            }
+        ]
+    },
+    {
+        "id": 605,
+        "name": "LAMPUNG TENGAH",
+        "districts": [
+            {
+                "id": 6328,
+                "name": "GUNUNG SUGIH"
+            },
+            {
+                "id": 6329,
+                "name": "PADANG RATU"
+            },
+            {
+                "id": 6330,
+                "name": "SEPUTIH MATARAM"
+            },
+            {
+                "id": 6331,
+                "name": "SEPUTIH BANYAK"
+            },
+            {
+                "id": 6332,
+                "name": "SEPUTIH SURABAYA"
+            },
+            {
+                "id": 6333,
+                "name": "SEPUTIH RAMAN"
+            },
+            {
+                "id": 6334,
+                "name": "TERBANGGI BESAR"
+            },
+            {
+                "id": 6335,
+                "name": "ANAK TUHA"
+            },
+            {
+                "id": 6336,
+                "name": "BANDAR MATARAM"
+            },
+            {
+                "id": 6337,
+                "name": "BANDAR SURABAYA"
+            },
+            {
+                "id": 6338,
+                "name": "BANGUN REJO"
+            },
+            {
+                "id": 6339,
+                "name": "BEKRI"
+            },
+            {
+                "id": 6340,
+                "name": "BUMI NABUNG"
+            },
+            {
+                "id": 6341,
+                "name": "BUMI RATU NUBAN"
+            },
+            {
+                "id": 6342,
+                "name": "KALIREJO"
+            },
+            {
+                "id": 6343,
+                "name": "KOTA GAJAH"
+            },
+            {
+                "id": 6344,
+                "name": "PUBIAN"
+            },
+            {
+                "id": 6345,
+                "name": "PUNGGUR"
+            },
+            {
+                "id": 6346,
+                "name": "RUMBIA"
+            },
+            {
+                "id": 6347,
+                "name": "SELAGAI LINGGA"
+            },
+            {
+                "id": 6348,
+                "name": "SENDANG AGUNG"
+            },
+            {
+                "id": 6349,
+                "name": "SEPUTIH AGUNG"
+            },
+            {
+                "id": 6350,
+                "name": "TERUSAN NUNYAI"
+            },
+            {
+                "id": 6351,
+                "name": "TRIMURJO"
+            },
+            {
+                "id": 6352,
+                "name": "WAY PANGUBUAN"
+            },
+            {
+                "id": 6353,
+                "name": "WAY SEPUTIH"
+            },
+            {
+                "id": 6354,
+                "name": "PUTRA RUMBIA"
+            },
+            {
+                "id": 6355,
+                "name": "ANAK RATU AJI"
+            }
+        ]
+    },
+    {
+        "id": 607,
+        "name": "LAMPUNG TIMUR",
+        "districts": [
+            {
+                "id": 6356,
+                "name": "SUKADANA"
+            },
+            {
+                "id": 6357,
+                "name": "BATANGHARI"
+            },
+            {
+                "id": 6358,
+                "name": "JABUNG"
+            },
+            {
+                "id": 6359,
+                "name": "LABUHAN MARINGGAI"
+            },
+            {
+                "id": 6360,
+                "name": "PEKALONGAN"
+            },
+            {
+                "id": 6361,
+                "name": "PURBOLINGGO"
+            },
+            {
+                "id": 6362,
+                "name": "RAMAN UTARA"
+            },
+            {
+                "id": 6363,
+                "name": "SEKAMPUNG"
+            },
+            {
+                "id": 6364,
+                "name": "WAY JEPARA"
+            },
+            {
+                "id": 6365,
+                "name": "BANDAR SRIBAWONO"
+            },
+            {
+                "id": 6366,
+                "name": "BATANGHARI NUBAN"
+            },
+            {
+                "id": 6367,
+                "name": "BRAJA SLEBAH"
+            },
+            {
+                "id": 6368,
+                "name": "BUMI AGUNG"
+            },
+            {
+                "id": 6369,
+                "name": "GUNUNG PELINDUNG"
+            },
+            {
+                "id": 6370,
+                "name": "LABUHAN RATU"
+            },
+            {
+                "id": 6371,
+                "name": "MARGATIGA"
+            },
+            {
+                "id": 6372,
+                "name": "MATARAM BARU"
+            },
+            {
+                "id": 6373,
+                "name": "MELINTING"
+            },
+            {
+                "id": 6374,
+                "name": "METRO KIBANG"
+            },
+            {
+                "id": 6375,
+                "name": "PASIR SAKTI"
+            },
+            {
+                "id": 6376,
+                "name": "SEKAMPUNG UDIK"
+            },
+            {
+                "id": 6377,
+                "name": "WAWAY KARYA"
+            },
+            {
+                "id": 6378,
+                "name": "WAY BUNGUR (PURBOLINGGO UTARA)"
+            },
+            {
+                "id": 6379,
+                "name": "MARGA SEKAMPUNG"
+            }
+        ]
+    },
+    {
+        "id": 608,
+        "name": "WAY KANAN",
+        "districts": [
+            {
+                "id": 6380,
+                "name": "BLAMBANGAN UMPU"
+            },
+            {
+                "id": 6381,
+                "name": "BAHUGA"
+            },
+            {
+                "id": 6382,
+                "name": "BARADATU"
+            },
+            {
+                "id": 6383,
+                "name": "KASUI"
+            },
+            {
+                "id": 6384,
+                "name": "BANJIT"
+            },
+            {
+                "id": 6385,
+                "name": "GUNUNG LABUHAN"
+            },
+            {
+                "id": 6386,
+                "name": "NEGARA BATIN"
+            },
+            {
+                "id": 6387,
+                "name": "NEGERI AGUNG"
+            },
+            {
+                "id": 6388,
+                "name": "NEGERI BESAR"
+            },
+            {
+                "id": 6389,
+                "name": "PAKUAN RATU"
+            },
+            {
+                "id": 6390,
+                "name": "REBANG TANGKAS"
+            },
+            {
+                "id": 6391,
+                "name": "WAY TUBA"
+            },
+            {
+                "id": 6392,
+                "name": "BUAY BAHUGA"
+            },
+            {
+                "id": 6393,
+                "name": "BUMI AGUNG"
+            },
+            {
+                "id": 7111,
+                "name": "UMPU SEMENGUK"
+            }
+        ]
+    },
+    {
+        "id": 609,
+        "name": "TULANG BAWANG",
+        "districts": [
+            {
+                "id": 6394,
+                "name": "MENGGALA"
+            },
+            {
+                "id": 6398,
+                "name": "BANJAR AGUNG"
+            },
+            {
+                "id": 6399,
+                "name": "GEDUNG AJI"
+            },
+            {
+                "id": 6400,
+                "name": "GEDUNG MENENG"
+            },
+            {
+                "id": 6401,
+                "name": "PENAWAR TAMA"
+            },
+            {
+                "id": 6402,
+                "name": "RAWAJITU SELATAN"
+            },
+            {
+                "id": 6408,
+                "name": "RAWAJITU TIMUR"
+            },
+            {
+                "id": 6409,
+                "name": "RAWA PITU"
+            },
+            {
+                "id": 6410,
+                "name": "PENAWAR AJI"
+            },
+            {
+                "id": 6411,
+                "name": "MERAKSA AJI"
+            },
+            {
+                "id": 6412,
+                "name": "GEDUNG AJI BARU"
+            },
+            {
+                "id": 6413,
+                "name": "DENTE TELADAS"
+            },
+            {
+                "id": 6414,
+                "name": "BANJAR MARGO"
+            },
+            {
+                "id": 6415,
+                "name": "BANJAR BARU"
+            },
+            {
+                "id": 6416,
+                "name": "MENGGALA TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 610,
+        "name": "MESUJI",
+        "districts": [
+            {
+                "id": 6395,
+                "name": "MESUJI"
+            },
+            {
+                "id": 6403,
+                "name": "RAWA JITU UTARA"
+            },
+            {
+                "id": 6404,
+                "name": "SIMPANG PEMATANG"
+            },
+            {
+                "id": 6405,
+                "name": "TANJUNG RAYA"
+            },
+            {
+                "id": 6407,
+                "name": "WAY SERDANG"
+            },
+            {
+                "id": 6451,
+                "name": "PANCA JAYA"
+            },
+            {
+                "id": 6452,
+                "name": "MESUJI TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 611,
+        "name": "TULANG BAWANG BARAT",
+        "districts": [
+            {
+                "id": 6396,
+                "name": "TULANG BAWANG TENGAH"
+            },
+            {
+                "id": 6397,
+                "name": "TULANG BAWANG UDIK"
+            },
+            {
+                "id": 6406,
+                "name": "TUMIJAJAR"
+            },
+            {
+                "id": 6457,
+                "name": "LAMBU KIBANG"
+            },
+            {
+                "id": 6458,
+                "name": "GUNUNG TERANG"
+            },
+            {
+                "id": 6459,
+                "name": "WAY KENANGA"
+            },
+            {
+                "id": 6460,
+                "name": "PAGAR DEWA"
+            },
+            {
+                "id": 6461,
+                "name": "GUNUNG AGUNG"
+            }
+        ]
+    },
+    {
+        "id": 615,
+        "name": "PRINGSEWU",
+        "districts": [
+            {
+                "id": 6417,
+                "name": "GADING REJO"
+            },
+            {
+                "id": 6418,
+                "name": "PAGELARAN"
+            },
+            {
+                "id": 6419,
+                "name": "PRINGSEWU"
+            },
+            {
+                "id": 6423,
+                "name": "ADI LUWIH"
+            },
+            {
+                "id": 6426,
+                "name": "PARDASUKA"
+            },
+            {
+                "id": 6453,
+                "name": "SUKOHARJO"
+            },
+            {
+                "id": 6454,
+                "name": "BANYUMAS"
+            },
+            {
+                "id": 6455,
+                "name": "AMBARAWA"
+            },
+            {
+                "id": 6456,
+                "name": "PAGELARAN UTARA"
+            }
+        ]
+    },
+    {
+        "id": 616,
+        "name": "TANGGAMUS",
+        "districts": [
+            {
+                "id": 6420,
+                "name": "PULAU PANGGUNG"
+            },
+            {
+                "id": 6421,
+                "name": "TALANG PADANG"
+            },
+            {
+                "id": 6422,
+                "name": "WONOSOBO"
+            },
+            {
+                "id": 6424,
+                "name": "CUKUH BALAK"
+            },
+            {
+                "id": 6425,
+                "name": "KELUMBAYAN"
+            },
+            {
+                "id": 6427,
+                "name": "PEMATANG SAWA"
+            },
+            {
+                "id": 6428,
+                "name": "PUGUNG"
+            },
+            {
+                "id": 6429,
+                "name": "SEMAKA"
+            },
+            {
+                "id": 6430,
+                "name": "SUMBEREJO"
+            },
+            {
+                "id": 6431,
+                "name": "ULUBELU"
+            },
+            {
+                "id": 6432,
+                "name": "LIMAU"
+            },
+            {
+                "id": 6433,
+                "name": "KOTA AGUNG TIMUR"
+            },
+            {
+                "id": 6434,
+                "name": "KOTA AGUNG (KOTA AGUNG PUSAT)"
+            },
+            {
+                "id": 6435,
+                "name": "KOTA AGUNG BARAT"
+            },
+            {
+                "id": 6436,
+                "name": "KELUMBAYAN BARAT"
+            },
+            {
+                "id": 6437,
+                "name": "GUNUNG ALIP"
+            },
+            {
+                "id": 6438,
+                "name": "GISTING"
+            },
+            {
+                "id": 6439,
+                "name": "BULOK"
+            },
+            {
+                "id": 6440,
+                "name": "BANDAR NEGERI SEMUONG"
+            },
+            {
+                "id": 6441,
+                "name": "AIR NANINGAN"
+            }
+        ]
+    },
+    {
+        "id": 618,
+        "name": "PESAWARAN",
+        "districts": [
+            {
+                "id": 6442,
+                "name": "GEDONG TATAAN"
+            },
+            {
+                "id": 6443,
+                "name": "KEDONDONG"
+            },
+            {
+                "id": 6444,
+                "name": "PADANG CERMIN"
+            },
+            {
+                "id": 6445,
+                "name": "NEGERI KATON"
+            },
+            {
+                "id": 6446,
+                "name": "PUNDUH PIDADA"
+            },
+            {
+                "id": 6447,
+                "name": "TEGINENENG"
+            },
+            {
+                "id": 6448,
+                "name": "WAY LIMA"
+            },
+            {
+                "id": 6449,
+                "name": "MARGA PUNDUH"
+            },
+            {
+                "id": 6450,
+                "name": "WAY KHILAU"
+            }
+        ]
+    }
+]

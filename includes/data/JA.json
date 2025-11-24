@@ -1,0 +1,632 @@
+[
+    {
+        "id": 150,
+        "name": "JAMBI",
+        "districts": [
+            {
+                "id": 1516,
+                "name": "DANAU SIPIN"
+            },
+            {
+                "id": 1517,
+                "name": "ALAM BARAJO"
+            },
+            {
+                "id": 1518,
+                "name": "PAAL MERAH"
+            },
+            {
+                "id": 1519,
+                "name": "DANAU TELUK"
+            },
+            {
+                "id": 1520,
+                "name": "JAMBI SELATAN"
+            },
+            {
+                "id": 1521,
+                "name": "JAMBI TIMUR"
+            },
+            {
+                "id": 1522,
+                "name": "JELUTUNG"
+            },
+            {
+                "id": 1523,
+                "name": "KOTA BARU"
+            },
+            {
+                "id": 1524,
+                "name": "PASAR JAMBI"
+            },
+            {
+                "id": 1525,
+                "name": "PELAYANGAN"
+            },
+            {
+                "id": 1526,
+                "name": "TELANAIPURA"
+            }
+        ]
+    },
+    {
+        "id": 152,
+        "name": "TANJUNG JABUNG BARAT",
+        "districts": [
+            {
+                "id": 1527,
+                "name": "BETARA"
+            },
+            {
+                "id": 1528,
+                "name": "MERLUNG"
+            },
+            {
+                "id": 1529,
+                "name": "PENGABUAN"
+            },
+            {
+                "id": 1530,
+                "name": "TUNGKAL ULU"
+            },
+            {
+                "id": 1531,
+                "name": "TUNGKAL ILIR"
+            },
+            {
+                "id": 1532,
+                "name": "BATANG ASAM"
+            },
+            {
+                "id": 1533,
+                "name": "BRAM ITAM"
+            },
+            {
+                "id": 1534,
+                "name": "KUALA BETARA"
+            },
+            {
+                "id": 1535,
+                "name": "MUARA PAPALIK"
+            },
+            {
+                "id": 1536,
+                "name": "RENAH MENDALUH"
+            },
+            {
+                "id": 1537,
+                "name": "SEBERANG KOTA"
+            },
+            {
+                "id": 1538,
+                "name": "SENYERANG"
+            },
+            {
+                "id": 1539,
+                "name": "TEBING TINGGI"
+            }
+        ]
+    },
+    {
+        "id": 153,
+        "name": "MERANGIN",
+        "districts": [
+            {
+                "id": 1540,
+                "name": "BANGKO"
+            },
+            {
+                "id": 1541,
+                "name": "JANGKAT"
+            },
+            {
+                "id": 1542,
+                "name": "MUARA SIAU"
+            },
+            {
+                "id": 1543,
+                "name": "SUNGAI MANAU"
+            },
+            {
+                "id": 1544,
+                "name": "TABIR"
+            },
+            {
+                "id": 1545,
+                "name": "PAMENANG"
+            },
+            {
+                "id": 1546,
+                "name": "TABIR ULU"
+            },
+            {
+                "id": 1547,
+                "name": "BANGKO BARAT"
+            },
+            {
+                "id": 1548,
+                "name": "BATANG MASUMAI"
+            },
+            {
+                "id": 1549,
+                "name": "LEMBAH MASURAI"
+            },
+            {
+                "id": 1550,
+                "name": "MARGO TABIR"
+            },
+            {
+                "id": 1551,
+                "name": "NALO TANTAN"
+            },
+            {
+                "id": 1552,
+                "name": "PAMENANG BARAT"
+            },
+            {
+                "id": 1553,
+                "name": "PAMENANG SELATAN"
+            },
+            {
+                "id": 1554,
+                "name": "PANGKALAN JAMBU"
+            },
+            {
+                "id": 1555,
+                "name": "RENAH PEMBARAP"
+            },
+            {
+                "id": 1556,
+                "name": "RENAH PEMENANG"
+            },
+            {
+                "id": 1557,
+                "name": "SUNGAI TENANG"
+            },
+            {
+                "id": 1558,
+                "name": "TABIR ILIR"
+            },
+            {
+                "id": 1559,
+                "name": "TABIR LINTAS"
+            },
+            {
+                "id": 1560,
+                "name": "TABIR SELATAN"
+            },
+            {
+                "id": 1561,
+                "name": "TABIR TIMUR"
+            },
+            {
+                "id": 1562,
+                "name": "TIANG PUMPUNG"
+            },
+            {
+                "id": 1563,
+                "name": "TABIR BARAT"
+            }
+        ]
+    },
+    {
+        "id": 154,
+        "name": "BATANG HARI",
+        "districts": [
+            {
+                "id": 1564,
+                "name": "MUARA BULIAN"
+            },
+            {
+                "id": 1565,
+                "name": "BATIN XXIV"
+            },
+            {
+                "id": 1566,
+                "name": "MARO SEBO ULU"
+            },
+            {
+                "id": 1567,
+                "name": "MERSAM"
+            },
+            {
+                "id": 1568,
+                "name": "MUARA TEMBESI"
+            },
+            {
+                "id": 1569,
+                "name": "PEMAYUNG"
+            },
+            {
+                "id": 1570,
+                "name": "BAJUBANG"
+            },
+            {
+                "id": 1571,
+                "name": "MARO SEBO ILIR"
+            }
+        ]
+    },
+    {
+        "id": 156,
+        "name": "BUNGO",
+        "districts": [
+            {
+                "id": 1572,
+                "name": "JUJUHAN"
+            },
+            {
+                "id": 1573,
+                "name": "PELEPAT"
+            },
+            {
+                "id": 1574,
+                "name": "RANTAU PANDAN"
+            },
+            {
+                "id": 1575,
+                "name": "TANAH SEPENGGAL"
+            },
+            {
+                "id": 1576,
+                "name": "TANAH TUMBUH"
+            },
+            {
+                "id": 1577,
+                "name": "BATHIN II BABEKO"
+            },
+            {
+                "id": 1578,
+                "name": "LIMBUR LUBUK MENGKUANG"
+            },
+            {
+                "id": 1579,
+                "name": "MUKO-MUKO BATIN VII"
+            },
+            {
+                "id": 1580,
+                "name": "PELEPAT ILIR"
+            },
+            {
+                "id": 1581,
+                "name": "JUJUHAN ILIR"
+            },
+            {
+                "id": 1582,
+                "name": "BATHIN II PELAYANG"
+            },
+            {
+                "id": 1583,
+                "name": "BATHIN III"
+            },
+            {
+                "id": 1584,
+                "name": "BATHIN III ULU"
+            },
+            {
+                "id": 1585,
+                "name": "BUNGO DANI"
+            },
+            {
+                "id": 1586,
+                "name": "PASAR MUARA BUNGO"
+            },
+            {
+                "id": 1587,
+                "name": "RIMBO TENGAH"
+            },
+            {
+                "id": 1588,
+                "name": "TANAH SEPENGGAL LINTAS"
+            }
+        ]
+    },
+    {
+        "id": 157,
+        "name": "SUNGAIPENUH",
+        "districts": [
+            {
+                "id": 1589,
+                "name": "SUNGAI PENUH"
+            },
+            {
+                "id": 1595,
+                "name": "HAMPARAN RAWANG"
+            },
+            {
+                "id": 1603,
+                "name": "KUMUN DEBAI"
+            },
+            {
+                "id": 1604,
+                "name": "PESISIR BUKIT"
+            },
+            {
+                "id": 1605,
+                "name": "TANAH KAMPUNG"
+            },
+            {
+                "id": 1606,
+                "name": "KOTO BARU"
+            },
+            {
+                "id": 1607,
+                "name": "PONDOK TINGGI"
+            },
+            {
+                "id": 1608,
+                "name": "SUNGAI BUNGKAL"
+            }
+        ]
+    },
+    {
+        "id": 158,
+        "name": "KERINCI",
+        "districts": [
+            {
+                "id": 1590,
+                "name": "AIR HANGAT"
+            },
+            {
+                "id": 1591,
+                "name": "BATANG MERANGIN"
+            },
+            {
+                "id": 1592,
+                "name": "DANAU KERINCI"
+            },
+            {
+                "id": 1593,
+                "name": "GUNUNG KERINCI"
+            },
+            {
+                "id": 1594,
+                "name": "GUNUNG RAYA"
+            },
+            {
+                "id": 1596,
+                "name": "KAYU ARO"
+            },
+            {
+                "id": 1597,
+                "name": "KELILING DANAU"
+            },
+            {
+                "id": 1598,
+                "name": "SITINJAU LAUT"
+            },
+            {
+                "id": 1599,
+                "name": "AIR HANGAT TIMUR"
+            },
+            {
+                "id": 1600,
+                "name": "DEPATI TUJUH"
+            },
+            {
+                "id": 1601,
+                "name": "GUNUNG TUJUH"
+            },
+            {
+                "id": 1602,
+                "name": "SIULAK"
+            },
+            {
+                "id": 1609,
+                "name": "KAYU ARO BARAT"
+            },
+            {
+                "id": 1610,
+                "name": "SIULAK MUKAI"
+            },
+            {
+                "id": 1611,
+                "name": "AIR HANGAT BARAT"
+            },
+            {
+                "id": 1612,
+                "name": "BUKITKERMAN"
+            }
+        ]
+    },
+    {
+        "id": 160,
+        "name": "MUARO JAMBI",
+        "districts": [
+            {
+                "id": 1613,
+                "name": "JAMBI LUAR KOTA"
+            },
+            {
+                "id": 1614,
+                "name": "KUMPEH"
+            },
+            {
+                "id": 1615,
+                "name": "KUMPEH ULU"
+            },
+            {
+                "id": 1616,
+                "name": "MARO SEBO"
+            },
+            {
+                "id": 1617,
+                "name": "MESTONG"
+            },
+            {
+                "id": 1618,
+                "name": "SEKERNAN"
+            },
+            {
+                "id": 1619,
+                "name": "SUNGAI BAHAR"
+            },
+            {
+                "id": 1620,
+                "name": "SUNGAI GELAM"
+            },
+            {
+                "id": 1621,
+                "name": "BAHAR SELATAN"
+            },
+            {
+                "id": 1622,
+                "name": "BAHAR UTARA"
+            },
+            {
+                "id": 1623,
+                "name": "TAMAN RAJO"
+            }
+        ]
+    },
+    {
+        "id": 161,
+        "name": "SAROLANGUN",
+        "districts": [
+            {
+                "id": 1624,
+                "name": "SAROLANGUN"
+            },
+            {
+                "id": 1625,
+                "name": "BATANG ASAI"
+            },
+            {
+                "id": 1626,
+                "name": "LIMUN"
+            },
+            {
+                "id": 1627,
+                "name": "MANDIANGIN"
+            },
+            {
+                "id": 1628,
+                "name": "PAUH"
+            },
+            {
+                "id": 1629,
+                "name": "PELAWAN"
+            },
+            {
+                "id": 1630,
+                "name": "AIR HITAM"
+            },
+            {
+                "id": 1631,
+                "name": "BATHIN VIII (BATIN VIII)"
+            },
+            {
+                "id": 1632,
+                "name": "CERMIN NAN GADANG"
+            },
+            {
+                "id": 1633,
+                "name": "SINGKUT"
+            }
+        ]
+    },
+    {
+        "id": 163,
+        "name": "TANJUNG JABUNG TIMUR",
+        "districts": [
+            {
+                "id": 1634,
+                "name": "DENDANG"
+            },
+            {
+                "id": 1635,
+                "name": "MENDAHARA"
+            },
+            {
+                "id": 1636,
+                "name": "NIPAH PANJANG"
+            },
+            {
+                "id": 1637,
+                "name": "RANTAU RASAU"
+            },
+            {
+                "id": 1638,
+                "name": "SADU"
+            },
+            {
+                "id": 1639,
+                "name": "BERBAK"
+            },
+            {
+                "id": 1640,
+                "name": "GERAGAI"
+            },
+            {
+                "id": 1641,
+                "name": "KUALA JAMBI"
+            },
+            {
+                "id": 1642,
+                "name": "MENDAHARA ULU"
+            },
+            {
+                "id": 1643,
+                "name": "MUARA SABAK BARAT"
+            },
+            {
+                "id": 1644,
+                "name": "MUARA SABAK TIMUR"
+            }
+        ]
+    },
+    {
+        "id": 164,
+        "name": "TEBO",
+        "districts": [
+            {
+                "id": 1645,
+                "name": "MUARA TABIR"
+            },
+            {
+                "id": 1646,
+                "name": "RIMBO BUJANG"
+            },
+            {
+                "id": 1647,
+                "name": "RIMBO ILIR"
+            },
+            {
+                "id": 1648,
+                "name": "RIMBO ULU"
+            },
+            {
+                "id": 1649,
+                "name": "SUMAY"
+            },
+            {
+                "id": 1650,
+                "name": "TEBO ILIR"
+            },
+            {
+                "id": 1651,
+                "name": "TEBO TENGAH"
+            },
+            {
+                "id": 1652,
+                "name": "TEBO ULU"
+            },
+            {
+                "id": 1653,
+                "name": "TENGAH ILIR"
+            },
+            {
+                "id": 1654,
+                "name": "VII KOTO"
+            },
+            {
+                "id": 1655,
+                "name": "SERAI SERUMPUN"
+            },
+            {
+                "id": 1656,
+                "name": "VII KOTO ILIR"
+            }
+        ]
+    }
+]
